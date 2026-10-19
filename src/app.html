@@ -202,6 +202,11 @@ a.linkbtn:hover{text-decoration:underline}
 .notice p{margin:0;color:var(--muted);font-size:14px}
 .shotclock{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--ink);color:var(--signal);font-family:var(--font-mono);font-size:20px;font-weight:500;letter-spacing:.02em}
 .notice-head{display:flex;gap:12px;align-items:center}
+.about{border-style:solid;margin-top:16px}
+.about p{color:var(--text,inherit)}
+.about summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--accent,#EF5A1E);list-style-position:inside}
+.about details[open] summary{margin-bottom:8px}
+.about ul{margin:0 0 10px;padding-left:18px;display:grid;gap:6px;font-size:14px}
 .skel{height:96px;border-radius:16px;background:linear-gradient(90deg,var(--surface) 0%,var(--surface-2) 50%,var(--surface) 100%);background-size:200% 100%;animation:shimmer 1.4s infinite linear;border:1px solid var(--line)}
 @keyframes shimmer{to{background-position:-200% 0}}
 .past-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-weight:700;font-size:14px}
@@ -331,6 +336,21 @@ textarea.input{min-height:84px;resize:vertical}
     <section class="pane gutter" id="pane-news" aria-labelledby="t-news">
       <h1 class="vh" id="t-news">News</h1>
       <div id="hero"></div>
+      <div class="notice about" id="about">
+        <div class="notice-head"><span class="shotclock" aria-hidden="true">?</span><h3>Warum gibt es Checkball?</h3></div>
+        <p>In Berlin wird so viel 3x3 gespielt wie nie. Aber die Termine sind überall verstreut: auf der FIBA-Seite, bei Vereinen, auf Instagram und in WhatsApp-Gruppen. Wer nicht zufällig davon hört, verpasst das Turnier. Checkball bringt alles an einen Ort, damit in Berlin niemand mehr ein Turnier, Open Gym oder Event verpasst.</p>
+        <details>
+          <summary>So funktioniert's</summary>
+          <ul>
+            <li><b>Jeden Morgen gecheckt:</b> Ein KI-Agent prüft öffentliche Quellen wie FIBA 3x3, DBB, Vereine und Veranstalter und trägt neue Turniere, Open Gyms und News ein.</li>
+            <li><b>Direkt zur Anmeldung:</b> Bei jedem Turnier führt ein Tipp zur FIBA-Anmeldung oder zur Seite des Veranstalters.</li>
+            <li><b>Nur Öffentliches:</b> Hier stehen nur Termine, die öffentlich angekündigt sind, immer mit Link zur Quelle.</li>
+            <li><b>Für alle:</b> Kostenlos, ohne Anmeldung, ohne Werbung und ohne Tracking. Von U14 bis zu den Erwachsenen, Damen, Herren und Mixed.</li>
+            <li><b>Von Ballern für Baller:</b> Checkball wird von Moritz gemacht, 3x3-Coach in Berlin.</li>
+          </ul>
+          <p>Fehlt ein Termin oder hast du Fragen? Schreib an <a class="linkbtn" href="mailto:ambitioncheckball@gmail.com">ambitioncheckball@gmail.com</a> oder per Instagram-Nachricht an @checkball.berlin.</p>
+        </details>
+      </div>
       <div class="section">
         <div class="pane-head"><h2 class="h-sec">News aus der 3x3-Welt</h2><span class="sub" id="newsCount"></span></div>
         <div id="newsList"></div>
