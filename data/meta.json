@@ -1,15 +1,15 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-19T15:05:00+02:00",
+ "lastRun": "2026-10-19T15:20:00+02:00",
  "log": [
-  "15:05  Zweiter Lauf heute · Stadt: Berlin",
-  "Neu: MBL Ferienliga Runde 2 (31.10.–01.11., Neukölln) als Event.",
-  "Rückblick ergänzt: Basketball-Fest am Hermann-Ehlers-Platz (26.08.).",
-  "FIBA 3x3: weiter blockiert. Hoop City 3x3 (FIBA df43cac9) gehörte zur Ferienliga im Februar, Datum nicht eindeutig, nicht übernommen.",
-  "Streetball-Team unverändert. Partnervereine, DBB: nichts Neues. Keine Community-Meldungen.",
-  "Friday Night Hoops: keine öffentliche Quelle gefunden, Eintrag bleibt als Betreiber-Freigabe.",
-  "22 Einträge, 1 Berliner Turnier in den nächsten 60 Tagen.",
-  "Web-Version nicht aktualisiert: Repo-Tool nicht verfügbar, Ausführung des Export-Skripts nicht freigegeben."
+  "15:20  Dritter Lauf heute · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche zu 3x3-Turnieren, FIBA-Events und Open Gyms ohne neue Berliner Termine.",
+  "visitBerlin: 3x3 Series Washingtonplatz (Juni) und Damen-WM (September) bereits erfasst bzw. kein 3x3-Turnier.",
+  "Streetball-Team: Weekly Gym Mo und Open Gym Mi laufen bis Ende Dezember, Einträge unverändert.",
+  "DBB 3x3 News: Liste lädt nur per JavaScript, keine neuen Meldungen gefunden.",
+  "Keine Community-Meldungen. Friday Night Hoops bleibt als Betreiber-Freigabe.",
+  "22 Einträge, 1 Berliner Turnier in den nächsten 60 Tagen (Streetball Night 30.10.).",
+  "Web-Version nicht aktualisiert: Push verweigert, Repo nicht als Quelle der geplanten Aufgabe eingetragen."
  ],
  "nextRun": "täglich um 05:54",
  "sources": [
@@ -88,5 +88,5 @@
   "soon": 1,
   "sources": 12
  },
- "exportedAt": "2026-10-19T15:05:42+02:00"
+ "exportedAt": "2026-10-19T14:00:52+00:00"
 }
