@@ -3,15 +3,15 @@
  "lastRun": "2026-10-19T15:20:00+02:00",
  "log": [
   "15:20  Dritter Lauf heute · Stadt: Berlin",
-  "Keine neuen Einträge: Websuche zu 3x3-Turnieren, FIBA-Events und Open Gyms ohne neue Berliner Termine.",
-  "visitBerlin: 3x3 Series Washingtonplatz (Juni) und Damen-WM (September) bereits erfasst bzw. kein 3x3-Turnier.",
-  "Streetball-Team: Weekly Gym Mo und Open Gym Mi laufen bis Ende Dezember, Einträge unverändert.",
-  "DBB 3x3 News: Liste lädt nur per JavaScript, keine neuen Meldungen gefunden.",
+  "Keine neuen Einträge aus der Websuche (3x3-Turniere, FIBA-Events, Open Gyms).",
+  "Nachgetragen auf Hinweis des Betreibers: The Battle for the Heimathafen (01.11., U14/U16, Friedrichshain).",
+  "Nachgetragen auf Hinweis des Betreibers: Hoop City Berlin 3x3 meets MBF (01.11., U18/Damen/Herren, Britz).",
+  "Streetball-Team: Weekly Gym Mo und Open Gym Mi laufen bis Ende Dezember, unverändert.",
   "Keine Community-Meldungen. Friday Night Hoops bleibt als Betreiber-Freigabe.",
-  "22 Einträge, 1 Berliner Turnier in den nächsten 60 Tagen (Streetball Night 30.10.).",
-  "Web-Version nicht aktualisiert: Push verweigert, Repo nicht als Quelle der geplanten Aufgabe eingetragen."
+  "24 Einträge, 3 Berliner Turniere in den nächsten 60 Tagen.",
+  "Web-Version: Stand wird beim Web-Update um 06:25 veröffentlicht."
  ],
- "nextRun": "täglich um 05:54",
+ "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
@@ -84,9 +84,9 @@
   }
  ],
  "stats": {
-  "items": 22,
-  "soon": 1,
+  "items": 24,
+  "soon": 3,
   "sources": 12
  },
- "exportedAt": "2026-10-19T14:00:52+00:00"
+ "exportedAt": "2026-10-19T15:47:15+00:00"
 }

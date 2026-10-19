@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T14:00:52+00:00",
+ "generatedAt": "2026-10-19T15:47:15+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -134,6 +134,27 @@
    "type": "news"
   },
   {
+   "id": "fiba-138ffe87",
+   "audience": "U14 und U16, Mädchen und Jungen (24 Teams)",
+   "categories": [
+    "U14",
+    "U16"
+   ],
+   "district": "Friedrichshain-Kreuzberg",
+   "end": "2026-11-01T14:30",
+   "foundAt": "2026-10-19",
+   "level": "FIBA 3x3 Event",
+   "price": "25 € pro Team",
+   "regUrl": "https://play.fiba3x3.com/events/138ffe87-177f-42f7-a521-0b4fad338de8",
+   "sourceName": "FIBA 3x3",
+   "sourceUrl": "https://play.fiba3x3.com/events/138ffe87-177f-42f7-a521-0b4fad338de8",
+   "start": "2026-11-01T11:00",
+   "summary": "Offizielles FIBA-3x3-Jugendturnier für U14- und U16-Teams, jeweils Mädchen und Jungen, mit sechs Teams pro Kategorie. Für Teilnehmende des Freibeuter x SKOK Academy 3x3 Advanced Skills Camp ist das Turnier kostenlos.",
+   "title": "The Battle for the Heimathafen",
+   "type": "turnier",
+   "venue": "Pufendorfstraße 10"
+  },
+  {
    "id": "fiba-7de288f1",
    "audience": "U18, U16, U14 (m/w)",
    "categories": [
@@ -175,6 +196,30 @@
    "title": "3x3 Basketball Series 2026",
    "type": "turnier",
    "venue": "Washingtonplatz am Hauptbahnhof"
+  },
+  {
+   "id": "fiba-bc13f52a",
+   "audience": "U18 männlich und weiblich, Damen, Herren",
+   "categories": [
+    "U18",
+    "Damen",
+    "Herren"
+   ],
+   "deadline": "2026-10-15",
+   "district": "Neukölln",
+   "end": "2026-11-01",
+   "foundAt": "2026-10-19",
+   "level": "FIBA 3x3 Event",
+   "organizer": "MBF Berlin e.V. und Hoop City Berlin 3x3",
+   "price": "40 € pro Team",
+   "regUrl": "https://play.fiba3x3.com/events/bc13f52a-00d3-483c-9de2-124b7ec6bb85",
+   "sourceName": "FIBA 3x3",
+   "sourceUrl": "https://play.fiba3x3.com/events/bc13f52a-00d3-483c-9de2-124b7ec6bb85",
+   "start": "2026-11-01",
+   "summary": "Gemeinsames 3x3-Turnier von MBF und Hoop City Berlin 3x3 in Britz, diesmal etwas kleiner als sonst. Für die Siegerteams gibt es Pokale und als Preis eine Startplatzübernahme für einen Stop der 3x3 Germany Tour 2027 oder der MEKB Tour 2027.",
+   "title": "Hoop City Berlin 3x3 meets MBF 3x3 Tournament",
+   "type": "turnier",
+   "venue": "Parchimer Allee 109, 12359 Berlin"
   },
   {
    "id": "fiba-d8f6706f",
