@@ -1,0 +1,86 @@
+{
+ "by": "Claude",
+ "lastRun": "2026-10-19T05:59:00+02:00",
+ "log": [
+  "05:59  Lauf gestartet · Stadt: Berlin",
+  "Streetball-Team Berlin neu als Quelle: Streetball Night (ab 30.10., 3–4er-Teams, kostenlos) als Turnier aufgenommen.",
+  "4 Open Gyms neu: Mo Max-Schmeling-Halle, Mi Lichtenberg, Ferien Open Gym 19.–23.10., Open Gym Night 06.11.",
+  "Rückblick ergänzt: ALBA 3x3 Girls Cup, Streetball Challenge, BBV-Brandenburg-Sommertour (KW, Bernau).",
+  "FIBA 3x3: weiter blockiert, Events über Suchindex und Verbandsseiten gefunden. Kein neues Berliner FIBA-Event.",
+  "fiba-b0524210: Spielerinnenname aus der Zusammenfassung entfernt.",
+  "Partnervereine: keine öffentlichen 3x3-Termine gefunden. Keine Community-Meldungen.",
+  "20 Einträge im Feed, 1 Berliner Turnier in den nächsten 60 Tagen."
+ ],
+ "nextRun": "täglich um 05:54",
+ "sources": [
+  {
+   "name": "FIBA 3x3 (play.fiba3x3.com)",
+   "note": "Direkter Abruf weiter blockiert. Event-Links über Suchindex und Veranstalterseiten gefunden.",
+   "status": "blockiert",
+   "url": "https://play.fiba3x3.com/"
+  },
+  {
+   "name": "DBB 3x3: News und Kalender",
+   "note": "News-Liste lädt per JavaScript und war leer, keine neuen Meldungen übernommen.",
+   "status": "ok",
+   "url": "https://3x3.basketball-bund.de/news/"
+  },
+  {
+   "name": "Berliner Basketball Verband (binb.info)",
+   "note": "Öffentliche News: Streetball Nights Okt–Dez 2026. Nur öffentlich angekündigte Termine. Friday Night Hoops vom Betreiber freigegeben.",
+   "status": "ok",
+   "url": "https://www.binb.info/"
+  },
+  {
+   "name": "Streetball-Team Berlin",
+   "note": "Streetball Nights, wöchentliche Open Gyms, Ferien Open Gym und Open Gym Night übernommen.",
+   "status": "ok",
+   "url": "https://www.streetball-team.de/"
+  },
+  {
+   "name": "Brandenburgischer Basketball-Verband",
+   "note": "3x3 Sommertour 2026 (Umland) in den Rückblick, keine neuen 3x3-Termine.",
+   "status": "ok",
+   "url": "https://bbv-inside.de/news/"
+  },
+  {
+   "name": "ALBA BERLIN Jugend",
+   "note": "3x3 Girls Cup 2026 (Juni) in den Rückblick.",
+   "status": "ok",
+   "url": "https://www.albaberlin.de/jugend/aktionen-projekte/alba-berlin-3x3-girls-cup-powered-by-allianz"
+  },
+  {
+   "name": "visitBerlin Eventkalender",
+   "note": "Keine neuen 3x3-Termine.",
+   "status": "ok",
+   "url": "https://www.visitberlin.de/"
+  },
+  {
+   "name": "Kultur- und Stadtkalender",
+   "note": "tip Berlin nicht abrufbar, Pop-Kultur ohne Neues.",
+   "status": "ok"
+  },
+  {
+   "name": "Instagram (@dbb.3x3 und Veranstalter)",
+   "note": "Abruf über die Instagram-API mit dem eigenen Business-Account @checkball.berlin.",
+   "status": "geplant",
+   "url": "https://www.instagram.com/dbb.3x3/"
+  },
+  {
+   "name": "3x3-Partnervereine",
+   "note": "BC Lions Moabit, DBV Charlottenburg, TuS Lichterfelde, Berliner Freibeuter: per Websuche keine öffentlichen 3x3-Termine gefunden.",
+   "status": "ok"
+  },
+  {
+   "name": "Community-Meldungen",
+   "note": "Keine offenen Meldungen.",
+   "status": "ok"
+  }
+ ],
+ "stats": {
+  "items": 20,
+  "soon": 1,
+  "sources": 10
+ },
+ "exportedAt": "2026-10-19T14:51:30+02:00"
+}

@@ -1,0 +1,1565 @@
+<title>Checkball Berlin</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: phone-first app shell — sticky brand bar, scrolling feeds of date-grouped cards, fixed bottom tab bar; on wide screens one 540px column standing on an asphalt ground with chalk 3x3 court lines */
+:root{
+  --ground:#DADFE4;      /* asphalt, light */
+  --bg:#EEF0F2;          /* app column */
+  --surface:#FFFFFF;
+  --surface-2:#F3F4F6;
+  --ink:#14171C;
+  --muted:#59626E;
+  --line:#D6DAE0;
+  --accent:#EF5A1E;      /* ball orange, carries ink text */
+  --accent-ink:#14171C;
+  --accent-text:#B33E0D; /* orange for text on light surfaces */
+  --accent-soft:#FDE3D6;
+  --signal:#FFD21F;      /* U-Bahn yellow: deadlines, neu */
+  --signal-ink:#14171C;
+  --ok:#14774A;
+  --ok-soft:#DDF2E6;
+  --warn:#8F5600;
+  --court:#C5CCD4;
+  --focus:#1F5FD6;
+  --danger:#B42318;
+  --shadow:0 1px 0 rgba(20,23,28,.04), 0 10px 24px -18px rgba(20,23,28,.45);
+  --font-display:"Barlow Condensed","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#090B0D; --bg:#101317; --surface:#171B20; --surface-2:#1F242A; --ink:#ECEEF1; --muted:#9BA4AF; --line:#2A3038;
+    --accent:#FF6A2B; --accent-ink:#121417; --accent-text:#FF8F5C; --accent-soft:#3A2116;
+    --signal:#FFD84D; --signal-ink:#121417; --ok:#46C985; --ok-soft:#163324; --warn:#F0B24A; --court:#1E2329; --focus:#7AA7FF; --danger:#FF8A80;
+    --shadow:0 1px 0 rgba(0,0,0,.3), 0 12px 28px -18px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#090B0D; --bg:#101317; --surface:#171B20; --surface-2:#1F242A; --ink:#ECEEF1; --muted:#9BA4AF; --line:#2A3038;
+  --accent:#FF6A2B; --accent-ink:#121417; --accent-text:#FF8F5C; --accent-soft:#3A2116;
+  --signal:#FFD84D; --signal-ink:#121417; --ok:#46C985; --ok-soft:#163324; --warn:#F0B24A; --court:#1E2329; --focus:#7AA7FF; --danger:#FF8A80;
+  --shadow:0 1px 0 rgba(0,0,0,.3), 0 12px 28px -18px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{height:100%}
+body{min-height:100%;background:var(--ground);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* ground with court lines (wide screens only) */
+.ground{position:fixed;inset:0;z-index:0;pointer-events:none;display:none;color:var(--court)}
+.ground svg{position:absolute;width:640px;height:auto}
+.ground .c1{left:-120px;bottom:-60px;transform:rotate(-8deg)}
+.ground .c2{right:-160px;top:40px;transform:rotate(172deg)}
+@media (min-width:860px){.ground{display:block}}
+
+.app{position:relative;z-index:1;max-width:540px;min-height:100vh;margin:0 auto;background:var(--bg);padding-bottom:calc(92px + env(safe-area-inset-bottom, 0px))}
+@media (min-width:860px){.app{box-shadow:0 0 0 1px var(--line), 0 40px 90px -50px rgba(0,0,0,.5)}}
+.gutter{padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+
+/* top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--bg);border-bottom:1px solid transparent;transition:border-color .2s}
+.topbar.scrolled{border-bottom-color:var(--line)}
+.topbar-inner{display:flex;align-items:center;gap:10px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:9px;min-width:0;margin-right:auto;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none;border-radius:9px}
+.wordmark{font-family:var(--font-display);font-weight:800;font-style:italic;font-size:27px;letter-spacing:.01em;line-height:1;text-transform:uppercase}
+.city-btn{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 10px 0 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-weight:700;font-size:13.5px}
+.city-btn svg{width:16px;height:16px}
+.agent-chip{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+.agent-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+.agent-chip[data-state="ok"] .dot{background:var(--ok);box-shadow:0 0 0 3px var(--ok-soft)}
+.agent-chip[data-state="old"] .dot{background:var(--warn)}
+.brand .wordmark{white-space:nowrap}
+@media (max-width:440px){.agent-chip .day{display:none}.city-btn{padding:0 8px 0 10px}}
+@media (max-width:370px){.agent-chip .lbl{display:none}.agent-chip{padding:0 12px}.wordmark{font-size:23px}}
+
+/* panes */
+main{display:block}
+.pane{padding-block:6px 24px;display:grid;gap:22px}
+.pane[hidden]{display:none!important}
+.pane-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1,h2,h3{margin:0;text-wrap:balance}
+.h-pane{font-family:var(--font-display);font-weight:800;font-style:italic;font-size:34px;line-height:1;text-transform:uppercase;letter-spacing:.005em}
+.h-sec{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.sub{color:var(--muted);font-size:14px}
+.section{display:grid;gap:10px}
+.stack{display:grid;gap:10px}
+
+/* hero (the one loud block) */
+.hero{position:relative;overflow:hidden;border-radius:18px;background:var(--accent);color:var(--accent-ink);padding:18px 18px 16px;display:grid;gap:14px}
+.hero::after{content:"";position:absolute;inset:-40% -30% auto auto;width:260px;height:260px;border-radius:50%;border:3px solid rgba(20,23,28,.18);pointer-events:none}
+.hero::before{content:"";position:absolute;right:58px;top:-60px;width:3px;height:260px;background:rgba(20,23,28,.14);transform:rotate(24deg);pointer-events:none}
+.hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.hero-title{font-family:var(--font-display);font-weight:800;font-style:italic;font-size:40px;line-height:.95;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;position:relative;z-index:1}
+.stat{display:grid;gap:2px;padding:10px 10px 8px;border-radius:12px;background:rgba(255,255,255,.22)}
+.stat b{font-family:var(--font-display);font-weight:800;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;font-weight:600;line-height:1.25}
+.next{position:relative;z-index:1;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--surface);color:var(--ink);text-align:left;width:100%}
+.next .when{font-family:var(--font-display);font-weight:800;font-size:20px;line-height:1;text-transform:uppercase;text-align:center;min-width:48px}
+.next .when small{display:block;font-family:var(--font-body);font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.next .t{font-weight:700;line-height:1.3;min-width:0}
+.next .t span{display:block;font-weight:500;font-size:13px;color:var(--muted)}
+.next svg{width:18px;height:18px;color:var(--muted)}
+
+/* chips */
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;margin-left:calc(-1 * var(--gutter-l));margin-right:calc(-1 * var(--gutter-r));padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:600;font-size:13.5px;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.forme[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip svg{width:15px;height:15px}
+
+/* cards */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;display:grid;grid-template-columns:58px minmax(0,1fr);gap:12px;box-shadow:var(--shadow)}
+.card.is-past{box-shadow:none;background:var(--surface-2)}
+.card.is-past .dateblock{opacity:.7}
+.dateblock{border-radius:12px;background:var(--surface-2);display:grid;align-content:center;justify-items:center;gap:1px;padding:8px 2px;text-align:center;align-self:start;min-height:64px}
+.card.is-past .dateblock{background:var(--surface)}
+.dateblock .w,.dateblock .m{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dateblock .d{font-family:var(--font-display);font-weight:800;font-size:31px;line-height:1;font-variant-numeric:tabular-nums}
+.dateblock .d.sm{font-size:22px}
+.dateblock.time .d{font-size:21px}
+.dateblock svg{width:28px;height:28px;color:var(--muted)}
+.body{min-width:0;display:grid;gap:7px}
+.c-title{font-family:var(--font-display);font-weight:700;font-size:23px;line-height:1.05;letter-spacing:.005em}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;color:var(--muted);font-size:13.5px}
+.meta span{display:inline-flex;align-items:center;gap:5px;min-width:0}
+.meta svg{width:14px;height:14px;flex:none}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line)}
+.card.is-past .tag{background:var(--surface)}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;line-height:1.3}
+.pill.planned{border:1px dashed var(--muted);color:var(--muted)}
+.pill.past{background:var(--line);color:var(--muted)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.new{background:var(--signal);color:var(--signal-ink)}
+.pill.forme{background:var(--accent-soft);color:var(--accent-text)}
+.pill.soon{background:var(--signal);color:var(--signal-ink)}
+.summary{font-size:14.5px;color:var(--ink);margin:0}
+.summary.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13.5px;margin:2px 0 0}
+.facts dt{color:var(--muted);font-weight:600}
+.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.source{font-size:12.5px;color:var(--muted)}
+.source a{color:var(--accent-text);font-weight:600;text-decoration:none}
+.source a:hover{text-decoration:underline}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:38px;padding:0 13px;border-radius:10px;font-weight:700;font-size:13.5px;text-decoration:none;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);white-space:nowrap}
+.btn svg{width:16px;height:16px;flex:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent}
+.btn.icon{width:38px;padding:0}
+.btn[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:var(--signal-ink)}
+.btn.block{width:100%}
+.btn[disabled]{opacity:.6;cursor:default}
+
+/* attendance (Open Gyms) */
+.card > .rsvp{grid-column:1 / -1}
+.rsvp{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 10px;padding:8px 8px 8px 12px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line)}
+.rsvp-info{display:flex;align-items:center;gap:10px;min-width:0;font-size:14px;font-weight:600;line-height:1.25}
+.rsvp-info span{white-space:nowrap}
+.rsvp-info svg{width:20px;height:20px;flex:none;color:var(--muted)}
+.rsvp-info b{font-family:var(--font-display);font-weight:800;font-size:21px;line-height:1}
+.rsvp-info small{display:block;font-size:12px;font-weight:500;color:var(--muted)}
+.btn.rsvp-btn{flex:none;margin-left:auto;background:var(--surface);border-color:var(--line)}
+.btn.rsvp-btn[aria-pressed="true"]{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.linkbtn{font-weight:700;font-size:13.5px;color:var(--accent-text);display:inline-flex;align-items:center;gap:4px}
+.linkbtn svg{width:15px;height:15px}
+a.linkbtn{text-decoration:none}
+a.linkbtn:hover{text-decoration:underline}
+.copybox .linkbtn{justify-self:start}
+
+/* news list */
+.list{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.row{display:grid;gap:6px;padding:14px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.src{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.row-title{font-weight:700;font-size:16px;line-height:1.3}
+.row a.more{color:var(--accent-text);font-weight:700;font-size:13.5px;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.row a.more svg{width:14px;height:14px}
+
+/* notices & states */
+.notice{border-radius:16px;padding:16px;background:var(--surface);border:1px dashed var(--muted);display:grid;gap:10px}
+.notice h3{font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1.1}
+.notice p{margin:0;color:var(--muted);font-size:14px}
+.shotclock{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--ink);color:var(--signal);font-family:var(--font-mono);font-size:20px;font-weight:500;letter-spacing:.02em}
+.notice-head{display:flex;gap:12px;align-items:center}
+.skel{height:96px;border-radius:16px;background:linear-gradient(90deg,var(--surface) 0%,var(--surface-2) 50%,var(--surface) 100%);background-size:200% 100%;animation:shimmer 1.4s infinite linear;border:1px solid var(--line)}
+@keyframes shimmer{to{background-position:-200% 0}}
+.past-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-weight:700;font-size:14px}
+.past-toggle svg{width:18px;height:18px;transition:transform .2s}
+.past-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+
+/* week strip */
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{display:grid;justify-items:center;gap:2px;padding:8px 0 7px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.day .wd{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.day .dn{font-family:var(--font-display);font-weight:800;font-size:21px;line-height:1;font-variant-numeric:tabular-nums}
+.day .dots{height:6px;display:flex;gap:3px}
+.day .dots i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.day[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.day[aria-pressed="true"] .wd{color:var(--bg);opacity:.75}
+.day.today .wd{color:var(--accent-text)}
+.day[aria-pressed="true"].today .wd{color:var(--signal)}
+
+/* profile */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:12px}
+.panel h2{font-family:var(--font-display);font-weight:700;font-size:23px;line-height:1.1}
+.panel p{margin:0;color:var(--muted);font-size:14px}
+.field{display:grid;gap:6px}
+.field label,.lbl-sm{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.input,.select,textarea.input{width:100%;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);padding:10px 12px;font-size:15px}
+textarea.input{min-height:84px;resize:vertical}
+.input:focus,.select:focus{outline:3px solid var(--focus);outline-offset:1px}
+.inline{display:flex;gap:8px;flex-wrap:wrap}
+.inline .input{flex:1 1 220px;min-width:0}
+.inline .field{min-width:0}
+.check-row{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14.5px;padding:12px;border-radius:10px;background:var(--surface-2);cursor:pointer}
+.check-row input{width:20px;height:20px;margin:0;accent-color:var(--accent);flex:none}
+.err{color:var(--danger);font-size:13px;font-weight:600}
+.connected{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;padding:12px;border-radius:12px;background:var(--ok-soft)}
+.connected .badge{width:40px;height:40px;border-radius:10px;background:var(--surface);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-style:italic;font-size:15px;color:var(--ink)}
+.connected b{display:block;color:var(--ok);font-size:14px}
+.connected span{display:block;font-size:13px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.plan-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.plan-list li{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:14px;padding:10px 12px;border-radius:10px;background:var(--surface-2)}
+.saved-row{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:10px 12px;border-radius:10px;background:var(--surface-2);font-size:14px}
+.saved-row b{font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.saved-row span{color:var(--muted);font-size:13px;white-space:nowrap}
+
+/* bottom tabs */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;justify-content:center;pointer-events:none}
+.tabbar-inner{pointer-events:auto;width:100%;max-width:540px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:max(6px, env(safe-area-inset-left, 0px));padding-right:max(6px, env(safe-area-inset-right, 0px))}
+.tab{display:grid;justify-items:center;gap:3px;padding:8px 2px 9px;font-size:11.5px;font-weight:700;color:var(--muted)}
+.tab .ic{display:grid;place-items:center;width:52px;height:30px;border-radius:999px;transition:background .15s}
+.tab svg{width:22px;height:22px}
+.tab[aria-selected="true"]{color:var(--ink)}
+.tab[aria-selected="true"] .ic{background:var(--accent-soft);color:var(--accent-text)}
+
+/* sheets */
+.scrim{position:fixed;inset:0;z-index:20;background:rgba(10,12,15,.45);display:flex;align-items:flex-end;justify-content:center}
+.scrim[hidden]{display:none!important}
+.sheet{width:100%;max-width:540px;max-height:88vh;overflow:auto;background:var(--bg);border-radius:20px 20px 0 0;padding-top:8px;padding-bottom:calc(20px + env(safe-area-inset-bottom, 0px));padding-left:var(--gutter-l);padding-right:var(--gutter-r);display:grid;gap:16px;animation:up .22s ease-out}
+@keyframes up{from{transform:translateY(24px);opacity:.6}to{transform:none;opacity:1}}
+.grabber{justify-self:center;width:40px;height:5px;border-radius:9px;background:var(--line)}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sheet-head h2{font-family:var(--font-display);font-weight:800;font-style:italic;font-size:28px;line-height:1;text-transform:uppercase}
+.src-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.src-list li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:10px;align-items:start;padding:11px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.src-list .sd{width:10px;height:10px;border-radius:50%;margin-top:5px;background:var(--muted)}
+.src-list .sd.ok{background:var(--ok)}
+.src-list .sd.blocked{background:var(--danger)}
+.src-list .sd.planned{background:transparent;border:2px solid var(--muted)}
+.src-list b{display:block;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
+.src-list span{display:block;font-size:13px;color:var(--muted)}
+.src-list em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:8px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start;font-size:14px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--font-display);font-weight:800;font-size:17px}
+.steps b{display:block}
+.steps span{color:var(--muted)}
+.log{font-family:var(--font-mono);font-size:12px;line-height:1.6;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--muted)}
+.kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kv div{padding:10px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.kv b{display:block;font-family:var(--font-display);font-weight:800;font-size:26px;line-height:1;font-variant-numeric:tabular-nums}
+.kv span{font-size:12px;color:var(--muted);font-weight:600}
+.city-list{display:grid;gap:8px}
+.city-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-weight:700}
+.city-row span{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.city-row.live span{color:var(--ok)}
+.copybox{display:grid;gap:8px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom, 0px));transform:translateX(-50%);z-index:30;max-width:min(92vw,480px);background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.toast[hidden]{display:none!important}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+
+<div class="ground" aria-hidden="true">
+  <svg class="c1" viewBox="0 0 640 480" fill="none" stroke="currentColor" stroke-width="4">
+    <rect x="20" y="20" width="600" height="440"/>
+    <rect x="222" y="20" width="196" height="232"/>
+    <path d="M248 252 a72 72 0 0 0 144 0"/>
+    <path d="M50 20 V105 A270 270 0 0 0 590 105 V20"/>
+    <path d="M295 83 a25 25 0 0 0 50 0"/>
+    <path d="M296 54 H344"/>
+  </svg>
+  <svg class="c2" viewBox="0 0 640 480" fill="none" stroke="currentColor" stroke-width="4">
+    <rect x="20" y="20" width="600" height="440"/>
+    <rect x="222" y="20" width="196" height="232"/>
+    <path d="M248 252 a72 72 0 0 0 144 0"/>
+    <path d="M50 20 V105 A270 270 0 0 0 590 105 V20"/>
+    <path d="M296 54 H344"/>
+  </svg>
+</div>
+
+<div class="app" id="app">
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner gutter">
+      <a class="brand" href="#news" data-act="tab" data-tab="news" aria-label="Checkball, zur Startseite">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#14171C"/><circle cx="50" cy="50" r="34" fill="#EF5A1E"/><path d="M70.85 23.15A34 34 0 1 1 23.15 70.85A34 34 0 0 0 70.85 23.15Z" fill="#C8461A"/><path d="M50 16V84M16 50H84" stroke="#14171C" stroke-width="3.6" stroke-linecap="round"/><path d="M30.5 22.15Q45.5 50 30.5 77.85M69.5 22.15Q54.5 50 69.5 77.85" fill="none" stroke="#14171C" stroke-width="3.6" stroke-linecap="round"/><circle cx="75" cy="75" r="15" fill="#FFD21F" stroke="#14171C" stroke-width="3.5"/><path d="M68.4 75.4L72.9 79.9L81.6 70.4" fill="none" stroke="#14171C" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="wordmark">Checkball</span>
+      </a>
+      <button class="city-btn" type="button" data-act="sheet" data-sheet="city" aria-label="Stadt wählen, aktuell Berlin">Berlin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="agent-chip" id="agentChip" type="button" data-act="sheet" data-sheet="agent" data-state="none"><span class="dot"></span><span class="lbl"><span class="day" id="agentDay"></span><span id="agentLbl">Agent</span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- NEWS -->
+    <section class="pane gutter" id="pane-news" aria-labelledby="t-news">
+      <h1 class="vh" id="t-news">News</h1>
+      <div id="hero"></div>
+      <div class="section">
+        <div class="pane-head"><h2 class="h-sec">News aus der 3x3-Welt</h2><span class="sub" id="newsCount"></span></div>
+        <div id="newsList"></div>
+      </div>
+    </section>
+
+    <!-- TURNIERE -->
+    <section class="pane gutter" id="pane-turniere" aria-labelledby="t-turniere" hidden>
+      <div class="pane-head"><h1 class="h-pane" id="t-turniere">Turniere</h1><span class="sub">chronologisch</span></div>
+      <div class="chips" id="filterChips" role="toolbar" aria-label="Nach Klasse filtern"></div>
+      <div id="tourList" class="stack"></div>
+    </section>
+
+    <!-- GYMS & EVENTS -->
+    <section class="pane gutter" id="pane-gyms" aria-labelledby="t-gyms" hidden>
+      <div class="pane-head"><h1 class="h-pane" id="t-gyms">Open Gyms &amp; Events</h1></div>
+      <div class="section">
+        <div class="pane-head"><h2 class="h-sec">Die nächsten 7 Tage</h2><button class="linkbtn" type="button" data-act="day" data-day="" id="dayReset" hidden>Alle Tage</button></div>
+        <div class="week" id="week" role="toolbar" aria-label="Tag wählen"></div>
+      </div>
+      <div class="section"><div class="pane-head"><h2 class="h-sec">Open Gyms</h2><button class="linkbtn" type="button" data-act="sheet" data-sheet="report" data-kind="gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Open Gym eintragen</button></div><div id="gymList" class="stack"></div></div>
+      <div class="section"><h2 class="h-sec">Events &amp; Camps</h2><div id="eventList" class="stack"></div></div>
+      <div class="notice">
+        <div class="notice-head"><span class="shotclock" aria-hidden="true">+1</span><h3>Du kennst ein Open Gym?</h3></div>
+        <p>Melde es hier. Der Agent prüft Ort, Zeiten und Quelle und nimmt es in den Feed auf.</p>
+        <div><button class="btn primary" type="button" data-act="sheet" data-sheet="report" data-kind="gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Open Gym melden</button></div>
+      </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="pane gutter" id="pane-profil" aria-labelledby="t-profil" hidden>
+      <div class="pane-head"><h1 class="h-pane" id="t-profil">Profil</h1></div>
+      <div class="panel" id="fibaPanel"></div>
+      <div class="panel">
+        <h2>Meine Klassen</h2>
+        <p>Turniere in deinen Klassen bekommen das Label „Für dich“ und lassen sich mit einem Tipp filtern.</p>
+        <div class="tags" id="classChips" role="group" aria-label="Klassen wählen"></div>
+      </div>
+      <div class="panel">
+        <h2>Mein Bezirk</h2>
+        <div class="field"><label for="district">Bezirk</label>
+          <select class="select" id="district"></select></div>
+      </div>
+      <div class="panel">
+        <h2>Gemerkt</h2>
+        <div id="savedList" class="stack"></div>
+      </div>
+      <div class="panel" id="installPanel" hidden></div>
+      <div class="panel">
+        <h2>Benachrichtigungen</h2>
+        <p>Diese Hinweise kommen mit der App-Version für iOS und Android.</p>
+        <ul class="plan-list">
+          <li>Neues Turnier in meiner Klasse<span class="pill planned">geplant</span></li>
+          <li>Anmeldeschluss in 48 Stunden<span class="pill planned">geplant</span></li>
+          <li>Open Gym heute in meinem Bezirk<span class="pill planned">geplant</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Event melden</h2>
+        <p>Turnier, Open Gym, Camp oder Watch Party: Was in Berlin mit 3x3 zu tun hat, gehört in den Feed.</p>
+        <div><button class="btn primary" type="button" data-act="sheet" data-sheet="report" data-kind="turnier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Event melden</button></div>
+      </div>
+      <p class="sub" style="margin:0">Checkball sammelt öffentlich angekündigte 3x3-Termine aus FIBA 3x3, DBB, BBV, Vereinen und der Community. Ein Claude-Agent prüft die Quellen jeden Tag. Kontakt: <a class="linkbtn" href="mailto:ambitioncheckball@gmail.com">ambitioncheckball@gmail.com</a> · Instagram: @checkball.berlin</p>
+      <p class="sub" id="legalLinks" style="margin:0" hidden><a class="linkbtn" href="impressum.html">Impressum</a> · <a class="linkbtn" href="datenschutz.html">Datenschutz</a></p>
+    </section>
+  </main>
+</div>
+
+<nav class="tabbar" aria-label="Hauptnavigation">
+  <div class="tabbar-inner" role="tablist">
+    <button class="tab" role="tab" type="button" data-act="tab" data-tab="news" id="tab-news" aria-controls="pane-news" aria-selected="true"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v14H6a2 2 0 0 1-2-2z"/><path d="M16 9h4v8a2 2 0 0 1-2 2h-2"/><path d="M7.5 9h5M7.5 12.5h5M7.5 16h3"/></svg></span>News</button>
+    <button class="tab" role="tab" type="button" data-act="tab" data-tab="turniere" id="tab-turniere" aria-controls="pane-turniere" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h5v6H3M8 7h4M3 14h5v6H3M8 17h4M12 7v10M12 12h9"/></svg></span>Turniere</button>
+    <button class="tab" role="tab" type="button" data-act="tab" data-tab="gyms" id="tab-gyms" aria-controls="pane-gyms" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="9" rx="1.5"/><rect x="9.5" y="6" width="5" height="4"/><path d="M7.5 12h9M8.5 12l1.6 8M15.5 12l-1.6 8M9.4 16h5.2"/></svg></span>Gyms &amp; Events</button>
+    <button class="tab" role="tab" type="button" data-act="tab" data-tab="profil" id="tab-profil" aria-controls="pane-profil" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>Profil</button>
+  </div>
+</nav>
+
+<div class="scrim" id="scrim" hidden>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- constants ---------- */
+  var LS_KEY = 'checkball:v1';
+  var CLASSES = ['U14', 'U16', 'U18', 'Damen', 'Herren', 'Mixed', 'FLINTA*', 'Offen'];
+  var DISTRICTS = ['Charlottenburg-Wilmersdorf', 'Friedrichshain-Kreuzberg', 'Lichtenberg', 'Marzahn-Hellersdorf', 'Mitte', 'Neukölln', 'Pankow', 'Reinickendorf', 'Spandau', 'Steglitz-Zehlendorf', 'Tempelhof-Schöneberg', 'Treptow-Köpenick'];
+  var CITIES = [['Berlin', true], ['Hamburg', false], ['München', false], ['Köln', false], ['Leipzig', false], ['Potsdam', false]];
+  var TABS = ['news', 'turniere', 'gyms', 'profil'];
+  var WD = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+  var WD_LONG = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  var MON = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+  var MON_LONG = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+  var CONTACT_MAIL = 'ambitioncheckball@gmail.com';
+  var INSTA_HANDLE = 'checkball.berlin';
+  /* Outside claude.ai (the open web version on GitHub Pages) there is no Claude runtime: the feed then comes from data/items.json. */
+  var IS_WEB = !(window.claude && typeof window.claude.use === 'function');
+
+  var I = {
+    ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+    star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.8l5.9-.9z"/></svg>',
+    cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>',
+    copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>',
+    pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+    chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
+    right: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
+    close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+    plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
+    spark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg>',
+    hoop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="9" rx="1.5"/><rect x="9.5" y="6" width="5" height="4"/><path d="M7.5 12h9M8.5 12l1.6 8M15.5 12l-1.6 8M9.4 16h5.2"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>',
+    users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M15.5 4.8a3.5 3.5 0 0 1 0 6.4M17.5 14.3c2.4.6 4 2.7 4 5.7"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+  };
+
+  /* ---------- prefs (per viewer, browser storage) ---------- */
+  function loadPrefs() {
+    var p = { classes: [], district: '', fiba: '', saved: [] };
+    try {
+      var raw = window.localStorage.getItem(LS_KEY);
+      if (raw) {
+        var o = JSON.parse(raw);
+        if (o && typeof o === 'object') {
+          if (Array.isArray(o.classes)) p.classes = o.classes.filter(function (c) { return CLASSES.indexOf(c) > -1; });
+          if (typeof o.district === 'string') p.district = o.district;
+          if (typeof o.fiba === 'string') p.fiba = o.fiba;
+          if (Array.isArray(o.saved)) p.saved = o.saved.filter(function (s) { return typeof s === 'string'; }).slice(0, 200);
+        }
+      }
+    } catch (e) { /* storage unavailable */ }
+    return p;
+  }
+  function savePrefs() {
+    try { window.localStorage.setItem(LS_KEY, JSON.stringify(prefs)); } catch (e) { /* ignore */ }
+  }
+  var prefs = loadPrefs();
+
+  /* ---------- state ---------- */
+  var state = {
+    items: [], meta: null, status: 'loading',
+    tab: tabFromHash(), filter: 'Alle', forMe: false, day: '', showPast: false,
+    expanded: {}, db: null, uid: null, canEdit: false, reportKind: 'turnier', reportCats: [], reportDays: [], reportSetting: '',
+    /* attendance: 'db' inside claude.ai, 'fb' in the open web version with Firebase configured, null = off */
+    rsvpMode: null, rsvpCounts: {}, rsvpMine: {}, rsvpBusy: {}
+  };
+
+  /* ---------- helpers ---------- */
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function str(v) { return typeof v === 'string' ? v : ''; }
+  function arr(v) { return Array.isArray(v) ? v.filter(function (x) { return typeof x === 'string'; }) : []; }
+  function safeUrl(u) {
+    if (typeof u !== 'string' || !u) return '';
+    try { var x = new URL(u); return (x.protocol === 'https:' || x.protocol === 'http:') ? x.href : ''; } catch (e) { return ''; }
+  }
+  function parseDate(s) {
+    if (typeof s !== 'string') return null;
+    var m = s.match(/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/);
+    if (!m) return null;
+    var d = new Date(+m[1], +m[2] - 1, +m[3], m[4] ? +m[4] : 0, m[5] ? +m[5] : 0);
+    return isNaN(d) ? null : d;
+  }
+  function hasTime(s) { return typeof s === 'string' && /T\d{2}:\d{2}/.test(s); }
+  function sod(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function dayDiff(a, b) { return Math.round((sod(b) - sod(a)) / 86400000); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function fmtDay(d) { return WD[d.getDay()] + ', ' + d.getDate() + '. ' + MON_LONG[d.getMonth()]; }
+  function fmtShort(d) { return pad(d.getDate()) + '.' + pad(d.getMonth() + 1) + '.'; }
+  function fmtTime(d) { return pad(d.getHours()) + ':' + pad(d.getMinutes()); }
+  function rel(d) {
+    var n = dayDiff(new Date(), d);
+    if (n === 0) return 'heute';
+    if (n === 1) return 'morgen';
+    if (n === -1) return 'gestern';
+    if (n > 1 && n < 14) return 'in ' + n + ' Tagen';
+    if (n < -1 && n > -14) return 'vor ' + (-n) + ' Tagen';
+    if (n >= 14 && n < 60) return 'in ' + Math.round(n / 7) + ' Wochen';
+    return fmtShort(d) + d.getFullYear();
+  }
+  function hm(s) { var m = /^(\d{1,2}):(\d{2})$/.exec(str(s)); return m ? [+m[1], +m[2]] : null; }
+
+  /* Weekdays of a recurring entry, Monday first. Accepts `weekdays: [..]` or the older single `weekday`. */
+  function recDays(rec) {
+    if (!rec || typeof rec !== 'object') return [];
+    var src = Array.isArray(rec.weekdays) ? rec.weekdays : (typeof rec.weekday === 'number' ? [rec.weekday] : []);
+    return src.filter(function (d, i, a) { return typeof d === 'number' && d >= 0 && d <= 6 && a.indexOf(d) === i; })
+      .sort(function (a, b) { return ((a + 6) % 7) - ((b + 6) % 7); });
+  }
+  function nextOccurrence(rec, from) {
+    var days = recDays(rec);
+    if (!days.length || rec.freq === 'irregular') return null;
+    var t = hm(rec.from) || [0, 0];
+    var tt = hm(rec.to);
+    var now = from || new Date();
+    if (rec.freq === 'monthly-first') {
+      for (var k = 0; k < 3; k++) {
+        var first = new Date(now.getFullYear(), now.getMonth() + k, 1);
+        while (first.getDay() !== days[0]) first.setDate(first.getDate() + 1);
+        var cand = new Date(first.getFullYear(), first.getMonth(), first.getDate(), t[0], t[1]);
+        var end = tt ? new Date(first.getFullYear(), first.getMonth(), first.getDate(), tt[0], tt[1]) : cand;
+        if (end >= now) return cand;
+      }
+      return null;
+    }
+    for (var i = 0; i < 8; i++) {
+      var d = addDays(sod(now), i);
+      if (days.indexOf(d.getDay()) < 0) continue;
+      var c = new Date(d.getFullYear(), d.getMonth(), d.getDate(), t[0], t[1]);
+      var e2 = tt ? new Date(d.getFullYear(), d.getMonth(), d.getDate(), tt[0], tt[1]) : c;
+      if (e2 >= now) return c;
+    }
+    return null;
+  }
+  function occursOn(item, day) {
+    var rec = item.recurring;
+    if (rec) {
+      var rdays = recDays(rec);
+      if (rec.freq === 'irregular' || rdays.indexOf(day.getDay()) < 0) return false;
+      if (rec.freq === 'monthly-first') return day.getDate() <= 7;
+      return true;
+    }
+    var s = parseDate(item.start); if (!s) return false;
+    var e = parseDate(item.end) || s;
+    return sod(day) >= sod(s) && sod(day) <= sod(e);
+  }
+  function ymd(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  /* The next session of an Open Gym that people can say yes to: weekly ones get a fresh key (item id + date)
+     every session, one-off ones (holiday Open Gym, Open Gym Night) one key for their date or date range. */
+  function rsvpOcc(item) {
+    if (item.type !== 'gym') return null;
+    var id = String(item.id).toLowerCase().replace(/[^a-z0-9-]/g, '-').slice(0, 80);
+    if (item.recurring) {
+      var d = nextOccurrence(item.recurring);
+      return d ? { date: d, key: id + '__' + ymd(d), label: WD[d.getDay()] + ', ' + fmtShort(d) } : null;
+    }
+    var s = parseDate(item.start);
+    if (!s || isPast(item)) return null;
+    var e = parseDate(item.end);
+    return { date: s, key: id + '__' + ymd(s), label: e && sod(e) > sod(s) ? fmtShort(s) + '–' + fmtShort(e) : WD[s.getDay()] + ', ' + fmtShort(s) };
+  }
+  /* Keys stay remembered two weeks, so a running multi-day Open Gym keeps its yes. */
+  function rsvpCutoff() { return ymd(addDays(new Date(), -14)); }
+  function startOf(item) {
+    if (item.recurring) return nextOccurrence(item.recurring);
+    return parseDate(item.start) || parseDate(item.sortKey);
+  }
+  function endOf(item) { return parseDate(item.end) || parseDate(item.start); }
+  function isPast(item) {
+    if (item.recurring) return false;
+    var e = endOf(item);
+    return !!e && sod(e) < sod(new Date());
+  }
+  function isPlanned(item) { return str(item.status) === 'geplant'; }
+  function isNew(item) { var f = parseDate(item.foundAt); return !!f && dayDiff(f, new Date()) <= 2; }
+  /* After a first full import almost everything is new; badges only help once a few items stand out. */
+  function showNewBadge(item) {
+    if (!isNew(item)) return false;
+    var n = state.items.filter(isNew).length;
+    return n <= Math.max(5, Math.floor(state.items.length * 0.4));
+  }
+  function forMe(item) {
+    if (!prefs.classes.length) return false;
+    var c = arr(item.categories);
+    return c.some(function (x) { return prefs.classes.indexOf(x) > -1; });
+  }
+  function byType(t) { return state.items.filter(function (i) { return i.type === t; }); }
+
+  function gcalUrl(item) {
+    var s = startOf(item); if (!s) return '';
+    var base = 'https://calendar.google.com/calendar/render?action=TEMPLATE';
+    var title = str(item.title);
+    var loc = [str(item.venue), str(item.address), 'Berlin'].filter(Boolean).join(', ');
+    var details = str(item.summary) + (safeUrl(item.regUrl) ? '\nAnmeldung: ' + safeUrl(item.regUrl) : '') + '\nGefunden mit Checkball';
+    var dates;
+    function stamp(d) { return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + 'T' + pad(d.getHours()) + pad(d.getMinutes()) + '00'; }
+    function dstamp(d) { return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()); }
+    if (item.recurring) {
+      var t2 = hm(item.recurring.to);
+      var e = t2 ? new Date(s.getFullYear(), s.getMonth(), s.getDate(), t2[0], t2[1]) : new Date(s.getTime() + 7200000);
+      dates = stamp(s) + '/' + stamp(e);
+      var codes = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'], rdays = recDays(item.recurring);
+      var rr = item.recurring.freq === 'monthly-first' ? 'RRULE:FREQ=MONTHLY;BYDAY=1' + codes[rdays[0]] : 'RRULE:FREQ=WEEKLY;BYDAY=' + rdays.map(function (d) { return codes[d]; }).join(',');
+      return base + '&text=' + encodeURIComponent(title) + '&dates=' + dates + '&ctz=Europe%2FBerlin&recur=' + encodeURIComponent(rr) + '&location=' + encodeURIComponent(loc) + '&details=' + encodeURIComponent(details);
+    }
+    if (!parseDate(item.start)) return '';
+    if (hasTime(item.start)) {
+      var ee = parseDate(item.end) || new Date(s.getTime() + 3 * 3600000);
+      dates = stamp(s) + '/' + stamp(ee);
+    } else {
+      var last = parseDate(item.end) || s;
+      dates = dstamp(s) + '/' + dstamp(addDays(last, 1));
+    }
+    return base + '&text=' + encodeURIComponent(title) + '&dates=' + dates + '&ctz=Europe%2FBerlin&location=' + encodeURIComponent(loc) + '&details=' + encodeURIComponent(details);
+  }
+
+  function whenText(item) {
+    if (item.recurring) {
+      var r = item.recurring, rd = recDays(r), lbl = str(r.label);
+      if (!lbl) {
+        if (r.freq === 'irregular' || !rd.length) lbl = 'wechselnde Termine';
+        else if (r.freq === 'monthly-first') lbl = 'jeden 1. ' + WD_LONG[rd[0]] + ' im Monat';
+        else if (rd.length === 1) lbl = 'jeden ' + WD_LONG[rd[0]];
+        else lbl = rd.slice(0, -1).map(function (d) { return WD[d]; }).join(', ') + ' und ' + WD[rd[rd.length - 1]];
+      }
+      return lbl + (r.from ? ' · ' + r.from + (r.to ? '–' + r.to : '') + ' Uhr' : '');
+    }
+    var s = parseDate(item.start);
+    if (!s) return str(item.dateLabel) || 'Termin folgt';
+    var e = parseDate(item.end);
+    var txt;
+    if (e && sod(e) > sod(s)) {
+      txt = s.getMonth() === e.getMonth() ? WD[s.getDay()] + '–' + WD[e.getDay()] + ', ' + s.getDate() + '.–' + e.getDate() + '. ' + MON_LONG[s.getMonth()] : fmtShort(s) + '–' + fmtShort(e);
+    } else {
+      txt = fmtDay(s);
+    }
+    if (s.getFullYear() !== new Date().getFullYear()) txt += ' ' + s.getFullYear();
+    if (hasTime(item.start)) txt += ' · ' + fmtTime(s) + (e && hasTime(item.end) && sod(e).getTime() === sod(s).getTime() ? '–' + fmtTime(e) : '') + ' Uhr';
+    return txt;
+  }
+
+  /* ---------- rendering ---------- */
+  function dateBlock(item) {
+    if (item.recurring) {
+      var n = nextOccurrence(item.recurring);
+      if (n) return '<div class="dateblock"><span class="w">' + WD[n.getDay()] + '</span><span class="d num">' + n.getDate() + '</span><span class="m">' + MON[n.getMonth()] + '</span></div>';
+      return '<div class="dateblock">' + I.hoop + '</div>';
+    }
+    var s = parseDate(item.start);
+    if (s) return '<div class="dateblock"><span class="w">' + WD[s.getDay()] + '</span><span class="d num">' + s.getDate() + '</span><span class="m">' + MON[s.getMonth()] + (s.getFullYear() !== new Date().getFullYear() ? ' ’' + String(s.getFullYear()).slice(2) : '') + '</span></div>';
+    var k = parseDate(item.sortKey);
+    if (k) return '<div class="dateblock"><span class="w">ab</span><span class="d sm">' + MON[k.getMonth()].toUpperCase() + '</span><span class="m">' + k.getFullYear() + '</span></div>';
+    return '<div class="dateblock"><span class="d sm">TBA</span></div>';
+  }
+
+  function pills(item) {
+    var out = [];
+    if (isPast(item)) out.push('<span class="pill past">vorbei</span>');
+    else if (isPlanned(item)) out.push('<span class="pill planned">in Planung</span>');
+    if (!isPast(item)) {
+      var dl = parseDate(item.deadline);
+      if (dl) {
+        var dd = dayDiff(new Date(), dl);
+        if (dd >= 0 && dd <= 14) out.push('<span class="pill soon">Anmeldung ' + (dd === 0 ? 'endet heute' : 'noch ' + dd + (dd === 1 ? ' Tag' : ' Tage')) + '</span>');
+      }
+      if (safeUrl(item.regUrl) && !isPlanned(item)) out.push('<span class="pill ok">Anmeldung über FIBA</span>');
+      if (forMe(item)) out.push('<span class="pill forme">Für dich</span>');
+    }
+    if (showNewBadge(item) && !isPast(item)) out.push('<span class="pill new">neu</span>');
+    return out.length ? '<div class="tags">' + out.join('') + '</div>' : '';
+  }
+
+  function sourceLine(item) {
+    var parts = [];
+    var f = parseDate(item.foundAt);
+    if (f) parts.push('Vom Agenten erfasst am ' + fmtShort(f) + f.getFullYear());
+    var url = safeUrl(item.sourceUrl);
+    var name = str(item.sourceName);
+    if (name) parts.push('Quelle: ' + (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(name) + '</a>' : esc(name)));
+    else if (url) parts.push('<a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle</a>');
+    return parts.length ? '<div class="source">' + parts.join(' · ') + '</div>' : '';
+  }
+
+  function eventCard(item) {
+    var id = esc(item.id);
+    var open = !!state.expanded[item.id];
+    var past = isPast(item);
+    var saved = prefs.saved.indexOf(item.id) > -1;
+    var cats = arr(item.categories);
+    var reg = safeUrl(item.regUrl);
+    var src = safeUrl(item.sourceUrl);
+    var cal = past ? '' : gcalUrl(item);
+    var h = '<article class="card' + (past ? ' is-past' : '') + '" id="item-' + id + '">' + dateBlock(item) + '<div class="body">';
+    h += '<h3 class="c-title">' + esc(item.title) + '</h3>';
+    h += '<div class="meta"><span>' + I.clock + esc(whenText(item)) + '</span>';
+    if (str(item.venue)) h += '<span>' + I.pin + esc(item.venue) + (str(item.district) ? ' · ' + esc(item.district) : '') + '</span>';
+    h += '</div>';
+    var extra = [];
+    if (str(item.setting) === 'halle') extra.push('Halle');
+    else if (str(item.setting) === 'freiplatz') extra.push('Freiplatz');
+    if (item.type === 'gym' && str(item.price) && str(item.price).length <= 24) extra.push(str(item.price));
+    if (str(item.level)) extra.push(str(item.level));
+    if (cats.length || extra.length) {
+      h += '<div class="tags">' + cats.concat(extra).map(function (c) { return '<span class="tag">' + esc(c) + '</span>'; }).join('') + '</div>';
+    }
+    h += pills(item);
+    if (str(item.summary)) h += '<p class="summary' + (open ? '' : ' clamp') + '">' + esc(item.summary) + '</p>';
+    if (open) {
+      var facts = [];
+      if (str(item.organizer)) facts.push(['Veranstalter', esc(item.organizer)]);
+      if (str(item.address)) facts.push(['Adresse', esc(item.address)]);
+      if (str(item.price)) facts.push(['Kosten', esc(item.price)]);
+      if (str(item.audience)) facts.push(['Für', esc(item.audience)]);
+      if (str(item.note)) facts.push(['Hinweis', esc(item.note)]);
+      if (item.type === 'turnier' && reg) facts.push(['Anmeldung', 'Team mit 3 Spielenden plus 1 Wechsel, über die FIBA 3x3 App oder play.fiba3x3.com']);
+      if (facts.length) h += '<dl class="facts">' + facts.map(function (f) { return '<dt>' + f[0] + '</dt><dd>' + f[1] + '</dd>'; }).join('') + '</dl>';
+      h += sourceLine(item);
+    }
+    h += '<div class="actions">';
+    if (reg && !past) h += '<a class="btn primary" href="' + esc(reg) + '" target="_blank" rel="noopener">' + (item.type === 'turnier' ? 'Zur FIBA-Anmeldung' : 'Zur Anmeldung') + I.ext + '</a>';
+    else if (reg && past) h += '<a class="btn" href="' + esc(reg) + '" target="_blank" rel="noopener">FIBA-Eventseite' + I.ext + '</a>';
+    else if (src && !open) h += '<a class="btn" href="' + esc(src) + '" target="_blank" rel="noopener">Quelle' + I.ext + '</a>';
+    if (!past) h += '<button class="btn icon" type="button" data-act="save" data-id="' + id + '" aria-pressed="' + saved + '" aria-label="' + (saved ? 'Gemerkt, entfernen' : 'Merken') + '" title="Merken">' + I.star + '</button>';
+    if (cal) h += '<a class="btn icon" href="' + esc(cal) + '" target="_blank" rel="noopener" aria-label="In Google Kalender eintragen" title="In Google Kalender eintragen">' + I.cal + '</a>';
+    h += '<button class="btn icon" type="button" data-act="share" data-id="' + id + '" aria-label="Infos kopieren" title="Infos kopieren">' + I.copy + '</button>';
+    h += '<button class="btn ghost" type="button" data-act="expand" data-id="' + id + '" aria-expanded="' + open + '">' + (open ? 'Weniger' : 'Details') + '</button>';
+    h += '</div></div>' + rsvpBlock(item) + '</article>';
+    return h;
+  }
+
+  function rsvpBlock(item) {
+    if (!state.rsvpMode) return '';
+    var occ = rsvpOcc(item);
+    if (!occ) return '';
+    var n = state.rsvpCounts[occ.key], mine = !!state.rsvpMine[occ.key];
+    var label = typeof n !== 'number' ? 'Wer ist dabei?' : n === 0 ? 'Noch keine Zusagen' : '<b class="num">' + n + '</b> ' + (n === 1 ? 'Zusage' : 'Zusagen');
+    return '<div class="rsvp"><div class="rsvp-info">' + I.users + '<span>' + label + '<small>für ' + occ.label + '</small></span></div>' +
+      '<button class="btn rsvp-btn" type="button" data-act="rsvp" data-key="' + esc(occ.key) + '" aria-pressed="' + mine + '"' + (state.rsvpBusy[occ.key] ? ' disabled' : '') + '>' +
+      (mine ? I.check + 'Du bist dabei' : 'Ich bin dabei') + '</button></div>';
+  }
+
+  function newsRow(item) {
+    var d = parseDate(item.date) || parseDate(item.foundAt);
+    var url = safeUrl(item.sourceUrl);
+    var h = '<article class="row" id="item-' + esc(item.id) + '"><div class="row-top"><span class="src">' + esc(str(item.sourceName) || 'Checkball') + '</span>';
+    if (d) h += '<span class="src" style="font-weight:600;letter-spacing:0;text-transform:none">' + esc(rel(d)) + '</span>';
+    if (isPlanned(item)) h += '<span class="pill planned">Vorschau</span>';
+    if (showNewBadge(item)) h += '<span class="pill new">neu</span>';
+    h += '</div><h3 class="row-title">' + esc(item.title) + '</h3>';
+    if (str(item.summary)) h += '<p class="summary">' + esc(item.summary) + '</p>';
+    if (url) h += '<a class="more" href="' + esc(url) + '" target="_blank" rel="noopener">Weiterlesen bei ' + esc(str(item.sourceName) || 'Quelle') + I.ext + '</a>';
+    h += '</article>';
+    return h;
+  }
+
+  function stateBlock(kind) {
+    if (state.status === 'loading') return '<div class="stack" aria-busy="true"><div class="skel"></div><div class="skel"></div><span class="vh">Feed wird geladen</span></div>';
+    if (state.status === 'offline') return IS_WEB
+      ? '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">12</span><h3>Feed gerade nicht erreichbar</h3></div><p>Prüf deine Internetverbindung und versuch es noch einmal.</p><div><button class="btn" type="button" data-act="reload">Neu laden</button></div></div>'
+      : '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">12</span><h3>Live-Feed gerade nicht erreichbar</h3></div><p>Der Feed kommt aus der Checkball-Datenbank. Öffne die App über ihren claude.ai-Link, dann siehst du die aktuellen Termine.</p></div>';
+    if (state.status === 'error') return '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">!</span><h3>Feed konnte nicht geladen werden</h3></div><p>Lade die Seite neu. Wenn es bleibt, prüft der Agent die Datenbank beim nächsten Lauf.</p></div>';
+    return '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">00</span><h3>Noch keine ' + kind + '</h3></div><p>Der Agent füllt den Feed bei seinem nächsten Lauf. Du kannst auch selbst etwas melden.</p><div><button class="btn primary" type="button" data-act="sheet" data-sheet="report">' + I.plus + 'Event melden</button></div></div>';
+  }
+
+  function renderHero() {
+    var el = document.getElementById('hero');
+    var now = new Date();
+    var t30 = 0, g7 = 0, nNew = 0;
+    state.items.forEach(function (i) {
+      if (i.type === 'turnier' && !isPast(i)) { var s = parseDate(i.start); if (s && dayDiff(now, s) <= 30) t30++; }
+      if (isNew(i)) nNew++;
+    });
+    for (var k = 0; k < 7; k++) {
+      var day = addDays(sod(now), k);
+      byType('gym').forEach(function (g) { if (occursOn(g, day)) g7++; });
+    }
+    var upcoming = state.items.filter(function (i) { return i.type !== 'news' && !isPast(i) && (i.recurring || parseDate(i.start)); })
+      .map(function (i) { return { i: i, s: startOf(i) }; }).filter(function (x) { return x.s; })
+      .sort(function (a, b) { return a.s - b.s; });
+    var nx = upcoming[0];
+    var end = addDays(now, 6);
+    var range = now.getDate() + '.' + (now.getMonth() === end.getMonth() ? '' : ' ' + MON[now.getMonth()]) + '–' + end.getDate() + '. ' + MON[end.getMonth()];
+    var h = '<div class="hero"><div><div class="hero-eyebrow">' + esc(range) + '</div><h2 class="hero-title">Diese Woche in Berlin</h2></div>';
+    if (state.status === 'live') {
+      h += '<div class="stats"><div class="stat"><b>' + t30 + '</b><span>Turniere in 30 Tagen</span></div><div class="stat"><b>' + g7 + '</b><span>Open Gyms in 7 Tagen</span></div><div class="stat"><b>' + nNew + '</b><span>neu in 48 Std.</span></div></div>';
+      if (nx) {
+        var s = nx.s, tab = nx.i.type === 'turnier' ? 'turniere' : 'gyms';
+        h += '<button class="next" type="button" data-act="goto" data-tab="' + tab + '" data-id="' + esc(nx.i.id) + '"><span class="when">' + WD[s.getDay()] + '<small>' + fmtShort(s) + '</small></span><span class="t">' + esc(nx.i.title) + '<span>' + esc(rel(s)) + (str(nx.i.venue) ? ' · ' + esc(nx.i.venue) : '') + '</span></span>' + I.right + '</button>';
+      }
+    } else {
+      h += '<div class="stats" aria-hidden="true"><div class="stat"><b>–</b><span>Turniere in 30 Tagen</span></div><div class="stat"><b>–</b><span>Open Gyms in 7 Tagen</span></div><div class="stat"><b>–</b><span>neu in 48 Std.</span></div></div>';
+    }
+    h += '</div>';
+    el.innerHTML = h;
+  }
+
+  function renderNews() {
+    renderHero();
+    var list = document.getElementById('newsList');
+    var cnt = document.getElementById('newsCount');
+    var news = byType('news').sort(function (a, b) { return (parseDate(b.date) || 0) - (parseDate(a.date) || 0); });
+    cnt.textContent = state.status === 'live' && news.length ? news.length + ' Meldungen' : '';
+    if (state.status !== 'live' || !news.length) { list.innerHTML = stateBlock('News'); return; }
+    list.innerHTML = '<div class="list">' + news.map(newsRow).join('') + '</div>';
+  }
+
+  function renderTurniere() {
+    var chips = document.getElementById('filterChips');
+    var ch = '';
+    if (prefs.classes.length) ch += '<button class="chip forme" type="button" data-act="forme" aria-pressed="' + state.forMe + '">' + I.spark + 'Für dich</button>';
+    ch += ['Alle'].concat(CLASSES).map(function (c) {
+      return '<button class="chip" type="button" data-act="filter" data-v="' + esc(c) + '" aria-pressed="' + (state.filter === c) + '">' + esc(c) + '</button>';
+    }).join('');
+    chips.innerHTML = ch;
+
+    var el = document.getElementById('tourList');
+    if (state.status !== 'live') { el.innerHTML = stateBlock('Turniere'); return; }
+    var all = byType('turnier').filter(function (i) {
+      var c = arr(i.categories);
+      if (state.filter !== 'Alle' && c.indexOf(state.filter) < 0) return false;
+      if (state.forMe && !forMe(i)) return false;
+      return true;
+    });
+    var upcoming = all.filter(function (i) { return !isPast(i); }).sort(function (a, b) { return (startOf(a) || 0) - (startOf(b) || 0); });
+    var past = all.filter(isPast).sort(function (a, b) { return (startOf(b) || 0) - (startOf(a) || 0); });
+    var now = new Date();
+    var soon = upcoming.filter(function (i) { var s = parseDate(i.start); return s && dayDiff(now, s) <= 60; });
+    var h = '';
+    if (!soon.length) {
+      h += '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">12</span><h3>Gerade keine Turniere in den nächsten 60 Tagen</h3></div><p>In Berlin ist Hallen- und Planungszeit. Der Agent prüft jeden Morgen FIBA 3x3, DBB, BBV und Vereinsseiten. Neue Turniere stehen dann sofort hier.</p><div><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div></div>';
+    }
+    if (upcoming.length) {
+      var groups = {}, order = [];
+      upcoming.forEach(function (i) {
+        var s = startOf(i);
+        var key = s ? MON_LONG[s.getMonth()] + ' ' + s.getFullYear() : 'Termin folgt';
+        if (!groups[key]) { groups[key] = []; order.push(key); }
+        groups[key].push(i);
+      });
+      order.forEach(function (k) {
+        h += '<div class="section"><h2 class="h-sec">' + esc(k) + '</h2>' + groups[k].map(eventCard).join('') + '</div>';
+      });
+    } else if (state.filter !== 'Alle' || state.forMe) {
+      h += '<p class="sub">Keine kommenden Turniere in dieser Auswahl.</p>';
+    }
+    if (past.length) {
+      h += '<div class="section"><button class="past-toggle" type="button" data-act="past" aria-expanded="' + state.showPast + '">Rückblick ' + new Date().getFullYear() + ' · ' + past.length + ' Turniere' + I.chev + '</button>';
+      if (state.showPast) h += '<div class="stack">' + past.map(eventCard).join('') + '</div>';
+      h += '</div>';
+    }
+    el.innerHTML = h;
+  }
+
+  function renderGyms() {
+    var week = document.getElementById('week');
+    var now = new Date();
+    var gyms = byType('gym');
+    var wh = '';
+    for (var k = 0; k < 7; k++) {
+      var d = addDays(sod(now), k);
+      var key = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+      var n = gyms.filter(function (g) { return occursOn(g, d); }).length + byType('event').filter(function (e) { return !isPast(e) && occursOn(e, d); }).length;
+      var dots = ''; for (var j = 0; j < Math.min(n, 3); j++) dots += '<i></i>';
+      wh += '<button class="day' + (k === 0 ? ' today' : '') + '" type="button" data-act="day" data-day="' + key + '" aria-pressed="' + (state.day === key) + '" aria-label="' + WD_LONG[d.getDay()] + ', ' + d.getDate() + '. ' + MON_LONG[d.getMonth()] + ', ' + n + ' Termine"><span class="wd">' + (k === 0 ? 'Heute' : WD[d.getDay()]) + '</span><span class="dn">' + d.getDate() + '</span><span class="dots">' + dots + '</span></button>';
+    }
+    week.innerHTML = wh;
+    document.getElementById('dayReset').hidden = !state.day;
+
+    var gl = document.getElementById('gymList'), evl = document.getElementById('eventList');
+    if (state.status !== 'live') { gl.innerHTML = stateBlock('Open Gyms'); evl.innerHTML = ''; return; }
+    var dayDate = state.day ? parseDate(state.day) : null;
+    var g = gyms.filter(function (x) { return !dayDate || occursOn(x, dayDate); })
+      .sort(function (a, b) { return (startOf(a) || 8.64e15) - (startOf(b) || 8.64e15); });
+    gl.innerHTML = g.length ? g.map(eventCard).join('') : '<p class="sub">' + (dayDate ? 'An diesem Tag kein Open Gym im Feed.' : 'Noch keine Open Gyms im Feed.') + '</p>';
+    var ev = byType('event').filter(function (x) { return !isPast(x) && (!dayDate || occursOn(x, dayDate)); })
+      .sort(function (a, b) { return (startOf(a) || 0) - (startOf(b) || 0); });
+    evl.innerHTML = ev.length ? ev.map(eventCard).join('') : '<p class="sub">' + (dayDate ? 'An diesem Tag keine Events.' : 'Keine kommenden Events im Feed.') + '</p>';
+  }
+
+  function renderFiba() {
+    var p = document.getElementById('fibaPanel');
+    var h = '<h2>FIBA 3x3 Profil</h2>';
+    if (prefs.fiba) {
+      h += '<div class="connected"><span class="badge">3x3</span><div style="min-width:0"><b>Verbunden</b><span>' + esc(prefs.fiba.replace(/^https?:\/\//, '')) + '</span></div></div>';
+      h += '<p>Dein Profil, deine Ranking-Punkte und deine Anmeldungen öffnest du direkt bei FIBA. Sobald der DBB eine Datenfreigabe erteilt, zeigt Checkball Punkte und Events hier an.</p>';
+      h += '<div class="actions"><a class="btn primary" href="' + esc(safeUrl(prefs.fiba)) + '" target="_blank" rel="noopener">Mein FIBA-Profil' + I.ext + '</a><button class="btn" type="button" data-act="fiba-off">Trennen</button></div>';
+    } else {
+      h += '<p>Verknüpfe dein Spielerprofil, damit Checkball dich direkt zu deinen Events, Teams und Ranking-Punkten bei FIBA bringt.</p>';
+      h += '<form id="fibaForm" class="field" novalidate><label for="fibaUrl">Link zu deinem Profil</label><div class="inline"><input class="input" id="fibaUrl" name="fibaUrl" type="url" inputmode="url" autocomplete="off" placeholder="https://play.fiba3x3.com/players/…"><button class="btn primary" type="submit">Verbinden</button></div><span class="sub" style="font-size:13px">In der FIBA 3x3 App: Profil öffnen, teilen, Link kopieren.</span><span class="err" id="fibaErr" hidden></span></form>';
+    }
+    p.innerHTML = h;
+  }
+
+  function renderClasses() {
+    document.getElementById('classChips').innerHTML = CLASSES.map(function (c) {
+      return '<button class="chip" type="button" data-act="cls" data-v="' + esc(c) + '" aria-pressed="' + (prefs.classes.indexOf(c) > -1) + '">' + esc(c) + '</button>';
+    }).join('');
+  }
+  function renderDistrict() {
+    var sel = document.getElementById('district');
+    sel.innerHTML = '<option value="">Kein Bezirk gewählt</option>' + DISTRICTS.map(function (d) {
+      return '<option value="' + esc(d) + '"' + (prefs.district === d ? ' selected' : '') + '>' + esc(d) + '</option>';
+    }).join('');
+  }
+  function renderSaved() {
+    var el = document.getElementById('savedList');
+    var items = prefs.saved.map(function (id) { return state.items.find(function (i) { return i.id === id; }); }).filter(Boolean);
+    if (!items.length) { el.innerHTML = '<p class="sub" style="margin:0">Tippe bei einem Turnier oder Open Gym auf den Stern, dann steht es hier.</p>'; return; }
+    el.innerHTML = items.map(function (i) {
+      var s = startOf(i);
+      return '<button class="saved-row" type="button" data-act="goto" data-tab="' + (i.type === 'turnier' ? 'turniere' : 'gyms') + '" data-id="' + esc(i.id) + '"><b>' + esc(i.title) + '</b><span>' + (s ? esc(fmtShort(s)) : 'Termin folgt') + '</span></button>';
+    }).join('');
+  }
+
+  function renderAgentChip() {
+    var chip = document.getElementById('agentChip'), lbl = document.getElementById('agentLbl'), dayEl = document.getElementById('agentDay');
+    var m = state.meta, last = m && typeof m.lastRun === 'string' ? new Date(m.lastRun) : null;
+    if (last && !isNaN(last)) {
+      var hrs = (Date.now() - last.getTime()) / 3600000;
+      chip.dataset.state = hrs <= 30 ? 'ok' : 'old';
+      var d = dayDiff(last, new Date());
+      dayEl.textContent = d === 0 ? 'Heute ' : d === 1 ? 'Gestern ' : '';
+      lbl.textContent = d > 1 ? fmtShort(last) : fmtTime(last);
+      chip.setAttribute('aria-label', 'Agent: zuletzt geprüft ' + dayEl.textContent + lbl.textContent + '. Details öffnen');
+    } else {
+      chip.dataset.state = 'none';
+      dayEl.textContent = '';
+      lbl.textContent = 'Agent';
+      chip.setAttribute('aria-label', 'Agent-Status öffnen');
+    }
+  }
+
+  function renderAll() {
+    renderAgentChip();
+    renderNews();
+    renderTurniere();
+    renderGyms();
+    renderSaved();
+  }
+
+  /* ---------- tabs ---------- */
+  function tabFromHash() {
+    var h = (location.hash || '').replace('#', '');
+    return TABS.indexOf(h) > -1 ? h : 'news';
+  }
+  function setTab(t, keepScroll) {
+    if (TABS.indexOf(t) < 0) t = 'news';
+    state.tab = t;
+    TABS.forEach(function (x) {
+      document.getElementById('pane-' + x).hidden = x !== t;
+      document.getElementById('tab-' + x).setAttribute('aria-selected', String(x === t));
+    });
+    if (location.hash.replace('#', '') !== t) { try { history.replaceState(null, '', '#' + t); } catch (e) { /* ignore */ } }
+    if (!keepScroll) window.scrollTo(0, 0);
+    if (t === 'gyms') refreshCounts();
+  }
+
+  /* ---------- sheets ---------- */
+  var lastFocus = null;
+  function openSheet(kind, opts) {
+    var sheet = document.getElementById('sheet');
+    var h = '<div class="grabber" aria-hidden="true"></div>';
+    if (kind === 'agent') h += agentSheet();
+    else if (kind === 'city') h += citySheet();
+    else if (kind === 'report') h += reportSheet(opts && opts.kind);
+    sheet.innerHTML = h;
+    lastFocus = document.activeElement;
+    document.getElementById('scrim').hidden = false;
+    document.body.style.overflow = 'hidden';
+    var f = sheet.querySelector('input,button,select,textarea,a');
+    if (f) f.focus({ preventScroll: true });
+  }
+  function closeSheet() {
+    document.getElementById('scrim').hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+  function head(title) {
+    return '<div class="sheet-head"><h2 id="sheetTitle">' + title + '</h2><button class="btn icon" type="button" data-act="close" aria-label="Schließen">' + I.close + '</button></div>';
+  }
+  function agentSheet() {
+    var m = state.meta || {};
+    var last = typeof m.lastRun === 'string' ? new Date(m.lastRun) : null;
+    var st = m.stats && typeof m.stats === 'object' ? m.stats : {};
+    var h = head('Der Agent');
+    h += '<p class="sub" style="margin:0">' + (last && !isNaN(last) ? 'Zuletzt geprüft: ' + esc(fmtDay(last)) + ', ' + fmtTime(last) + ' Uhr' : 'Noch kein Lauf protokolliert') + (str(m.nextRun) ? ' · Nächster Lauf: ' + esc(m.nextRun) : '') + '</p>';
+    h += '<div class="kv"><div><b class="num">' + (typeof st.items === 'number' ? st.items : state.items.length) + '</b><span>Einträge im Feed</span></div><div><b class="num">' + (typeof st.sources === 'number' ? st.sources : '–') + '</b><span>Quellen geprüft</span></div><div><b class="num">' + (typeof st.soon === 'number' ? st.soon : '–') + '</b><span>Turniere in 60 Tagen</span></div></div>';
+    var srcs = Array.isArray(m.sources) ? m.sources : [];
+    if (srcs.length) {
+      h += '<div class="section"><h3 class="h-sec">Quellen</h3><ul class="src-list">' + srcs.map(function (s) {
+        if (!s || typeof s !== 'object') return '';
+        var stv = str(s.status), cls = stv === 'ok' ? 'ok' : stv === 'blockiert' ? 'blocked' : stv === 'geplant' ? 'planned' : '';
+        var u = safeUrl(s.url);
+        return '<li><span class="sd ' + cls + '"></span><div style="min-width:0"><b>' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener" style="text-decoration:none">' + esc(s.name) + '</a>' : esc(s.name)) + '</b>' + (str(s.note) ? '<span>' + esc(s.note) + '</span>' : '') + '</div><em>' + esc(stv) + '</em></li>';
+      }).join('') + '</ul></div>';
+    }
+    h += '<div class="section"><h3 class="h-sec">So entsteht der Feed</h3><ol class="steps">' +
+      '<li><div><b>Sammeln</b><span>FIBA 3x3, DBB, BBV, Vereinsseiten, Instagram-Accounts der Veranstalter und Community-Meldungen abfragen.</span></div></li>' +
+      '<li><div><b>Prüfen</b><span>Nur öffentlich angekündigte Termine aus Berlin und Umland. Datum, Ort, Klassen und Anmeldelink kontrollieren, Doppelte zusammenführen.</span></div></li>' +
+      '<li><div><b>Veröffentlichen</b><span>Einträge mit Quelle in den Feed schreiben, Vergangenes in den Rückblick schieben.</span></div></li>' +
+      '<li><div><b>Melden</b><span>Neue Turniere als Insta-Post-Entwurf vorbereiten. Push-Hinweise folgen mit der App-Version.</span></div></li></ol></div>';
+    var log = Array.isArray(m.log) ? m.log.filter(function (x) { return typeof x === 'string'; }).slice(0, 12) : [];
+    if (log.length) h += '<div class="section"><h3 class="h-sec">Protokoll des letzten Laufs</h3><pre class="log">' + esc(log.join('\n')) + '</pre></div>';
+    return h;
+  }
+  function citySheet() {
+    var h = head('Stadt');
+    h += '<div class="city-list">' + CITIES.map(function (c) {
+      return '<div class="city-row' + (c[1] ? ' live' : '') + '">' + esc(c[0]) + '<span>' + (c[1] ? 'aktiv' : 'bald') + '</span></div>';
+    }).join('') + '</div>';
+    h += '<p class="sub" style="margin:0">Checkball startet in Berlin. Weitere Städte folgen, sobald dort Quellen und Partner angebunden sind.</p>';
+    return h;
+  }
+  function reportSheet(kind) {
+    state.reportKind = kind === 'gym' ? 'gym' : kind === 'event' ? 'event' : 'turnier';
+    state.reportCats = []; state.reportDays = []; state.reportSetting = '';
+    var isGym = state.reportKind === 'gym';
+    var h = head(isGym ? 'Open Gym eintragen' : 'Event melden');
+    h += '<form id="reportForm" class="stack" novalidate>';
+    h += '<div class="field"><span class="lbl-sm" id="rk-l">Art</span><div class="tags" role="group" aria-labelledby="rk-l">' +
+      [['turnier', 'Turnier'], ['gym', 'Open Gym'], ['event', 'Event / Camp']].map(function (k) {
+        return '<button class="chip" type="button" data-act="rkind" data-v="' + k[0] + '" aria-pressed="' + (state.reportKind === k[0]) + '">' + k[1] + '</button>';
+      }).join('') + '</div></div>';
+    h += '<div class="field"><label for="r-title">Name</label><input class="input" id="r-title" required maxlength="120" placeholder="' + (isGym ? 'z. B. Open Run Sporthalle Wedding' : 'z. B. Kiez Cup 3x3 Neukölln') + '"></div>';
+
+    /* Open Gym: when it happens regularly */
+    h += '<div class="stack" data-group="gym"' + (isGym ? '' : ' hidden') + '>';
+    h += '<div class="field"><span class="lbl-sm" id="rd-l">Wochentage</span><div class="tags" role="group" aria-labelledby="rd-l">' + [1, 2, 3, 4, 5, 6, 0].map(function (d) {
+      return '<button class="chip" type="button" data-act="rday" data-v="' + d + '" aria-pressed="false" aria-label="' + WD_LONG[d] + '">' + WD[d] + '</button>';
+    }).join('') + '</div></div>';
+    h += '<div class="inline"><div class="field" style="flex:1 1 120px"><label for="r-from">Von</label><input class="input" id="r-from" type="time"></div><div class="field" style="flex:1 1 120px"><label for="r-to">Bis</label><input class="input" id="r-to" type="time"></div></div>';
+    h += '<div class="field"><label for="r-rhythm">Rhythmus</label><select class="select" id="r-rhythm"><option value="weekly">Jede Woche</option><option value="monthly-first">Einmal im Monat, am ersten dieser Wochentage</option><option value="irregular">Wechselnde Termine</option></select></div>';
+    h += '<div class="field"><span class="lbl-sm" id="rs-l">Wo wird gespielt?</span><div class="tags" role="group" aria-labelledby="rs-l"><button class="chip" type="button" data-act="rset" data-v="halle" aria-pressed="false">Halle</button><button class="chip" type="button" data-act="rset" data-v="freiplatz" aria-pressed="false">Freiplatz</button></div></div>';
+    h += '<div class="inline"><div class="field" style="flex:1 1 140px"><label for="r-cost">Kosten</label><input class="input" id="r-cost" maxlength="40" placeholder="kostenlos"></div><div class="field" style="flex:1 1 170px"><label for="r-level">Niveau</label><select class="select" id="r-level"><option value="">Alle Level</option><option>Einsteiger</option><option>Fortgeschrittene</option><option>Leistungsorientiert</option></select></div></div>';
+    h += '</div>';
+
+    /* Turnier / Event: one date */
+    h += '<div class="inline" data-group="date"' + (isGym ? ' hidden' : '') + '><div class="field" style="flex:1 1 150px"><label for="r-date">Datum</label><input class="input" id="r-date" type="date"></div><div class="field" style="flex:1 1 120px"><label for="r-time">Uhrzeit</label><input class="input" id="r-time" type="time"></div></div>';
+
+    h += '<div class="inline"><div class="field" style="flex:2 1 200px"><label for="r-venue">Ort</label><input class="input" id="r-venue" maxlength="120" placeholder="Halle oder Freiplatz mit Adresse"></div><div class="field" style="flex:1 1 170px"><label for="r-district">Bezirk</label><select class="select" id="r-district"><option value="">Bezirk wählen</option>' + DISTRICTS.map(function (d) { return '<option>' + esc(d) + '</option>'; }).join('') + '</select></div></div>';
+    h += '<div class="field"><span class="lbl-sm" id="rc-l">Für wen?</span><div class="tags" role="group" aria-labelledby="rc-l">' + CLASSES.map(function (c) {
+      return '<button class="chip" type="button" data-act="rcat" data-v="' + esc(c) + '" aria-pressed="false">' + esc(c) + '</button>';
+    }).join('') + '</div></div>';
+    h += '<div class="field"><label for="r-link">Link (FIBA, Instagram oder Website)</label><input class="input" id="r-link" type="url" inputmode="url" placeholder="https://"></div>';
+    h += '<div class="field"><label for="r-note">Notiz</label><textarea class="input" id="r-note" maxlength="500" placeholder="' + (isGym ? 'Anmeldung nötig? Was mitbringen? Welcher Verein steckt dahinter?' : 'Kosten? Anmeldeschluss? Wiederkehrend?') + '"></textarea></div>';
+    if (state.canEdit) h += '<label class="check-row" for="r-publish"><input type="checkbox" id="r-publish" checked>Direkt im Feed veröffentlichen</label>';
+    h += '<span class="err" id="reportErr" hidden></span>';
+    h += '<button class="btn primary block" type="submit">' + (state.canEdit ? 'Speichern' : IS_WEB ? 'Weiter' : 'Melden') + '</button>';
+    h += '<p class="sub" style="margin:0;font-size:13px">' + (state.canEdit ? 'Ohne Haken geht der Eintrag erst an den Agenten zur Prüfung.' : IS_WEB ? 'Im nächsten Schritt schickst du die Meldung per Mail oder Instagram-DM an uns. Wir prüfen jede Meldung, bevor sie im Feed erscheint.' : 'Der Agent prüft jede Meldung, bevor sie im Feed erscheint.') + '</p>';
+    h += '</form><div id="reportFallback" hidden></div>';
+    return h;
+  }
+
+  /* ---------- toast ---------- */
+  var toastTimer = null;
+  function toast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg; t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.hidden = true; }, 2600);
+  }
+  function copyText(text, okMsg, fallbackEl) {
+    var done = function () { toast(okMsg); };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { manualCopy(text, fallbackEl); });
+        return;
+      }
+    } catch (e) { /* fall through */ }
+    manualCopy(text, fallbackEl);
+  }
+  function manualCopy(text, el) {
+    if (el) { el.focus(); el.select(); toast('Markiert – jetzt kopieren'); return; }
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    toast(ok ? 'Kopiert' : 'Kopieren nicht möglich');
+  }
+  function shareText(item) {
+    var lines = [str(item.title), whenText(item)];
+    if (str(item.venue)) lines.push(str(item.venue) + (str(item.district) ? ', ' + str(item.district) : ''));
+    var u = safeUrl(item.regUrl) || safeUrl(item.sourceUrl);
+    if (u) lines.push(u);
+    lines.push('via Checkball Berlin');
+    return lines.join('\n');
+  }
+
+  /* ---------- report submit ---------- */
+  function slugify(s) {
+    return String(s).toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'eintrag';
+  }
+  function todayStr() { var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function itemFromEntry(e) {
+    /* Published by an editor of the app, so it also goes into the open web version. */
+    var it = { type: e.kind, title: e.title, foundAt: todayStr(), sourceName: 'Checkball-Community', public: true };
+    if (e.venue) it.venue = e.venue;
+    if (e.district) it.district = e.district;
+    if (e.categories.length) it.categories = e.categories;
+    if (e.note) it.summary = e.note;
+    if (e.kind === 'gym') {
+      it.recurring = { freq: e.rhythm, weekdays: e.weekdays, from: e.from || '', to: e.to || '' };
+      if (e.weekdays.length) it.recurring.weekday = e.weekdays[0];
+      if (e.setting) it.setting = e.setting;
+      if (e.cost) it.price = e.cost;
+      if (e.level) it.level = e.level;
+      if (e.link) it.sourceUrl = e.link;
+    } else {
+      it.start = e.date + (e.time ? 'T' + e.time : '');
+      if (e.link && /play\.fiba3x3\.com/.test(e.link)) it.regUrl = e.link;
+      else if (e.link) it.sourceUrl = e.link;
+    }
+    return it;
+  }
+  function submitReport(form) {
+    var err = document.getElementById('reportErr');
+    var f = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    var fail = function (msg, el) { err.textContent = msg; err.hidden = false; if (el) el.focus(); };
+    var kind = state.reportKind;
+    var title = f('r-title'), link = f('r-link');
+    if (!title) { fail('Bitte gib einen Namen an.', document.getElementById('r-title')); return; }
+    if (link && !safeUrl(link)) { fail('Der Link muss mit https:// beginnen.', document.getElementById('r-link')); return; }
+    var entry = {
+      kind: kind, title: title.slice(0, 120), venue: f('r-venue').slice(0, 120), district: f('r-district'),
+      categories: state.reportCats.slice(), link: safeUrl(link), note: f('r-note').slice(0, 500), sentAt: new Date().toISOString()
+    };
+    if (kind === 'gym') {
+      entry.rhythm = f('r-rhythm') || 'weekly';
+      entry.weekdays = state.reportDays.slice().sort(function (a, b) { return ((a + 6) % 7) - ((b + 6) % 7); });
+      entry.from = f('r-from'); entry.to = f('r-to');
+      entry.setting = state.reportSetting; entry.cost = f('r-cost').slice(0, 40); entry.level = f('r-level');
+      if (entry.rhythm !== 'irregular' && !entry.weekdays.length) { fail('Wähle mindestens einen Wochentag.', document.querySelector('[data-act="rday"]')); return; }
+      if (entry.rhythm !== 'irregular' && !entry.from) { fail('Gib an, ab wann gespielt wird.', document.getElementById('r-from')); return; }
+      if (entry.rhythm === 'monthly-first') entry.weekdays = entry.weekdays.slice(0, 1);
+    } else {
+      entry.date = f('r-date'); entry.time = f('r-time');
+    }
+    err.hidden = true;
+    var btn = form.querySelector('button[type="submit"]');
+    var label = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Wird gespeichert …';
+    var restore = function () { btn.disabled = false; btn.textContent = label; };
+    var pub = document.getElementById('r-publish');
+    if (state.db && state.canEdit && pub && pub.checked) {
+      if (kind !== 'gym' && !entry.date) { restore(); fail('Für den Feed braucht der Eintrag ein Datum.', document.getElementById('r-date')); return; }
+      var iref;
+      try { iref = state.db.collection('items').doc('community-' + slugify(entry.title) + '-' + Date.now().toString(36)); } catch (e) { restore(); showFallback(entry); return; }
+      iref.set(itemFromEntry(entry)).then(function () {
+        closeSheet();
+        toast('Im Feed veröffentlicht');
+      }, function () { restore(); fail('Speichern hat nicht geklappt. Versuch es gleich noch einmal.', null); });
+      return;
+    }
+    var fallback = function () { restore(); showFallback(entry); };
+    if (!state.db || !state.uid) { fallback(); return; }
+    var ref;
+    try { ref = state.db.doc('submissions/' + state.uid); } catch (e) { fallback(); return; }
+    ref.get().then(function (snap) {
+      var prev = snap.exists && snap.data() && Array.isArray(snap.data().entries) ? snap.data().entries.slice(-19) : [];
+      return ref.set({ entries: prev.concat([entry]), updatedAt: entry.sentAt });
+    }).then(function () {
+      closeSheet();
+      toast('Gemeldet. Der Agent prüft es beim nächsten Lauf.');
+    }, fallback);
+  }
+  function showFallback(entry) {
+    var form = document.getElementById('reportForm'), fb = document.getElementById('reportFallback');
+    if (!fb) return;
+    var kindName = entry.kind === 'gym' ? 'Open Gym' : entry.kind === 'event' ? 'Event' : 'Turnier';
+    var when;
+    if (entry.kind === 'gym') {
+      when = entry.rhythm === 'irregular' ? 'wechselnde Termine'
+        : (entry.rhythm === 'monthly-first' ? 'jeden 1. ' : '') + entry.weekdays.map(function (d) { return WD[d]; }).join(', ') + (entry.from ? ', ' + entry.from + (entry.to ? '–' + entry.to : '') + ' Uhr' : '');
+    } else {
+      when = (entry.date ? entry.date.split('-').reverse().join('.') : 'Datum offen') + (entry.time ? ', ' + entry.time + ' Uhr' : '');
+    }
+    var text = ['Neu für Checkball (' + kindName + '):', entry.title, when,
+      [entry.venue, entry.district].filter(Boolean).join(', '),
+      entry.setting === 'halle' ? 'Halle' : entry.setting === 'freiplatz' ? 'Freiplatz' : '',
+      entry.cost || '', entry.level || '', entry.categories.join(', '), entry.link, entry.note].filter(Boolean).join('\n');
+    var mail = 'mailto:' + CONTACT_MAIL + '?subject=' + encodeURIComponent('Checkball: ' + kindName + ' – ' + entry.title) + '&body=' + encodeURIComponent(text);
+    form.hidden = true; fb.hidden = false;
+    fb.innerHTML = '<div class="copybox"><p class="sub" style="margin:0">Fast geschafft: Schick die Meldung per Mail an <b>' + esc(CONTACT_MAIL) + '</b> oder per Instagram-DM an <b>@' + esc(INSTA_HANDLE) + '</b>. Wir prüfen sie und nehmen sie in den Feed auf.</p>' +
+      '<textarea class="input" id="fbText" rows="7" readonly>' + esc(text) + '</textarea>' +
+      '<a class="btn primary block" href="' + esc(mail) + '">' + I.mail + 'Per Mail senden</a>' +
+      '<button class="btn block" type="button" data-act="copy-fb">' + I.copy + 'Text kopieren</button>' +
+      '<a class="linkbtn" href="https://www.instagram.com/' + esc(INSTA_HANDLE) + '/" target="_blank" rel="noopener">Instagram öffnen' + I.ext + '</a></div>';
+  }
+
+  /* ---------- events ---------- */
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-act]');
+    if (!t) { if (e.target.id === 'scrim') closeSheet(); return; }
+    var act = t.dataset.act;
+    if (act === 'tab') { e.preventDefault(); setTab(t.dataset.tab); }
+    else if (act === 'filter') { state.filter = t.dataset.v; renderTurniere(); }
+    else if (act === 'forme') { state.forMe = !state.forMe; renderTurniere(); }
+    else if (act === 'past') { state.showPast = !state.showPast; renderTurniere(); }
+    else if (act === 'day') { state.day = state.day === t.dataset.day ? '' : t.dataset.day; renderGyms(); }
+    else if (act === 'expand') {
+      var id = t.dataset.id; state.expanded[id] = !state.expanded[id];
+      renderTurniere(); renderGyms();
+      var again = document.querySelector('[data-act="expand"][data-id="' + CSS.escape(id) + '"]');
+      if (again) again.focus({ preventScroll: true });
+    }
+    else if (act === 'save') {
+      var sid = t.dataset.id, ix = prefs.saved.indexOf(sid);
+      if (ix > -1) prefs.saved.splice(ix, 1); else prefs.saved.push(sid);
+      savePrefs(); renderTurniere(); renderGyms(); renderSaved();
+      toast(ix > -1 ? 'Nicht mehr gemerkt' : 'Gemerkt');
+      var b2 = document.querySelector('[data-act="save"][data-id="' + CSS.escape(sid) + '"]');
+      if (b2) b2.focus({ preventScroll: true });
+    }
+    else if (act === 'share') {
+      var it = state.items.find(function (x) { return x.id === t.dataset.id; });
+      if (it) copyText(shareText(it), 'Infos kopiert');
+    }
+    else if (act === 'goto') {
+      var gid = t.dataset.id;
+      setTab(t.dataset.tab);
+      if (t.dataset.tab === 'turniere') { state.filter = 'Alle'; state.forMe = false; var gi = state.items.find(function (x) { return x.id === gid; }); if (gi && isPast(gi)) state.showPast = true; renderTurniere(); }
+      if (t.dataset.tab === 'gyms') { state.day = ''; renderGyms(); }
+      var target = document.getElementById('item-' + gid);
+      if (target) setTimeout(function () { target.scrollIntoView({ block: 'center' }); }, 30);
+    }
+    else if (act === 'sheet') { openSheet(t.dataset.sheet, { kind: t.dataset.kind }); }
+    else if (act === 'close') { closeSheet(); }
+    else if (act === 'cls') {
+      var c = t.dataset.v, ci = prefs.classes.indexOf(c);
+      if (ci > -1) prefs.classes.splice(ci, 1); else prefs.classes.push(c);
+      if (!prefs.classes.length) state.forMe = false;
+      savePrefs(); renderClasses(); renderTurniere();
+    }
+    else if (act === 'fiba-off') { prefs.fiba = ''; savePrefs(); renderFiba(); toast('FIBA-Profil getrennt'); }
+    else if (act === 'rkind') {
+      state.reportKind = t.dataset.v;
+      t.parentNode.querySelectorAll('[data-act="rkind"]').forEach(function (b) { b.setAttribute('aria-pressed', String(b === t)); });
+      var gymKind = state.reportKind === 'gym';
+      document.querySelectorAll('#reportForm [data-group="gym"]').forEach(function (g) { g.hidden = !gymKind; });
+      document.querySelectorAll('#reportForm [data-group="date"]').forEach(function (g) { g.hidden = gymKind; });
+      var stl = document.getElementById('sheetTitle');
+      if (stl) stl.textContent = gymKind ? 'Open Gym eintragen' : 'Event melden';
+    }
+    else if (act === 'rday') {
+      var dv = +t.dataset.v, dix = state.reportDays.indexOf(dv);
+      if (dix > -1) state.reportDays.splice(dix, 1); else state.reportDays.push(dv);
+      t.setAttribute('aria-pressed', String(dix < 0));
+    }
+    else if (act === 'rset') {
+      state.reportSetting = state.reportSetting === t.dataset.v ? '' : t.dataset.v;
+      t.parentNode.querySelectorAll('[data-act="rset"]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === state.reportSetting)); });
+    }
+    else if (act === 'rcat') {
+      var rc = t.dataset.v, ri = state.reportCats.indexOf(rc);
+      if (ri > -1) state.reportCats.splice(ri, 1); else state.reportCats.push(rc);
+      t.setAttribute('aria-pressed', String(ri < 0));
+    }
+    else if (act === 'copy-fb') { var ta = document.getElementById('fbText'); if (ta) copyText(ta.value, 'Text kopiert', ta); }
+    else if (act === 'reload') { state.status = 'loading'; renderAll(); loadStatic(); }
+    else if (act === 'rsvp') { toggleRsvp(t.dataset.key); }
+    else if (act === 'install') {
+      if (installPrompt) {
+        var ip = installPrompt; installPrompt = null;
+        ip.prompt();
+        ip.userChoice.then(function () { renderInstall(); }, function () { renderInstall(); });
+      }
+    }
+  });
+  document.addEventListener('submit', function (e) {
+    if (e.target.id === 'fibaForm') {
+      e.preventDefault();
+      var inp = document.getElementById('fibaUrl'), v = inp.value.trim(), er = document.getElementById('fibaErr');
+      if (!/^https:\/\/play\.fiba3x3\.com\/players\/[A-Za-z0-9-]+/.test(v)) {
+        er.textContent = 'Das sieht nicht nach einem FIBA-3x3-Profil aus. Der Link beginnt mit https://play.fiba3x3.com/players/';
+        er.hidden = false; inp.focus(); return;
+      }
+      prefs.fiba = safeUrl(v); savePrefs(); renderFiba(); toast('FIBA-Profil verbunden');
+    } else if (e.target.id === 'reportForm') {
+      e.preventDefault(); submitReport(e.target);
+    }
+  });
+  document.addEventListener('change', function (e) {
+    if (e.target.id === 'district') { prefs.district = e.target.value; savePrefs(); toast(prefs.district ? 'Bezirk gespeichert' : 'Bezirk entfernt'); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !document.getElementById('scrim').hidden) closeSheet();
+  });
+  window.addEventListener('hashchange', function () { setTab(tabFromHash()); });
+  var tb = document.getElementById('topbar');
+  window.addEventListener('scroll', function () { tb.classList.toggle('scrolled', window.scrollY > 4); }, { passive: true });
+
+  /* ---------- data ---------- */
+  function normalize(doc) {
+    var d = doc.data() || {};
+    var o = {};
+    Object.keys(d).forEach(function (k) { o[k] = d[k]; });
+    o.id = doc.id;
+    o.type = str(o.type);
+    o.title = str(o.title) || 'Ohne Titel';
+    if (o.recurring && (typeof o.recurring !== 'object' || (!recDays(o.recurring).length && o.recurring.freq !== 'irregular'))) o.recurring = null;
+    /* A one-off Open Gym with real dates (holiday Open Gym, Open Gym Night) is a dated event, not "wechselnde Termine". */
+    if (o.recurring && o.recurring.freq === 'irregular' && parseDate(o.start)) o.recurring = null;
+    return o;
+  }
+  /* Static feed: data/items.json and data/meta.json next to the page (written by the agent every morning). */
+  var lastStaticLoad = 0;
+  function fetchJson(path) {
+    return fetch(path, { cache: 'no-cache' }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    });
+  }
+  function loadStatic() {
+    if (typeof fetch !== 'function') { state.status = 'offline'; renderAll(); return; }
+    lastStaticLoad = Date.now();
+    fetchJson('data/items.json').then(function (data) {
+      var list = Array.isArray(data) ? data : (data && Array.isArray(data.items) ? data.items : []);
+      state.items = list.filter(function (x) { return x && typeof x === 'object' && typeof x.id === 'string' && x.id; })
+        .map(function (x) { return normalize({ id: x.id, data: function () { return x; } }); });
+      state.status = state.items.length ? 'live' : 'empty';
+      renderAll();
+      if (state.tab === 'gyms') refreshCounts(true);
+    }, function () {
+      if (!state.items.length) { state.status = 'offline'; renderAll(); }
+    });
+    fetchJson('data/meta.json').then(function (m) {
+      state.meta = m && typeof m === 'object' && !Array.isArray(m) ? m : null;
+      renderAgentChip();
+    }, function () { /* chip stays neutral */ });
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && !state.db && lastStaticLoad && Date.now() - lastStaticLoad > 15 * 60000) loadStatic();
+  });
+
+  /* ---------- attendance for Open Gyms ("Ich bin dabei") ----------
+     Inside claude.ai each viewer keeps one document rsvp/<their id> with {going: {<key>: true}};
+     everyone reads all of them and counts. In the open web version the same counts live in
+     Firebase (Cloud Firestore + anonymous sign-in), switched on by config.json. */
+  var rsvpChain = Promise.resolve(), rsvpDocs = [];
+  function rerenderRsvp(key) {
+    renderGyms();
+    var b = document.querySelector('[data-act="rsvp"][data-key="' + CSS.escape(key) + '"]');
+    if (b) b.focus({ preventScroll: true });
+  }
+  function toggleRsvp(key) {
+    if (!key || state.rsvpBusy[key] || !state.rsvpMode) return;
+    if (state.rsvpMode === 'db' && !state.uid) { toast('Zum Abstimmen bitte bei claude.ai anmelden'); return; }
+    var on = !state.rsvpMine[key], before = state.rsvpCounts[key];
+    state.rsvpBusy[key] = true;
+    if (on) state.rsvpMine[key] = true; else delete state.rsvpMine[key];
+    if (typeof before === 'number') state.rsvpCounts[key] = Math.max(0, before + (on ? 1 : -1));
+    rerenderRsvp(key);
+    var write = state.rsvpMode === 'db' ? dbSaveRsvp : function () { return fbVote(key, on); };
+    rsvpChain = rsvpChain.then(write).then(function () {
+      state.rsvpBusy[key] = false;
+      if (state.rsvpMode === 'fb') { saveMineLocal(); refreshCount(key); }
+      rerenderRsvp(key);
+      toast(on ? 'Du bist dabei' : 'Zusage zurückgenommen');
+    }, function (e) {
+      state.rsvpBusy[key] = false;
+      if (on) delete state.rsvpMine[key]; else state.rsvpMine[key] = true;
+      if (typeof before === 'number') state.rsvpCounts[key] = before;
+      rerenderRsvp(key);
+      toast(e && e.code === 'invalid_argument' ? 'Abstimmen ist in dieser Ansicht nicht möglich' : 'Hat nicht geklappt. Versuch es gleich noch einmal.');
+    });
+  }
+
+  /* claude.ai: own document, written whole (one writer per document, old dates dropped) */
+  function dbSaveRsvp() {
+    var cutoff = rsvpCutoff(), going = {};
+    Object.keys(state.rsvpMine).forEach(function (k) { if (state.rsvpMine[k] && k.slice(-10) >= cutoff) going[k] = true; });
+    return state.db.doc('rsvp/' + state.uid).set({ going: going, updatedAt: new Date().toISOString() });
+  }
+  function recountRsvp() {
+    var counts = {}, mine = {};
+    rsvpDocs.forEach(function (d) {
+      var body = d.data() || {}, g = body.going;
+      if (!g || typeof g !== 'object') return;
+      Object.keys(g).forEach(function (k) {
+        if (g[k] !== true) return;
+        counts[k] = (counts[k] || 0) + 1;
+        if (state.uid && d.id === state.uid) mine[k] = true;
+      });
+    });
+    Object.keys(state.rsvpBusy).forEach(function (k) {
+      if (!state.rsvpBusy[k]) return;
+      if (state.rsvpMine[k]) mine[k] = true; else delete mine[k];
+    });
+    state.rsvpCounts = counts;
+    state.rsvpMine = mine;
+    renderGyms();
+  }
+
+  /* open web version: Firebase REST (no SDK, nothing loads from other servers until the Open Gyms tab is opened) */
+  var FB = null, fbAuth = null, countsLoadedAt = 0;
+  var RSVP_LS = 'checkball:rsvp', AUTH_LS = 'checkball:fbauth';
+  function fbJson(r) {
+    if (!r.ok) { var err = new Error('HTTP ' + r.status); err.status = r.status; throw err; }
+    return r.status === 204 ? {} : r.json();
+  }
+  function fsBase() { return 'https://firestore.googleapis.com/v1/projects/' + encodeURIComponent(FB.projectId) + '/databases/(default)/documents'; }
+  function fbKey() { return 'key=' + encodeURIComponent(FB.apiKey); }
+  function fbStoreAuth(uid, idToken, refreshToken, expiresIn) {
+    fbAuth = { uid: uid, idToken: idToken, refreshToken: refreshToken, exp: Date.now() + (parseInt(expiresIn, 10) || 3600) * 1000 };
+    try { localStorage.setItem(AUTH_LS, JSON.stringify(fbAuth)); } catch (e) { /* stays for this visit */ }
+    return fbAuth;
+  }
+  function fbSignUp() {
+    return fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?' + fbKey(), {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ returnSecureToken: true })
+    }).then(fbJson).then(function (r) { return fbStoreAuth(r.localId, r.idToken, r.refreshToken, r.expiresIn); });
+  }
+  function fbToken() {
+    if (fbAuth && fbAuth.idToken && fbAuth.exp > Date.now() + 60000) return Promise.resolve(fbAuth);
+    if (!fbAuth || !fbAuth.refreshToken) return fbSignUp();
+    return fetch('https://securetoken.googleapis.com/v1/token?' + fbKey(), {
+      method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'grant_type=refresh_token&refresh_token=' + encodeURIComponent(fbAuth.refreshToken)
+    }).then(fbJson).then(function (r) { return fbStoreAuth(r.user_id, r.id_token, r.refresh_token, r.expires_in); },
+      function () { fbAuth = null; return fbSignUp(); });
+  }
+  function fbCount(key) {
+    return fetch(fsBase() + '/rsvps/' + encodeURIComponent(key) + ':runAggregationQuery?' + fbKey(), {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ structuredAggregationQuery: { structuredQuery: { from: [{ collectionId: 'votes' }] }, aggregations: [{ alias: 'n', count: {} }] } })
+    }).then(fbJson).then(function (rows) {
+      var row = Array.isArray(rows) ? rows.filter(function (x) { return x && x.result; })[0] : null;
+      var v = row && row.result.aggregateFields && row.result.aggregateFields.n;
+      return v ? parseInt(v.integerValue, 10) || 0 : 0;
+    });
+  }
+  function fbVote(key, on) {
+    return fbToken().then(function (a) {
+      var url = fsBase() + '/rsvps/' + encodeURIComponent(key) + '/votes/' + encodeURIComponent(a.uid) + '?' + fbKey();
+      var auth = { Authorization: 'Bearer ' + a.idToken };
+      return fetch(url, on
+        ? { method: 'PATCH', headers: { Authorization: auth.Authorization, 'Content-Type': 'application/json' }, body: JSON.stringify({ fields: { v: { integerValue: '1' } } }) }
+        : { method: 'DELETE', headers: auth }).then(fbJson);
+    });
+  }
+  function loadMineLocal() {
+    var cutoff = rsvpCutoff(), m = {};
+    try {
+      var o = JSON.parse(localStorage.getItem(RSVP_LS) || '{}');
+      Object.keys(o || {}).forEach(function (k) { if (o[k] === true && k.slice(-10) >= cutoff) m[k] = true; });
+    } catch (e) { /* nothing remembered */ }
+    state.rsvpMine = m;
+  }
+  function saveMineLocal() { try { localStorage.setItem(RSVP_LS, JSON.stringify(state.rsvpMine)); } catch (e) { /* ignore */ } }
+  function initWebRsvp() {
+    fetchJson('config.json').then(function (c) {
+      var f = c && c.firebase;
+      if (!f || typeof f.apiKey !== 'string' || typeof f.projectId !== 'string' || !f.apiKey || !f.projectId) return;
+      FB = { apiKey: f.apiKey, projectId: f.projectId };
+      try { var a = JSON.parse(localStorage.getItem(AUTH_LS) || 'null'); if (a && a.uid && a.refreshToken) fbAuth = a; } catch (e) { /* new sign-in on first vote */ }
+      loadMineLocal();
+      state.rsvpMode = 'fb';
+      renderGyms();
+      if (state.tab === 'gyms') refreshCounts(true);
+    }, function () { /* no config.json: attendance stays off */ });
+  }
+  function refreshCounts(force) {
+    if (state.rsvpMode !== 'fb') return;
+    var keys = byType('gym').map(rsvpOcc).filter(Boolean).map(function (o) { return o.key; });
+    if (!keys.length || (!force && Date.now() - countsLoadedAt < 60000)) return;
+    countsLoadedAt = Date.now();
+    keys.forEach(refreshCount);
+  }
+  function refreshCount(key) {
+    fbCount(key).then(function (n) {
+      if (state.rsvpBusy[key]) return;
+      state.rsvpCounts[key] = n;
+      renderGyms();
+    }, function () { /* keep the last known count */ });
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && state.tab === 'gyms') refreshCounts();
+  });
+
+  function connect() {
+    var c = window.claude;
+    if (IS_WEB) { loadStatic(); initWebRsvp(); return; }
+    c.use('db').then(function (db) {
+      if (!db) { loadStatic(); return; }
+      state.db = db;
+      state.rsvpMode = 'db';
+      db.collection('rsvp').onSnapshot(function (snap) {
+        rsvpDocs = snap.docs.filter(function (d) { return d.exists; });
+        recountRsvp();
+      }, function () { /* counts stay as they are */ });
+      db.collection('items').onSnapshot(function (snap) {
+        state.items = snap.docs.filter(function (d) { return d.exists; }).map(normalize);
+        state.status = state.items.length ? 'live' : 'empty';
+        renderAll();
+      }, function () { state.status = 'error'; renderAll(); });
+      db.doc('meta/agent').onSnapshot(function (s) {
+        state.meta = s.exists ? s.data() : null;
+        renderAgentChip();
+      }, function () { /* status chip stays neutral */ });
+    }, function () { loadStatic(); });
+    c.use('user').then(function (u) {
+      if (!u) return;
+      u.canEdit().then(function (v) { state.canEdit = !!v; }, function () { /* keep false */ });
+      return u.id().then(function (id) { state.uid = id || null; if (state.rsvpMode === 'db') recountRsvp(); });
+    }).catch(function () { /* no identity */ });
+  }
+
+  /* ---------- open web version: install hint and offline cache (never inside claude.ai) ---------- */
+  var installPrompt = null;
+  function isStandalone() {
+    try { return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true; } catch (e) { return false; }
+  }
+  function renderInstall() {
+    var el = document.getElementById('installPanel');
+    if (!el) return;
+    if (!IS_WEB || isStandalone()) { el.hidden = true; return; }
+    var ua = navigator.userAgent || '';
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var h = '<h2>Checkball aufs Handy</h2>';
+    if (installPrompt) h += '<p>Mit einem Tipp auf deinen Startbildschirm. Dann öffnest du Checkball wie jede andere App.</p><div><button class="btn primary" type="button" data-act="install">' + I.plus + 'App installieren</button></div>';
+    else if (ios) h += '<p>In Safari unten auf „Teilen“ tippen und „Zum Home-Bildschirm“ wählen. Dann öffnest du Checkball wie jede andere App.</p>';
+    else h += '<p>Im Browser-Menü „App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen. Dann öffnest du Checkball wie jede andere App.</p>';
+    el.innerHTML = h;
+    el.hidden = false;
+  }
+  if (IS_WEB) {
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); installPrompt = e; renderInstall(); });
+    window.addEventListener('appinstalled', function () { installPrompt = null; renderInstall(); toast('Checkball ist installiert'); });
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () { /* offline cache is optional */ });
+      });
+    }
+  }
+
+  /* ---------- boot ---------- */
+  if (IS_WEB) document.getElementById('legalLinks').hidden = false;
+  renderFiba(); renderClasses(); renderDistrict(); renderInstall();
+  setTab(state.tab, true);
+  renderAll();
+  connect();
+})();
+</script>

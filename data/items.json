@@ -1,0 +1,397 @@
+{
+ "generatedAt": "2026-10-19T14:51:30+02:00",
+ "items": [
+  {
+   "id": "alba-3x3-girls-cup-2026",
+   "audience": "Mädchen wU10 bis wU16",
+   "categories": [
+    "U14",
+    "U16",
+    "FLINTA*"
+   ],
+   "district": "Pankow",
+   "end": "2026-06-07",
+   "foundAt": "2026-10-19",
+   "level": "Nachwuchsturnier",
+   "organizer": "ALBA BERLIN mit Allianz",
+   "sourceName": "ALBA BERLIN",
+   "sourceUrl": "https://www.albaberlin.de/jugend/aktionen-projekte/alba-berlin-3x3-girls-cup-powered-by-allianz",
+   "start": "2026-06-06",
+   "summary": "3x3-Turnier nur für Mädchen auf den Freiplätzen im Jahnsportpark. Samstag spielten wU10 und wU12, Sonntag wU14 und wU16.",
+   "title": "ALBA & Allianz 3x3 Girls Cup",
+   "type": "turnier",
+   "venue": "Freiplätze im Friedrich-Ludwig-Jahn-Sportpark"
+  },
+  {
+   "id": "bbv-dm-quali-2026",
+   "categories": [
+    "Damen",
+    "Herren",
+    "FLINTA*"
+   ],
+   "district": "Mitte",
+   "end": "2026-05-31",
+   "foundAt": "2026-10-18",
+   "level": "Quali German Championship",
+   "organizer": "Berliner Basketball Verband",
+   "sourceName": "visitBerlin",
+   "sourceUrl": "https://www.visitberlin.de/de/node/2286182",
+   "start": "2026-05-30",
+   "summary": "Samstag FLINTA* Open Court und Berliner Mädchenteams von 10 bis 18 Uhr, Sonntag die offizielle Qualifikation für die Deutsche Meisterschaft. Anmeldung als Dreierteam über die FIBA 3x3 Plattform, Bälle wurden gestellt.",
+   "title": "3x3 DM-Qualifikation Damen & Herren",
+   "type": "turnier",
+   "venue": "Center am Potsdamer Platz"
+  },
+  {
+   "id": "bbv-friday-night-hoops",
+   "audience": "ab U16: U16, U18 und alle Älteren",
+   "categories": [
+    "U16",
+    "U18",
+    "Damen",
+    "Herren"
+   ],
+   "district": "Charlottenburg-Wilmersdorf",
+   "foundAt": "2026-10-18",
+   "level": "BBV 3x3 Open Gym",
+   "organizer": "Berliner Basketball Verband",
+   "public": true,
+   "recurring": {
+    "freq": "weekly",
+    "from": "19:15",
+    "label": "jeden Freitag",
+    "to": "21:30",
+    "weekday": 5
+   },
+   "setting": "halle",
+   "sourceName": "BBV 3x3",
+   "summary": "Das Freitagsformat des BBV: Bei vielen Teams gibt es ein Mini-Turnier, bei einer mittleren Runde freies Spiel, bei einer kleinen Gruppe eine Skill-Session.",
+   "title": "Friday Night Hoops",
+   "type": "gym",
+   "venue": "Sporthalle im Olympiapark"
+  },
+  {
+   "id": "dakar-yog-3x3",
+   "end": "2026-11-13",
+   "foundAt": "2026-10-18",
+   "level": "Zuschauen",
+   "sourceName": "DBB",
+   "sourceUrl": "https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nominiert/",
+   "start": "2026-10-31",
+   "summary": "Das deutsche 3x3-Team tritt bei den Olympischen Jugendspielen an. Termine der Spiele folgen über DBB und FIBA.",
+   "title": "Olympische Jugendspiele: 3x3 in Dakar",
+   "type": "event",
+   "venue": "Dakar, Senegal"
+  },
+  {
+   "id": "dbb-3x3-weekend-2026",
+   "date": "2026-09-20",
+   "foundAt": "2026-10-18",
+   "sourceName": "DBB",
+   "sourceUrl": "https://www.basketball-bund.de/3x3-weekend-hessen-und-baden-wuerttemberg-sind-titeltraeger/",
+   "summary": "Rekord in Bad Hersfeld mit 36 Teams aus 13 Landesverbänden. Bei den Mädchen gewann Baden-Württemberg, bei den Jungen Hessen 2. Unter den 15 Spielerinnen, die im Januar zum Nominierungslehrgang eingeladen sind, kommen drei aus Berlin.",
+   "title": "3x3-Weekend: Drei Berlinerinnen für den DBB-Lehrgang nominiert",
+   "type": "news"
+  },
+  {
+   "id": "dbb-dakar-2026",
+   "date": "2026-09-16",
+   "foundAt": "2026-10-18",
+   "sourceName": "DBB",
+   "sourceUrl": "https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nominiert/",
+   "summary": "Für die Olympischen Jugendspiele vom 31. Oktober bis 13. November 2026 hat der DOSB im 3x3 einen Pool von sechs Spielern nominiert.",
+   "title": "Jugendspiele Dakar: DOSB nominiert 3x3-Pool",
+   "type": "news"
+  },
+  {
+   "id": "dbb-europecup-2026",
+   "date": "2026-09-13",
+   "foundAt": "2026-10-18",
+   "sourceName": "DBB",
+   "sourceUrl": "https://www.basketball-bund.de/3x3-europe-cup-doppeltes-aus-im-viertelfinale/",
+   "summary": "In Antwerpen scheiden die Damen gegen Slowenien (9:17) und die Herren gegen die Niederlande (14:16) im Viertelfinale aus.",
+   "title": "3x3 Europe Cup: Doppeltes Aus im Viertelfinale",
+   "type": "news"
+  },
+  {
+   "id": "dbb-gc-2026",
+   "date": "2026-07-25",
+   "foundAt": "2026-10-18",
+   "sourceName": "DBB",
+   "sourceUrl": "https://www.basketball-bund.de/ing-3x3-german-championship-bonn-triumphiert-im-herren-finale/",
+   "summary": "Bei der ING 3x3 German Championship in Hannover schlagen die Baskets Bonn die Skyliners im Finale 22:12.",
+   "title": "German Championship: Bonn holt den Herren-Titel",
+   "type": "news"
+  },
+  {
+   "id": "dbb-worldcup-2026",
+   "date": "2026-06-07",
+   "foundAt": "2026-10-18",
+   "sourceName": "DBB",
+   "sourceUrl": "https://www.basketball-bund.de/3x3-world-cup-silber-fuer-dbb-herren/",
+   "summary": "Im Finale unterliegt Deutschland Lettland mit 15:20.",
+   "title": "3x3 World Cup: Silber für die DBB-Herren",
+   "type": "news"
+  },
+  {
+   "id": "fiba-7de288f1",
+   "audience": "U18, U16, U14 (m/w)",
+   "categories": [
+    "U14",
+    "U16",
+    "U18"
+   ],
+   "district": "Umland (Brandenburg)",
+   "end": "2026-06-13",
+   "foundAt": "2026-10-19",
+   "level": "FIBA 3x3 Event",
+   "organizer": "Brandenburgischer Basketball-Verband mit SSV Lok Bernau",
+   "price": "30–40 € pro Team",
+   "regUrl": "https://play.fiba3x3.com/events/7de288f1-e4b4-4478-a9aa-14fa30f77751",
+   "sourceName": "Brandenburgischer Basketball-Verband",
+   "sourceUrl": "https://bbv-inside.de/events/3x3-turnier-in-bernau-2/",
+   "start": "2026-06-13",
+   "summary": "Dritter und letzter Stopp der Brandenburger Sommertour, nur für Nachwuchsklassen. Anmeldung lief über die FIBA-3x3-Plattform.",
+   "title": "BBV 3x3 Sommertour: Bernau bei Berlin",
+   "type": "turnier",
+   "venue": "Bernau bei Berlin"
+  },
+  {
+   "id": "fiba-b0524210",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Mitte",
+   "end": "2026-06-21",
+   "foundAt": "2026-10-18",
+   "level": "FIBA 3x3 Event",
+   "organizer": "Mein_EinkaufsBahnhof",
+   "price": "Eintritt frei",
+   "regUrl": "https://play.fiba3x3.com/events/b0524210-8f72-4c6b-b3c8-e193ec3f0e6c",
+   "sourceName": "visitBerlin",
+   "sourceUrl": "https://www.visitberlin.de/en/node/2287392",
+   "start": "2026-06-20",
+   "summary": "Streetball-Arena vor dem Hauptbahnhof mit Musik und Mitmachangeboten an zwei Tagen.",
+   "title": "3x3 Basketball Series 2026",
+   "type": "turnier",
+   "venue": "Washingtonplatz am Hauptbahnhof"
+  },
+  {
+   "id": "fiba-d8f6706f",
+   "audience": "Herren/Damen, U18, U16, U14, U12 mixed",
+   "categories": [
+    "U14",
+    "U16",
+    "U18",
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Umland (Brandenburg)",
+   "end": "2026-06-07",
+   "foundAt": "2026-10-19",
+   "level": "Quali U18 German Championship",
+   "organizer": "Brandenburgischer Basketball-Verband mit BG Red Dragons KW",
+   "price": "30–50 € pro Team",
+   "regUrl": "https://play.fiba3x3.com/events/d8f6706f-8c54-4f4f-9ab1-2efdd1782572",
+   "sourceName": "Brandenburgischer Basketball-Verband",
+   "sourceUrl": "https://bbv-inside.de/3x3-basketball-sommertour-2026/",
+   "start": "2026-06-07",
+   "summary": "Zweiter Stopp der Sommertour des Brandenburgischen Basketball-Verbands, zugleich Qualifikation für die DBB-U18-Meisterschaft. Anmeldung lief über die FIBA-3x3-Plattform bis zum Mittwoch vor dem Turnier.",
+   "title": "BBV 3x3 Sommertour: Königs Wusterhausen",
+   "type": "turnier",
+   "venue": "Königs Wusterhausen"
+  },
+  {
+   "id": "heretohoop-2026",
+   "date": "2026-08-28",
+   "foundAt": "2026-10-18",
+   "sourceName": "Pop-Kultur Berlin",
+   "sourceUrl": "https://www.pop-kultur.berlin/en/event/heretohoop-basketball-skill-session/",
+   "summary": "Das Berliner Programm bietet offene Sessions, Camps und Workshops mit FLINTA*-Coaches. Mit dem BBV organisiert es die Aktionswoche Mädchen* Basketball, zuletzt mit über 24 Vereinen in Berlin und Brandenburg.",
+   "title": "HereToHoop: kostenlose Sessions für Mädchen* und FLINTA*",
+   "type": "news"
+  },
+  {
+   "id": "streetballteam-ferien-opengym-herbst-2026",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2026-10-23T16:00",
+   "foundAt": "2026-10-19",
+   "level": "",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "recurring": {
+    "freq": "irregular",
+    "from": "11:00",
+    "to": "16:00",
+    "weekday": 1,
+    "weekdays": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "setting": "halle",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/ferien-open-gym/",
+   "start": "2026-10-19T11:00",
+   "summary": "In den Herbstferien täglich offene Halle zum Reinkommen, wann man will. Kostenlos und ohne Anmeldung, eigenen Ball und Hallenschuhe mitbringen.",
+   "title": "Ferien Open Gym in der Seelenbinderhalle",
+   "type": "gym",
+   "venue": "Seelenbinderhalle, Paul-Heyse-Straße 26"
+  },
+  {
+   "id": "streetballteam-open-gym-night-2026-11",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Mitte",
+   "end": "2026-11-06T23:00",
+   "foundAt": "2026-10-19",
+   "level": "",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "recurring": {
+    "freq": "irregular",
+    "from": "21:00",
+    "to": "23:00",
+    "weekday": 5,
+    "weekdays": [
+     5
+    ]
+   },
+   "setting": "halle",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/open-gym-night/",
+   "start": "2026-11-06T21:00",
+   "summary": "Freies Spiel auf Halbfeld und Ganzfeld am Freitagabend. Kostenlos, einfach vorbeikommen.",
+   "title": "Open Gym Night in Wedding",
+   "type": "gym",
+   "venue": "Sporthalle der Anna-Lindh-Schule, Reinickendorfer Straße 60"
+  },
+  {
+   "id": "streetballteam-opengym-mittwoch",
+   "audience": "ohne Anmeldung",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Lichtenberg",
+   "foundAt": "2026-10-19",
+   "level": "",
+   "organizer": "Streetball-Team Berlin mit Kreafithaus Lichtenberg",
+   "recurring": {
+    "freq": "weekly",
+    "from": "17:00",
+    "to": "18:00",
+    "weekday": 3,
+    "weekdays": [
+     3
+    ]
+   },
+   "setting": "halle",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/turniere-open-gym/",
+   "summary": "Wöchentliches Open Gym in der Sporthalle des Herder-Gymnasiums. Eine Anmeldung ist nicht nötig.",
+   "title": "Open Gym Mittwoch in Lichtenberg",
+   "type": "gym",
+   "venue": "Sporthalle Johann-Gottfried-Herder-Gymnasium, Franz-Jacob-Str. 8"
+  },
+  {
+   "id": "streetballteam-opengym-montag",
+   "audience": "ab 16 Jahren, mit Anmeldung",
+   "categories": [
+    "U18",
+    "Damen",
+    "Herren"
+   ],
+   "district": "Pankow",
+   "foundAt": "2026-10-19",
+   "level": "",
+   "organizer": "Streetball-Team Berlin mit Berliner TSC",
+   "recurring": {
+    "freq": "weekly",
+    "from": "19:00",
+    "to": "20:30",
+    "weekday": 1,
+    "weekdays": [
+     1
+    ]
+   },
+   "setting": "halle",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/turniere-open-gym/",
+   "summary": "Wöchentliches Open Gym auf einem Querfeld für Jugendliche ab 16 Jahren. Wegen begrenzter Plätze ist eine Anmeldung nötig, sie öffnet jeweils dienstags um 15 Uhr für den folgenden Montag.",
+   "title": "Open Gym Montag in der Max-Schmeling-Halle",
+   "type": "gym",
+   "venue": "Max-Schmeling-Halle, Nebenhalle B, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-challenge-2026",
+   "audience": "Schulteams aus Berlin und Brandenburg",
+   "categories": [
+    "U14",
+    "U16",
+    "U18",
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Charlottenburg-Wilmersdorf",
+   "end": "2026-06-25",
+   "foundAt": "2026-10-19",
+   "level": "Schulturnier",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetballchallengeberlin/",
+   "start": "2026-06-24",
+   "summary": "Das traditionsreiche Schul-Streetballturnier: am ersten Tag Grundschulteams, am zweiten Oberschulteams bis zu Damen und Herren.",
+   "title": "Streetball Challenge Berlin 2026",
+   "type": "turnier",
+   "venue": "Horst-Dohm-Eisstadion, Fritz-Wildung-Straße 9"
+  },
+  {
+   "id": "streetballteam-streetball-night-2026",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2026-10-31T01:30",
+   "foundAt": "2026-10-19",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2026-10-30T22:30",
+   "summary": "Kostenlose Streetball-Turnierreihe am Freitagabend für Teams mit 3 bis 4 Leuten, Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele, gespielt wird ohne Gesamtsieger. Weitere Termine: 13.11., 27.11. und 11.12.2026.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "we-own-the-game-schoeneberg",
+   "categories": [
+    "Offen",
+    "FLINTA*"
+   ],
+   "district": "Tempelhof-Schöneberg",
+   "end": "2026-07-09",
+   "foundAt": "2026-10-18",
+   "level": "Mini-Turniere",
+   "organizer": "Bezirksamt Tempelhof-Schöneberg mit SpOrt365 und Friedenauer TSC",
+   "sourceName": "visitBerlin",
+   "sourceUrl": "https://www.visitberlin.de/en/node/2287735",
+   "start": "2026-07-08",
+   "summary": "Mittwoch FLINTA* Open Court (19 bis 21 Uhr), Donnerstag Open Court (11 bis 13 Uhr) und Mini-Turniere (13 bis 16 Uhr).",
+   "title": "We Own The Game am Rathaus Schöneberg",
+   "type": "turnier",
+   "venue": "Vorplatz Rathaus Schöneberg"
+  }
+ ]
+}

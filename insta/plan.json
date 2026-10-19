@@ -1,0 +1,36 @@
+{
+  "account": "@checkball.berlin",
+  "rules": [
+    "Erst veröffentlichen, wenn der Link in der Bio auf die Web-Version zeigt.",
+    "Story 3 zeigt „Ich bin dabei“: erst posten, wenn die Funktion in der Web-Version eingeschaltet ist.",
+    "Nur öffentlich angekündigte Inhalte. Nichts aus internen Unterlagen.",
+    "Metricool Free: höchstens 20 Veröffentlichungen pro Monat (Posts und Storys zusammen)."
+  ],
+  "hashtags": "#3x3 #3x3basketball #basketballberlin #berlinbasketball #fiba3x3 #streetball #bbv3x3",
+  "launch": [
+    { "day": 1, "type": "post", "image": "insta/post-1-launch.png",
+      "caption": "Nie wieder ein 3x3-Turnier in Berlin verpassen. Checkball sammelt jeden Morgen alle Turniere, Open Gyms und News an einem Ort. Link in Bio." },
+    { "day": 1, "type": "story", "image": "insta/story-1-nie-wieder-verpassen.png" },
+    { "day": 1, "type": "story", "image": "insta/story-2-turniere.png" },
+    { "day": 1, "type": "story", "image": "insta/story-3-open-gyms.png" },
+    { "day": 1, "type": "story", "image": "insta/story-4-jeden-morgen-gecheckt.png" },
+    { "day": 1, "type": "story", "image": "insta/story-5-los-gehts.png" },
+    { "day": 2, "type": "post", "image": "insta/post-2-so-funktionierts.png",
+      "caption": "So funktioniert's: Der Agent checkt jeden Morgen FIBA 3x3, DBB, BBV und Vereine. Du wählst deine Klasse, ein Tipp bringt dich zur FIBA-Anmeldung." },
+    { "day": 3, "type": "post", "image": "insta/post-6-3x3-in-30-sekunden.png",
+      "caption": "3x3 in 30 Sekunden: ein Korb, 12 Sekunden Shotclock, Spiel bis 21 oder 10 Minuten. Speichern und mit dem Team teilen." },
+    { "day": "nächster Freitag", "type": "post", "image": "insta/post-5-friday-night-hoops.png",
+      "caption": "Freitag ist Hoops-Tag: Friday Night Hoops, jeden Freitag von 19:15 bis 21:30 Uhr in der Sporthalle im Olympiapark, für U16, U18 und alle Älteren." },
+    { "day": 5, "type": "post", "image": "insta/post-7-so-meldest-du-dich-an.png",
+      "caption": "Turnier gefunden? So meldest du dein Team an: FIBA-3x3-Profil anlegen, Team aus 3 plus 1 bilden, in Checkball auf „Zur FIBA-Anmeldung“ tippen. Speichern für die Saison." },
+    { "day": 6, "type": "post", "image": "insta/post-8-du-organisierst-3x3.png",
+      "caption": "Du organisierst ein 3x3-Turnier in Berlin? Schick uns den Link aus dem FIBA 3x3 Event Maker per DM, wir bringen es in den Feed." },
+    { "day": 7, "type": "post", "image": "insta/post-9-rueckblick-2026.png",
+      "caption": "Rückblick 2026: drei große 3x3-Events in Berlin. Ab jetzt verpasst du kein Turnier mehr." }
+  ],
+  "weekly": [
+    "Montag: Post „Diese Woche in Berlin“ aus den aktuellen Einträgen (Vorlage Post 3).",
+    "Freitag: Story „Heute: Open Gym“ (Vorlage Story-Heute).",
+    "Sofort: Turnier-Alarm für jedes neue Berliner Turnier mit öffentlicher Anmeldung (Vorlage Post 4)."
+  ]
+}
