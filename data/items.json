@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T14:51:30+02:00",
+ "generatedAt": "2026-10-19T15:05:42+02:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -213,6 +213,25 @@
    "type": "news"
   },
   {
+   "id": "mbf-ferienliga-runde2-2026",
+   "categories": [
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Neukölln",
+   "end": "2026-11-01T18:00",
+   "foundAt": "2026-10-19",
+   "organizer": "MBF Berlin e.V.",
+   "sourceName": "MBF Berlin",
+   "sourceUrl": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627",
+   "start": "2026-10-31T10:00",
+   "summary": "Zweite Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V., gespielt in den Herbstferien. In der Liga spielen Herren-, Damen-, Ü40- und Mixed-Teams. Weitere Runden folgen im Dezember, Februar, März und Mai.",
+   "title": "MBL Ferienliga: Runde 2",
+   "type": "event",
+   "venue": "Neukölln"
+  },
+  {
    "id": "streetballteam-ferien-opengym-herbst-2026",
    "categories": [
     "Offen"
@@ -373,6 +392,22 @@
    "title": "Streetball Night in der Max-Schmeling-Halle",
    "type": "turnier",
    "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "visitberlin-hermann-ehlers-platz-2026",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Steglitz-Zehlendorf",
+   "end": "2026-08-26",
+   "foundAt": "2026-10-19",
+   "sourceName": "visitBerlin",
+   "sourceUrl": "https://www.visitberlin.de/en/node/2290855",
+   "start": "2026-08-26T12:00",
+   "summary": "Mitmach-Fest zur Frauen-Basketball-WM in Berlin mit Vereinsturnier, Open Play, Rollstuhlbasketball und DJ. Offen für alle Altersgruppen und Erfahrungsstufen.",
+   "title": "Basketball am Hermann-Ehlers-Platz",
+   "type": "event",
+   "venue": "Hermann-Ehlers-Platz"
   },
   {
    "id": "we-own-the-game-schoeneberg",

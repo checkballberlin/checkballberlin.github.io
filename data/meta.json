@@ -1,15 +1,15 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-19T05:59:00+02:00",
+ "lastRun": "2026-10-19T15:05:00+02:00",
  "log": [
-  "05:59  Lauf gestartet · Stadt: Berlin",
-  "Streetball-Team Berlin neu als Quelle: Streetball Night (ab 30.10., 3–4er-Teams, kostenlos) als Turnier aufgenommen.",
-  "4 Open Gyms neu: Mo Max-Schmeling-Halle, Mi Lichtenberg, Ferien Open Gym 19.–23.10., Open Gym Night 06.11.",
-  "Rückblick ergänzt: ALBA 3x3 Girls Cup, Streetball Challenge, BBV-Brandenburg-Sommertour (KW, Bernau).",
-  "FIBA 3x3: weiter blockiert, Events über Suchindex und Verbandsseiten gefunden. Kein neues Berliner FIBA-Event.",
-  "fiba-b0524210: Spielerinnenname aus der Zusammenfassung entfernt.",
-  "Partnervereine: keine öffentlichen 3x3-Termine gefunden. Keine Community-Meldungen.",
-  "20 Einträge im Feed, 1 Berliner Turnier in den nächsten 60 Tagen."
+  "15:05  Zweiter Lauf heute · Stadt: Berlin",
+  "Neu: MBL Ferienliga Runde 2 (31.10.–01.11., Neukölln) als Event.",
+  "Rückblick ergänzt: Basketball-Fest am Hermann-Ehlers-Platz (26.08.).",
+  "FIBA 3x3: weiter blockiert. Hoop City 3x3 (FIBA df43cac9) gehörte zur Ferienliga im Februar, Datum nicht eindeutig, nicht übernommen.",
+  "Streetball-Team unverändert. Partnervereine, DBB: nichts Neues. Keine Community-Meldungen.",
+  "Friday Night Hoops: keine öffentliche Quelle gefunden, Eintrag bleibt als Betreiber-Freigabe.",
+  "22 Einträge, 1 Berliner Turnier in den nächsten 60 Tagen.",
+  "Web-Version nicht aktualisiert: Repo-Tool nicht verfügbar, Ausführung des Export-Skripts nicht freigegeben."
  ],
  "nextRun": "täglich um 05:54",
  "sources": [
@@ -21,43 +21,49 @@
   },
   {
    "name": "DBB 3x3: News und Kalender",
-   "note": "News-Liste lädt per JavaScript und war leer, keine neuen Meldungen übernommen.",
+   "note": "Keine neuen Meldungen gefunden.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Öffentliche News: Streetball Nights Okt–Dez 2026. Nur öffentlich angekündigte Termine. Friday Night Hoops vom Betreiber freigegeben.",
+   "note": "Nur öffentlich angekündigte Termine. Friday Night Hoops vom Betreiber freigegeben.",
    "status": "ok",
    "url": "https://www.binb.info/"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Streetball Nights, wöchentliche Open Gyms, Ferien Open Gym und Open Gym Night übernommen.",
+   "note": "Upcoming Events geprüft, keine Änderungen.",
    "status": "ok",
    "url": "https://www.streetball-team.de/"
   },
   {
+   "name": "MBF Berlin (MBL Ferienliga)",
+   "note": "Neu: Rundentermine Saison 2026/27.",
+   "status": "ok",
+   "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
+  },
+  {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "3x3 Sommertour 2026 (Umland) in den Rückblick, keine neuen 3x3-Termine.",
+   "note": "Keine neuen 3x3-Termine.",
    "status": "ok",
    "url": "https://bbv-inside.de/news/"
   },
   {
    "name": "ALBA BERLIN Jugend",
-   "note": "3x3 Girls Cup 2026 (Juni) in den Rückblick.",
+   "note": "Keine neuen Termine.",
    "status": "ok",
    "url": "https://www.albaberlin.de/jugend/aktionen-projekte/alba-berlin-3x3-girls-cup-powered-by-allianz"
   },
   {
    "name": "visitBerlin Eventkalender",
-   "note": "Keine neuen 3x3-Termine.",
+   "note": "Hermann-Ehlers-Platz (August) in den Rückblick.",
    "status": "ok",
    "url": "https://www.visitberlin.de/"
   },
   {
    "name": "Kultur- und Stadtkalender",
-   "note": "tip Berlin nicht abrufbar, Pop-Kultur ohne Neues.",
+   "note": "berlin.de und Pop-Kultur ohne Neues.",
    "status": "ok"
   },
   {
@@ -68,7 +74,7 @@
   },
   {
    "name": "3x3-Partnervereine",
-   "note": "BC Lions Moabit, DBV Charlottenburg, TuS Lichterfelde, Berliner Freibeuter: per Websuche keine öffentlichen 3x3-Termine gefunden.",
+   "note": "BC Lions Moabit, DBV Charlottenburg, TuS Lichterfelde, Berliner Freibeuter: keine öffentlichen 3x3-Termine gefunden.",
    "status": "ok"
   },
   {
@@ -78,9 +84,9 @@
   }
  ],
  "stats": {
-  "items": 20,
+  "items": 22,
   "soon": 1,
-  "sources": 10
+  "sources": 12
  },
- "exportedAt": "2026-10-19T14:51:30+02:00"
+ "exportedAt": "2026-10-19T15:05:42+02:00"
 }
