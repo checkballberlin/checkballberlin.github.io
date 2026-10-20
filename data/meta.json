@@ -1,17 +1,16 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-20T05:57:00+02:00",
+ "lastRun": "2026-10-20T17:58:00+02:00",
  "log": [
-  "05:57  Morgenlauf · Stadt: Berlin",
-  "Keine neuen Einträge: Websuche nach FIBA-3x3-Events, Turnieren und Open Gyms ohne neue Berliner Termine ab heute.",
-  "visitBerlin-Treffer (Washingtonplatz, Rathaus Schöneberg, Hermann-Ehlers-Platz, DM-Quali) sind bereits erfasst.",
-  "Streetball-Team: Open Gym Mi 21./28.10. (17–18 Uhr) und Weekly Gym Mo 26.10. (19–20:30 Uhr) wie erfasst.",
-  "Geprüft und verworfen: Grundschulturnier (24.02.2026) sowie Ballhaus-Ost-Streetballturnier und FLINTA+-Training (beide Juni 2025), alle vergangen.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche (FIBA 3x3, Berlin/Brandenburg Nov./Dez., Hochschulsport, Open Gyms, FLINTA*) ohne neue öffentliche Berliner Termine.",
+  "Geprüft und verworfen: Streetball Challenge Indoor Grundschulturnier (24.02.2026, vergangen, nur Schulen).",
+  "Geprüft und verworfen: FLINTA* Competitive Training (Wien, nicht Berlin); Ballhaus-Ost FLINTA+-Basketball ohne aktuellen Termin.",
   "DBB: keine neuen 3x3-Meldungen.",
   "Keine Community-Meldungen in submissions.",
   "24 Einträge, 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
  ],
- "nextRun": "täglich um 05:55 und 17:55",
+ "nextRun": "täglich um 05:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
@@ -88,5 +87,5 @@
   "soon": 3,
   "sources": 12
  },
- "exportedAt": "2026-10-20T16:29:34+02:00"
+ "exportedAt": "2026-10-20T16:26:14+00:00"
 }
