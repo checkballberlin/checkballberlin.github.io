@@ -2,6 +2,8 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firestore.googleapis.com; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Checkball Berlin</title>
 <meta name="description" content="3x3 Basketball in Berlin: Turniere, Open Gyms und News an einem Ort. Jeden Morgen gecheckt.">
@@ -238,6 +240,9 @@ a.linkbtn:hover{text-decoration:underline}
 .shotclock{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--ink);color:var(--signal);font-family:var(--font-mono);font-size:20px;font-weight:500;letter-spacing:.02em}
 .notice-head{display:flex;gap:12px;align-items:center}
 .about{border-style:solid;margin-top:16px}
+.legal-foot{margin:24px 0 8px;font-size:12px;text-align:center}
+.rsvp-anon{display:block;font-size:11px;opacity:.8}
+.rsvp-anon a{color:inherit;text-decoration:underline}
 .about p{color:var(--text,inherit)}
 .about summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--accent,#EF5A1E);list-style-position:inside}
 .about details[open] summary{margin-bottom:8px}
@@ -391,6 +396,7 @@ textarea.input{min-height:84px;resize:vertical}
         <div class="pane-head"><h2 class="h-sec">News aus der 3x3-Welt</h2><span class="sub" id="newsCount"></span></div>
         <div id="newsList"></div>
       </div>
+      <p class="sub legal-foot">Alle Angaben ohne Gewähr. Maßgeblich sind die Angaben der Veranstalter und der FIBA-Anmeldung.<span id="legalFootLinks" hidden> · <a class="linkbtn" href="impressum.html">Impressum</a> · <a class="linkbtn" href="datenschutz.html">Datenschutz</a></span></p>
     </section>
 
     <!-- TURNIERE -->
@@ -810,7 +816,8 @@ textarea.input{min-height:84px;resize:vertical}
     if (!occ) return '';
     var n = state.rsvpCounts[occ.key], mine = !!state.rsvpMine[occ.key];
     var label = typeof n !== 'number' ? 'Wer ist dabei?' : n === 0 ? 'Noch keine Zusagen' : '<b class="num">' + n + '</b> ' + (n === 1 ? 'Zusage' : 'Zusagen');
-    return '<div class="rsvp"><div class="rsvp-info">' + I.users + '<span>' + label + '<small>für ' + occ.label + '</small></span></div>' +
+    var note = IS_WEB ? '<small class="rsvp-anon">anonym, ohne Konto · <a href="datenschutz.html#zusagen">Datenschutz</a></small>' : '';
+    return '<div class="rsvp"><div class="rsvp-info">' + I.users + '<span>' + label + '<small>für ' + occ.label + '</small>' + note + '</span></div>' +
       '<button class="btn rsvp-btn" type="button" data-act="rsvp" data-key="' + esc(occ.key) + '" aria-pressed="' + mine + '"' + (state.rsvpBusy[occ.key] ? ' disabled' : '') + '>' +
       (mine ? I.check + 'Du bist dabei' : 'Ich bin dabei') + '</button></div>';
   }
@@ -1613,6 +1620,7 @@ textarea.input{min-height:84px;resize:vertical}
 
   /* ---------- boot ---------- */
   if (IS_WEB) document.getElementById('legalLinks').hidden = false;
+  if (IS_WEB) document.getElementById('legalFootLinks').hidden = false;
   renderFiba(); renderClasses(); renderDistrict(); renderInstall();
   setTab(state.tab, true);
   renderAll();
