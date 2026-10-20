@@ -378,7 +378,7 @@ textarea.input{min-height:84px;resize:vertical}
         <div class="pane-head"><h2 class="h-sec">News aus der 3x3-Welt</h2><span class="sub" id="newsCount"></span></div>
         <div id="newsList"></div>
       </div>
-      <p class="sub legal-foot">Alle Angaben ohne Gewähr. Maßgeblich sind die Angaben der Veranstalter und der FIBA-Anmeldung.<span id="legalFootLinks" hidden> · <a class="linkbtn" href="impressum.html">Impressum</a> · <a class="linkbtn" href="datenschutz.html">Datenschutz</a></span></p>
+      <p class="sub legal-foot">Alle Angaben ohne Gewähr. Maßgeblich sind die Angaben der Veranstalter und der FIBA-Anmeldung.<span class="no-tr"> · <button class="linkbtn" type="button" data-act="lang" data-v="de">Deutsch</button> · <button class="linkbtn" type="button" data-act="lang" data-v="en">English</button></span><span id="legalFootLinks" hidden> · <a class="linkbtn" href="impressum.html">Impressum</a> · <a class="linkbtn" href="datenschutz.html">Datenschutz</a></span></p>
     </section>
 
     <!-- TURNIERE -->
@@ -432,6 +432,10 @@ textarea.input{min-height:84px;resize:vertical}
       <div class="panel">
         <h2>Gemerkt</h2>
         <div id="savedList" class="stack"></div>
+      </div>
+      <div class="panel">
+        <h2>Sprache · Language</h2>
+        <div class="tags no-tr" role="group" aria-label="Sprache / Language"><button class="chip" type="button" data-act="lang" data-v="de" id="lang-de">Deutsch</button><button class="chip" type="button" data-act="lang" data-v="en" id="lang-en">English</button></div>
       </div>
       <div class="panel">
         <h2>Kalender-Abo</h2>
@@ -520,7 +524,7 @@ textarea.input{min-height:84px;resize:vertical}
 
   /* ---------- prefs (per viewer, browser storage) ---------- */
   function loadPrefs() {
-    var p = { classes: [], district: '', fiba: '', saved: [], ages: [], cat: '', area: 'berlin', onboarded: false, seen: [] };
+    var p = { classes: [], district: '', fiba: '', saved: [], ages: [], cat: '', area: 'berlin', onboarded: false, seen: [], lang: '' };
     try {
       var raw = window.localStorage.getItem(LS_KEY);
       if (raw) {
@@ -536,6 +540,7 @@ textarea.input{min-height:84px;resize:vertical}
           else { var g0 = p.classes.filter(function (c) { return GENDERS.indexOf(c) > -1; })[0]; p.cat = g0 || ''; }
           if (o.area === 'district' || o.area === 'berlin' || o.area === 'umland') p.area = o.area;
           p.onboarded = o.onboarded === true || p.classes.length > 0;
+          if (o.lang === 'de' || o.lang === 'en') p.lang = o.lang;
           if (Array.isArray(o.seen)) p.seen = o.seen.filter(function (s) { return typeof s === 'string'; }).slice(0, 2000);
         }
       }
@@ -706,9 +711,10 @@ textarea.input{min-height:84px;resize:vertical}
   function tabFor(item) { return item.type === 'turnier' ? 'turniere' : item.type === 'gym' ? 'gyms' : item.type === 'event' ? 'events' : 'news'; }
   function prefSummary() {
     var parts = [];
-    parts.push(prefs.ages.length ? prefs.ages.join(', ') : 'alle Altersklassen');
-    parts.push(prefs.cat || 'alle Kategorien');
-    parts.push(prefs.area === 'district' && prefs.district ? prefs.district : prefs.area === 'umland' ? 'Berlin + Umland' : 'ganz Berlin');
+    var en = LANG === 'en';
+    parts.push(prefs.ages.length ? prefs.ages.join(', ') : (en ? 'all age groups' : 'alle Altersklassen'));
+    parts.push(prefs.cat || (en ? 'all categories' : 'alle Kategorien'));
+    parts.push(prefs.area === 'district' && prefs.district ? prefs.district : prefs.area === 'umland' ? (en ? 'Berlin + surroundings' : 'Berlin + Umland') : (en ? 'all of Berlin' : 'ganz Berlin'));
     return parts.join(' · ');
   }
   function byType(t) { return state.items.filter(function (i) { return i.type === t; }); }
@@ -831,7 +837,7 @@ textarea.input{min-height:84px;resize:vertical}
       h += '<div class="tags">' + cats.concat(extra).map(function (c) { return '<span class="tag">' + esc(c) + '</span>'; }).join('') + '</div>';
     }
     h += pills(item);
-    if (str(item.summary)) h += '<p class="summary' + (open ? '' : ' clamp') + '">' + esc(item.summary) + '</p>';
+    if (itemSummary(item)) h += '<p class="summary' + (open ? '' : ' clamp') + '">' + esc(itemSummary(item)) + '</p>';
     if (open) {
       var facts = [];
       if (str(item.organizer)) facts.push(['Veranstalter', esc(item.organizer)]);
@@ -875,7 +881,7 @@ textarea.input{min-height:84px;resize:vertical}
     if (isPlanned(item)) h += '<span class="pill planned">Vorschau</span>';
     if (showNewBadge(item)) h += '<span class="pill new">neu</span>';
     h += '</div><h3 class="row-title">' + esc(item.title) + '</h3>';
-    if (str(item.summary)) h += '<p class="summary">' + esc(item.summary) + '</p>';
+    if (itemSummary(item)) h += '<p class="summary">' + esc(itemSummary(item)) + '</p>';
     if (url) h += '<a class="more" href="' + esc(url) + '" target="_blank" rel="noopener">Weiterlesen bei ' + esc(str(item.sourceName) || 'Quelle') + I.ext + '</a>';
     h += '</article>';
     return h;
@@ -1452,6 +1458,7 @@ textarea.input{min-height:84px;resize:vertical}
     else if (act === 'filter') { state.filter = t.dataset.v; renderTurniere(); }
     else if (act === 'forme') { state.forMe = !state.forMe; renderTurniere(); }
     else if (act === 'past') { state.showPast = !state.showPast; renderTurniere(); }
+    else if (act === 'lang') { prefs.lang = t.dataset.v; savePrefs(); location.reload(); }
     else if (act === 'copy-cal') { copyText(t.dataset.url, 'Kalender-Link kopiert'); }
     else if (act === 'pastev') { state.showPastEv = !state.showPastEv; renderEvents(); }
     else if (act === 'ob-age') {
@@ -1820,11 +1827,176 @@ textarea.input{min-height:84px;resize:vertical}
     }
   }
 
+  /* ---------- language: German (source) and English (translated after rendering) ---------- */
+  var EN = {
+    '1. In welcher Altersklasse willst du spielen?': '1. Which age group do you want to play in?',
+    '2. In welcher Kategorie?': '2. Which category?',
+    '3. Wo willst du spielen?': '3. Where do you want to play?',
+    'Alle': 'All', 'Alles': 'Everything', 'Alle Level': 'All levels', 'Alle Open Gyms': 'All Open Gyms', 'Alle Tage': 'All days', 'Alle Turniere': 'All tournaments',
+    'Alle 3x3-Turniere in Berlin und Umland, mit Erinnerung am Vortag.': 'All 3x3 tournaments in Berlin and the surrounding area, with a reminder the day before.',
+    'Alle Angaben ohne Gewähr. Maßgeblich sind die Angaben der Veranstalter und der FIBA-Anmeldung.': 'All information without guarantee. The organiser and the FIBA registration page are authoritative.',
+    'Alle regelmäßigen und einmaligen Open Gyms.': 'All regular and one-off Open Gyms.',
+    'Anmeldeschluss in 48 Stunden': 'Registration closes in 48 hours', 'Anmeldung': 'Registration', 'Anmeldung über FIBA': 'Register via FIBA', 'Art': 'Type',
+    'Bei jedem Turnier führt ein Tipp zur FIBA-Anmeldung oder zur Seite des Veranstalters.': 'For every tournament, one tap takes you to the FIBA registration or the organiser’s page.',
+    'Benachrichtigungen': 'Notifications', 'Berlin + Umland': 'Berlin + surroundings', 'Bezirk': 'District', 'Bezirk wählen': 'Choose district', 'Bis': 'Until',
+    'Camp, Liga, Streetball-Turnier oder Watch Party in Berlin: Melde es hier, der Agent prüft es und nimmt es auf.': 'Camp, league, streetball tournament or watch party in Berlin: report it here, the agent checks it and adds it.',
+    'Camps, Ligen, Streetball & mehr': 'Camps, leagues, streetball & more',
+    'Checkball aufs Handy': 'Checkball on your phone',
+    'Checkball sammelt öffentlich angekündigte 3x3-Termine aus FIBA 3x3, DBB, BBV, Vereinen und der Community. Ein Claude-Agent prüft die Quellen jeden Tag. Kontakt:': 'Checkball collects publicly announced 3x3 dates from FIBA 3x3, DBB, BBV, clubs and the community. A Claude agent checks the sources every day. Contact:',
+    'Checkball wird von Moritz gemacht, 3x3-Coach in Berlin.': 'Checkball is made by Moritz, a 3x3 coach in Berlin.',
+    'Damen': 'Women', 'Herren': 'Men', 'Offen': 'Open', 'Erwachsene': 'Adults', 'Egal': 'Any',
+    'Danach richtet sich „Für dich“ auf der Startseite und der Filter bei den Turnieren. Bleibt nur auf deinem Gerät.': 'This sets “For you” on the home page and the tournament filter. Stays on your device only.',
+    'Datenschutz': 'Privacy', 'Impressum': 'Legal notice', 'Datum': 'Date', 'Dein Bezirk': 'Your district', 'Der Agent': 'The agent', 'Details': 'Details', 'Weniger': 'Less',
+    'Die nächsten 7 Tage': 'Next 7 days',
+    'Diese Hinweise kommen mit der App-Version für iOS und Android.': 'These alerts will come with the iOS and Android app.',
+    'Diese Woche in Berlin': 'This week in Berlin', 'Direkt zur Anmeldung:': 'Straight to registration:',
+    'Drei kurze Fragen zu Altersklasse, Kategorie und Ort, dann zeigt dir Checkball hier genau deine Turniere und Events.': 'Three quick questions about age group, category and location, and Checkball shows you exactly your tournaments and events here.',
+    'Drei kurze Fragen, dann zeigt dir Checkball, was zu dir passt. Deine Antworten bleiben nur auf diesem Gerät.': 'Three quick questions and Checkball shows you what fits. Your answers stay on this device only.',
+    'Du kennst ein Event?': 'Know an event?', 'Du kennst ein Open Gym?': 'Know an Open Gym?',
+    'Ein KI-Agent prüft öffentliche Quellen wie FIBA 3x3, DBB, Vereine und Veranstalter und trägt neue Turniere, Open Gyms und News ein.': 'An AI agent checks public sources such as FIBA 3x3, DBB, clubs and organisers and adds new tournaments, Open Gyms and news.',
+    'Einmal abonnieren, dann stehen neue Termine automatisch in deinem Handy-Kalender. Der Kalender aktualisiert sich selbst, du musst nichts mehr tun.': 'Subscribe once and new dates appear in your phone calendar automatically. It updates itself, nothing else to do.',
+    'Einmal im Monat, am ersten dieser Wochentage': 'Once a month, on the first of these weekdays',
+    'Einsteiger': 'Beginners', 'Fortgeschrittene': 'Advanced', 'Leistungsorientiert': 'Competitive', 'Einstellen': 'Set up', 'Ändern': 'Change',
+    'Einträge im Feed': 'Entries in the feed',
+    'Event / Camp': 'Event / camp', 'Event melden': 'Report an event', 'Events': 'Events',
+    'FIBA 3x3 Profil': 'FIBA 3x3 profile',
+    'Fehlt ein Termin oder hast du Fragen? Schreib an': 'Missing a date or got questions? Write to',
+    'Freiplatz': 'Outdoor court', 'Halle': 'Indoor gym', 'Für': 'For', 'Für alle:': 'For everyone:', 'Für dich': 'For you', 'Für wen?': 'Who is it for?',
+    'Ganz Berlin': 'All of Berlin', 'Mein Bezirk': 'My district', 'Gemerkt': 'Saved',
+    'Gespeichert. „Für dich“ ist eingestellt.': 'Saved. “For you” is set up.',
+    'Google Kalender': 'Google Calendar',
+    'Google Kalender: am besten am Computer öffnen und „Hinzufügen“ bestätigen, danach erscheint der Kalender auch auf dem Handy. Outlook & Co.: „Link kopieren“ und dort als Internetkalender hinzufügen.': 'Google Calendar: best opened on a computer, confirm “Add”, then it also shows on your phone. Outlook & co.: “Copy link” and add it as an internet calendar.',
+    'Heute': 'Today',
+    'Hier stehen nur Termine, die öffentlich angekündigt sind, immer mit Link zur Quelle.': 'Only publicly announced dates, always with a link to the source.',
+    'Ich bin dabei': 'I’m in', 'Du bist dabei': 'You’re in', 'Noch keine Zusagen': 'No one yet', 'Wer ist dabei?': 'Who’s coming?', 'Sei der Erste': 'Be the first',
+    'Im Browser-Menü „App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen. Dann öffnest du Checkball wie jede andere App.': 'In the browser menu choose “Install app” or “Add to home screen”. Then Checkball opens like any other app.',
+    'In Safari unten auf „Teilen“ tippen und „Zum Home-Bildschirm“ wählen. Dann öffnest du Checkball wie jede andere App.': 'In Safari tap “Share” and choose “Add to Home Screen”. Then Checkball opens like any other app.',
+    'Mit einem Tipp auf deinen Startbildschirm. Dann öffnest du Checkball wie jede andere App.': 'One tap puts it on your home screen. Then Checkball opens like any other app.',
+    'App installieren': 'Install app',
+    'Im nächsten Schritt schickst du die Meldung per Mail oder Instagram-DM an uns. Wir prüfen jede Meldung, bevor sie im Feed erscheint.': 'Next, you send the report to us by email or Instagram DM. We check every report before it appears in the feed.',
+    'In Berlin wird so viel 3x3 gespielt wie nie. Aber die Termine sind überall verstreut: auf der FIBA-Seite, bei Vereinen, auf Instagram und in WhatsApp-Gruppen. Wer nicht zufällig davon hört, verpasst das Turnier. Checkball bringt alles an einen Ort, damit in Berlin niemand mehr ein Turnier, Open Gym oder Event verpasst.': 'Berlin plays more 3x3 than ever. But the dates are scattered everywhere: on the FIBA site, at clubs, on Instagram and in WhatsApp groups. If you don’t hear about it by chance, you miss the tournament. Checkball brings it all into one place so nobody in Berlin misses a tournament, Open Gym or event again.',
+    'In der FIBA 3x3 App: Profil öffnen, teilen, Link kopieren.': 'In the FIBA 3x3 app: open your profile, share, copy link.',
+    'In meinen Kalender': 'Add to my calendar', 'Open Gyms in meinen Kalender': 'Add Open Gyms to my calendar', 'Kalender abonnieren': 'Subscribe to calendar', 'Kalender-Abo': 'Calendar subscription',
+    'Jede Woche': 'Every week', 'Wechselnde Termine': 'Varying dates', 'Jeden Morgen gecheckt:': 'Checked every morning:', 'Jetzt einstellen': 'Set up now',
+    'Kein Bezirk gewählt': 'No district chosen', 'Kosten': 'Cost',
+    'Kostenlos, ohne Anmeldung, ohne Werbung und ohne Tracking. Von U14 bis zu den Erwachsenen, Damen, Herren und Mixed.': 'Free, no sign-up, no ads, no tracking. From U14 to adults, women, men and mixed.',
+    'Link (FIBA, Instagram oder Website)': 'Link (FIBA, Instagram or website)', 'Link kopieren': 'Copy link', 'Link zu deinem Profil': 'Link to your profile',
+    'Los geht\'s': 'Let’s go', 'Mehrere möglich.': 'Several possible.',
+    'Melde es hier. Der Agent prüft Ort, Zeiten und Quelle und nimmt es in den Feed auf.': 'Report it here. The agent checks place, times and source and adds it to the feed.',
+    'Melden': 'Report', 'Name': 'Name', 'Notiz': 'Note', 'Niveau': 'Level', 'Ort': 'Place', 'Uhrzeit': 'Time', 'Von': 'From', 'Rhythmus': 'Schedule', 'Wochentage': 'Weekdays', 'Veranstalter': 'Organiser', 'Adresse': 'Address', 'Hinweis': 'Note',
+    'Neue Turniere und Open Gyms landen automatisch in deinem Handy-Kalender, mit Erinnerung am Tag vor dem Turnier.': 'New tournaments and Open Gyms land in your phone calendar automatically, with a reminder the day before the tournament.',
+    'Neues Turnier in meiner Klasse': 'New tournament in my category', 'Open Gym heute in meinem Bezirk': 'Open Gym today in my district',
+    'News aus der 3x3-Welt': 'News from the 3x3 world', 'Noch nichts eingestellt.': 'Nothing set yet.',
+    'Nur Öffentliches:': 'Public only:', 'Open Gym eintragen': 'Add an Open Gym', 'Open Gym melden': 'Report an Open Gym',
+    'Open Gyms diese Woche': 'Open Gyms this week', 'Open Gyms in 7 Tagen': 'Open Gyms in 7 days',
+    'Profil': 'Profile', 'Protokoll des letzten Laufs': 'Log of the last run', 'Prüfen': 'Check', 'Quelle': 'Source', 'Quellen': 'Sources', 'Quellen geprüft': 'Sources checked', 'Sammeln': 'Collect', 'Veröffentlichen': 'Publish',
+    'So entsteht der Feed': 'How the feed is made', 'So funktioniert\'s': 'How it works', 'Speichern': 'Save', 'Später': 'Later',
+    'Team mit 3 Spielenden plus 1 Wechsel, über die FIBA 3x3 App oder play.fiba3x3.com': 'Team of 3 players plus 1 sub, via the FIBA 3x3 app or play.fiba3x3.com',
+    'Tippe bei einem Turnier oder Open Gym auf den Stern, dann steht es hier.': 'Tap the star on a tournament or Open Gym and it shows up here.',
+    'Turnier': 'Tournament', 'Turnier melden': 'Report a tournament', 'Turniere': 'Tournaments', 'Turniere in 30 Tagen': 'Tournaments in 30 days', 'Turniere in 60 Tagen': 'Tournaments in 60 days',
+    'Turnier, Open Gym, Camp oder Watch Party: Was in Berlin mit 3x3 zu tun hat, gehört in den Feed.': 'Tournament, Open Gym, camp or watch party: anything 3x3 in Berlin belongs in the feed.',
+    'Turniere, Open Gyms und Events in einem Kalender.': 'Tournaments, Open Gyms and events in one calendar.',
+    'Verbinden': 'Connect', 'Trennen': 'Disconnect', 'Mein FIBA-Profil': 'My FIBA profile', 'Verbunden': 'Connected',
+    'Verknüpfe dein Spielerprofil, damit Checkball dich direkt zu deinen Events, Teams und Ranking-Punkten bei FIBA bringt.': 'Link your player profile so Checkball takes you straight to your events, teams and ranking points on FIBA.',
+    'Von Ballern für Baller:': 'By ballers, for ballers:', 'Warum gibt es Checkball?': 'Why Checkball?', 'Was suchst du?': 'What are you looking for?',
+    'Weiter': 'Next', 'Wo wird gespielt?': 'Where is it played?', 'Zur FIBA-Anmeldung': 'Register on FIBA', 'Zur Anmeldung': 'Register', 'FIBA-Eventseite': 'FIBA event page',
+    'anonym, ohne Konto ·': 'anonymous, no account ·', 'blockiert': 'blocked', 'geplant': 'planned', 'ok': 'ok', 'chronologisch': 'chronological', 'neu in 48 Std.': 'new in 48 hrs',
+    'oder per Instagram-Nachricht an @checkball.berlin.': 'or via Instagram message to @checkball.berlin.', 'offen für alle': 'open to everyone', 'iPhone / Apple': 'iPhone / Apple',
+    'Zuletzt geprüft': 'Last checked', 'Termin folgt': 'Date TBA', 'in Planung': 'planned', 'vorbei': 'over', 'Vorschau': 'Preview', 'neu': 'new', 'Termine': 'dates',
+    'An diesem Tag kein Open Gym im Feed.': 'No Open Gym in the feed on this day.', 'Noch keine Open Gyms im Feed.': 'No Open Gyms in the feed yet.',
+    'Gerade keine kommenden Events im Feed.': 'No upcoming events in the feed right now.', 'Keine kommenden Turniere in dieser Auswahl.': 'No upcoming tournaments for this selection.',
+    'Gerade keine Turniere in den nächsten 60 Tagen': 'No tournaments in the next 60 days right now',
+    'In Berlin ist Hallen- und Planungszeit. Der Agent prüft jeden Morgen FIBA 3x3, DBB, BBV und Vereinsseiten. Neue Turniere stehen dann sofort hier.': 'It’s indoor and planning season in Berlin. The agent checks FIBA 3x3, DBB, BBV and club pages every morning. New tournaments show up here right away.',
+    'Gerade keine passenden Turniere oder Events. Der Agent sucht jeden Morgen weiter.': 'No matching tournaments or events right now. The agent keeps looking every morning.',
+    'Feed gerade nicht erreichbar': 'Feed not reachable right now', 'Prüf deine Internetverbindung und versuch es noch einmal.': 'Check your internet connection and try again.', 'Neu laden': 'Reload',
+    'Feed konnte nicht geladen werden': 'Feed could not be loaded',
+    'Gemerkt': 'Saved', 'Nicht mehr gemerkt': 'Removed from saved', 'Infos kopiert': 'Info copied', 'Kalender-Link kopiert': 'Calendar link copied', 'Text kopiert': 'Text copied',
+    'FIBA-Profil verbunden': 'FIBA profile connected', 'FIBA-Profil getrennt': 'FIBA profile disconnected', 'Gemeldet. Der Agent prüft es beim nächsten Lauf.': 'Reported. The agent checks it on the next run.',
+    'Checkball ist installiert': 'Checkball is installed', 'Bezirk gespeichert': 'District saved', 'Bezirk entfernt': 'District removed',
+    'Sprache': 'Language', 'Merken': 'Save', 'Infos kopieren': 'Copy info', 'In Google Kalender eintragen': 'Add to Google Calendar', 'Schließen': 'Close', 'Hauptnavigation': 'Main navigation',
+    'Nach Klasse filtern': 'Filter by category', 'Tag wählen': 'Choose day', 'Checkball, zur Startseite': 'Checkball, to home page',
+    'Halle oder Freiplatz mit Adresse': 'Gym or outdoor court with address', 'Kosten? Anmeldeschluss? Wiederkehrend?': 'Cost? Deadline? Recurring?', 'Anmeldung nötig? Was mitbringen? Welcher Verein steckt dahinter?': 'Registration needed? What to bring? Which club runs it?',
+    'Mo': 'Mon', 'Di': 'Tue', 'Mi': 'Wed', 'Do': 'Thu', 'Fr': 'Fri', 'Sa': 'Sat', 'So': 'Sun', 'Okt': 'Oct', 'Dez': 'Dec', 'Mär': 'Mar', 'Mai': 'May',
+    'kostenlos': 'free', 'Zuschauen': 'Watch', 'Umland (Brandenburg)': 'Surroundings (Brandenburg)'
+  };
+  var WD_EN = { 'Montag': 'Monday', 'Dienstag': 'Tuesday', 'Mittwoch': 'Wednesday', 'Donnerstag': 'Thursday', 'Freitag': 'Friday', 'Samstag': 'Saturday', 'Sonntag': 'Sunday',
+    'Januar': 'January', 'Februar': 'February', 'März': 'March', 'April': 'April', 'Mai': 'May', 'Juni': 'June', 'Juli': 'July', 'August': 'August', 'September': 'September', 'Oktober': 'October', 'November': 'November', 'Dezember': 'December',
+    'Mo': 'Mon', 'Di': 'Tue', 'Mi': 'Wed', 'Do': 'Thu', 'Fr': 'Fri', 'Sa': 'Sat', 'So': 'Sun', 'Okt': 'Oct', 'Dez': 'Dec', 'Mär': 'Mar', 'Heute': 'Today', 'heute': 'today', 'morgen': 'tomorrow', 'gestern': 'yesterday', 'jeden': 'every', 'Uhr': '', 'für': 'for', 'Termine': 'dates', 'Termin': 'date' };
+  var RX = [
+    [/^(\d+) Meldungen$/, '$1 stories'],
+    [/^Rückblick (\d{4}) · (\d+) Turniere$/, 'Look back $1 · $2 tournaments'], [/^Rückblick (\d{4}) · (\d+) Events$/, 'Look back $1 · $2 events'],
+    [/^Vom Agenten erfasst am (.+?)( · Quelle:)?$/, function (m, d, q) { return 'Added by the agent on ' + d + (q ? ' · Source:' : ''); }],
+    [/^Weiterlesen bei (.+)$/, 'Read more at $1'],
+    [/^Neu seit deinem letzten Besuch: (.+)$/, function (m, l) { return 'New since your last visit: ' + l.replace(/Turniere?/g, function (x) { return x === 'Turnier' ? 'tournament' : 'tournaments'; }).replace(/Open Gyms?/g, function (x) { return x; }).replace(/Events?/g, function (x) { return x.toLowerCase(); }); }],
+    [/^(\d+) kommt$/, '$1 is coming'], [/^(\d+) kommen$/, '$1 are coming'], [/^Zusagen?$/, function (m) { return m === 'Zusage' ? 'yes' : 'yeses'; }],
+    [/^in (\d+) Tagen$/, 'in $1 days'], [/^vor (\d+) Tagen$/, '$1 days ago'], [/^in (\d+) Wochen$/, 'in $1 weeks'],
+    [/^Anmeldung endet heute$/, 'Registration closes today'], [/^Anmeldung noch (\d+) Tage?$/, 'Registration: $1 days left'],
+    [/^Zuletzt geprüft: (.+)$/, function (m, r) { return 'Last checked: ' + dateTokens(r).replace('Nächster Lauf: täglich um', 'Next run: daily at'); }]
+  ];
+  var DATE_SEL = '.meta span, .when, .when small, .mini-row .t span, .day .wd, .rsvp-info small, .hero-eyebrow, .h-sec, .dateblock span, .next .t span, .saved-row span, .stat span, .row-top .src';
+  function dateTokens(t) {
+    return t.replace(/\b(\d+) Tagen\b/g, '$1 days').replace(/\bin (\d+) Wochen\b/g, 'in $1 weeks')
+      .replace(/[A-Za-zÄÖÜäöüß]+/g, function (w) { return Object.prototype.hasOwnProperty.call(WD_EN, w) ? WD_EN[w] : w; })
+      .replace(/ {2,}/g, ' ').replace(/ ·\s*$/, '').trim();
+  }
+  function trText(t, dateCtx) {
+    var core = t.trim();
+    if (!core) return t;
+    var out = null;
+    if (Object.prototype.hasOwnProperty.call(EN, core)) out = EN[core];
+    else {
+      for (var i = 0; i < RX.length && out === null; i++) if (RX[i][0].test(core)) out = core.replace(RX[i][0], RX[i][1]);
+      if (out === null && dateCtx) out = dateTokens(core);
+    }
+    if (out === null || out === core) return t;
+    return t.replace(core, out);
+  }
+  var LANG = 'de', translating = false;
+  function translateTree(root) {
+    if (LANG !== 'en' || !root) return;
+    translating = true;
+    try {
+      var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), n, list = [];
+      while ((n = w.nextNode())) list.push(n);
+      if (root.nodeType === 3) list.push(root);
+      list.forEach(function (tn) {
+        var p = tn.parentElement; if (!p || p.closest('script,style,.no-tr')) return;
+        var nv = trText(tn.nodeValue, !!p.closest(DATE_SEL));
+        if (nv !== tn.nodeValue) tn.nodeValue = nv;
+      });
+      var els = root.querySelectorAll ? root.querySelectorAll('[aria-label],[placeholder],[title]') : [];
+      Array.prototype.forEach.call(els, function (el) {
+        ['aria-label', 'placeholder', 'title'].forEach(function (a) {
+          var v = el.getAttribute(a); if (!v) return;
+          var nv = trText(v, true); if (nv !== v) el.setAttribute(a, nv);
+        });
+      });
+    } finally { translating = false; }
+  }
+  function initLang() {
+    var l = prefs.lang;
+    if (l !== 'de' && l !== 'en') { var nav = (navigator.language || 'de').toLowerCase(); l = nav.indexOf('de') === 0 ? 'de' : 'en'; }
+    LANG = l;
+    document.documentElement.lang = LANG;
+    ['de', 'en'].forEach(function (x) { var b = document.getElementById('lang-' + x); if (b) b.setAttribute('aria-pressed', String(x === LANG)); });
+    if (LANG !== 'en') return;
+    translateTree(document.body);
+    new MutationObserver(function (muts) {
+      if (translating) return;
+      muts.forEach(function (m) {
+        if (m.type === 'characterData') translateTree(m.target.parentElement);
+        else m.addedNodes.forEach(function (n) { translateTree(n.nodeType === 1 ? n : n.parentElement); });
+      });
+    }).observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+  function itemSummary(item) { return LANG === 'en' && str(item.summaryEn) ? item.summaryEn : str(item.summary); }
+
   /* ---------- boot ---------- */
   if (IS_WEB) document.getElementById('legalLinks').hidden = false;
   if (IS_WEB) document.getElementById('legalFootLinks').hidden = false;
   renderFiba(); renderClasses(); renderDistrict(); renderInstall();
   state.forMe = hasPrefs();
+  initLang();
   setTab(state.tab, true);
   renderAll();
   connect();
