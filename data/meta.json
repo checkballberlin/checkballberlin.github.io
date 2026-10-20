@@ -1,45 +1,45 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-19T15:20:00+02:00",
+ "lastRun": "2026-10-20T05:57:00+02:00",
  "log": [
-  "15:20  Dritter Lauf heute · Stadt: Berlin",
-  "Keine neuen Einträge aus der Websuche (3x3-Turniere, FIBA-Events, Open Gyms).",
-  "Nachgetragen auf Hinweis des Betreibers: The Battle for the Heimathafen (01.11., U14/U16, Friedrichshain).",
-  "Nachgetragen auf Hinweis des Betreibers: Hoop City Berlin 3x3 meets MBF (01.11., U18/Damen/Herren, Britz).",
-  "Streetball-Team: Weekly Gym Mo und Open Gym Mi laufen bis Ende Dezember, unverändert.",
-  "Keine Community-Meldungen. Friday Night Hoops bleibt als Betreiber-Freigabe.",
-  "24 Einträge, 3 Berliner Turniere in den nächsten 60 Tagen.",
-  "Web-Version: Stand wird beim Web-Update um 06:25 veröffentlicht."
+  "05:57  Morgenlauf · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche nach FIBA-3x3-Events, Turnieren und Open Gyms ohne neue Berliner Termine ab heute.",
+  "visitBerlin-Treffer (Washingtonplatz, Rathaus Schöneberg, Hermann-Ehlers-Platz, DM-Quali) sind bereits erfasst.",
+  "Streetball-Team: Open Gym Mi 21./28.10. (17–18 Uhr) und Weekly Gym Mo 26.10. (19–20:30 Uhr) wie erfasst.",
+  "Geprüft und verworfen: Grundschulturnier (24.02.2026) sowie Ballhaus-Ost-Streetballturnier und FLINTA+-Training (beide Juni 2025), alle vergangen.",
+  "DBB: keine neuen 3x3-Meldungen.",
+  "Keine Community-Meldungen in submissions.",
+  "24 Einträge, 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf weiter blockiert. Event-Links über Suchindex und Veranstalterseiten gefunden.",
+   "note": "Direkter Abruf weiter blockiert. Suchindex ohne neue Berliner Events.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/"
   },
   {
    "name": "DBB 3x3: News und Kalender",
-   "note": "Keine neuen Meldungen gefunden.",
+   "note": "Newsseite derzeit ohne Einträge; keine neuen Meldungen.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Nur öffentlich angekündigte Termine. Friday Night Hoops vom Betreiber freigegeben.",
+   "note": "Keine neuen öffentlich angekündigten 3x3-Termine gefunden.",
    "status": "ok",
    "url": "https://www.binb.info/"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Upcoming Events geprüft, keine Änderungen.",
+   "note": "Oktober-Kalender geprüft, keine Änderungen.",
    "status": "ok",
    "url": "https://www.streetball-team.de/"
   },
   {
    "name": "MBF Berlin (MBL Ferienliga)",
-   "note": "Neu: Rundentermine Saison 2026/27.",
+   "note": "Runde 2 am 31.10. unverändert.",
    "status": "ok",
    "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
   },
@@ -57,13 +57,13 @@
   },
   {
    "name": "visitBerlin Eventkalender",
-   "note": "Hermann-Ehlers-Platz (August) in den Rückblick.",
+   "note": "Nur vergangene Basketball-Events (Juni bis September) gefunden.",
    "status": "ok",
    "url": "https://www.visitberlin.de/"
   },
   {
    "name": "Kultur- und Stadtkalender",
-   "note": "berlin.de und Pop-Kultur ohne Neues.",
+   "note": "berlin.de ohne Neues.",
    "status": "ok"
   },
   {
@@ -88,5 +88,5 @@
   "soon": 3,
   "sources": 12
  },
- "exportedAt": "2026-10-19T15:47:15+00:00"
+ "exportedAt": "2026-10-20T04:26:14+00:00"
 }
