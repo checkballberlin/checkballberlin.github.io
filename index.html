@@ -286,15 +286,32 @@ textarea.input{min-height:84px;resize:vertical}
 .connected span{display:block;font-size:13px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .plan-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .plan-list li{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:14px;padding:10px 12px;border-radius:10px;background:var(--surface-2)}
+.home-block{margin-top:18px;display:grid;gap:10px}
+.home-block .pane-head{margin:0}
+.mini-list{display:grid;gap:8px}
+.mini-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;width:100%;text-align:left;padding:10px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-size:14px;color:var(--ink)}
+.mini-row .when{display:grid;justify-items:center;min-width:44px;font-weight:800;font-size:13px;line-height:1.1}
+.mini-row .when small{font-weight:600;color:var(--muted);font-size:11.5px}
+.mini-row .t{display:grid;gap:2px;min-width:0}
+.mini-row .t b{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini-row .t span{color:var(--muted);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini-row .cnt{font-size:12px;font-weight:700;color:var(--accent-text);white-space:nowrap}
+.mini-row svg{width:18px;height:18px;color:var(--muted)}
+.mini-row.cnt-row{grid-template-columns:auto 1fr auto auto}
+.pref-sum{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.newbar{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:14px;padding:10px 14px;border-radius:12px;background:var(--accent-soft);color:var(--accent-text);font-weight:700;font-size:14px}
+.ob-q{display:grid;gap:8px}
+.ob-q h3{font-size:15px;margin:0}
+.ob-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
 .saved-row{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:10px 12px;border-radius:10px;background:var(--surface-2);font-size:14px}
 .saved-row b{font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .saved-row span{color:var(--muted);font-size:13px;white-space:nowrap}
 
 /* bottom tabs */
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;justify-content:center;pointer-events:none}
-.tabbar-inner{pointer-events:auto;width:100%;max-width:540px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:max(6px, env(safe-area-inset-left, 0px));padding-right:max(6px, env(safe-area-inset-right, 0px))}
+.tabbar-inner{pointer-events:auto;width:100%;max-width:540px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:max(6px, env(safe-area-inset-left, 0px));padding-right:max(6px, env(safe-area-inset-right, 0px))}
 .tab{display:grid;justify-items:center;gap:3px;padding:8px 2px 9px;font-size:11.5px;font-weight:700;color:var(--muted)}
-.tab .ic{display:grid;place-items:center;width:52px;height:30px;border-radius:999px;transition:background .15s}
+.tab .ic{display:grid;place-items:center;width:46px;height:30px;border-radius:999px;transition:background .15s}
 .tab svg{width:22px;height:22px}
 .tab[aria-selected="true"]{color:var(--ink)}
 .tab[aria-selected="true"] .ic{background:var(--accent-soft);color:var(--accent-text)}
@@ -376,7 +393,10 @@ textarea.input{min-height:84px;resize:vertical}
     <!-- NEWS -->
     <section class="pane gutter" id="pane-news" aria-labelledby="t-news">
       <h1 class="vh" id="t-news">News</h1>
+      <div id="newBanner"></div>
       <div id="hero"></div>
+      <div id="forYou" class="home-block"></div>
+      <div id="homeGyms" class="home-block"></div>
       <div class="notice about" id="about">
         <div class="notice-head"><span class="shotclock" aria-hidden="true">?</span><h3>Warum gibt es Checkball?</h3></div>
         <p>In Berlin wird so viel 3x3 gespielt wie nie. Aber die Termine sind überall verstreut: auf der FIBA-Seite, bei Vereinen, auf Instagram und in WhatsApp-Gruppen. Wer nicht zufällig davon hört, verpasst das Turnier. Checkball bringt alles an einen Ort, damit in Berlin niemand mehr ein Turnier, Open Gym oder Event verpasst.</p>
@@ -408,17 +428,27 @@ textarea.input{min-height:84px;resize:vertical}
 
     <!-- GYMS & EVENTS -->
     <section class="pane gutter" id="pane-gyms" aria-labelledby="t-gyms" hidden>
-      <div class="pane-head"><h1 class="h-pane" id="t-gyms">Open Gyms &amp; Events</h1></div>
+      <div class="pane-head"><h1 class="h-pane" id="t-gyms">Open Gyms</h1><span class="sub">offen für alle</span></div>
       <div class="section">
         <div class="pane-head"><h2 class="h-sec">Die nächsten 7 Tage</h2><button class="linkbtn" type="button" data-act="day" data-day="" id="dayReset" hidden>Alle Tage</button></div>
         <div class="week" id="week" role="toolbar" aria-label="Tag wählen"></div>
       </div>
       <div class="section"><div class="pane-head"><h2 class="h-sec">Open Gyms</h2><button class="linkbtn" type="button" data-act="sheet" data-sheet="report" data-kind="gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Open Gym eintragen</button></div><div id="gymList" class="stack"></div></div>
-      <div class="section"><h2 class="h-sec">Events &amp; Camps</h2><div id="eventList" class="stack"></div></div>
       <div class="notice">
         <div class="notice-head"><span class="shotclock" aria-hidden="true">+1</span><h3>Du kennst ein Open Gym?</h3></div>
         <p>Melde es hier. Der Agent prüft Ort, Zeiten und Quelle und nimmt es in den Feed auf.</p>
         <div><button class="btn primary" type="button" data-act="sheet" data-sheet="report" data-kind="gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Open Gym melden</button></div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="pane gutter" id="pane-events" aria-labelledby="t-events" hidden>
+      <div class="pane-head"><h1 class="h-pane" id="t-events">Events</h1><span class="sub">Camps, Ligen, Streetball &amp; mehr</span></div>
+      <div id="eventList" class="stack"></div>
+      <div class="notice">
+        <div class="notice-head"><span class="shotclock" aria-hidden="true">+1</span><h3>Du kennst ein Event?</h3></div>
+        <p>Camp, Liga, Streetball-Turnier oder Watch Party in Berlin: Melde es hier, der Agent prüft es und nimmt es auf.</p>
+        <div><button class="btn primary" type="button" data-act="sheet" data-sheet="report" data-kind="event"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Event melden</button></div>
       </div>
     </section>
 
@@ -427,9 +457,9 @@ textarea.input{min-height:84px;resize:vertical}
       <div class="pane-head"><h1 class="h-pane" id="t-profil">Profil</h1></div>
       <div class="panel" id="fibaPanel"></div>
       <div class="panel">
-        <h2>Meine Klassen</h2>
-        <p>Turniere in deinen Klassen bekommen das Label „Für dich“ und lassen sich mit einem Tipp filtern.</p>
-        <div class="tags" id="classChips" role="group" aria-label="Klassen wählen"></div>
+        <h2>Was suchst du?</h2>
+        <p>Danach richtet sich „Für dich“ auf der Startseite und der Filter bei den Turnieren. Bleibt nur auf deinem Gerät.</p>
+        <div id="classChips"></div>
       </div>
       <div class="panel">
         <h2>Mein Bezirk</h2>
@@ -465,7 +495,8 @@ textarea.input{min-height:84px;resize:vertical}
   <div class="tabbar-inner" role="tablist">
     <button class="tab" role="tab" type="button" data-act="tab" data-tab="news" id="tab-news" aria-controls="pane-news" aria-selected="true"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v14H6a2 2 0 0 1-2-2z"/><path d="M16 9h4v8a2 2 0 0 1-2 2h-2"/><path d="M7.5 9h5M7.5 12.5h5M7.5 16h3"/></svg></span>News</button>
     <button class="tab" role="tab" type="button" data-act="tab" data-tab="turniere" id="tab-turniere" aria-controls="pane-turniere" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h5v6H3M8 7h4M3 14h5v6H3M8 17h4M12 7v10M12 12h9"/></svg></span>Turniere</button>
-    <button class="tab" role="tab" type="button" data-act="tab" data-tab="gyms" id="tab-gyms" aria-controls="pane-gyms" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="9" rx="1.5"/><rect x="9.5" y="6" width="5" height="4"/><path d="M7.5 12h9M8.5 12l1.6 8M15.5 12l-1.6 8M9.4 16h5.2"/></svg></span>Gyms &amp; Events</button>
+    <button class="tab" role="tab" type="button" data-act="tab" data-tab="gyms" id="tab-gyms" aria-controls="pane-gyms" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="9" rx="1.5"/><rect x="9.5" y="6" width="5" height="4"/><path d="M7.5 12h9M8.5 12l1.6 8M15.5 12l-1.6 8M9.4 16h5.2"/></svg></span>Open Gyms</button>
+    <button class="tab" role="tab" type="button" data-act="tab" data-tab="events" id="tab-events" aria-controls="pane-events" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3"/></svg></span>Events</button>
     <button class="tab" role="tab" type="button" data-act="tab" data-tab="profil" id="tab-profil" aria-controls="pane-profil" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>Profil</button>
   </div>
 </nav>
@@ -484,7 +515,12 @@ textarea.input{min-height:84px;resize:vertical}
   var CLASSES = ['U14', 'U16', 'U18', 'Damen', 'Herren', 'Mixed', 'FLINTA*', 'Offen'];
   var DISTRICTS = ['Charlottenburg-Wilmersdorf', 'Friedrichshain-Kreuzberg', 'Lichtenberg', 'Marzahn-Hellersdorf', 'Mitte', 'Neukölln', 'Pankow', 'Reinickendorf', 'Spandau', 'Steglitz-Zehlendorf', 'Tempelhof-Schöneberg', 'Treptow-Köpenick'];
   var CITIES = [['Berlin', true], ['Hamburg', false], ['München', false], ['Köln', false], ['Leipzig', false], ['Potsdam', false]];
-  var TABS = ['news', 'turniere', 'gyms', 'profil'];
+  var TABS = ['news', 'turniere', 'gyms', 'events', 'profil'];
+  var AGES = ['U14', 'U16', 'U18', 'Erwachsene'];
+  var AGE_TAGS = ['U14', 'U16', 'U18'];
+  var GENDERS = ['Damen', 'Herren', 'Mixed', 'FLINTA*'];
+  var GENDER_MATCH = { 'Damen': ['Damen', 'FLINTA*', 'Mixed'], 'Herren': ['Herren', 'Mixed'], 'Mixed': ['Mixed'], 'FLINTA*': ['FLINTA*', 'Damen', 'Mixed'] };
+  var AREAS = [['district', 'Mein Bezirk'], ['berlin', 'Ganz Berlin'], ['umland', 'Berlin + Umland']];
   var WD = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
   var WD_LONG = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
   var MON = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
@@ -514,7 +550,7 @@ textarea.input{min-height:84px;resize:vertical}
 
   /* ---------- prefs (per viewer, browser storage) ---------- */
   function loadPrefs() {
-    var p = { classes: [], district: '', fiba: '', saved: [] };
+    var p = { classes: [], district: '', fiba: '', saved: [], ages: [], cat: '', area: 'berlin', onboarded: false, seen: [] };
     try {
       var raw = window.localStorage.getItem(LS_KEY);
       if (raw) {
@@ -524,6 +560,13 @@ textarea.input{min-height:84px;resize:vertical}
           if (typeof o.district === 'string') p.district = o.district;
           if (typeof o.fiba === 'string') p.fiba = o.fiba;
           if (Array.isArray(o.saved)) p.saved = o.saved.filter(function (s) { return typeof s === 'string'; }).slice(0, 200);
+          if (Array.isArray(o.ages)) p.ages = o.ages.filter(function (a) { return AGES.indexOf(a) > -1; });
+          else p.ages = p.classes.filter(function (c) { return AGE_TAGS.indexOf(c) > -1; });
+          if (typeof o.cat === 'string' && (o.cat === '' || GENDERS.indexOf(o.cat) > -1)) p.cat = o.cat;
+          else { var g0 = p.classes.filter(function (c) { return GENDERS.indexOf(c) > -1; })[0]; p.cat = g0 || ''; }
+          if (o.area === 'district' || o.area === 'berlin' || o.area === 'umland') p.area = o.area;
+          p.onboarded = o.onboarded === true || p.classes.length > 0;
+          if (Array.isArray(o.seen)) p.seen = o.seen.filter(function (s) { return typeof s === 'string'; }).slice(0, 2000);
         }
       }
     } catch (e) { /* storage unavailable */ }
@@ -533,11 +576,12 @@ textarea.input{min-height:84px;resize:vertical}
     try { window.localStorage.setItem(LS_KEY, JSON.stringify(prefs)); } catch (e) { /* ignore */ }
   }
   var prefs = loadPrefs();
+  function hasPrefs() { return prefs.ages.length > 0 || !!prefs.cat || prefs.area !== 'berlin'; }
 
   /* ---------- state ---------- */
   var state = {
     items: [], meta: null, status: 'loading',
-    tab: tabFromHash(), filter: 'Alle', forMe: false, day: '', showPast: false,
+    tab: tabFromHash(), filter: 'Alle', forMe: false, day: '', showPast: false, showPastEv: false, newIds: {}, returning: false, seenDone: false, onboardShown: false, ob: null,
     expanded: {}, db: null, uid: null, canEdit: false, reportKind: 'turnier', reportCats: [], reportDays: [], reportSetting: '',
     /* attendance: 'db' inside claude.ai, 'fb' in the open web version with Firebase configured, null = off */
     rsvpMode: null, rsvpCounts: {}, rsvpMine: {}, rsvpBusy: {}
@@ -657,14 +701,45 @@ textarea.input{min-height:84px;resize:vertical}
   function isNew(item) { var f = parseDate(item.foundAt); return !!f && dayDiff(f, new Date()) <= 2; }
   /* After a first full import almost everything is new; badges only help once a few items stand out. */
   function showNewBadge(item) {
+    if (state.returning) return !!state.newIds[item.id];
     if (!isNew(item)) return false;
     var n = state.items.filter(isNew).length;
     return n <= Math.max(5, Math.floor(state.items.length * 0.4));
   }
-  function forMe(item) {
-    if (!prefs.classes.length) return false;
+  function areaMatch(item) {
+    var d = str(item.district);
+    if (!d) return false;
+    if (prefs.area === 'umland') return true;
+    if (prefs.area === 'district' && prefs.district) return d === prefs.district;
+    return DISTRICTS.indexOf(d) > -1;
+  }
+  function ageMatch(item) {
+    if (!prefs.ages.length) return true;
     var c = arr(item.categories);
-    return c.some(function (x) { return prefs.classes.indexOf(x) > -1; });
+    if (!c.length || c.indexOf('Offen') > -1) return true;
+    var a = c.filter(function (x) { return AGE_TAGS.indexOf(x) > -1; });
+    if (!a.length) return prefs.ages.indexOf('Erwachsene') > -1;
+    return a.some(function (x) { return prefs.ages.indexOf(x) > -1; });
+  }
+  function catMatch(item) {
+    if (!prefs.cat) return true;
+    var c = arr(item.categories);
+    var g = c.filter(function (x) { return GENDERS.indexOf(x) > -1; });
+    if (!g.length || c.indexOf('Offen') > -1) return true;
+    var ok = GENDER_MATCH[prefs.cat] || [prefs.cat];
+    return g.some(function (x) { return ok.indexOf(x) > -1; });
+  }
+  function forMe(item) {
+    if (!hasPrefs()) return false;
+    return ageMatch(item) && catMatch(item) && areaMatch(item);
+  }
+  function tabFor(item) { return item.type === 'turnier' ? 'turniere' : item.type === 'gym' ? 'gyms' : item.type === 'event' ? 'events' : 'news'; }
+  function prefSummary() {
+    var parts = [];
+    parts.push(prefs.ages.length ? prefs.ages.join(', ') : 'alle Altersklassen');
+    parts.push(prefs.cat || 'alle Kategorien');
+    parts.push(prefs.area === 'district' && prefs.district ? prefs.district : prefs.area === 'umland' ? 'Berlin + Umland' : 'ganz Berlin');
+    return parts.join(' · ');
   }
   function byType(t) { return state.items.filter(function (i) { return i.type === t; }); }
 
@@ -775,7 +850,7 @@ textarea.input{min-height:84px;resize:vertical}
     var h = '<article class="card' + (past ? ' is-past' : '') + '" id="item-' + id + '">' + dateBlock(item) + '<div class="body">';
     h += '<h3 class="c-title">' + esc(item.title) + '</h3>';
     h += '<div class="meta"><span>' + I.clock + esc(whenText(item)) + '</span>';
-    if (str(item.venue)) h += '<span>' + I.pin + esc(item.venue) + (str(item.district) ? ' · ' + esc(item.district) : '') + '</span>';
+    if (str(item.venue)) h += '<span>' + I.pin + esc(item.venue) + (str(item.district) && str(item.district) !== str(item.venue) ? ' · ' + esc(item.district) : '') + '</span>';
     h += '</div>';
     var extra = [];
     if (str(item.setting) === 'halle') extra.push('Halle');
@@ -867,7 +942,7 @@ textarea.input{min-height:84px;resize:vertical}
     if (state.status === 'live') {
       h += '<div class="stats"><div class="stat"><b>' + t30 + '</b><span>Turniere in 30 Tagen</span></div><div class="stat"><b>' + g7 + '</b><span>Open Gyms in 7 Tagen</span></div><div class="stat"><b>' + nNew + '</b><span>neu in 48 Std.</span></div></div>';
       if (nx) {
-        var s = nx.s, tab = nx.i.type === 'turnier' ? 'turniere' : 'gyms';
+        var s = nx.s, tab = tabFor(nx.i);
         h += '<button class="next" type="button" data-act="goto" data-tab="' + tab + '" data-id="' + esc(nx.i.id) + '"><span class="when">' + WD[s.getDay()] + '<small>' + fmtShort(s) + '</small></span><span class="t">' + esc(nx.i.title) + '<span>' + esc(rel(s)) + (str(nx.i.venue) ? ' · ' + esc(nx.i.venue) : '') + '</span></span>' + I.right + '</button>';
       }
     } else {
@@ -879,6 +954,9 @@ textarea.input{min-height:84px;resize:vertical}
 
   function renderNews() {
     renderHero();
+    renderNewBanner();
+    renderForYou();
+    renderHomeGyms();
     var list = document.getElementById('newsList');
     var cnt = document.getElementById('newsCount');
     var news = byType('news').sort(function (a, b) { return (parseDate(b.date) || 0) - (parseDate(a.date) || 0); });
@@ -887,10 +965,69 @@ textarea.input{min-height:84px;resize:vertical}
     list.innerHTML = '<div class="list">' + news.map(newsRow).join('') + '</div>';
   }
 
+  function miniRow(item, extra) {
+    var s = startOf(item);
+    var when = s ? '<span class="when">' + WD[s.getDay()] + '<small>' + fmtShort(s) + '</small></span>' : '<span class="when">–</span>';
+    var sub = [];
+    if (s && (item.recurring || hasTime(str(item.start)))) sub.push(fmtTime(s) + ' Uhr');
+    if (str(item.venue)) sub.push(str(item.venue));
+    return '<button class="mini-row' + (extra ? ' cnt-row' : '') + '" type="button" data-act="goto" data-tab="' + tabFor(item) + '" data-id="' + esc(item.id) + '">' + when +
+      '<span class="t"><b>' + esc(item.title) + '</b><span>' + esc(sub.join(' · ') || rel(s || new Date())) + '</span></span>' + (extra || '') + I.right + '</button>';
+  }
+  function renderNewBanner() {
+    var el = document.getElementById('newBanner');
+    if (!el) return;
+    var ids = Object.keys(state.newIds);
+    var items = state.items.filter(function (i) { return state.newIds[i.id] && !isPast(i); });
+    if (!state.returning || !items.length) { el.innerHTML = ''; return; }
+    var c = { turnier: 0, gym: 0, event: 0, news: 0 };
+    items.forEach(function (i) { if (c[i.type] != null) c[i.type]++; });
+    var parts = [];
+    if (c.turnier) parts.push(c.turnier + (c.turnier === 1 ? ' Turnier' : ' Turniere'));
+    if (c.gym) parts.push(c.gym + (c.gym === 1 ? ' Open Gym' : ' Open Gyms'));
+    if (c.event) parts.push(c.event + (c.event === 1 ? ' Event' : ' Events'));
+    if (c.news) parts.push(c.news + ' News');
+    var first = items.filter(function (i) { return i.type === 'turnier'; })[0] || items[0];
+    el.innerHTML = '<button class="newbar" type="button" data-act="goto" data-tab="' + tabFor(first) + '" data-id="' + esc(first.id) + '"><span>Neu seit deinem letzten Besuch: ' + esc(parts.join(', ')) + '</span>' + I.right + '</button>';
+  }
+  function renderForYou() {
+    var el = document.getElementById('forYou');
+    if (!el) return;
+    if (state.status !== 'live') { el.innerHTML = ''; return; }
+    var h = '<div class="pane-head"><h2 class="h-sec">Für dich</h2><button class="linkbtn" type="button" data-act="sheet" data-sheet="onboard">' + (hasPrefs() ? 'Ändern' : 'Einstellen') + '</button></div>';
+    if (!hasPrefs()) {
+      h += '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">3</span><h3>Was suchst du?</h3></div><p>Drei kurze Fragen zu Altersklasse, Kategorie und Ort, dann zeigt dir Checkball hier genau deine Turniere und Events.</p><div><button class="btn primary" type="button" data-act="sheet" data-sheet="onboard">Los geht\'s</button></div></div>';
+      el.innerHTML = h; return;
+    }
+    var list = state.items.filter(function (i) { return (i.type === 'turnier' || i.type === 'event') && !isPast(i) && startOf(i) && forMe(i); })
+      .sort(function (a, b) { return startOf(a) - startOf(b); }).slice(0, 4);
+    h += '<p class="sub" style="margin:0">' + esc(prefSummary()) + '</p>';
+    if (list.length) h += '<div class="mini-list">' + list.map(function (i) { return miniRow(i); }).join('') + '</div>';
+    else h += '<p class="sub" style="margin:0">Gerade keine passenden Turniere oder Events. Der Agent sucht jeden Morgen weiter.</p>';
+    h += '<div class="actions" style="margin:0"><button class="btn" type="button" data-act="tab" data-tab="turniere">Alle Turniere</button><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div>';
+    el.innerHTML = h;
+  }
+  function renderHomeGyms() {
+    var el = document.getElementById('homeGyms');
+    if (!el) return;
+    if (state.status !== 'live') { el.innerHTML = ''; return; }
+    var limit = addDays(sod(new Date()), 7);
+    var gyms = byType('gym').filter(function (g) { var s = startOf(g); return s && s < limit && (!hasPrefs() || areaMatch(g)); })
+      .sort(function (a, b) { return startOf(a) - startOf(b); }).slice(0, 4);
+    var h = '<div class="pane-head"><h2 class="h-sec">Open Gyms diese Woche</h2><button class="linkbtn" type="button" data-act="tab" data-tab="gyms">Alle Open Gyms</button></div>';
+    if (!gyms.length) { el.innerHTML = h + '<p class="sub" style="margin:0">In den nächsten 7 Tagen kein Open Gym im Feed. Kennst du eins? Trag es im Tab „Open Gyms“ ein.</p>'; return; }
+    h += '<div class="mini-list">' + gyms.map(function (g) {
+      var occ = rsvpOcc(g), n = occ ? state.rsvpCounts[occ.key] : undefined;
+      var cnt = state.rsvpMode && typeof n === 'number' ? '<span class="cnt">' + (n === 0 ? 'Sei der Erste' : n + (n === 1 ? ' kommt' : ' kommen')) + '</span>' : '';
+      return miniRow(g, cnt);
+    }).join('') + '</div>';
+    el.innerHTML = h;
+  }
+
   function renderTurniere() {
     var chips = document.getElementById('filterChips');
     var ch = '';
-    if (prefs.classes.length) ch += '<button class="chip forme" type="button" data-act="forme" aria-pressed="' + state.forMe + '">' + I.spark + 'Für dich</button>';
+    if (hasPrefs()) ch += '<button class="chip forme" type="button" data-act="forme" aria-pressed="' + state.forMe + '">' + I.spark + 'Für dich</button>';
     ch += ['Alle'].concat(CLASSES).map(function (c) {
       return '<button class="chip" type="button" data-act="filter" data-v="' + esc(c) + '" aria-pressed="' + (state.filter === c) + '">' + esc(c) + '</button>';
     }).join('');
@@ -908,7 +1045,7 @@ textarea.input{min-height:84px;resize:vertical}
     var past = all.filter(isPast).sort(function (a, b) { return (startOf(b) || 0) - (startOf(a) || 0); });
     var now = new Date();
     var soon = upcoming.filter(function (i) { var s = parseDate(i.start); return s && dayDiff(now, s) <= 60; });
-    var h = '';
+    var h = '<div class="actions" style="margin:0 0 4px"><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div>';
     if (!soon.length) {
       h += '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">12</span><h3>Gerade keine Turniere in den nächsten 60 Tagen</h3></div><p>In Berlin ist Hallen- und Planungszeit. Der Agent prüft jeden Morgen FIBA 3x3, DBB, BBV und Vereinsseiten. Neue Turniere stehen dann sofort hier.</p><div><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div></div>';
     }
@@ -942,22 +1079,34 @@ textarea.input{min-height:84px;resize:vertical}
     for (var k = 0; k < 7; k++) {
       var d = addDays(sod(now), k);
       var key = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
-      var n = gyms.filter(function (g) { return occursOn(g, d); }).length + byType('event').filter(function (e) { return !isPast(e) && occursOn(e, d); }).length;
+      var n = gyms.filter(function (g) { return occursOn(g, d); }).length;
       var dots = ''; for (var j = 0; j < Math.min(n, 3); j++) dots += '<i></i>';
       wh += '<button class="day' + (k === 0 ? ' today' : '') + '" type="button" data-act="day" data-day="' + key + '" aria-pressed="' + (state.day === key) + '" aria-label="' + WD_LONG[d.getDay()] + ', ' + d.getDate() + '. ' + MON_LONG[d.getMonth()] + ', ' + n + ' Termine"><span class="wd">' + (k === 0 ? 'Heute' : WD[d.getDay()]) + '</span><span class="dn">' + d.getDate() + '</span><span class="dots">' + dots + '</span></button>';
     }
     week.innerHTML = wh;
     document.getElementById('dayReset').hidden = !state.day;
 
-    var gl = document.getElementById('gymList'), evl = document.getElementById('eventList');
-    if (state.status !== 'live') { gl.innerHTML = stateBlock('Open Gyms'); evl.innerHTML = ''; return; }
+    var gl = document.getElementById('gymList');
+    renderHomeGyms();
+    if (state.status !== 'live') { gl.innerHTML = stateBlock('Open Gyms'); return; }
     var dayDate = state.day ? parseDate(state.day) : null;
     var g = gyms.filter(function (x) { return !dayDate || occursOn(x, dayDate); })
       .sort(function (a, b) { return (startOf(a) || 8.64e15) - (startOf(b) || 8.64e15); });
     gl.innerHTML = g.length ? g.map(eventCard).join('') : '<p class="sub">' + (dayDate ? 'An diesem Tag kein Open Gym im Feed.' : 'Noch keine Open Gyms im Feed.') + '</p>';
-    var ev = byType('event').filter(function (x) { return !isPast(x) && (!dayDate || occursOn(x, dayDate)); })
-      .sort(function (a, b) { return (startOf(a) || 0) - (startOf(b) || 0); });
-    evl.innerHTML = ev.length ? ev.map(eventCard).join('') : '<p class="sub">' + (dayDate ? 'An diesem Tag keine Events.' : 'Keine kommenden Events im Feed.') + '</p>';
+  }
+  function renderEvents() {
+    var evl = document.getElementById('eventList');
+    if (state.status !== 'live') { evl.innerHTML = stateBlock('Events'); return; }
+    var all = byType('event');
+    var up = all.filter(function (x) { return !isPast(x); }).sort(function (a, b) { return (startOf(a) || 8.64e15) - (startOf(b) || 8.64e15); });
+    var past = all.filter(isPast).sort(function (a, b) { return (startOf(b) || 0) - (startOf(a) || 0); });
+    var h = up.length ? up.map(eventCard).join('') : '<p class="sub">Gerade keine kommenden Events im Feed.</p>';
+    if (past.length) {
+      h += '<div class="section"><button class="past-toggle" type="button" data-act="pastev" aria-expanded="' + state.showPastEv + '">Rückblick ' + new Date().getFullYear() + ' · ' + past.length + ' Events' + I.chev + '</button>';
+      if (state.showPastEv) h += '<div class="stack">' + past.map(eventCard).join('') + '</div>';
+      h += '</div>';
+    }
+    evl.innerHTML = h;
   }
 
   function renderFiba() {
@@ -975,9 +1124,10 @@ textarea.input{min-height:84px;resize:vertical}
   }
 
   function renderClasses() {
-    document.getElementById('classChips').innerHTML = CLASSES.map(function (c) {
-      return '<button class="chip" type="button" data-act="cls" data-v="' + esc(c) + '" aria-pressed="' + (prefs.classes.indexOf(c) > -1) + '">' + esc(c) + '</button>';
-    }).join('');
+    var el = document.getElementById('classChips');
+    if (!el) return;
+    el.innerHTML = '<div class="pref-sum">' + (hasPrefs() ? prefSummary().split(' · ').map(function (x) { return '<span class="tag">' + esc(x) + '</span>'; }).join('') : '<span class="sub">Noch nichts eingestellt.</span>') + '</div>' +
+      '<div class="actions"><button class="btn primary" type="button" data-act="sheet" data-sheet="onboard">' + (hasPrefs() ? 'Ändern' : 'Jetzt einstellen') + '</button></div>';
   }
   function renderDistrict() {
     var sel = document.getElementById('district');
@@ -991,7 +1141,7 @@ textarea.input{min-height:84px;resize:vertical}
     if (!items.length) { el.innerHTML = '<p class="sub" style="margin:0">Tippe bei einem Turnier oder Open Gym auf den Stern, dann steht es hier.</p>'; return; }
     el.innerHTML = items.map(function (i) {
       var s = startOf(i);
-      return '<button class="saved-row" type="button" data-act="goto" data-tab="' + (i.type === 'turnier' ? 'turniere' : 'gyms') + '" data-id="' + esc(i.id) + '"><b>' + esc(i.title) + '</b><span>' + (s ? esc(fmtShort(s)) : 'Termin folgt') + '</span></button>';
+      return '<button class="saved-row" type="button" data-act="goto" data-tab="' + tabFor(i) + '" data-id="' + esc(i.id) + '"><b>' + esc(i.title) + '</b><span>' + (s ? esc(fmtShort(s)) : 'Termin folgt') + '</span></button>';
     }).join('');
   }
 
@@ -1013,12 +1163,29 @@ textarea.input{min-height:84px;resize:vertical}
     }
   }
 
+  function markSeen() {
+    if (state.status !== 'live' || state.seenDone) return;
+    state.seenDone = true;
+    if (prefs.seen.length) {
+      state.returning = true;
+      state.items.forEach(function (i) { if (prefs.seen.indexOf(i.id) < 0) state.newIds[i.id] = true; });
+    }
+    prefs.seen = state.items.map(function (i) { return i.id; }).slice(0, 2000);
+    savePrefs();
+  }
   function renderAll() {
+    markSeen();
     renderAgentChip();
     renderNews();
     renderTurniere();
     renderGyms();
+    renderEvents();
     renderSaved();
+    renderClasses();
+    if (state.status === 'live' && !prefs.onboarded && !state.onboardShown && document.getElementById('scrim').hidden) {
+      state.onboardShown = true;
+      setTimeout(function () { openSheet('onboard'); }, 400);
+    }
   }
 
   /* ---------- tabs ---------- */
@@ -1035,7 +1202,7 @@ textarea.input{min-height:84px;resize:vertical}
     });
     if (location.hash.replace('#', '') !== t) { try { history.replaceState(null, '', '#' + t); } catch (e) { /* ignore */ } }
     if (!keepScroll) window.scrollTo(0, 0);
-    if (t === 'gyms') refreshCounts();
+    if (t === 'gyms' || t === 'news') refreshCounts();
   }
 
   /* ---------- sheets ---------- */
@@ -1046,6 +1213,7 @@ textarea.input{min-height:84px;resize:vertical}
     if (kind === 'agent') h += agentSheet();
     else if (kind === 'city') h += citySheet();
     else if (kind === 'report') h += reportSheet(opts && opts.kind);
+    else if (kind === 'onboard') h += onboardSheet();
     sheet.innerHTML = h;
     lastFocus = document.activeElement;
     document.getElementById('scrim').hidden = false;
@@ -1060,6 +1228,25 @@ textarea.input{min-height:84px;resize:vertical}
   }
   function head(title) {
     return '<div class="sheet-head"><h2 id="sheetTitle">' + title + '</h2><button class="btn icon" type="button" data-act="close" aria-label="Schließen">' + I.close + '</button></div>';
+  }
+  function onboardSheet() {
+    state.ob = { ages: prefs.ages.slice(), cat: prefs.cat, area: prefs.area, district: prefs.district };
+    var o = state.ob;
+    var h = head('Was suchst du?');
+    h += '<p class="sub" style="margin:0">Drei kurze Fragen, dann zeigt dir Checkball, was zu dir passt. Deine Antworten bleiben nur auf diesem Gerät.</p>';
+    h += '<div class="ob-q"><h3>1. In welcher Altersklasse willst du spielen?</h3><div class="tags" role="group">' + AGES.map(function (a) {
+      return '<button class="chip" type="button" data-act="ob-age" data-v="' + esc(a) + '" aria-pressed="' + (o.ages.indexOf(a) > -1) + '">' + esc(a) + '</button>';
+    }).join('') + '</div><span class="sub" style="font-size:12.5px">Mehrere möglich.</span></div>';
+    h += '<div class="ob-q"><h3>2. In welcher Kategorie?</h3><div class="tags" role="group">' + [['', 'Egal']].concat(GENDERS.map(function (g) { return [g, g]; })).map(function (g) {
+      return '<button class="chip" type="button" data-act="ob-cat" data-v="' + esc(g[0]) + '" aria-pressed="' + (o.cat === g[0]) + '">' + esc(g[1]) + '</button>';
+    }).join('') + '</div></div>';
+    h += '<div class="ob-q"><h3>3. Wo willst du spielen?</h3><div class="tags" role="group">' + AREAS.map(function (a) {
+      return '<button class="chip" type="button" data-act="ob-area" data-v="' + a[0] + '" aria-pressed="' + (o.area === a[0]) + '">' + a[1] + '</button>';
+    }).join('') + '</div>';
+    h += '<div class="field" id="obDistrictField"' + (o.area === 'district' ? '' : ' hidden') + '><label for="obDistrict">Dein Bezirk</label><select class="select" id="obDistrict"><option value="">Bezirk wählen</option>' +
+      DISTRICTS.map(function (d) { return '<option value="' + esc(d) + '"' + (o.district === d ? ' selected' : '') + '>' + esc(d) + '</option>'; }).join('') + '</select></div></div>';
+    h += '<div class="ob-actions"><button class="btn ghost" type="button" data-act="ob-skip">Später</button><button class="btn primary" type="button" data-act="ob-save">Speichern</button></div>';
+    return h;
   }
   function agentSheet() {
     var m = state.meta || {};
@@ -1281,17 +1468,46 @@ textarea.input{min-height:84px;resize:vertical}
     else if (act === 'filter') { state.filter = t.dataset.v; renderTurniere(); }
     else if (act === 'forme') { state.forMe = !state.forMe; renderTurniere(); }
     else if (act === 'past') { state.showPast = !state.showPast; renderTurniere(); }
+    else if (act === 'pastev') { state.showPastEv = !state.showPastEv; renderEvents(); }
+    else if (act === 'ob-age') {
+      var oa = state.ob.ages, ov = t.dataset.v, oi = oa.indexOf(ov);
+      if (oi > -1) oa.splice(oi, 1); else oa.push(ov);
+      t.setAttribute('aria-pressed', String(oi < 0));
+    }
+    else if (act === 'ob-cat') {
+      state.ob.cat = t.dataset.v;
+      t.parentNode.querySelectorAll('[data-act="ob-cat"]').forEach(function (b) { b.setAttribute('aria-pressed', String(b === t)); });
+    }
+    else if (act === 'ob-area') {
+      state.ob.area = t.dataset.v;
+      t.parentNode.querySelectorAll('[data-act="ob-area"]').forEach(function (b) { b.setAttribute('aria-pressed', String(b === t)); });
+      var df = document.getElementById('obDistrictField'); if (df) df.hidden = state.ob.area !== 'district';
+    }
+    else if (act === 'ob-save' || act === 'ob-skip') {
+      if (act === 'ob-save') {
+        var sel = document.getElementById('obDistrict');
+        if (sel) state.ob.district = sel.value;
+        if (state.ob.area === 'district' && !state.ob.district) state.ob.area = 'berlin';
+        prefs.ages = state.ob.ages.slice(); prefs.cat = state.ob.cat; prefs.area = state.ob.area;
+        if (state.ob.district) prefs.district = state.ob.district;
+        prefs.classes = prefs.ages.filter(function (a) { return AGE_TAGS.indexOf(a) > -1; }).concat(prefs.cat ? [prefs.cat] : []);
+        state.forMe = hasPrefs();
+      }
+      prefs.onboarded = true; savePrefs(); closeSheet();
+      renderDistrict(); renderAll();
+      if (act === 'ob-save') toast('Gespeichert. „Für dich“ ist eingestellt.');
+    }
     else if (act === 'day') { state.day = state.day === t.dataset.day ? '' : t.dataset.day; renderGyms(); }
     else if (act === 'expand') {
       var id = t.dataset.id; state.expanded[id] = !state.expanded[id];
-      renderTurniere(); renderGyms();
+      renderTurniere(); renderGyms(); renderEvents();
       var again = document.querySelector('[data-act="expand"][data-id="' + CSS.escape(id) + '"]');
       if (again) again.focus({ preventScroll: true });
     }
     else if (act === 'save') {
       var sid = t.dataset.id, ix = prefs.saved.indexOf(sid);
       if (ix > -1) prefs.saved.splice(ix, 1); else prefs.saved.push(sid);
-      savePrefs(); renderTurniere(); renderGyms(); renderSaved();
+      savePrefs(); renderTurniere(); renderGyms(); renderEvents(); renderSaved();
       toast(ix > -1 ? 'Nicht mehr gemerkt' : 'Gemerkt');
       var b2 = document.querySelector('[data-act="save"][data-id="' + CSS.escape(sid) + '"]');
       if (b2) b2.focus({ preventScroll: true });
@@ -1305,6 +1521,7 @@ textarea.input{min-height:84px;resize:vertical}
       setTab(t.dataset.tab);
       if (t.dataset.tab === 'turniere') { state.filter = 'Alle'; state.forMe = false; var gi = state.items.find(function (x) { return x.id === gid; }); if (gi && isPast(gi)) state.showPast = true; renderTurniere(); }
       if (t.dataset.tab === 'gyms') { state.day = ''; renderGyms(); }
+      if (t.dataset.tab === 'events') { var ei = state.items.find(function (x) { return x.id === gid; }); if (ei && isPast(ei)) state.showPastEv = true; renderEvents(); }
       var target = document.getElementById('item-' + gid);
       if (target) setTimeout(function () { target.scrollIntoView({ block: 'center' }); }, 30);
     }
@@ -1404,7 +1621,7 @@ textarea.input{min-height:84px;resize:vertical}
         .map(function (x) { return normalize({ id: x.id, data: function () { return x; } }); });
       state.status = state.items.length ? 'live' : 'empty';
       renderAll();
-      if (state.tab === 'gyms') refreshCounts(true);
+      if (state.tab === 'gyms' || state.tab === 'news') refreshCounts(true);
     }, function () {
       if (!state.items.length) { state.status = 'offline'; renderAll(); }
     });
@@ -1541,7 +1758,7 @@ textarea.input{min-height:84px;resize:vertical}
       loadMineLocal();
       state.rsvpMode = 'fb';
       renderGyms();
-      if (state.tab === 'gyms') refreshCounts(true);
+      if (state.tab === 'gyms' || state.tab === 'news') refreshCounts(true);
     }, function () { /* no config.json: attendance stays off */ });
   }
   function refreshCounts(force) {
@@ -1559,7 +1776,7 @@ textarea.input{min-height:84px;resize:vertical}
     }, function () { /* keep the last known count */ });
   }
   document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'visible' && state.tab === 'gyms') refreshCounts();
+    if (document.visibilityState === 'visible' && (state.tab === 'gyms' || state.tab === 'news')) refreshCounts();
   });
 
   function connect() {
@@ -1622,6 +1839,7 @@ textarea.input{min-height:84px;resize:vertical}
   if (IS_WEB) document.getElementById('legalLinks').hidden = false;
   if (IS_WEB) document.getElementById('legalFootLinks').hidden = false;
   renderFiba(); renderClasses(); renderDistrict(); renderInstall();
+  state.forMe = hasPrefs();
   setTab(state.tab, true);
   renderAll();
   connect();
