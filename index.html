@@ -433,6 +433,7 @@ textarea.input{min-height:84px;resize:vertical}
         <div class="pane-head"><h2 class="h-sec">Die nächsten 7 Tage</h2><button class="linkbtn" type="button" data-act="day" data-day="" id="dayReset" hidden>Alle Tage</button></div>
         <div class="week" id="week" role="toolbar" aria-label="Tag wählen"></div>
       </div>
+      <div class="actions" style="margin:4px 0 0"><button class="btn" type="button" data-act="sheet" data-sheet="calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Open Gyms in meinen Kalender</button></div>
       <div class="section"><div class="pane-head"><h2 class="h-sec">Open Gyms</h2><button class="linkbtn" type="button" data-act="sheet" data-sheet="report" data-kind="gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Open Gym eintragen</button></div><div id="gymList" class="stack"></div></div>
       <div class="notice">
         <div class="notice-head"><span class="shotclock" aria-hidden="true">+1</span><h3>Du kennst ein Open Gym?</h3></div>
@@ -469,6 +470,11 @@ textarea.input{min-height:84px;resize:vertical}
       <div class="panel">
         <h2>Gemerkt</h2>
         <div id="savedList" class="stack"></div>
+      </div>
+      <div class="panel">
+        <h2>Kalender-Abo</h2>
+        <p>Neue Turniere und Open Gyms landen automatisch in deinem Handy-Kalender, mit Erinnerung am Tag vor dem Turnier.</p>
+        <div><button class="btn primary" type="button" data-act="sheet" data-sheet="calendar">Kalender abonnieren</button></div>
       </div>
       <div class="panel" id="installPanel" hidden></div>
       <div class="panel">
@@ -526,6 +532,8 @@ textarea.input{min-height:84px;resize:vertical}
   var MON = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
   var MON_LONG = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
   var CONTACT_MAIL = 'ambitioncheckball@gmail.com';
+  var SITE_HOST = 'checkballberlin.github.io';
+  var CALS = [['turniere', 'Turniere', 'Alle 3x3-Turniere in Berlin und Umland, mit Erinnerung am Vortag.'], ['opengyms', 'Open Gyms', 'Alle regelmäßigen und einmaligen Open Gyms.'], ['alles', 'Alles', 'Turniere, Open Gyms und Events in einem Kalender.']];
   var INSTA_HANDLE = 'checkball.berlin';
   /* Outside claude.ai (the open web version on GitHub Pages) there is no Claude runtime: the feed then comes from data/items.json. */
   var IS_WEB = !(window.claude && typeof window.claude.use === 'function');
@@ -1004,7 +1012,7 @@ textarea.input{min-height:84px;resize:vertical}
     h += '<p class="sub" style="margin:0">' + esc(prefSummary()) + '</p>';
     if (list.length) h += '<div class="mini-list">' + list.map(function (i) { return miniRow(i); }).join('') + '</div>';
     else h += '<p class="sub" style="margin:0">Gerade keine passenden Turniere oder Events. Der Agent sucht jeden Morgen weiter.</p>';
-    h += '<div class="actions" style="margin:0"><button class="btn" type="button" data-act="tab" data-tab="turniere">Alle Turniere</button><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div>';
+    h += '<div class="actions" style="margin:0"><button class="btn" type="button" data-act="sheet" data-sheet="calendar">' + I.cal + 'Kalender-Abo</button><button class="btn" type="button" data-act="tab" data-tab="turniere">Alle Turniere</button><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div>';
     el.innerHTML = h;
   }
   function renderHomeGyms() {
@@ -1045,7 +1053,7 @@ textarea.input{min-height:84px;resize:vertical}
     var past = all.filter(isPast).sort(function (a, b) { return (startOf(b) || 0) - (startOf(a) || 0); });
     var now = new Date();
     var soon = upcoming.filter(function (i) { var s = parseDate(i.start); return s && dayDiff(now, s) <= 60; });
-    var h = '<div class="actions" style="margin:0 0 4px"><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div>';
+    var h = '<div class="actions" style="margin:0 0 4px"><button class="btn primary" type="button" data-act="sheet" data-sheet="calendar">' + I.cal + 'In meinen Kalender</button><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div>';
     if (!soon.length) {
       h += '<div class="notice"><div class="notice-head"><span class="shotclock" aria-hidden="true">12</span><h3>Gerade keine Turniere in den nächsten 60 Tagen</h3></div><p>In Berlin ist Hallen- und Planungszeit. Der Agent prüft jeden Morgen FIBA 3x3, DBB, BBV und Vereinsseiten. Neue Turniere stehen dann sofort hier.</p><div><button class="btn" type="button" data-act="sheet" data-sheet="report" data-kind="turnier">' + I.plus + 'Turnier melden</button></div></div>';
     }
@@ -1214,6 +1222,7 @@ textarea.input{min-height:84px;resize:vertical}
     else if (kind === 'city') h += citySheet();
     else if (kind === 'report') h += reportSheet(opts && opts.kind);
     else if (kind === 'onboard') h += onboardSheet();
+    else if (kind === 'calendar') h += calendarSheet();
     sheet.innerHTML = h;
     lastFocus = document.activeElement;
     document.getElementById('scrim').hidden = false;
@@ -1228,6 +1237,19 @@ textarea.input{min-height:84px;resize:vertical}
   }
   function head(title) {
     return '<div class="sheet-head"><h2 id="sheetTitle">' + title + '</h2><button class="btn icon" type="button" data-act="close" aria-label="Schließen">' + I.close + '</button></div>';
+  }
+  function calendarSheet() {
+    var h = head('Kalender abonnieren');
+    h += '<p class="sub" style="margin:0">Einmal abonnieren, dann stehen neue Termine automatisch in deinem Handy-Kalender. Der Kalender aktualisiert sich selbst, du musst nichts mehr tun.</p>';
+    h += CALS.map(function (c) {
+      var https = 'https://' + SITE_HOST + '/data/' + c[0] + '.ics', webcal = 'webcal://' + SITE_HOST + '/data/' + c[0] + '.ics';
+      return '<div class="panel" style="margin:0"><h2>' + c[1] + '</h2><p>' + c[2] + '</p><div class="actions">' +
+        '<a class="btn primary" href="' + webcal + '">iPhone / Apple</a>' +
+        '<a class="btn" href="https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(webcal) + '" target="_blank" rel="noopener">Google Kalender' + I.ext + '</a>' +
+        '<button class="btn" type="button" data-act="copy-cal" data-url="' + https + '">Link kopieren</button></div></div>';
+    }).join('');
+    h += '<p class="sub" style="margin:0;font-size:12.5px">Google Kalender: am besten am Computer öffnen und „Hinzufügen“ bestätigen, danach erscheint der Kalender auch auf dem Handy. Outlook &amp; Co.: „Link kopieren“ und dort als Internetkalender hinzufügen.</p>';
+    return h;
   }
   function onboardSheet() {
     state.ob = { ages: prefs.ages.slice(), cat: prefs.cat, area: prefs.area, district: prefs.district };
@@ -1468,6 +1490,7 @@ textarea.input{min-height:84px;resize:vertical}
     else if (act === 'filter') { state.filter = t.dataset.v; renderTurniere(); }
     else if (act === 'forme') { state.forMe = !state.forMe; renderTurniere(); }
     else if (act === 'past') { state.showPast = !state.showPast; renderTurniere(); }
+    else if (act === 'copy-cal') { copyText(t.dataset.url, 'Kalender-Link kopiert'); }
     else if (act === 'pastev') { state.showPastEv = !state.showPastEv; renderEvents(); }
     else if (act === 'ob-age') {
       var oa = state.ob.ages, ov = t.dataset.v, oi = oa.indexOf(ov);

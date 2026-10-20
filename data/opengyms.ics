@@ -1,0 +1,102 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Checkball Berlin//Kalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Checkball · Open Gyms Berlin
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALDESC:3x3-Basketball in Berlin\, jeden Tag aktualisiert. https://che
+ ckballberlin.github.io
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bbv-friday-night-hoops@checkballberlin.github.io
+DTSTAMP:20261020T142934Z
+DTSTART;TZID=Europe/Berlin:20261023T191500
+DTEND;TZID=Europe/Berlin:20261023T213000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:🏀 Friday Night Hoops
+LOCATION:Sporthalle im Olympiapark
+DESCRIPTION:Das Freitagsformat des BBV: Bei vielen Teams gibt es ein Mini-T
+ urnier\, bei einer mittleren Runde freies Spiel\, bei einer kleinen Gruppe
+  eine Skill-Session.\nFür: ab U16: U16\, U18 und alle Älteren\nVeranstal
+ ter: Berliner Basketball Verband\nAlle Termine: https://checkballberlin.gi
+ thub.io · Angaben ohne Gewähr
+END:VEVENT
+BEGIN:VEVENT
+UID:streetballteam-ferien-opengym-herbst-2026@checkballberlin.github.io
+DTSTAMP:20261020T142934Z
+DTSTART;TZID=Europe/Berlin:20261019T110000
+DTEND;TZID=Europe/Berlin:20261023T160000
+SUMMARY:🏀 Ferien Open Gym in der Seelenbinderhalle
+LOCATION:Seelenbinderhalle\, Paul-Heyse-Straße 26
+DESCRIPTION:In den Herbstferien täglich offene Halle zum Reinkommen\, wann
+  man will. Kostenlos und ohne Anmeldung\, eigenen Ball und Hallenschuhe mi
+ tbringen.\nKosten: kostenlos\nVeranstalter: Streetball-Team Berlin (GSJ gG
+ mbH)\nQuelle: https://www.streetball-team.de/ferien-open-gym/\nAlle Termin
+ e: https://checkballberlin.github.io · Angaben ohne Gewähr
+URL:https://www.streetball-team.de/ferien-open-gym/
+END:VEVENT
+BEGIN:VEVENT
+UID:streetballteam-open-gym-night-2026-11@checkballberlin.github.io
+DTSTAMP:20261020T142934Z
+DTSTART;TZID=Europe/Berlin:20261106T210000
+DTEND;TZID=Europe/Berlin:20261106T230000
+SUMMARY:🏀 Open Gym Night in Wedding
+LOCATION:Sporthalle der Anna-Lindh-Schule\, Reinickendorfer Straße 60
+DESCRIPTION:Freies Spiel auf Halbfeld und Ganzfeld am Freitagabend. Kostenl
+ os\, einfach vorbeikommen.\nKosten: kostenlos\nVeranstalter: Streetball-Te
+ am Berlin (GSJ gGmbH)\nQuelle: https://www.streetball-team.de/open-gym-nig
+ ht/\nAlle Termine: https://checkballberlin.github.io · Angaben ohne Gewä
+ hr
+URL:https://www.streetball-team.de/open-gym-night/
+END:VEVENT
+BEGIN:VEVENT
+UID:streetballteam-opengym-mittwoch@checkballberlin.github.io
+DTSTAMP:20261020T142934Z
+DTSTART;TZID=Europe/Berlin:20261021T170000
+DTEND;TZID=Europe/Berlin:20261021T180000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:🏀 Open Gym Mittwoch in Lichtenberg
+LOCATION:Sporthalle Johann-Gottfried-Herder-Gymnasium\, Franz-Jacob-Str. 8
+DESCRIPTION:Wöchentliches Open Gym in der Sporthalle des Herder-Gymnasiums
+ . Eine Anmeldung ist nicht nötig.\nFür: ohne Anmeldung\nVeranstalter: St
+ reetball-Team Berlin mit Kreafithaus Lichtenberg\nQuelle: https://www.stre
+ etball-team.de/turniere-open-gym/\nAlle Termine: https://checkballberlin.g
+ ithub.io · Angaben ohne Gewähr
+URL:https://www.streetball-team.de/turniere-open-gym/
+END:VEVENT
+BEGIN:VEVENT
+UID:streetballteam-opengym-montag@checkballberlin.github.io
+DTSTAMP:20261020T142934Z
+DTSTART;TZID=Europe/Berlin:20261026T190000
+DTEND;TZID=Europe/Berlin:20261026T203000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:🏀 Open Gym Montag in der Max-Schmeling-Halle
+LOCATION:Max-Schmeling-Halle\, Nebenhalle B\, Am Falkplatz 1
+DESCRIPTION:Wöchentliches Open Gym auf einem Querfeld für Jugendliche ab 
+ 16 Jahren. Wegen begrenzter Plätze ist eine Anmeldung nötig\, sie öffne
+ t jeweils dienstags um 15 Uhr für den folgenden Montag.\nFür: ab 16 Jahr
+ en\, mit Anmeldung\nVeranstalter: Streetball-Team Berlin mit Berliner TSC\
+ nQuelle: https://www.streetball-team.de/turniere-open-gym/\nAlle Termine: 
+ https://checkballberlin.github.io · Angaben ohne Gewähr
+URL:https://www.streetball-team.de/turniere-open-gym/
+END:VEVENT
+END:VCALENDAR

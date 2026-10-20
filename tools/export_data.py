@@ -16,6 +16,9 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import calendar_ics  # noqa: E402
+
 if len(sys.argv) < 2:
     sys.exit(__doc__)
 DUMP = pathlib.Path(sys.argv[1])
@@ -57,6 +60,12 @@ def main():
     meta["stats"] = {**stats, "items": len(items)}
     meta["exportedAt"] = now
     (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    try:
+        cal = calendar_ics.write_all(items, out)
+        print(f"Kalender: {cal[0]} Turniere, {cal[1]} Open Gyms, {cal[2]} gesamt")
+    except Exception as e:  # Kalender darf den Export nie blockieren
+        print(f"Kalender nicht erzeugt: {e}")
 
     print(f"{len(items)} öffentliche Einträge exportiert, {len(held_back)} zurückgehalten"
           + (": " + ", ".join(i["id"] for i in held_back) if held_back else ""))
