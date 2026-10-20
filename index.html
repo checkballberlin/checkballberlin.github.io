@@ -123,6 +123,11 @@ a{color:inherit}
 .agent-chip[data-state="ok"] .dot{background:var(--ok);box-shadow:0 0 0 3px var(--ok-soft)}
 .agent-chip[data-state="old"] .dot{background:var(--warn)}
 .brand .wordmark{white-space:nowrap}
+.flags{display:inline-flex;gap:4px;margin-left:2px;flex:none}
+.flag{display:grid;place-items:center;width:30px;height:30px;border-radius:999px;border:1px solid var(--line);background:var(--surface);opacity:.55;transition:opacity .15s}
+.flag svg{width:18px;height:12px;border-radius:2px;display:block}
+.flag[aria-pressed="true"]{opacity:1;border-color:var(--accent)}
+@media (max-width:420px){.city-btn{display:none}}
 @media (max-width:440px){.agent-chip .day{display:none}.city-btn{padding:0 8px 0 10px}}
 @media (max-width:370px){.agent-chip .lbl{display:none}.agent-chip{padding:0 12px}.wordmark{font-size:23px}}
 
@@ -386,6 +391,7 @@ textarea.input{min-height:84px;resize:vertical}
       </a>
       <button class="city-btn" type="button" data-act="sheet" data-sheet="city" aria-label="Stadt wählen, aktuell Berlin">Berlin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
       <button class="agent-chip" id="agentChip" type="button" data-act="sheet" data-sheet="agent" data-state="none"><span class="dot"></span><span class="lbl"><span class="day" id="agentDay"></span><span id="agentLbl">Agent</span></span></button>
+      <div class="flags no-tr" role="group" aria-label="Sprache / Language"><button class="flag" type="button" data-act="lang" data-v="de" id="flag-de" aria-label="Deutsch" title="Deutsch"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#DD0000"/><rect y="13.33" width="30" height="6.67" fill="#FFCE00"/></svg></button><button class="flag" type="button" data-act="lang" data-v="en" id="flag-en" aria-label="English" title="English"><svg viewBox="0 0 60 40" aria-hidden="true"><clipPath id="gbc"><rect width="60" height="40"/></clipPath><g clip-path="url(#gbc)"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></g></svg></button></div>
     </div>
   </header>
 
@@ -1496,7 +1502,7 @@ textarea.input{min-height:84px;resize:vertical}
     else if (act === 'filter') { state.filter = t.dataset.v; renderTurniere(); }
     else if (act === 'forme') { state.forMe = !state.forMe; renderTurniere(); }
     else if (act === 'past') { state.showPast = !state.showPast; renderTurniere(); }
-    else if (act === 'lang') { prefs.lang = t.dataset.v; savePrefs(); location.reload(); }
+    else if (act === 'lang') { if (t.dataset.v === LANG) return; prefs.lang = t.dataset.v; savePrefs(); location.reload(); }
     else if (act === 'copy-cal') { copyText(t.dataset.url, 'Kalender-Link kopiert'); }
     else if (act === 'pastev') { state.showPastEv = !state.showPastEv; renderEvents(); }
     else if (act === 'ob-age') {
@@ -2016,7 +2022,7 @@ textarea.input{min-height:84px;resize:vertical}
     if (l !== 'de' && l !== 'en') { var nav = (navigator.language || 'de').toLowerCase(); l = nav.indexOf('de') === 0 ? 'de' : 'en'; }
     LANG = l;
     document.documentElement.lang = LANG;
-    ['de', 'en'].forEach(function (x) { var b = document.getElementById('lang-' + x); if (b) b.setAttribute('aria-pressed', String(x === LANG)); });
+    ['de', 'en'].forEach(function (x) { ['lang-', 'flag-'].forEach(function (pre) { var b = document.getElementById(pre + x); if (b) b.setAttribute('aria-pressed', String(x === LANG)); }); });
     if (LANG !== 'en') return;
     translateTree(document.body);
     new MutationObserver(function (muts) {
