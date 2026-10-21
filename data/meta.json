@@ -1,13 +1,12 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-21T05:58:00+02:00",
+ "lastRun": "2026-10-21T17:58:00+02:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "Neu: Friedenauer TSC Herbstferien-Camps (26.–30.10., Tempelhof-Schöneberg) und Mädchen-Kiezcamp Reinickendorf (26.–30.10.), beide aus öffentlichen Seiten (FTSC, BBV-Jugendnews).",
-  "Keine neuen 3x3-Turniere: Websuche FIBA 3x3 Berlin/Brandenburg Nov./Dez., Hochschulsport, Open Gyms ohne neue Termine.",
-  "Geprüft und verworfen: visitBerlin FLINTA*-Turnier Potsdamer Platz (30./31.05., vergangen, bereits als DM-Quali erfasst); Ballhaus-Ost Streetball-Turnier (07.06.2025, vergangen).",
-  "summaryEn bei 15 Einträgen ergänzt (kommende Termine zuerst).",
-  "Noch ohne summaryEn: 8 vergangene Einträge.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin/Brandenburg Nov./Dez., Kiez-Cups, Hochschulsport, englischsprachige Pickup-Runs ohne neue Termine.",
+  "Geprüft: binb.info, Streetball-Team (Open Gyms Mo/Mi unverändert), BBV Brandenburg, Berliner Sportkalender (nur Profispiele).",
+  "Nicht übernommen: Herbstcamp BV Ludwigsfelde und BC-Lions-Multisport-Camp (Details nicht öffentlich lesbar).",
+  "summaryEn bei den 9 restlichen (vergangenen) Einträgen ergänzt; jetzt alle Einträge zweisprachig.",
   "Keine Community-Meldungen in submissions.",
   "26 Einträge, 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
  ],
@@ -21,25 +20,25 @@
   },
   {
    "name": "DBB 3x3: News und Kalender",
-   "note": "Keine neuen 3x3-Meldungen.",
+   "note": "Newsliste lädt nur per JavaScript; keine neuen Meldungen gefunden.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Jugend-News: Herbstferien-Camps übernommen; keine neuen 3x3-Termine.",
+   "note": "Jugend-News geprüft: nur bereits erfasste Herbstcamps, keine 3x3-Termine.",
    "status": "ok",
    "url": "https://www.binb.info/jugend/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open-Gym-Seite geprüft, unverändert.",
+   "note": "Open Gyms Mo/Mi unverändert, keine neuen News seit 17.09.",
    "status": "ok",
    "url": "https://www.streetball-team.de/turniere-open-gym/"
   },
   {
    "name": "Friedenauer TSC Basketball",
-   "note": "Herbstferien-Camps übernommen.",
+   "note": "Herbstferien-Camps bereits erfasst.",
    "status": "ok",
    "url": "https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schulferien-2026/"
   },
@@ -51,7 +50,7 @@
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Keine neuen 3x3-Termine.",
+   "note": "Nur Schiedsrichter-News; Herbstcamp Ludwigsfelde ohne lesbare Details.",
    "status": "ok",
    "url": "https://bbv-inside.de/news/"
   },
@@ -62,10 +61,10 @@
    "url": "https://www.albaberlin.de/jugend/aktionen-projekte/alba-berlin-3x3-girls-cup-powered-by-allianz"
   },
   {
-   "name": "visitBerlin Eventkalender",
-   "note": "Nur vergangene Basketball-Events gefunden.",
+   "name": "Berliner Sportkalender / visitBerlin",
+   "note": "Nur Profispiele und vergangene Events.",
    "status": "ok",
-   "url": "https://www.visitberlin.de/"
+   "url": "https://www.berlinsport-aktuell.de/berliner-sportkalender/"
   },
   {
    "name": "Hochschulsport Berlin",
@@ -80,7 +79,7 @@
   },
   {
    "name": "3x3-Partnervereine",
-   "note": "BC Lions Moabit (Multisport-Herbstcamps ohne genaue Termine, nicht übernommen), DBV Charlottenburg, TuS Lichterfelde, Berliner Freibeuter: keine neuen 3x3-Termine.",
+   "note": "BC Lions Moabit, DBV Charlottenburg, TuS Lichterfelde, Berliner Freibeuter: keine neuen 3x3-Termine.",
    "status": "ok"
   },
   {
@@ -94,5 +93,5 @@
   "soon": 3,
   "sources": 13
  },
- "exportedAt": "2026-10-21T04:26:02+00:00"
+ "exportedAt": "2026-10-21T16:26:06+00:00"
 }

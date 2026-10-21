@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T04:26:02+00:00",
+ "generatedAt": "2026-10-21T16:26:06+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -18,6 +18,7 @@
    "sourceUrl": "https://www.albaberlin.de/jugend/aktionen-projekte/alba-berlin-3x3-girls-cup-powered-by-allianz",
    "start": "2026-06-06",
    "summary": "3x3-Turnier nur für Mädchen auf den Freiplätzen im Jahnsportpark. Samstag spielten wU10 und wU12, Sonntag wU14 und wU16.",
+   "summaryEn": "A girls-only 3x3 tournament on the outdoor courts at Jahnsportpark. Saturday featured U10 and U12 girls, Sunday U14 and U16 girls.",
    "title": "ALBA & Allianz 3x3 Girls Cup",
    "type": "turnier",
    "venue": "Freiplätze im Friedrich-Ludwig-Jahn-Sportpark"
@@ -38,6 +39,7 @@
    "sourceUrl": "https://www.visitberlin.de/de/node/2286182",
    "start": "2026-05-30",
    "summary": "Samstag FLINTA* Open Court und Berliner Mädchenteams von 10 bis 18 Uhr, Sonntag die offizielle Qualifikation für die Deutsche Meisterschaft. Anmeldung als Dreierteam über die FIBA 3x3 Plattform, Bälle wurden gestellt.",
+   "summaryEn": "Saturday offered a FLINTA* open court and Berlin girls' teams from 10 am to 6 pm, Sunday the official qualifier for the German Championship. Teams of three registered via the FIBA 3x3 platform; balls were provided.",
    "title": "3x3 DM-Qualifikation Damen & Herren",
    "type": "turnier",
    "venue": "Center am Potsdamer Platz"
@@ -125,6 +127,7 @@
    "sourceName": "DBB",
    "sourceUrl": "https://www.basketball-bund.de/ing-3x3-german-championship-bonn-triumphiert-im-herren-finale/",
    "summary": "Bei der ING 3x3 German Championship in Hannover schlagen die Baskets Bonn die Skyliners im Finale 22:12.",
+   "summaryEn": "At the ING 3x3 German Championship in Hanover, Telekom Baskets Bonn beat the Skyliners 22–12 in the men's final.",
    "title": "German Championship: Bonn holt den Herren-Titel",
    "type": "news"
   },
@@ -135,6 +138,7 @@
    "sourceName": "DBB",
    "sourceUrl": "https://www.basketball-bund.de/3x3-world-cup-silber-fuer-dbb-herren/",
    "summary": "Im Finale unterliegt Deutschland Lettland mit 15:20.",
+   "summaryEn": "Germany lost the final to Latvia 15–20 and took silver.",
    "title": "3x3 World Cup: Silber für die DBB-Herren",
    "type": "news"
   },
@@ -179,6 +183,7 @@
    "sourceUrl": "https://bbv-inside.de/events/3x3-turnier-in-bernau-2/",
    "start": "2026-06-13",
    "summary": "Dritter und letzter Stopp der Brandenburger Sommertour, nur für Nachwuchsklassen. Anmeldung lief über die FIBA-3x3-Plattform.",
+   "summaryEn": "Third and final stop of the Brandenburg summer tour, for youth age groups only. Registration ran via the FIBA 3x3 platform.",
    "title": "BBV 3x3 Sommertour: Bernau bei Berlin",
    "type": "turnier",
    "venue": "Bernau bei Berlin"
@@ -199,6 +204,7 @@
    "sourceUrl": "https://www.visitberlin.de/en/node/2287392",
    "start": "2026-06-20",
    "summary": "Streetball-Arena vor dem Hauptbahnhof mit Musik und Mitmachangeboten an zwei Tagen.",
+   "summaryEn": "A streetball arena in front of Berlin Hauptbahnhof with music and activities to join in on, over two days.",
    "title": "3x3 Basketball Series 2026",
    "type": "turnier",
    "venue": "Washingtonplatz am Hauptbahnhof"
@@ -250,6 +256,7 @@
    "sourceUrl": "https://bbv-inside.de/3x3-basketball-sommertour-2026/",
    "start": "2026-06-07",
    "summary": "Zweiter Stopp der Sommertour des Brandenburgischen Basketball-Verbands, zugleich Qualifikation für die DBB-U18-Meisterschaft. Anmeldung lief über die FIBA-3x3-Plattform bis zum Mittwoch vor dem Turnier.",
+   "summaryEn": "Second stop of the Brandenburg Basketball Association's summer tour and also a qualifier for the DBB U18 championship. Registration ran via the FIBA 3x3 platform until the Wednesday before the event.",
    "title": "BBV 3x3 Sommertour: Königs Wusterhausen",
    "type": "turnier",
    "venue": "Königs Wusterhausen"
@@ -471,6 +478,7 @@
    "sourceUrl": "https://www.streetball-team.de/streetballchallengeberlin/",
    "start": "2026-06-24",
    "summary": "Das traditionsreiche Schul-Streetballturnier: am ersten Tag Grundschulteams, am zweiten Oberschulteams bis zu Damen und Herren.",
+   "summaryEn": "Berlin's long-running school streetball tournament: primary school teams on day one, secondary school teams up to women's and men's divisions on day two.",
    "title": "Streetball Challenge Berlin 2026",
    "type": "turnier",
    "venue": "Horst-Dohm-Eisstadion, Fritz-Wildung-Straße 9"
@@ -528,6 +536,7 @@
    "sourceUrl": "https://www.visitberlin.de/en/node/2287735",
    "start": "2026-07-08",
    "summary": "Mittwoch FLINTA* Open Court (19 bis 21 Uhr), Donnerstag Open Court (11 bis 13 Uhr) und Mini-Turniere (13 bis 16 Uhr).",
+   "summaryEn": "Wednesday FLINTA* open court (7–9 pm), Thursday open court (11 am–1 pm) and mini tournaments (1–4 pm).",
    "title": "We Own The Game am Rathaus Schöneberg",
    "type": "turnier",
    "venue": "Vorplatz Rathaus Schöneberg"

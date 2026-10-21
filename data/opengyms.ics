@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bbv-friday-night-hoops@checkballberlin.github.io
-DTSTAMP:20261021T042602Z
+DTSTAMP:20261021T162606Z
 DTSTART;TZID=Europe/Berlin:20261023T191500
 DTEND;TZID=Europe/Berlin:20261023T213000
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -42,7 +42,7 @@ DESCRIPTION:Das Freitagsformat des BBV: Bei vielen Teams gibt es ein Mini-T
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-ferien-opengym-herbst-2026@checkballberlin.github.io
-DTSTAMP:20261021T042602Z
+DTSTAMP:20261021T162606Z
 DTSTART;TZID=Europe/Berlin:20261019T110000
 DTEND;TZID=Europe/Berlin:20261023T160000
 SUMMARY:🏀 Ferien Open Gym in der Seelenbinderhalle
@@ -56,7 +56,7 @@ URL:https://www.streetball-team.de/ferien-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-open-gym-night-2026-11@checkballberlin.github.io
-DTSTAMP:20261021T042602Z
+DTSTAMP:20261021T162606Z
 DTSTART;TZID=Europe/Berlin:20261106T210000
 DTEND;TZID=Europe/Berlin:20261106T230000
 SUMMARY:🏀 Open Gym Night in Wedding
@@ -70,7 +70,7 @@ URL:https://www.streetball-team.de/open-gym-night/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-opengym-mittwoch@checkballberlin.github.io
-DTSTAMP:20261021T042602Z
+DTSTAMP:20261021T162606Z
 DTSTART;TZID=Europe/Berlin:20261021T170000
 DTEND;TZID=Europe/Berlin:20261021T180000
 RRULE:FREQ=WEEKLY;BYDAY=WE
@@ -85,7 +85,7 @@ URL:https://www.streetball-team.de/turniere-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-opengym-montag@checkballberlin.github.io
-DTSTAMP:20261021T042602Z
+DTSTAMP:20261021T162606Z
 DTSTART;TZID=Europe/Berlin:20261026T190000
 DTEND;TZID=Europe/Berlin:20261026T203000
 RRULE:FREQ=WEEKLY;BYDAY=MO
