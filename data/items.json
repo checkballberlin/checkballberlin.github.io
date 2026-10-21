@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T16:26:14+00:00",
+ "generatedAt": "2026-10-21T04:26:02+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -66,6 +66,7 @@
    "setting": "halle",
    "sourceName": "BBV 3x3",
    "summary": "Das Freitagsformat des BBV: Bei vielen Teams gibt es ein Mini-Turnier, bei einer mittleren Runde freies Spiel, bei einer kleinen Gruppe eine Skill-Session.",
+   "summaryEn": "The BBV's Friday format: with many teams there's a mini tournament, with a medium group free play, and with a small group a skills session.",
    "title": "Friday Night Hoops",
    "type": "gym",
    "venue": "Sporthalle im Olympiapark"
@@ -79,6 +80,7 @@
    "sourceUrl": "https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nominiert/",
    "start": "2026-10-31",
    "summary": "Das deutsche 3x3-Team tritt bei den Olympischen Jugendspielen an. Termine der Spiele folgen über DBB und FIBA.",
+   "summaryEn": "Germany's 3x3 team competes at the Youth Olympic Games. Game dates will follow via DBB and FIBA.",
    "title": "Olympische Jugendspiele: 3x3 in Dakar",
    "type": "event",
    "venue": "Dakar, Senegal"
@@ -90,6 +92,7 @@
    "sourceName": "DBB",
    "sourceUrl": "https://www.basketball-bund.de/3x3-weekend-hessen-und-baden-wuerttemberg-sind-titeltraeger/",
    "summary": "Rekord in Bad Hersfeld mit 36 Teams aus 13 Landesverbänden. Bei den Mädchen gewann Baden-Württemberg, bei den Jungen Hessen 2. Unter den 15 Spielerinnen, die im Januar zum Nominierungslehrgang eingeladen sind, kommen drei aus Berlin.",
+   "summaryEn": "A record in Bad Hersfeld with 36 teams from 13 state associations. Baden-Württemberg won the girls' event, Hessen 2 the boys'. Three of the 15 players invited to the selection camp in January are from Berlin.",
    "title": "3x3-Weekend: Drei Berlinerinnen für den DBB-Lehrgang nominiert",
    "type": "news"
   },
@@ -100,6 +103,7 @@
    "sourceName": "DBB",
    "sourceUrl": "https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nominiert/",
    "summary": "Für die Olympischen Jugendspiele vom 31. Oktober bis 13. November 2026 hat der DOSB im 3x3 einen Pool von sechs Spielern nominiert.",
+   "summaryEn": "For the Youth Olympic Games from 31 October to 13 November 2026, the German Olympic Sports Confederation has nominated a 3x3 pool of six players.",
    "title": "Jugendspiele Dakar: DOSB nominiert 3x3-Pool",
    "type": "news"
   },
@@ -110,6 +114,7 @@
    "sourceName": "DBB",
    "sourceUrl": "https://www.basketball-bund.de/3x3-europe-cup-doppeltes-aus-im-viertelfinale/",
    "summary": "In Antwerpen scheiden die Damen gegen Slowenien (9:17) und die Herren gegen die Niederlande (14:16) im Viertelfinale aus.",
+   "summaryEn": "In Antwerp, the women lost to Slovenia (9:17) and the men to the Netherlands (14:16) in the quarter-finals.",
    "title": "3x3 Europe Cup: Doppeltes Aus im Viertelfinale",
    "type": "news"
   },
@@ -150,6 +155,7 @@
    "sourceUrl": "https://play.fiba3x3.com/events/138ffe87-177f-42f7-a521-0b4fad338de8",
    "start": "2026-11-01T11:00",
    "summary": "Offizielles FIBA-3x3-Jugendturnier für U14- und U16-Teams, jeweils Mädchen und Jungen, mit sechs Teams pro Kategorie. Für Teilnehmende des Freibeuter x SKOK Academy 3x3 Advanced Skills Camp ist das Turnier kostenlos.",
+   "summaryEn": "Official FIBA 3x3 youth tournament for U14 and U16 teams, girls and boys, with six teams per category. Free for participants of the Freibeuter x SKOK Academy 3x3 Advanced Skills Camp.",
    "title": "The Battle for the Heimathafen",
    "type": "turnier",
    "venue": "Pufendorfstraße 10"
@@ -217,6 +223,7 @@
    "sourceUrl": "https://play.fiba3x3.com/events/bc13f52a-00d3-483c-9de2-124b7ec6bb85",
    "start": "2026-11-01",
    "summary": "Gemeinsames 3x3-Turnier von MBF und Hoop City Berlin 3x3 in Britz, diesmal etwas kleiner als sonst. Für die Siegerteams gibt es Pokale und als Preis eine Startplatzübernahme für einen Stop der 3x3 Germany Tour 2027 oder der MEKB Tour 2027.",
+   "summaryEn": "Joint 3x3 tournament by MBF and Hoop City Berlin 3x3 in Britz, a bit smaller this time. Winning teams get trophies and a covered entry to a stop of the 3x3 Germany Tour 2027 or the MEKB Tour 2027.",
    "title": "Hoop City Berlin 3x3 meets MBF 3x3 Tournament",
    "type": "turnier",
    "venue": "Parchimer Allee 109, 12359 Berlin"
@@ -248,14 +255,59 @@
    "venue": "Königs Wusterhausen"
   },
   {
+   "id": "friedenau-herbstcamps-2026",
+   "audience": "Kinder und Jugendliche 7–15 Jahre",
+   "categories": [
+    "U14",
+    "U16"
+   ],
+   "district": "Tempelhof-Schöneberg",
+   "end": "2026-10-30",
+   "foundAt": "2026-10-21",
+   "organizer": "Friedenauer TSC Basketball",
+   "price": "Mini Camp 200 €/225 €, Skills Camp 250 €/290 € (Mitglieder/Nichtmitglieder)",
+   "regUrl": "https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schulferien-2026/",
+   "sourceName": "Friedenauer TSC Basketball",
+   "sourceUrl": "https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schulferien-2026/",
+   "start": "2026-10-26",
+   "status": "bestätigt",
+   "summary": "Der Friedenauer TSC bietet in der ersten Herbstferienwoche zwei Basketball-Camps an: ein Mini Camp für 7- bis 12-Jährige (9–16 Uhr) und ein Skills Camp für 12- bis 15-Jährige (10–15 Uhr). Die genaue Halle in Friedenau wird kurz vorher bekanntgegeben.",
+   "summaryEn": "Friedenauer TSC runs two basketball camps in the first week of the autumn holidays: a Mini Camp for ages 7–12 (9am–4pm) and a Skills Camp for ages 12–15 (10am–3pm). The exact gym in Friedenau will be announced shortly before.",
+   "title": "Mammut Basketball Camps in den Herbstferien",
+   "type": "event",
+   "venue": "Sporthalle in Friedenau (wird vorher bekanntgegeben)"
+  },
+  {
    "id": "heretohoop-2026",
    "date": "2026-08-28",
    "foundAt": "2026-10-18",
    "sourceName": "Pop-Kultur Berlin",
    "sourceUrl": "https://www.pop-kultur.berlin/en/event/heretohoop-basketball-skill-session/",
    "summary": "Das Berliner Programm bietet offene Sessions, Camps und Workshops mit FLINTA*-Coaches. Mit dem BBV organisiert es die Aktionswoche Mädchen* Basketball, zuletzt mit über 24 Vereinen in Berlin und Brandenburg.",
+   "summaryEn": "The Berlin programme offers open sessions, camps and workshops with FLINTA* coaches. Together with the BBV it organises the girls* basketball action week, most recently with more than 24 clubs in Berlin and Brandenburg.",
    "title": "HereToHoop: kostenlose Sessions für Mädchen* und FLINTA*",
    "type": "news"
+  },
+  {
+   "id": "kiezcamp-maedchen-reinickendorf-herbst-2026",
+   "audience": "Mädchen 7–11 Jahre",
+   "categories": [
+    "U14",
+    "FLINTA*"
+   ],
+   "district": "Reinickendorf",
+   "end": "2026-10-30T15:45",
+   "foundAt": "2026-10-21",
+   "regUrl": "https://app.campai.com/em/7hfci/events/6a8ecb1b0f823e2a681cff92/info",
+   "sourceName": "Berliner Basketball Verband (Jugend-News)",
+   "sourceUrl": "https://www.binb.info/jugend/news",
+   "start": "2026-10-26T09:00",
+   "status": "bestätigt",
+   "summary": "Basketball-Kiezcamp nur für Mädchen von 7 bis 11 Jahren in der ersten Herbstferienwoche in Reinickendorf. Die Plätze sind begrenzt, die Anmeldung läuft online.",
+   "summaryEn": "A neighbourhood basketball camp just for girls aged 7 to 11 during the first week of the autumn holidays in Reinickendorf. Places are limited; registration is online.",
+   "title": "Herbstferiencamp für Mädchen in Reinickendorf",
+   "type": "event",
+   "venue": "Reinickendorf"
   },
   {
    "id": "mbf-ferienliga-runde2-2026",
@@ -272,6 +324,7 @@
    "sourceUrl": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627",
    "start": "2026-10-31T10:00",
    "summary": "Zweite Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V., gespielt in den Herbstferien. In der Liga spielen Herren-, Damen-, Ü40- und Mixed-Teams. Weitere Runden folgen im Dezember, Februar, März und Mai.",
+   "summaryEn": "Round two of the 2026/27 season of MBF Berlin's holiday league, played during the autumn break. The league has men's, women's, over-40 and mixed teams. Further rounds follow in December, February, March and May.",
    "title": "MBL Ferienliga: Runde 2",
    "type": "event",
    "venue": "Neukölln"
@@ -305,6 +358,7 @@
    "sourceUrl": "https://www.streetball-team.de/ferien-open-gym/",
    "start": "2026-10-19T11:00",
    "summary": "In den Herbstferien täglich offene Halle zum Reinkommen, wann man will. Kostenlos und ohne Anmeldung, eigenen Ball und Hallenschuhe mitbringen.",
+   "summaryEn": "Open gym every day during the autumn holidays, drop in whenever you like. Free and no registration; bring your own ball and indoor shoes.",
    "title": "Ferien Open Gym in der Seelenbinderhalle",
    "type": "gym",
    "venue": "Seelenbinderhalle, Paul-Heyse-Straße 26"
@@ -334,6 +388,7 @@
    "sourceUrl": "https://www.streetball-team.de/open-gym-night/",
    "start": "2026-11-06T21:00",
    "summary": "Freies Spiel auf Halbfeld und Ganzfeld am Freitagabend. Kostenlos, einfach vorbeikommen.",
+   "summaryEn": "Free play on half court and full court on Friday night. Free of charge, just drop by.",
    "title": "Open Gym Night in Wedding",
    "type": "gym",
    "venue": "Sporthalle der Anna-Lindh-Schule, Reinickendorfer Straße 60"
@@ -361,6 +416,7 @@
    "sourceName": "Streetball-Team Berlin",
    "sourceUrl": "https://www.streetball-team.de/turniere-open-gym/",
    "summary": "Wöchentliches Open Gym in der Sporthalle des Herder-Gymnasiums. Eine Anmeldung ist nicht nötig.",
+   "summaryEn": "Weekly open gym in the sports hall of the Herder-Gymnasium. No registration needed.",
    "title": "Open Gym Mittwoch in Lichtenberg",
    "type": "gym",
    "venue": "Sporthalle Johann-Gottfried-Herder-Gymnasium, Franz-Jacob-Str. 8"
@@ -390,6 +446,7 @@
    "sourceName": "Streetball-Team Berlin",
    "sourceUrl": "https://www.streetball-team.de/turniere-open-gym/",
    "summary": "Wöchentliches Open Gym auf einem Querfeld für Jugendliche ab 16 Jahren. Wegen begrenzter Plätze ist eine Anmeldung nötig, sie öffnet jeweils dienstags um 15 Uhr für den folgenden Montag.",
+   "summaryEn": "Weekly open gym on a cross court for players aged 16 and up. Places are limited, so registration is required; it opens every Tuesday at 3pm for the following Monday.",
    "title": "Open Gym Montag in der Max-Schmeling-Halle",
    "type": "gym",
    "venue": "Max-Schmeling-Halle, Nebenhalle B, Am Falkplatz 1"
@@ -434,6 +491,7 @@
    "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
    "start": "2026-10-30T22:30",
    "summary": "Kostenlose Streetball-Turnierreihe am Freitagabend für Teams mit 3 bis 4 Leuten, Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele, gespielt wird ohne Gesamtsieger. Weitere Termine: 13.11., 27.11. und 11.12.2026.",
+   "summaryEn": "Free Friday-night streetball series for teams of 3 to 4, category L (recreational) or XL. Each team plays 5 to 6 games, with no overall winner. Further dates: 13 Nov, 27 Nov and 11 Dec 2026.",
    "title": "Streetball Night in der Max-Schmeling-Halle",
    "type": "turnier",
    "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
@@ -450,6 +508,7 @@
    "sourceUrl": "https://www.visitberlin.de/en/node/2290855",
    "start": "2026-08-26T12:00",
    "summary": "Mitmach-Fest zur Frauen-Basketball-WM in Berlin mit Vereinsturnier, Open Play, Rollstuhlbasketball und DJ. Offen für alle Altersgruppen und Erfahrungsstufen.",
+   "summaryEn": "A hands-on festival for the Women's Basketball World Cup in Berlin with a club tournament, open play, wheelchair basketball and a DJ. Open to all ages and experience levels.",
    "title": "Basketball am Hermann-Ehlers-Platz",
    "type": "event",
    "venue": "Hermann-Ehlers-Platz"
