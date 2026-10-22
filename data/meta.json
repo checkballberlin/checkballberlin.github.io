@@ -1,14 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-21T17:58:00+02:00",
+ "lastRun": "2026-10-22T05:58:00+02:00",
  "log": [
-  "17:58  Abendlauf · Stadt: Berlin",
-  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin/Brandenburg Nov./Dez., Kiez-Cups, Hochschulsport, englischsprachige Pickup-Runs ohne neue Termine.",
-  "Geprüft: binb.info, Streetball-Team (Open Gyms Mo/Mi unverändert), BBV Brandenburg, Berliner Sportkalender (nur Profispiele).",
-  "Nicht übernommen: Herbstcamp BV Ludwigsfelde und BC-Lions-Multisport-Camp (Details nicht öffentlich lesbar).",
-  "summaryEn bei den 9 restlichen (vergangenen) Einträgen ergänzt; jetzt alle Einträge zweisprachig.",
+  "05:58  Morgenlauf · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin/Brandenburg Nov./Dez., Streetball-Hallenturniere, Hochschulsport, Open Gyms, FLINTA*-Trainings, englischsprachige Pickup-Runs ohne neue Termine.",
+  "Geprüft: Streetball-Team (Open Gyms Mo/Mi unverändert), binb.info Jugend-News (nur bereits erfasste Herbstcamps), visitBerlin (nur vergangene Events).",
+  "Nicht übernommen: FLINTA* Competitive Training (Rainbowtime) – findet in Wien statt; visitBerlin-Seite 2262873 nicht abrufbar.",
   "Keine Community-Meldungen in submissions.",
-  "26 Einträge, 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
+  "26 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
@@ -93,5 +92,5 @@
   "soon": 3,
   "sources": 13
  },
- "exportedAt": "2026-10-21T16:26:06+00:00"
+ "exportedAt": "2026-10-22T04:25:33+00:00"
 }
