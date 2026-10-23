@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T04:25:48+00:00",
+ "generatedAt": "2026-10-23T16:26:10+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -56,6 +56,8 @@
    "district": "Charlottenburg-Wilmersdorf",
    "foundAt": "2026-10-18",
    "level": "BBV 3x3 Open Gym",
+   "note": "Fällt bis auf Weiteres aus. Stand jetzt geht es nach den Ferien wieder los.",
+   "noteEn": "Cancelled until further notice. As things stand, sessions resume after the school holidays.",
    "organizer": "Berliner Basketball Verband",
    "public": true,
    "recurring": {
@@ -67,14 +69,12 @@
    },
    "setting": "halle",
    "sourceName": "BBV 3x3",
+   "status": "abgesagt",
    "summary": "Das Freitagsformat des BBV: Bei vielen Teams gibt es ein Mini-Turnier, bei einer mittleren Runde freies Spiel, bei einer kleinen Gruppe eine Skill-Session.",
    "summaryEn": "The BBV's Friday format: with many teams there's a mini tournament, with a medium group free play, and with a small group a skills session.",
    "title": "Friday Night Hoops",
    "type": "gym",
-   "venue": "Sporthalle im Olympiapark",
-   "status": "abgesagt",
-   "note": "Fällt bis auf Weiteres aus. Stand jetzt geht es nach den Ferien wieder los.",
-   "noteEn": "Cancelled until further notice. As things stand, sessions resume after the school holidays."
+   "venue": "Sporthalle im Olympiapark"
   },
   {
    "id": "dakar-yog-3x3",
