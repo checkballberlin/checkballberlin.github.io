@@ -1,11 +1,11 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-22T17:58:00+02:00",
+ "lastRun": "2026-10-23T05:56:00+02:00",
  "log": [
-  "17:58  Abendlauf · Stadt: Berlin",
-  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin/Brandenburg Nov./Dez., Streetball-Team Winter, Potsdam/Umland, Open Gyms, DBB-News ohne neue Termine.",
-  "Geprüft: visitBerlin 3x3 FLINTA*-Turnier (30./31.05.) und We Own The Game (08./09.07.) – vergangen und bereits erfasst; visitBerlin-Seite 2287392 nicht abrufbar (robots).",
-  "Nicht übernommen: Indoor-Grundschulturnier des Streetball-Teams (berlin.de-Flyer) – fand bereits am 24.02.2026 statt.",
+  "05:56  Morgenlauf · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin/Brandenburg, 3x3-Turniere Nov./Dez., Potsdam/Umland, Open Gyms, FLINTA*-Sessions, englischsprachige Pickup-Runs, DBB-News ohne neue Termine.",
+  "Geprüft: Ballhaus Ost Streetball-Turnier (07.06.2025) und FLINTA+ Basketball (04.06.2025) – vergangen, keine 2026-Termine.",
+  "Nicht übernommen: berlincentral.org (Berlin, NY/USA, 2022) und FLINTA*-Training Rainbowtime (Wien) – nicht Berlin.",
   "Keine Community-Meldungen in submissions.",
   "26 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
  ],
@@ -19,19 +19,19 @@
   },
   {
    "name": "DBB 3x3: News und Kalender",
-   "note": "Newsliste lädt nur per JavaScript; keine neuen Meldungen gefunden.",
+   "note": "Keine neuen Meldungen im Suchindex.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Jugend-News geprüft: nur bereits erfasste Herbstcamps, keine 3x3-Termine.",
+   "note": "Keine neuen 3x3-Termine.",
    "status": "ok",
    "url": "https://www.binb.info/jugend/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gyms Mo/Mi unverändert, keine neuen News seit 17.09.",
+   "note": "Open Gyms Mo/Mi, Streetball Night 30.10. und Open Gym Night 06.11. unverändert.",
    "status": "ok",
    "url": "https://www.streetball-team.de/turniere-open-gym/"
   },
@@ -49,7 +49,7 @@
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Nur Schiedsrichter-News; Herbstcamp Ludwigsfelde ohne lesbare Details.",
+   "note": "Keine neuen 3x3-Termine in Potsdam/Umland gefunden.",
    "status": "ok",
    "url": "https://bbv-inside.de/news/"
   },
@@ -61,9 +61,15 @@
   },
   {
    "name": "Berliner Sportkalender / visitBerlin",
-   "note": "Nur Profispiele und vergangene Events.",
+   "note": "Nur bereits erfasste oder vergangene Events.",
    "status": "ok",
    "url": "https://www.berlinsport-aktuell.de/berliner-sportkalender/"
+  },
+  {
+   "name": "Ballhaus Ost",
+   "note": "Streetball-Turnier und FLINTA+ Basketball nur mit Terminen aus 2025.",
+   "status": "ok",
+   "url": "https://www.ballhausost.de/flinta-basketball/?lang=en"
   },
   {
    "name": "Hochschulsport Berlin",
@@ -90,7 +96,7 @@
  "stats": {
   "items": 26,
   "soon": 3,
-  "sources": 13
+  "sources": 14
  },
- "exportedAt": "2026-10-22T16:25:36+00:00"
+ "exportedAt": "2026-10-23T04:25:48+00:00"
 }
