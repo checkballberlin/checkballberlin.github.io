@@ -194,6 +194,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .pill.new{background:var(--signal);color:var(--signal-ink)}
 .pill.forme{background:var(--accent-soft);color:var(--accent-text)}
 .pill.soon{background:var(--signal);color:var(--signal-ink)}
+.pill.cancel{background:var(--danger);color:var(--bg)}
+.cancel-note{font-size:14px;font-weight:600;color:var(--danger);margin:0}
 .summary{font-size:14.5px;color:var(--ink);margin:0}
 .summary.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13.5px;margin:2px 0 0}
@@ -678,6 +680,7 @@ textarea.input{min-height:84px;resize:vertical}
     return null;
   }
   function occursOn(item, day) {
+    if (isCancelled(item)) return false;
     var rec = item.recurring;
     if (rec) {
       var rdays = recDays(rec);
@@ -693,7 +696,7 @@ textarea.input{min-height:84px;resize:vertical}
   /* The next session of an Open Gym that people can say yes to: weekly ones get a fresh key (item id + date)
      every session, one-off ones (holiday Open Gym, Open Gym Night) one key for their date or date range. */
   function rsvpOcc(item) {
-    if (item.type !== 'gym') return null;
+    if (item.type !== 'gym' || isCancelled(item)) return null;
     var id = String(item.id).toLowerCase().replace(/[^a-z0-9-]/g, '-').slice(0, 80);
     if (item.recurring) {
       var d = nextOccurrence(item.recurring);
@@ -707,6 +710,7 @@ textarea.input{min-height:84px;resize:vertical}
   /* Keys stay remembered two weeks, so a running multi-day Open Gym keeps its yes. */
   function rsvpCutoff() { return ymd(addDays(new Date(), -14)); }
   function startOf(item) {
+    if (isCancelled(item)) return null;
     if (item.recurring) return nextOccurrence(item.recurring);
     return parseDate(item.start) || parseDate(item.sortKey);
   }
@@ -717,6 +721,9 @@ textarea.input{min-height:84px;resize:vertical}
     return !!e && sod(e) < sod(new Date());
   }
   function isPlanned(item) { return str(item.status) === 'geplant'; }
+  /* Cancelled until further notice: stays visible with a note, but has no upcoming dates. */
+  function isCancelled(item) { var v = str(item.status).toLowerCase(); return v === 'abgesagt' || v === 'pausiert'; }
+  function cancelNote(item) { return LANG === 'en' && str(item.noteEn) ? item.noteEn : str(item.note); }
   function isNew(item) { var f = parseDate(item.foundAt); return !!f && dayDiff(f, new Date()) <= 2; }
   /* After a first full import almost everything is new; badges only help once a few items stand out. */
   function showNewBadge(item) {
@@ -819,7 +826,7 @@ textarea.input{min-height:84px;resize:vertical}
   /* ---------- rendering ---------- */
   function dateBlock(item) {
     if (item.recurring) {
-      var n = nextOccurrence(item.recurring);
+      var n = isCancelled(item) ? null : nextOccurrence(item.recurring);
       if (n) return '<div class="dateblock"><span class="w">' + WD[n.getDay()] + '</span><span class="d num">' + n.getDate() + '</span><span class="m">' + MON[n.getMonth()] + '</span></div>';
       return '<div class="dateblock">' + I.hoop + '</div>';
     }
@@ -832,6 +839,7 @@ textarea.input{min-height:84px;resize:vertical}
 
   function pills(item) {
     var out = [];
+    if (isCancelled(item)) return '<div class="tags"><span class="pill cancel">abgesagt</span></div>';
     if (isPast(item)) out.push('<span class="pill past">vorbei</span>');
     else if (isPlanned(item)) out.push('<span class="pill planned">in Planung</span>');
     if (!isPast(item)) {
@@ -862,12 +870,13 @@ textarea.input{min-height:84px;resize:vertical}
     var id = esc(item.id);
     var open = !!state.expanded[item.id];
     var past = isPast(item);
+    var cancelled = isCancelled(item);
     var saved = prefs.saved.indexOf(item.id) > -1;
     var cats = arr(item.categories);
     var reg = safeUrl(item.regUrl);
     var src = safeUrl(item.sourceUrl);
     var cal = past ? '' : gcalUrl(item);
-    var h = '<article class="card' + (past ? ' is-past' : '') + '" id="item-' + id + '">' + dateBlock(item) + '<div class="body">';
+    var h = '<article class="card' + (past || cancelled ? ' is-past' : '') + '" id="item-' + id + '">' + dateBlock(item) + '<div class="body">';
     h += '<h3 class="c-title">' + esc(item.title) + '</h3>';
     h += '<div class="meta"><span>' + I.clock + esc(whenText(item)) + '</span>';
     if (str(item.venue)) h += '<span>' + I.pin + esc(item.venue) + (str(item.district) && str(item.district) !== str(item.venue) ? ' · ' + esc(item.district) : '') + '</span>';
@@ -881,6 +890,7 @@ textarea.input{min-height:84px;resize:vertical}
       h += '<div class="tags">' + cats.concat(extra).map(function (c) { return '<span class="tag">' + esc(c) + '</span>'; }).join('') + '</div>';
     }
     h += pills(item);
+    if (cancelled && cancelNote(item)) h += '<p class="cancel-note">' + esc(cancelNote(item)) + '</p>';
     if (itemSummary(item)) h += '<p class="summary' + (open ? '' : ' clamp') + '">' + esc(itemSummary(item)) + '</p>';
     if (open) {
       var facts = [];
@@ -888,7 +898,7 @@ textarea.input{min-height:84px;resize:vertical}
       if (str(item.address)) facts.push(['Adresse', esc(item.address)]);
       if (str(item.price)) facts.push(['Kosten', esc(item.price)]);
       if (str(item.audience)) facts.push(['Für', esc(item.audience)]);
-      if (str(item.note)) facts.push(['Hinweis', esc(item.note)]);
+      if (str(item.note) && !cancelled) facts.push(['Hinweis', esc(item.note)]);
       if (item.type === 'turnier' && reg) facts.push(['Anmeldung', 'Team mit 3 Spielenden plus 1 Wechsel, über die FIBA 3x3 App oder play.fiba3x3.com']);
       if (facts.length) h += '<dl class="facts">' + facts.map(function (f) { return '<dt>' + f[0] + '</dt><dd>' + f[1] + '</dd>'; }).join('') + '</dl>';
       h += sourceLine(item);
@@ -1161,7 +1171,7 @@ textarea.input{min-height:84px;resize:vertical}
     if (!items.length) { el.innerHTML = '<p class="sub" style="margin:0">Tippe bei einem Turnier oder Open Gym auf den Stern, dann steht es hier.</p>'; return; }
     el.innerHTML = items.map(function (i) {
       var s = startOf(i);
-      return '<button class="saved-row" type="button" data-act="goto" data-tab="' + tabFor(i) + '" data-id="' + esc(i.id) + '"><b>' + esc(i.title) + '</b><span>' + (s ? esc(fmtShort(s)) : 'Termin folgt') + '</span></button>';
+      return '<button class="saved-row" type="button" data-act="goto" data-tab="' + tabFor(i) + '" data-id="' + esc(i.id) + '"><b>' + esc(i.title) + '</b><span>' + (s ? esc(fmtShort(s)) : isCancelled(i) ? 'abgesagt' : 'Termin folgt') + '</span></button>';
     }).join('');
   }
 
@@ -1384,6 +1394,7 @@ textarea.input{min-height:84px;resize:vertical}
   }
   function shareText(item) {
     var lines = [str(item.title), whenText(item)];
+    if (isCancelled(item)) lines.push('ABGESAGT' + (cancelNote(item) ? ': ' + cancelNote(item) : ''));
     if (str(item.venue)) lines.push(str(item.venue) + (str(item.district) ? ', ' + str(item.district) : ''));
     var u = safeUrl(item.regUrl) || safeUrl(item.sourceUrl);
     if (u) lines.push(u);
@@ -1946,7 +1957,7 @@ textarea.input{min-height:84px;resize:vertical}
     'Weiter': 'Next', 'Wo wird gespielt?': 'Where is it played?', 'Zur FIBA-Anmeldung': 'Register on FIBA', 'Zur Anmeldung': 'Register', 'FIBA-Eventseite': 'FIBA event page',
     'anonym, ohne Konto ·': 'anonymous, no account ·', 'blockiert': 'blocked', 'geplant': 'planned', 'ok': 'ok', 'chronologisch': 'chronological', 'neu in 48 Std.': 'new in 48 hrs',
     'oder per Instagram-Nachricht an @checkball.berlin.': 'or via Instagram message to @checkball.berlin.', 'offen für alle': 'open to everyone', 'iPhone / Apple': 'iPhone / Apple',
-    'Zuletzt geprüft': 'Last checked', 'Termin folgt': 'Date TBA', 'in Planung': 'planned', 'vorbei': 'over', 'Vorschau': 'Preview', 'neu': 'new', 'Termine': 'dates',
+    'Zuletzt geprüft': 'Last checked', 'Termin folgt': 'Date TBA', 'in Planung': 'planned', 'vorbei': 'over', 'abgesagt': 'cancelled', 'Vorschau': 'Preview', 'neu': 'new', 'Termine': 'dates',
     'An diesem Tag kein Open Gym im Feed.': 'No Open Gym in the feed on this day.', 'Noch keine Open Gyms im Feed.': 'No Open Gyms in the feed yet.',
     'Gerade keine kommenden Events im Feed.': 'No upcoming events in the feed right now.', 'Keine kommenden Turniere in dieser Auswahl.': 'No upcoming tournaments for this selection.',
     'Gerade keine Turniere in den nächsten 60 Tagen': 'No tournaments in the next 60 days right now',

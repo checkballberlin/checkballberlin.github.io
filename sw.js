@@ -1,5 +1,5 @@
 /* Checkball offline cache: always try the network first, fall back to the last copy when offline. */
-const CACHE = 'checkball-v1';
+const CACHE = 'checkball-v2';
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'data/items.json', 'data/meta.json', 'icons/favicon.svg', 'icons/icon-192.png'];
 
 self.addEventListener('install', (event) => {

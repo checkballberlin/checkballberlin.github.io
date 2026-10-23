@@ -62,7 +62,9 @@ def main():
     (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     try:
-        cal = calendar_ics.write_all(items, out)
+        # Abgesagte oder pausierte Einträge (z. B. status "abgesagt") kommen in keine Kalenderdatei.
+        cal_items = [i for i in items if str(i.get("status") or "").lower() not in ("abgesagt", "pausiert")]
+        cal = calendar_ics.write_all(cal_items, out)
         print(f"Kalender: {cal[0]} Turniere, {cal[1]} Open Gyms, {cal[2]} gesamt")
     except Exception as e:  # Kalender darf den Export nie blockieren
         print(f"Kalender nicht erzeugt: {e}")

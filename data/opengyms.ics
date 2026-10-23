@@ -27,20 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:bbv-friday-night-hoops@checkballberlin.github.io
-DTSTAMP:20261023T042548Z
-DTSTART;TZID=Europe/Berlin:20261023T191500
-DTEND;TZID=Europe/Berlin:20261023T213000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-SUMMARY:🏀 Friday Night Hoops
-LOCATION:Sporthalle im Olympiapark
-DESCRIPTION:Das Freitagsformat des BBV: Bei vielen Teams gibt es ein Mini-T
- urnier\, bei einer mittleren Runde freies Spiel\, bei einer kleinen Gruppe
-  eine Skill-Session.\nFür: ab U16: U16\, U18 und alle Älteren\nVeranstal
- ter: Berliner Basketball Verband\nAlle Termine: https://checkballberlin.gi
- thub.io · Angaben ohne Gewähr
-END:VEVENT
-BEGIN:VEVENT
 UID:streetballteam-ferien-opengym-herbst-2026@checkballberlin.github.io
 DTSTAMP:20261023T042548Z
 DTSTART;TZID=Europe/Berlin:20261019T110000

@@ -71,7 +71,10 @@
    "summaryEn": "The BBV's Friday format: with many teams there's a mini tournament, with a medium group free play, and with a small group a skills session.",
    "title": "Friday Night Hoops",
    "type": "gym",
-   "venue": "Sporthalle im Olympiapark"
+   "venue": "Sporthalle im Olympiapark",
+   "status": "abgesagt",
+   "note": "Fällt bis auf Weiteres aus. Stand jetzt geht es nach den Ferien wieder los.",
+   "noteEn": "Cancelled until further notice. As things stand, sessions resume after the school holidays."
   },
   {
    "id": "dakar-yog-3x3",
