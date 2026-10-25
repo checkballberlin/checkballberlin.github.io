@@ -1,11 +1,12 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-24T17:57:00+02:00",
+ "lastRun": "2026-10-25T05:58:00+01:00",
  "log": [
-  "17:57  Abendlauf · Stadt: Berlin",
-  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin Nov./Dez., Potsdam/Umland, Weihnachtsturniere, Hochschulsport WiSe 26/27, FLINTA*-Trainings, Pickup-Runs, Partnervereine ohne neue öffentliche Termine.",
-  "visitBerlin-Seiten geprüft (3x3 Series, FLINTA*-Turnier/DM-Quali, We Own The Game, Hermann-Ehlers-Platz, Damen-WM): alle vergangen und bereits erfasst bzw. nicht 3x3.",
-  "Gefundene 3x3-Turniere in Kaiserslautern, Mainz, Bochum, Graz liegen außerhalb Berlins – nicht übernommen.",
+  "05:58  Morgenlauf · Stadt: Berlin",
+  "Keine neuen Einträge: Websuche 3x3 Berlin Nov. 2026, FIBA 3x3 Berlin, Potsdam/Brandenburg, Weihnachtsturniere, Open Gyms Dezember, englischsprachige Pickup-Runs ohne neue öffentliche Termine.",
+  "visitBerlin-Seiten (We Own The Game, Hermann-Ehlers-Platz) erneut geprüft: vergangen und bereits erfasst.",
+  "Streetball-Team: Open Gyms Mo/Mi unverändert.",
+  "Funde in Kaiserslautern, Bochum, Mainz außerhalb Berlins – nicht übernommen.",
   "Keine Community-Meldungen in submissions.",
   "26 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
  ],
@@ -98,5 +99,5 @@
   "soon": 3,
   "sources": 14
  },
- "exportedAt": "2026-10-24T16:26:00+00:00"
+ "exportedAt": "2026-10-25T05:26:19+00:00"
 }
