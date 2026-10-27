@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-27T05:25:30+00:00",
+ "generatedAt": "2026-10-27T17:26:13+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -320,6 +320,26 @@
    "venue": "Reinickendorf"
   },
   {
+   "id": "mbf-ferienliga-abschluss-2027",
+   "categories": [
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Neukölln",
+   "end": "2027-05-23T18:00",
+   "foundAt": "2026-10-27",
+   "organizer": "MBF Berlin e.V.",
+   "sourceName": "MBF Berlin",
+   "sourceUrl": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627",
+   "start": "2027-05-22T10:00",
+   "summary": "Saisonabschluss 2026/27 der Berliner Ferienliga des MBF Berlin e.V. Laut Saisonplan an beiden Tagen von 10 bis 18 Uhr in Neukölln.",
+   "summaryEn": "Season finale 2026/27 of MBF Berlin's holiday league. According to the season plan it runs from 10 am to 6 pm on both days in Neukölln.",
+   "title": "MBL Ferienliga: Abschlussevent",
+   "type": "event",
+   "venue": "Neukölln"
+  },
+  {
    "id": "mbf-ferienliga-runde2-2026",
    "categories": [
     "Damen",
@@ -356,6 +376,46 @@
    "summary": "Dritte Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V., verbunden mit einem Weihnachtsevent. Gespielt wird an beiden Tagen von 10 bis 18 Uhr in Neukölln.",
    "summaryEn": "Round three of the 2026/27 season of MBF Berlin's holiday league, combined with a Christmas event. Games run from 10 am to 6 pm on both days in Neukölln.",
    "title": "MBL Ferienliga: Runde 3 und Weihnachtsevent",
+   "type": "event",
+   "venue": "Neukölln"
+  },
+  {
+   "id": "mbf-ferienliga-runde4-2027",
+   "categories": [
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Neukölln",
+   "end": "2027-02-07T18:00",
+   "foundAt": "2026-10-27",
+   "organizer": "MBF Berlin e.V.",
+   "sourceName": "MBF Berlin",
+   "sourceUrl": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627",
+   "start": "2027-02-06T10:00",
+   "summary": "Vierte Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V. in den Winterferien. Gespielt wird an beiden Tagen von 10 bis 18 Uhr in Neukölln.",
+   "summaryEn": "Round four of the 2026/27 season of MBF Berlin's holiday league during the winter break. Games run from 10 am to 6 pm on both days in Neukölln.",
+   "title": "MBL Ferienliga: Runde 4",
+   "type": "event",
+   "venue": "Neukölln"
+  },
+  {
+   "id": "mbf-ferienliga-runde5-2027",
+   "categories": [
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Neukölln",
+   "end": "2027-03-21T18:00",
+   "foundAt": "2026-10-27",
+   "organizer": "MBF Berlin e.V.",
+   "sourceName": "MBF Berlin",
+   "sourceUrl": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627",
+   "start": "2027-03-20T10:00",
+   "summary": "Fünfte Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V. Gespielt wird an beiden Tagen von 10 bis 18 Uhr in Neukölln.",
+   "summaryEn": "Round five of the 2026/27 season of MBF Berlin's holiday league. Games run from 10 am to 6 pm on both days in Neukölln.",
+   "title": "MBL Ferienliga: Runde 5",
    "type": "event",
    "venue": "Neukölln"
   },

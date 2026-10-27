@@ -1,15 +1,15 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-27T05:58:00+01:00",
+ "lastRun": "2026-10-27T17:58:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "Neu: MBL Ferienliga Runde 3 + Weihnachtsevent (19.–20.12., Neukölln) laut MBF-Saisonplan.",
-  "FIBA-Event „MBF / Hoop City Berlin 3x3 Ferienliga Turnier“ (df43cac9) im Suchindex gefunden – Datum nicht abrufbar (FIBA blockiert), nicht übernommen.",
-  "3x3-Basketballcup der Berliner Verwaltung (17.09., nur Verwaltungsbeschäftigte) – vergangen, nicht übernommen.",
-  "Hoop District x Off Court (Kraftwerk) – Termin aus 2024, nicht übernommen.",
-  "visitBerlin, DBB, BBV, Brandenburg, Hochschulsport, englische Pickup-Runs: keine neuen öffentlichen Termine.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "Neu: MBL Ferienliga Runde 4 (06.–07.02.27), Runde 5 (20.–21.03.27) und Abschlussevent (22.–23.05.27) laut MBF-Saisonplan.",
+  "FIBA-Suchindex: keine neuen Berliner/Brandenburger Events; df43cac9 weiter ohne Datum.",
+  "visitBerlin-Treffer (3x3 Series, FLINTA*-Turnier, We Own The Game) sind vergangen bzw. erfasst.",
+  "Streetball-Team: Open Gyms Mo/Mi unverändert; Terminkalender lädt dynamisch, nicht auslesbar.",
+  "DBB, BBV, Brandenburg, Hochschulsport, FLINTA*-Angebote: keine neuen öffentlichen Termine.",
   "Keine Community-Meldungen in submissions.",
-  "27 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen."
+  "30 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
@@ -102,9 +102,9 @@
   }
  ],
  "stats": {
-  "items": 27,
+  "items": 30,
   "soon": 3,
   "sources": 15
  },
- "exportedAt": "2026-10-27T05:25:30+00:00"
+ "exportedAt": "2026-10-27T17:26:13+00:00"
 }
