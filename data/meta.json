@@ -1,19 +1,21 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-26T17:58:00+01:00",
+ "lastRun": "2026-10-27T05:58:00+01:00",
  "log": [
-  "17:58  Abendlauf · Stadt: Berlin",
-  "Keine neuen Einträge: Websuche FIBA 3x3 Berlin Nov. 2026, Open Gym Berlin Dez. 2026, DBB-3x3-News, Potsdam/Brandenburg 3x3, englischsprachige Pickup-Runs ohne neue öffentliche Termine.",
-  "visitBerlin: We Own The Game und Hermann-Ehlers-Platz erneut gefunden – bereits erfasst und vergangen.",
-  "Fund Streetball Challenge Indoor (Grundschulturnier) liegt am 24.02.2026 – vergangen, 3x3-Format nicht bestätigt, nicht übernommen.",
+  "05:58  Morgenlauf · Stadt: Berlin",
+  "Neu: MBL Ferienliga Runde 3 + Weihnachtsevent (19.–20.12., Neukölln) laut MBF-Saisonplan.",
+  "FIBA-Event „MBF / Hoop City Berlin 3x3 Ferienliga Turnier“ (df43cac9) im Suchindex gefunden – Datum nicht abrufbar (FIBA blockiert), nicht übernommen.",
+  "3x3-Basketballcup der Berliner Verwaltung (17.09., nur Verwaltungsbeschäftigte) – vergangen, nicht übernommen.",
+  "Hoop District x Off Court (Kraftwerk) – Termin aus 2024, nicht übernommen.",
+  "visitBerlin, DBB, BBV, Brandenburg, Hochschulsport, englische Pickup-Runs: keine neuen öffentlichen Termine.",
   "Keine Community-Meldungen in submissions.",
-  "26 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen (30.10. Streetball Night, 01.11. Heimathafen, 01.11. Hoop City)."
+  "27 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf weiter blockiert. Suchindex ohne neue Berliner Events.",
+   "note": "Direkter Abruf blockiert. Neues Event df43cac9 (MBF/Hoop City Ferienliga) ohne Datum im Suchindex – beobachten.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/"
   },
@@ -27,11 +29,11 @@
    "name": "Berliner Basketball Verband (binb.info)",
    "note": "Keine neuen 3x3-Termine.",
    "status": "ok",
-   "url": "https://www.binb.info/jugend/news"
+   "url": "https://www.binb.info/spielbetrieb/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gyms Mo/Mi, Streetball Night 30.10. und Open Gym Night 06.11. unverändert.",
+   "note": "Open Gyms Mo/Mi unverändert.",
    "status": "ok",
    "url": "https://www.streetball-team.de/turniere-open-gym/"
   },
@@ -43,13 +45,13 @@
   },
   {
    "name": "MBF Berlin (MBL Ferienliga)",
-   "note": "Runde 2 am 31.10. unverändert.",
+   "note": "Runde 2 (31.10.) erfasst, Runde 3 (19.–20.12.) neu.",
    "status": "ok",
    "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Keine neuen 3x3-Termine in Potsdam/Umland gefunden.",
+   "note": "Keine neuen 3x3-Termine in Potsdam/Umland.",
    "status": "ok",
    "url": "https://bbv-inside.de/news/"
   },
@@ -63,11 +65,17 @@
    "name": "Berliner Sportkalender / visitBerlin",
    "note": "Nur bereits erfasste oder vergangene Events.",
    "status": "ok",
-   "url": "https://www.berlinsport-aktuell.de/berliner-sportkalender/"
+   "url": "https://www.visitberlin.de/de/sport-berlin"
+  },
+  {
+   "name": "SBNE (3x3-Cup Berliner Verwaltung)",
+   "note": "17.09. vergangen, nur für Verwaltungsbeschäftigte.",
+   "status": "ok",
+   "url": "https://sbne.de/aktuelles/jetzt-anmelden-3x3-basketballcup-der-berliner-verwaltung/"
   },
   {
    "name": "Ballhaus Ost",
-   "note": "Streetball-Turnier und FLINTA+ Basketball nur mit Terminen aus 2025.",
+   "note": "Keine neuen Termine.",
    "status": "ok",
    "url": "https://www.ballhausost.de/flinta-basketball/?lang=en"
   },
@@ -94,9 +102,9 @@
   }
  ],
  "stats": {
-  "items": 26,
+  "items": 27,
   "soon": 3,
-  "sources": 14
+  "sources": 15
  },
- "exportedAt": "2026-10-26T17:25:58+00:00"
+ "exportedAt": "2026-10-27T05:25:30+00:00"
 }

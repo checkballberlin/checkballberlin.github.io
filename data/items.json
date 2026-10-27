@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T17:25:58+00:00",
+ "generatedAt": "2026-10-27T05:25:30+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -336,6 +336,26 @@
    "summary": "Zweite Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V., gespielt in den Herbstferien. In der Liga spielen Herren-, Damen-, Ü40- und Mixed-Teams. Weitere Runden folgen im Dezember, Februar, März und Mai.",
    "summaryEn": "Round two of the 2026/27 season of MBF Berlin's holiday league, played during the autumn break. The league has men's, women's, over-40 and mixed teams. Further rounds follow in December, February, March and May.",
    "title": "MBL Ferienliga: Runde 2",
+   "type": "event",
+   "venue": "Neukölln"
+  },
+  {
+   "id": "mbf-ferienliga-runde3-2026",
+   "categories": [
+    "Damen",
+    "Herren",
+    "Mixed"
+   ],
+   "district": "Neukölln",
+   "end": "2026-12-20T18:00",
+   "foundAt": "2026-10-27",
+   "organizer": "MBF Berlin e.V.",
+   "sourceName": "MBF Berlin",
+   "sourceUrl": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627",
+   "start": "2026-12-19T10:00",
+   "summary": "Dritte Runde der Saison 2026/27 der Berliner Ferienliga des MBF Berlin e.V., verbunden mit einem Weihnachtsevent. Gespielt wird an beiden Tagen von 10 bis 18 Uhr in Neukölln.",
+   "summaryEn": "Round three of the 2026/27 season of MBF Berlin's holiday league, combined with a Christmas event. Games run from 10 am to 6 pm on both days in Neukölln.",
+   "title": "MBL Ferienliga: Runde 3 und Weihnachtsevent",
    "type": "event",
    "venue": "Neukölln"
   },
