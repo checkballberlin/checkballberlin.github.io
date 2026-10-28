@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:dakar-yog-3x3@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261114
 SUMMARY:📅 Olympische Jugendspiele: 3x3 in Dakar
@@ -42,7 +42,7 @@ URL:https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nomin
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-138ffe87@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261101T110000
 DTEND;TZID=Europe/Berlin:20261101T143000
 SUMMARY:🏆 The Battle for the Heimathafen
@@ -64,7 +64,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-bc13f52a@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:🏆 Hoop City Berlin 3x3 meets MBF 3x3 Tournament
@@ -87,7 +87,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:friedenau-herbstcamps-2026@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261031
 SUMMARY:📅 Mammut Basketball Camps in den Herbstferien
@@ -107,7 +107,7 @@ URL:https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schu
 END:VEVENT
 BEGIN:VEVENT
 UID:kiezcamp-maedchen-reinickendorf-herbst-2026@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261026T090000
 DTEND;TZID=Europe/Berlin:20261030T154500
 SUMMARY:📅 Herbstferiencamp für Mädchen in Reinickendorf
@@ -122,7 +122,7 @@ URL:https://app.campai.com/em/7hfci/events/6a8ecb1b0f823e2a681cff92/info
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-abschluss-2027@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20270522T100000
 DTEND;TZID=Europe/Berlin:20270523T180000
 SUMMARY:📅 MBL Ferienliga: Abschlussevent
@@ -136,7 +136,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde2-2026@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261031T100000
 DTEND;TZID=Europe/Berlin:20261101T180000
 SUMMARY:📅 MBL Ferienliga: Runde 2
@@ -151,7 +151,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde3-2026@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261219T100000
 DTEND;TZID=Europe/Berlin:20261220T180000
 SUMMARY:📅 MBL Ferienliga: Runde 3 und Weihnachtsevent
@@ -165,7 +165,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde4-2027@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20270206T100000
 DTEND;TZID=Europe/Berlin:20270207T180000
 SUMMARY:📅 MBL Ferienliga: Runde 4
@@ -179,7 +179,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde5-2027@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20270320T100000
 DTEND;TZID=Europe/Berlin:20270321T180000
 SUMMARY:📅 MBL Ferienliga: Runde 5
@@ -193,7 +193,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-ferien-opengym-herbst-2026@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261019T110000
 DTEND;TZID=Europe/Berlin:20261023T160000
 SUMMARY:🏀 Ferien Open Gym in der Seelenbinderhalle
@@ -207,7 +207,7 @@ URL:https://www.streetball-team.de/ferien-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-open-gym-night-2026-11@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261106T210000
 DTEND;TZID=Europe/Berlin:20261106T230000
 SUMMARY:🏀 Open Gym Night in Wedding
@@ -221,7 +221,7 @@ URL:https://www.streetball-team.de/open-gym-night/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-opengym-mittwoch@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261028T170000
 DTEND;TZID=Europe/Berlin:20261028T180000
 RRULE:FREQ=WEEKLY;BYDAY=WE
@@ -236,7 +236,7 @@ URL:https://www.streetball-team.de/turniere-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-opengym-montag@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261102T190000
 DTEND;TZID=Europe/Berlin:20261102T203000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -252,7 +252,7 @@ URL:https://www.streetball-team.de/turniere-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2026@checkballberlin.github.io
-DTSTAMP:20261028T052548Z
+DTSTAMP:20261028T172537Z
 DTSTART;TZID=Europe/Berlin:20261030T223000
 DTEND;TZID=Europe/Berlin:20261031T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle

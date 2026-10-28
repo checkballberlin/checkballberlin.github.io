@@ -1,15 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-28T06:10:00+01:00",
+ "lastRun": "2026-10-28T17:55:00+01:00",
  "log": [
-  "06:10  Morgenlauf · Stadt: Berlin",
+  "17:55  Abendlauf · Stadt: Berlin",
   "Keine neuen öffentlichen Termine gefunden; Bestand unverändert (30 Einträge, alle zweisprachig).",
-  "FIBA-Suchindex: keine neuen Berliner/Brandenburger Events; df43cac9 weiter ohne Datum.",
-  "visitBerlin-Treffer (We Own The Game, Hermann-Ehlers-Platz, 3x3 Series, FLINTA*-Turnier) vergangen und bereits erfasst.",
-  "Ballhaus Ost: Streetball-Turnier und FLINTA+-Training nur mit Terminen von 2025.",
-  "rausgegangen.de „I called game 3x3 Turnier“: Seite nicht abrufbar, Ort/Datum unbestätigt – beobachten.",
-  "Schulportal Berlin (Ausschreibungen 2026/27) bis ca. 31.10. in Wartung – danach erneut prüfen.",
-  "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
+  "FIBA-Suchindex (Berlin/Brandenburg, Nov./Dez.): keine neuen Events.",
+  "visitBerlin-Treffer (Hermann-Ehlers-Platz, We Own The Game, 3x3 Series, FLINTA*-Turnier) vergangen und bereits erfasst.",
+  "Streetball-Team: Indoor-Grundschulturnier-Flyer weiter nur für 24.02.2026.",
+  "Potsdam/Umland und englischsprachige Pickup-Runs: keine öffentlich ausgeschriebenen neuen Termine.",
+  "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen (30.10., 2× 01.11.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
@@ -112,5 +111,5 @@
   "soon": 3,
   "sources": 16
  },
- "exportedAt": "2026-10-28T05:25:48+00:00"
+ "exportedAt": "2026-10-28T17:25:37+00:00"
 }
