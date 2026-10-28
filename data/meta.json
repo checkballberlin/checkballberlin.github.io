@@ -1,21 +1,21 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-27T17:58:00+01:00",
+ "lastRun": "2026-10-28T06:10:00+01:00",
  "log": [
-  "17:58  Abendlauf · Stadt: Berlin",
-  "Neu: MBL Ferienliga Runde 4 (06.–07.02.27), Runde 5 (20.–21.03.27) und Abschlussevent (22.–23.05.27) laut MBF-Saisonplan.",
+  "06:10  Morgenlauf · Stadt: Berlin",
+  "Keine neuen öffentlichen Termine gefunden; Bestand unverändert (30 Einträge, alle zweisprachig).",
   "FIBA-Suchindex: keine neuen Berliner/Brandenburger Events; df43cac9 weiter ohne Datum.",
-  "visitBerlin-Treffer (3x3 Series, FLINTA*-Turnier, We Own The Game) sind vergangen bzw. erfasst.",
-  "Streetball-Team: Open Gyms Mo/Mi unverändert; Terminkalender lädt dynamisch, nicht auslesbar.",
-  "DBB, BBV, Brandenburg, Hochschulsport, FLINTA*-Angebote: keine neuen öffentlichen Termine.",
-  "Keine Community-Meldungen in submissions.",
-  "30 Einträge, alle zweisprachig; 3 Berliner Turniere in den nächsten 60 Tagen."
+  "visitBerlin-Treffer (We Own The Game, Hermann-Ehlers-Platz, 3x3 Series, FLINTA*-Turnier) vergangen und bereits erfasst.",
+  "Ballhaus Ost: Streetball-Turnier und FLINTA+-Training nur mit Terminen von 2025.",
+  "rausgegangen.de „I called game 3x3 Turnier“: Seite nicht abrufbar, Ort/Datum unbestätigt – beobachten.",
+  "Schulportal Berlin (Ausschreibungen 2026/27) bis ca. 31.10. in Wartung – danach erneut prüfen.",
+  "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf blockiert. Neues Event df43cac9 (MBF/Hoop City Ferienliga) ohne Datum im Suchindex – beobachten.",
+   "note": "Direkter Abruf blockiert. df43cac9 (MBF/Hoop City Ferienliga) weiter ohne Datum im Suchindex.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/"
   },
@@ -33,19 +33,19 @@
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gyms Mo/Mi unverändert.",
+   "note": "Open Gyms Mo/Mi unverändert; Indoor-Grundschulturnier-Flyer nur für Feb. 2026.",
    "status": "ok",
    "url": "https://www.streetball-team.de/turniere-open-gym/"
   },
   {
    "name": "Friedenauer TSC Basketball",
-   "note": "Herbstferien-Camps bereits erfasst.",
+   "note": "Herbstferien-Camps erfasst.",
    "status": "ok",
    "url": "https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schulferien-2026/"
   },
   {
    "name": "MBF Berlin (MBL Ferienliga)",
-   "note": "Runde 2 (31.10.) erfasst, Runde 3 (19.–20.12.) neu.",
+   "note": "Runden 2–5 und Abschlussevent erfasst.",
    "status": "ok",
    "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
   },
@@ -63,19 +63,13 @@
   },
   {
    "name": "Berliner Sportkalender / visitBerlin",
-   "note": "Nur bereits erfasste oder vergangene Events.",
+   "note": "Nur vergangene oder erfasste Events.",
    "status": "ok",
    "url": "https://www.visitberlin.de/de/sport-berlin"
   },
   {
-   "name": "SBNE (3x3-Cup Berliner Verwaltung)",
-   "note": "17.09. vergangen, nur für Verwaltungsbeschäftigte.",
-   "status": "ok",
-   "url": "https://sbne.de/aktuelles/jetzt-anmelden-3x3-basketballcup-der-berliner-verwaltung/"
-  },
-  {
    "name": "Ballhaus Ost",
-   "note": "Keine neuen Termine.",
+   "note": "Streetball-Turnier und FLINTA+-Training nur 2025.",
    "status": "ok",
    "url": "https://www.ballhausost.de/flinta-basketball/?lang=en"
   },
@@ -83,6 +77,18 @@
    "name": "Hochschulsport Berlin",
    "note": "Keine offenen 3x3-Turniere im Wintersemester gefunden.",
    "status": "ok"
+  },
+  {
+   "name": "Schulportal Berlin (Schulsport-Ausschreibungen)",
+   "note": "Bis ca. 31.10.2026 in Wartung.",
+   "status": "blockiert",
+   "url": "https://schulportal.berlin.de/"
+  },
+  {
+   "name": "rausgegangen.de",
+   "note": "Event „I called game 3x3“ nicht abrufbar; unbestätigt.",
+   "status": "blockiert",
+   "url": "https://rausgegangen.de/en/organizations/i-called-game-1/"
   },
   {
    "name": "Instagram (@dbb.3x3 und Veranstalter)",
@@ -104,7 +110,7 @@
  "stats": {
   "items": 30,
   "soon": 3,
-  "sources": 15
+  "sources": 16
  },
- "exportedAt": "2026-10-27T17:26:13+00:00"
+ "exportedAt": "2026-10-28T05:25:48+00:00"
 }
