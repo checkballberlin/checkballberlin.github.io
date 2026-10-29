@@ -1,20 +1,20 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-28T17:55:00+01:00",
+ "lastRun": "2026-10-29T05:58:00+01:00",
  "log": [
-  "17:55  Abendlauf · Stadt: Berlin",
+  "05:55  Morgenlauf · Stadt: Berlin",
   "Keine neuen öffentlichen Termine gefunden; Bestand unverändert (30 Einträge, alle zweisprachig).",
-  "FIBA-Suchindex (Berlin/Brandenburg, Nov./Dez.): keine neuen Events.",
-  "visitBerlin-Treffer (Hermann-Ehlers-Platz, We Own The Game, 3x3 Series, FLINTA*-Turnier) vergangen und bereits erfasst.",
-  "Streetball-Team: Indoor-Grundschulturnier-Flyer weiter nur für 24.02.2026.",
-  "Potsdam/Umland und englischsprachige Pickup-Runs: keine öffentlich ausgeschriebenen neuen Termine.",
+  "FIBA-Suchindex: Winter League #1 (ab3208fe) und Eastercup (40b37ea1) gefunden, Abruf blockiert, ohne bestätigtes Datum – nicht übernommen.",
+  "3x3-Cup der Berliner Verwaltung (17.09., sbne.de) war nur für Verwaltungsbeschäftigte – nicht übernommen.",
+  "BBV-News (binb.info/puls): nur Herbstcamps (erfasst) und Trainerfortbildung 01.11.; keine neuen 3x3-Termine.",
+  "Streetball-Team: Open Gyms Mo/Mi unverändert; keine neuen Turniere.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen (30.10., 2× 01.11.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf blockiert. df43cac9 (MBF/Hoop City Ferienliga) weiter ohne Datum im Suchindex.",
+   "note": "Direkter Abruf blockiert. ab3208fe (Winter League #1) und 40b37ea1 (Eastercup) im Suchindex ohne Datum; df43cac9 weiter ohne Datum.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/"
   },
@@ -26,13 +26,13 @@
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Keine neuen 3x3-Termine.",
+   "note": "Puls-News geprüft: keine neuen 3x3-Termine.",
    "status": "ok",
-   "url": "https://www.binb.info/spielbetrieb/news"
+   "url": "https://www.binb.info/puls/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gyms Mo/Mi unverändert; Indoor-Grundschulturnier-Flyer nur für Feb. 2026.",
+   "note": "Open Gyms Mo/Mi unverändert; keine neuen Turniere.",
    "status": "ok",
    "url": "https://www.streetball-team.de/turniere-open-gym/"
   },
@@ -62,7 +62,7 @@
   },
   {
    "name": "Berliner Sportkalender / visitBerlin",
-   "note": "Nur vergangene oder erfasste Events.",
+   "note": "Nur vergangene oder erfasste Events (3x3 Series, FLINTA*/DM-Quali, WM).",
    "status": "ok",
    "url": "https://www.visitberlin.de/de/sport-berlin"
   },
@@ -76,6 +76,12 @@
    "name": "Hochschulsport Berlin",
    "note": "Keine offenen 3x3-Turniere im Wintersemester gefunden.",
    "status": "ok"
+  },
+  {
+   "name": "SBNE / Bezirksamt Charlottenburg-Wilmersdorf",
+   "note": "3x3-Cup der Berliner Verwaltung 17.09.2026, nur für Verwaltungsbeschäftigte.",
+   "status": "ok",
+   "url": "https://sbne.de/aktuelles/jetzt-anmelden-3x3-basketballcup-der-berliner-verwaltung/"
   },
   {
    "name": "Schulportal Berlin (Schulsport-Ausschreibungen)",
@@ -109,7 +115,7 @@
  "stats": {
   "items": 30,
   "soon": 3,
-  "sources": 16
+  "sources": 17
  },
- "exportedAt": "2026-10-28T17:25:37+00:00"
+ "exportedAt": "2026-10-29T05:25:46+00:00"
 }
