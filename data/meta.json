@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-29T05:58:00+01:00",
+ "lastRun": "2026-10-29T17:57:00+01:00",
  "log": [
-  "05:55  Morgenlauf · Stadt: Berlin",
+  "17:55  Abendlauf · Stadt: Berlin",
   "Keine neuen öffentlichen Termine gefunden; Bestand unverändert (30 Einträge, alle zweisprachig).",
-  "FIBA-Suchindex: Winter League #1 (ab3208fe) und Eastercup (40b37ea1) gefunden, Abruf blockiert, ohne bestätigtes Datum – nicht übernommen.",
-  "3x3-Cup der Berliner Verwaltung (17.09., sbne.de) war nur für Verwaltungsbeschäftigte – nicht übernommen.",
-  "BBV-News (binb.info/puls): nur Herbstcamps (erfasst) und Trainerfortbildung 01.11.; keine neuen 3x3-Termine.",
+  "FIBA-Suchindex: keine neuen Berliner/Brandenburger Events mit Datum.",
+  "visitBerlin: nur vergangene bzw. bereits erfasste Events (3x3 Series, We Own The Game, Hermann-Ehlers-Platz, FLINTA*/DM-Quali).",
   "Streetball-Team: Open Gyms Mo/Mi unverändert; keine neuen Turniere.",
+  "rausgegangen.de („I called game“) weiter nicht abrufbar – nicht übernommen.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen (30.10., 2× 01.11.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -117,5 +117,5 @@
   "soon": 3,
   "sources": 17
  },
- "exportedAt": "2026-10-29T05:25:46+00:00"
+ "exportedAt": "2026-10-29T17:26:06+00:00"
 }
