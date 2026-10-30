@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-29T17:26:06+00:00",
+ "generatedAt": "2026-10-30T05:26:06+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -567,6 +567,72 @@
    "venue": "Horst-Dohm-Eisstadion, Fritz-Wildung-Straße 9"
   },
   {
+   "id": "streetballteam-streetball-night-2026-11-13",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2026-11-14T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2026-11-13T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 13.11.2026, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 13 Nov 2026, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2026-11-27",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2026-11-28T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2026-11-27T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 27.11.2026, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 27 Nov 2026, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2026-12-11",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2026-12-12T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2026-12-11T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 11.12.2026, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 11 Dec 2026, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
    "id": "streetballteam-streetball-night-2026",
    "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
    "categories": [
@@ -583,6 +649,116 @@
    "start": "2026-10-30T22:30",
    "summary": "Kostenlose Streetball-Turnierreihe am Freitagabend für Teams mit 3 bis 4 Leuten, Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele, gespielt wird ohne Gesamtsieger. Weitere Termine: 13.11., 27.11. und 11.12.2026.",
    "summaryEn": "Free Friday-night streetball series for teams of 3 to 4, category L (recreational) or XL. Each team plays 5 to 6 games, with no overall winner. Further dates: 13 Nov, 27 Nov and 11 Dec 2026.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2027-01-15",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2027-01-16T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2027-01-15T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 15.01.2027, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 15 Jan 2027, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2027-01-29",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2027-01-30T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2027-01-29T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 29.01.2027, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 29 Jan 2027, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2027-02-19",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2027-02-20T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2027-02-19T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 19.02.2027, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 19 Feb 2027, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2027-03-05",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2027-03-06T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2027-03-05T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 05.03.2027, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 5 Mar 2027, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
+   "title": "Streetball Night in der Max-Schmeling-Halle",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"
+  },
+  {
+   "id": "streetballteam-streetball-night-2027-03-19",
+   "audience": "ab 18; Jahrgänge 2007/2008 mit Einverständnis der Eltern",
+   "categories": [
+    "Offen"
+   ],
+   "district": "Pankow",
+   "end": "2027-03-20T01:30",
+   "foundAt": "2026-10-30",
+   "level": "Streetball, Kategorien L und XL",
+   "organizer": "Streetball-Team Berlin (GSJ gGmbH)",
+   "price": "kostenlos",
+   "regUrl": "https://www.streetball-team.de/anmeldung-streetball-night/",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/streetball-nights/",
+   "start": "2027-03-19T22:30",
+   "summary": "Kostenlose Streetball-Nacht am Freitag, 19.03.2027, für Teams mit 3 bis 4 Leuten in Kategorie L (Freizeit) oder XL. Jedes Team spielt 5 bis 6 Spiele ohne Gesamtsieger; Einlass ab ca. 21:45 Uhr, Voranmeldung verfällt um 22:15 Uhr.",
+   "summaryEn": "Free streetball night on Friday, 19 Mar 2027, for teams of 3 to 4 in category L (recreational) or XL. Each team plays 5 to 6 games with no overall winner; doors open around 9:45 pm, pre-registration lapses at 10:15 pm.",
    "title": "Streetball Night in der Max-Schmeling-Halle",
    "type": "turnier",
    "venue": "Max-Schmeling-Halle, Nebenhalle C, Am Falkplatz 1"

@@ -1,26 +1,27 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-29T17:57:00+01:00",
+ "lastRun": "2026-10-30T05:57:00+01:00",
  "log": [
-  "17:55  Abendlauf · Stadt: Berlin",
-  "Keine neuen öffentlichen Termine gefunden; Bestand unverändert (30 Einträge, alle zweisprachig).",
+  "05:55  Morgenlauf · Stadt: Berlin",
+  "Neu: 8 Einzeltermine der Streetball Nights (13.11.2026 bis 19.03.2027, Max-Schmeling-Halle) als eigene Turnier-Einträge.",
   "FIBA-Suchindex: keine neuen Berliner/Brandenburger Events mit Datum.",
-  "visitBerlin: nur vergangene bzw. bereits erfasste Events (3x3 Series, We Own The Game, Hermann-Ehlers-Platz, FLINTA*/DM-Quali).",
-  "Streetball-Team: Open Gyms Mo/Mi unverändert; keine neuen Turniere.",
-  "rausgegangen.de („I called game“) weiter nicht abrufbar – nicht übernommen.",
-  "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen (30.10., 2× 01.11.)."
+  "DBB 3x3-News: keine neuen Meldungen; BBV Brandenburg: nur Schiedsrichter-News (28.10.).",
+  "binb.info: nur Trainer-Fortbildung (01.11.) und bereits erfasste Herbstcamps – nicht übernommen.",
+  "Streetball-Team: Open Gyms Mo/Mi unverändert.",
+  "Hochschulsport, FLINTA*-Angebote, Potsdam/Umland: nichts Neues.",
+  "Keine Community-Meldungen; 6 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf blockiert. ab3208fe (Winter League #1) und 40b37ea1 (Eastercup) im Suchindex ohne Datum; df43cac9 weiter ohne Datum.",
+   "note": "Direkter Abruf blockiert; im Suchindex keine neuen Berliner Events.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/"
   },
   {
    "name": "DBB 3x3: News und Kalender",
-   "note": "Keine neuen Meldungen im Suchindex.",
+   "note": "Keine neuen Meldungen.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -32,9 +33,9 @@
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gyms Mo/Mi unverändert; keine neuen Turniere.",
+   "note": "Streetball-Night-Termine bis März 2027 erfasst; Open Gyms Mo/Mi unverändert.",
    "status": "ok",
-   "url": "https://www.streetball-team.de/turniere-open-gym/"
+   "url": "https://www.streetball-team.de/streetball-nights/"
   },
   {
    "name": "Friedenauer TSC Basketball",
@@ -62,7 +63,7 @@
   },
   {
    "name": "Berliner Sportkalender / visitBerlin",
-   "note": "Nur vergangene oder erfasste Events (3x3 Series, FLINTA*/DM-Quali, WM).",
+   "note": "Nur vergangene oder erfasste Events.",
    "status": "ok",
    "url": "https://www.visitberlin.de/de/sport-berlin"
   },
@@ -113,9 +114,9 @@
   }
  ],
  "stats": {
-  "items": 30,
-  "soon": 3,
+  "items": 38,
+  "soon": 6,
   "sources": 17
  },
- "exportedAt": "2026-10-29T17:26:06+00:00"
+ "exportedAt": "2026-10-30T05:26:06+00:00"
 }
