@@ -1,23 +1,22 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-30T05:57:00+01:00",
+ "lastRun": "2026-10-30T17:58:00+01:00",
  "log": [
-  "05:55  Morgenlauf · Stadt: Berlin",
-  "Neu: 8 Einzeltermine der Streetball Nights (13.11.2026 bis 19.03.2027, Max-Schmeling-Halle) als eigene Turnier-Einträge.",
-  "FIBA-Suchindex: keine neuen Berliner/Brandenburger Events mit Datum.",
-  "DBB 3x3-News: keine neuen Meldungen; BBV Brandenburg: nur Schiedsrichter-News (28.10.).",
-  "binb.info: nur Trainer-Fortbildung (01.11.) und bereits erfasste Herbstcamps – nicht übernommen.",
-  "Streetball-Team: Open Gyms Mo/Mi unverändert.",
-  "Hochschulsport, FLINTA*-Angebote, Potsdam/Umland: nichts Neues.",
+  "17:55  Abendlauf · Stadt: Berlin",
+  "Keine neuen Einträge, keine Änderungen; alle Einträge haben summaryEn.",
+  "FIBA-Suchindex: neues Event „MBF / Hoop City Berlin 3x3 Ferienliga Turnier“ (df43cac9) gefunden, Datum/Ort nicht abrufbar – noch nicht übernommen.",
+  "MBF Ferienliga: Runden 2–5 und Abschluss unverändert (Runde 2 am 31.10./01.11.).",
+  "Streetball-Team: Terminseite lädt per JavaScript; Open Gyms Mo/Mi weiter im Kalender.",
+  "DBB 3x3, binb.info, Hochschulsport, FLINTA*, Potsdam/Umland: nichts Neues.",
   "Keine Community-Meldungen; 6 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf blockiert; im Suchindex keine neuen Berliner Events.",
+   "note": "Direkter Abruf blockiert; neues Event df43cac9 (MBF/Hoop City Ferienliga Turnier) ohne Datum – beobachten.",
    "status": "blockiert",
-   "url": "https://play.fiba3x3.com/"
+   "url": "https://play.fiba3x3.com/events/df43cac9-12ae-449e-b24c-af2a09b25fae"
   },
   {
    "name": "DBB 3x3: News und Kalender",
@@ -27,15 +26,15 @@
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Puls-News geprüft: keine neuen 3x3-Termine.",
+   "note": "Keine neuen 3x3-Termine.",
    "status": "ok",
    "url": "https://www.binb.info/puls/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Streetball-Night-Termine bis März 2027 erfasst; Open Gyms Mo/Mi unverändert.",
+   "note": "Streetball Nights bis März 2027 erfasst; Terminseite per JavaScript, Open Gyms Mo/Mi unverändert.",
    "status": "ok",
-   "url": "https://www.streetball-team.de/streetball-nights/"
+   "url": "https://www.streetball-team.de/"
   },
   {
    "name": "Friedenauer TSC Basketball",
@@ -45,7 +44,7 @@
   },
   {
    "name": "MBF Berlin (MBL Ferienliga)",
-   "note": "Runden 2–5 und Abschlussevent erfasst.",
+   "note": "Runden 2–5 und Abschlussevent erfasst; kein FIBA-Link auf der Seite.",
    "status": "ok",
    "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
   },
@@ -108,6 +107,11 @@
    "status": "ok"
   },
   {
+   "name": "FLINTA*-Angebote (Websuche)",
+   "note": "Keine neuen Berliner Angebote; Treffer „FLINTA Competitive Training“ ist in Wien – nicht übernommen.",
+   "status": "ok"
+  },
+  {
    "name": "Community-Meldungen",
    "note": "Keine offenen Meldungen.",
    "status": "ok"
@@ -116,7 +120,7 @@
  "stats": {
   "items": 38,
   "soon": 6,
-  "sources": 17
+  "sources": 18
  },
- "exportedAt": "2026-10-30T05:26:06+00:00"
+ "exportedAt": "2026-10-30T17:25:38+00:00"
 }
