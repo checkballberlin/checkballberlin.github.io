@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-10-31T05:56:00+01:00",
+ "lastRun": "2026-10-31T17:57:00+01:00",
  "log": [
-  "05:55  Morgenlauf · Stadt: Berlin",
+  "17:55  Abendlauf · Stadt: Berlin",
   "Keine neuen Einträge, keine Änderungen; alle Einträge haben summaryEn.",
-  "FIBA-Event df43cac9 (MBF/Hoop City Ferienliga Turnier): weiterhin kein öffentlich abrufbares Datum – nicht übernommen.",
-  "Heute: MBF Ferienliga Runde 2 (31.10./01.11.); morgen zwei FIBA-3x3-Turniere (Kreuzberg, Neukölln).",
-  "Websuche FIBA/DBB/Potsdam/Hochschulsport/FLINTA*/Open Gyms: nur bereits erfasste Quellen.",
-  "Streetball Night 30.10. vorbei; nächste am 13.11.",
+  "Websuche FIBA 3x3 Berlin/Brandenburg, DBB-News, Weihnachtsturniere, Hochschulsport, Open Gyms: keine neuen öffentlichen Berliner Termine.",
+  "FIBA-Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiterhin ohne öffentliches Datum – nicht übernommen.",
+  "Morgen (01.11.): The Battle for the Heimathafen (Kreuzberg) und Hoop City meets MBF (Neukölln).",
+  "Nächste Streetball Night am 13.11.; Open Gym Night Wedding am 06.11.",
   "Keine Community-Meldungen; 5 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -122,5 +122,5 @@
   "soon": 5,
   "sources": 18
  },
- "exportedAt": "2026-10-31T05:25:57+00:00"
+ "exportedAt": "2026-10-31T17:25:36+00:00"
 }
