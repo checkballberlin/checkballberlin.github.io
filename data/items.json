@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-01T05:25:56+00:00",
+ "generatedAt": "2026-11-01T17:26:11+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -215,6 +215,7 @@
   {
    "id": "fiba-bc13f52a",
    "audience": "U18 männlich und weiblich, Damen, Herren",
+   "cancelNote": "Absage vom Betreiber gemeldet (01.11.2026)",
    "categories": [
     "U18",
     "Damen",
@@ -231,8 +232,9 @@
    "sourceName": "FIBA 3x3",
    "sourceUrl": "https://play.fiba3x3.com/events/bc13f52a-00d3-483c-9de2-124b7ec6bb85",
    "start": "2026-11-01",
-   "summary": "Gemeinsames 3x3-Turnier von MBF und Hoop City Berlin 3x3 in Britz, diesmal etwas kleiner als sonst. Für die Siegerteams gibt es Pokale und als Preis eine Startplatzübernahme für einen Stop der 3x3 Germany Tour 2027 oder der MEKB Tour 2027.",
-   "summaryEn": "Joint 3x3 tournament by MBF and Hoop City Berlin 3x3 in Britz, a bit smaller this time. Winning teams get trophies and a covered entry to a stop of the 3x3 Germany Tour 2027 or the MEKB Tour 2027.",
+   "status": "abgesagt",
+   "summary": "ABGESAGT: Das gemeinsame 3x3-Turnier von MBF und Hoop City Berlin 3x3 in Britz am 01.11.2026 fällt aus. Geplant waren Pokale und eine Startplatzübernahme für einen Stop der 3x3 Germany Tour 2027 oder der MEKB Tour 2027.",
+   "summaryEn": "CANCELLED: The joint 3x3 tournament by MBF and Hoop City Berlin 3x3 in Britz on 1 Nov 2026 will not take place. Trophies and a covered entry to a 3x3 Germany Tour 2027 or MEKB Tour 2027 stop had been planned.",
    "title": "Hoop City Berlin 3x3 meets MBF 3x3 Tournament",
    "type": "turnier",
    "venue": "Parchimer Allee 109, 12359 Berlin"
