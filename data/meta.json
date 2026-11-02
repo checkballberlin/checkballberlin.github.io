@@ -1,11 +1,12 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-01T17:58:00+01:00",
+ "lastRun": "2026-11-02T05:58:00+01:00",
  "log": [
-  "17:55  Abendlauf · Stadt: Berlin",
+  "05:55  Morgenlauf · Stadt: Berlin",
   "Keine neuen Einträge, keine Änderungen; alle Einträge haben summaryEn.",
-  "Websuche FIBA 3x3 Berlin/Brandenburg, DBB, Streetball-Team, FLINTA*, Open Gyms: keine neuen öffentlichen Berliner Termine.",
-  "visitBerlin-Treffer (FLINTA*-Turnier/DM-Quali, 3x3 Series Hbf, We Own The Game, Hermann-Ehlers-Platz) bereits erfasst und vergangen.",
+  "Websuche FIBA 3x3 Berlin/Brandenburg, Dezember-Turniere, Open Gyms, FLINTA*, Pickup-Runs, Hochschulsport, Partnervereine, Potsdam: keine neuen öffentlichen Berliner Termine.",
+  "Direkt geprüft: BBV (binb.info), Streetball-Team, MBF, Brandenburgischer Verband, visitBerlin: nichts Neues ab November.",
+  "DBB-3x3-Newsseite zeigte beim Abruf keine Einträge (vermutlich dynamisch geladen).",
   "FIBA-Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiterhin ohne öffentliches Datum.",
   "Nächste Termine: Open Gym Night Wedding 06.11., Streetball Night 13.11. und 27.11.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
@@ -14,13 +15,13 @@
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direkter Abruf blockiert; neues Event df43cac9 (MBF/Hoop City Ferienliga Turnier) ohne Datum – beobachten.",
+   "note": "Direkter Abruf blockiert; Event df43cac9 (MBF/Hoop City Ferienliga Turnier) ohne Datum – beobachten.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/events/df43cac9-12ae-449e-b24c-af2a09b25fae"
   },
   {
    "name": "DBB 3x3: News und Kalender",
-   "note": "Keine neuen Meldungen.",
+   "note": "Newsliste beim Abruf leer (vermutlich dynamisch geladen); per Websuche keine neuen Meldungen.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -32,7 +33,7 @@
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Streetball Nights bis März 2027 erfasst; Terminseite per JavaScript, Open Gyms Mo/Mi unverändert.",
+   "note": "Streetball Nights bis März 2027 erfasst; Open Gym Night 06.11. und Open Gyms Mo/Mi unverändert.",
    "status": "ok",
    "url": "https://www.streetball-team.de/"
   },
@@ -85,7 +86,7 @@
   },
   {
    "name": "Schulportal Berlin (Schulsport-Ausschreibungen)",
-   "note": "Bis ca. 31.10.2026 in Wartung.",
+   "note": "Wartung sollte bis ca. 31.10.2026 laufen; in diesem Lauf nicht erneut direkt geprüft.",
    "status": "blockiert",
    "url": "https://schulportal.berlin.de/"
   },
@@ -108,7 +109,7 @@
   },
   {
    "name": "FLINTA*-Angebote (Websuche)",
-   "note": "Keine neuen Berliner Angebote; Treffer „FLINTA Competitive Training“ ist in Wien – nicht übernommen.",
+   "note": "Keine neuen Berliner Angebote; Treffer „FLINTA Competitive Training“ nicht in Berlin – nicht übernommen.",
    "status": "ok"
   },
   {
@@ -122,5 +123,5 @@
   "soon": 3,
   "sources": 18
  },
- "exportedAt": "2026-11-01T17:26:11+00:00"
+ "exportedAt": "2026-11-02T05:25:51+00:00"
 }
