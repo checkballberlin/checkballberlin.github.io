@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-02T05:58:00+01:00",
+ "lastRun": "2026-11-02T18:13:00+01:00",
  "log": [
-  "05:55  Morgenlauf · Stadt: Berlin",
+  "17:55  Abendlauf · Stadt: Berlin (Start 18:12)",
   "Keine neuen Einträge, keine Änderungen; alle Einträge haben summaryEn.",
-  "Websuche FIBA 3x3 Berlin/Brandenburg, Dezember-Turniere, Open Gyms, FLINTA*, Pickup-Runs, Hochschulsport, Partnervereine, Potsdam: keine neuen öffentlichen Berliner Termine.",
-  "Direkt geprüft: BBV (binb.info), Streetball-Team, MBF, Brandenburgischer Verband, visitBerlin: nichts Neues ab November.",
-  "DBB-3x3-Newsseite zeigte beim Abruf keine Einträge (vermutlich dynamisch geladen).",
-  "FIBA-Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiterhin ohne öffentliches Datum.",
+  "Websuche FIBA 3x3 Berlin, Dezember-Turniere, Brandenburg/Potsdam, Open Gyms, FLINTA*, Pickup-Runs, Weihnachtsturniere, Hochschulsport: keine neuen öffentlichen Berliner Termine.",
+  "Direkt geprüft: Streetball-Team, BBV (binb.info), MBF, Brandenburgischer Verband, visitBerlin: nichts Neues ab November.",
+  "DBB-3x3-Newsseite weiterhin ohne Einträge; FIBA-Event df43cac9 weiterhin ohne öffentliches Datum.",
+  "Nicht erneut geprüft in diesem Lauf: Schulportal, rausgegangen.de, Partnervereine direkt (nur Websuche).",
   "Nächste Termine: Open Gym Night Wedding 06.11., Streetball Night 13.11. und 27.11.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
@@ -123,5 +123,5 @@
   "soon": 3,
   "sources": 18
  },
- "exportedAt": "2026-11-02T05:25:51+00:00"
+ "exportedAt": "2026-11-02T17:52:25+00:00"
 }
