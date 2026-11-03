@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-03T05:58:00+01:00",
+ "lastRun": "2026-11-03T17:59:00+01:00",
  "log": [
-  "05:55  Morgenlauf · Stadt: Berlin",
-  "Keine neuen Einträge, keine Änderungen; alle Einträge haben summaryEn.",
-  "Websuche FIBA 3x3 Berlin, Dezember- und Winterturniere, Brandenburg/Potsdam, Open Gyms, FLINTA*, Pickup-Runs, Weihnachtsturniere, Partnervereine: keine neuen öffentlichen Berliner Termine.",
-  "Direkt geprüft: Streetball-Team, MBF, Brandenburgischer Verband, Sportveranstaltungen des Landes Berlin: nichts Neues ab November.",
-  "DBB-Kalender (iCal) neu geprüft: 200 Einträge, letzter vom 01.08.2025, nichts aus Berlin oder Brandenburg.",
-  "Nicht abrufbar: binb.info und berlin.de/Schulsport-Wettbewerbe (Abruffehler), HU-Hochschulsport (Bot-Schutz).",
-  "Nächste Termine: Open Gym Night Wedding 06.11., Streetball Night 13.11. und 27.11.",
+  "17:55  Abendlauf · Stadt: Berlin",
+  "Neu: Indoor Streetball Challenge Grundschulturnier (10.02.2027, Max-Schmeling-Halle, 3 gegen 3).",
+  "Neu: Offenes Mädchen- und Frauenturnier Neuenhagen (22.05.2027, Umland, Spielmodus wird vor Ort abgestimmt).",
+  "Auffällig: Streetball-Team nennt für den 10.02.2027 Dienstag und Mittwoch; das Datum ist ein Mittwoch. Anmeldeschluss noch offen.",
+  "Nicht übernommen: BBV Mini-Tour U8–U11 (Bernau, Glienicke u. a.), Vereins-Kinderturniere ohne 3x3-Bezug; Jugend Appreciation Day ohne Ort.",
+  "Websuche FIBA 3x3, Winterturniere, Open Gyms, FLINTA*, Pickup, Hochschulsport, Partnervereine: nichts Neues.",
+  "Nicht abrufbar: binb.info, play.fiba3x3.com (Abruffehler), Rainbowtime-Seite (Weiterleitung).",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -21,7 +21,7 @@
   },
   {
    "name": "DBB 3x3: News",
-   "note": "Newsliste beim Abruf leer (vermutlich dynamisch geladen); per Websuche keine neuen Meldungen.",
+   "note": "Newsliste beim Abruf leer; Turnierseite nennt nur vergangene Termine 2026.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -39,9 +39,9 @@
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Streetball Nights bis März 2027 erfasst; Open Gym Night 06.11. und Open Gyms Mo/Mi unverändert.",
+   "note": "Indoor-Grundschulturnier 10.02.2027 neu erfasst; Streetball Nights bis März 2027, Open Gym Night 06.11. und Open Gyms Mo/Mi unverändert.",
    "status": "ok",
-   "url": "https://www.streetball-team.de/"
+   "url": "https://www.streetball-team.de/upcoming-events/"
   },
   {
    "name": "Friedenauer TSC Basketball",
@@ -57,9 +57,9 @@
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Keine neuen 3x3-Termine in Potsdam/Umland.",
+   "note": "Veranstaltungskalender geprüft: Frauenturnier Neuenhagen erfasst; sonst Mini-Tour U8–U11, kein 3x3 genannt.",
    "status": "ok",
-   "url": "https://bbv-inside.de/news/"
+   "url": "https://bbv-inside.de/veranstaltungen/"
   },
   {
    "name": "ALBA BERLIN Jugend",
@@ -122,7 +122,7 @@
   },
   {
    "name": "FLINTA*-Angebote (Websuche)",
-   "note": "Keine neuen Berliner Angebote.",
+   "note": "Keine neuen Berliner Angebote; Rainbowtime-Eintrag (FLINTA Competitive Training) nicht lesbar.",
    "status": "ok"
   },
   {
@@ -137,9 +137,9 @@
   }
  ],
  "stats": {
-  "items": 38,
+  "items": 40,
   "soon": 3,
   "sources": 21
  },
- "exportedAt": "2026-11-03T05:25:58+00:00"
+ "exportedAt": "2026-11-03T17:25:43+00:00"
 }

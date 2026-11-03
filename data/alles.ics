@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:dakar-yog-3x3@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261114
 SUMMARY:📅 Olympische Jugendspiele: 3x3 in Dakar
@@ -42,7 +42,7 @@ URL:https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nomin
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-138ffe87@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261101T110000
 DTEND;TZID=Europe/Berlin:20261101T143000
 SUMMARY:🏆 The Battle for the Heimathafen
@@ -64,7 +64,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:friedenau-herbstcamps-2026@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261031
 SUMMARY:📅 Mammut Basketball Camps in den Herbstferien
@@ -84,7 +84,7 @@ URL:https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schu
 END:VEVENT
 BEGIN:VEVENT
 UID:kiezcamp-maedchen-reinickendorf-herbst-2026@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261026T090000
 DTEND;TZID=Europe/Berlin:20261030T154500
 SUMMARY:📅 Herbstferiencamp für Mädchen in Reinickendorf
@@ -99,7 +99,7 @@ URL:https://app.campai.com/em/7hfci/events/6a8ecb1b0f823e2a681cff92/info
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-abschluss-2027@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270522T100000
 DTEND;TZID=Europe/Berlin:20270523T180000
 SUMMARY:📅 MBL Ferienliga: Abschlussevent
@@ -113,7 +113,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde2-2026@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261031T100000
 DTEND;TZID=Europe/Berlin:20261101T180000
 SUMMARY:📅 MBL Ferienliga: Runde 2
@@ -128,7 +128,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde3-2026@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261219T100000
 DTEND;TZID=Europe/Berlin:20261220T180000
 SUMMARY:📅 MBL Ferienliga: Runde 3 und Weihnachtsevent
@@ -142,7 +142,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde4-2027@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270206T100000
 DTEND;TZID=Europe/Berlin:20270207T180000
 SUMMARY:📅 MBL Ferienliga: Runde 4
@@ -156,7 +156,7 @@ URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
 UID:mbf-ferienliga-runde5-2027@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270320T100000
 DTEND;TZID=Europe/Berlin:20270321T180000
 SUMMARY:📅 MBL Ferienliga: Runde 5
@@ -169,8 +169,27 @@ DESCRIPTION:Fünfte Runde der Saison 2026/27 der Berliner Ferienliga des MB
 URL:https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627
 END:VEVENT
 BEGIN:VEVENT
+UID:neuenhagen-maedchen-frauenturnier-2027@checkballberlin.github.io
+DTSTAMP:20261103T172543Z
+DTSTART;TZID=Europe/Berlin:20270522T090000
+DTEND;TZID=Europe/Berlin:20270522T160000
+SUMMARY:📅 Offenes Mädchen- und Frauenturnier in Neuenhagen
+LOCATION:Grundschule am Gruscheweg\, Gruscheweg 52-54\, 15366 Neuenhagen be
+ i Berlin
+DESCRIPTION:Offenes Basketballturnier der SG Rot-Weiß Neuenhagen für Mäd
+ chen und Frauen von U12 bis Ü18. Der Spielmodus wird vor Ort abgestimmt\,
+  Meldeschluss ist der 16.05.2027.\nFür: Mädchen und Frauen\, U12 bis Ü1
+ 8\nVeranstalter: SG Rot-Weiß Neuenhagen e.V.\nAnmeldung: https://bbv-insi
+ de.de/events/offenes-maedchen-und-frauenturnier-sg-rot-weiss-neuenhagen-e-
+ v-u12-frauen/\nQuelle: https://bbv-inside.de/events/offenes-maedchen-und-f
+ rauenturnier-sg-rot-weiss-neuenhagen-e-v-u12-frauen/\nAlle Termine: https:
+ //checkballberlin.github.io · Angaben ohne Gewähr
+URL:https://bbv-inside.de/events/offenes-maedchen-und-frauenturnier-sg-rot-
+ weiss-neuenhagen-e-v-u12-frauen/
+END:VEVENT
+BEGIN:VEVENT
 UID:streetballteam-ferien-opengym-herbst-2026@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261019T110000
 DTEND;TZID=Europe/Berlin:20261023T160000
 SUMMARY:🏀 Ferien Open Gym in der Seelenbinderhalle
@@ -183,8 +202,31 @@ DESCRIPTION:In den Herbstferien täglich offene Halle zum Reinkommen\, wann
 URL:https://www.streetball-team.de/ferien-open-gym/
 END:VEVENT
 BEGIN:VEVENT
+UID:streetballteam-indoor-grundschulturnier-2027@checkballberlin.github.io
+DTSTAMP:20261103T172543Z
+DTSTART;TZID=Europe/Berlin:20270210T093000
+DTEND;TZID=Europe/Berlin:20270210T153000
+SUMMARY:🏆 Indoor Streetball Challenge: Grundschulturnier
+LOCATION:Max-Schmeling-Halle\, Nebenhallen A und B\, Am Falkplatz 1
+DESCRIPTION:3-gegen-3-Hallenturnier auf dem Halbfeld für Berliner Schulen 
+ mit Grundstufe\, auch schulübergreifende Teams sind möglich. Gespielt wi
+ rd ohne Schiedsrichter\, pro Schule sind höchstens 5 Teams und insgesamt 
+ höchstens 100 Teams zugelassen. Ein Anmeldeschluss steht noch nicht fest.
+ \nFür: Mädchen und Jungen der Jahrgänge 2014 bis 2017 von Berliner Schu
+ len mit Grundstufe\nVeranstalter: Streetball-Team (GSJ) im Auftrag der Sen
+ atsverwaltung für Bildung\, Jugend und Familie\nQuelle: https://www.stree
+ tball-team.de/indoor-grundschulturnier/\nAlle Termine: https://checkballbe
+ rlin.github.io · Angaben ohne Gewähr
+URL:https://www.streetball-team.de/indoor-grundschulturnier/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Morgen: Indoor Streetball Challenge: Grundschulturnier
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:streetballteam-open-gym-night-2026-11@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261106T210000
 DTEND;TZID=Europe/Berlin:20261106T230000
 SUMMARY:🏀 Open Gym Night in Wedding
@@ -198,7 +240,7 @@ URL:https://www.streetball-team.de/open-gym-night/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-opengym-mittwoch@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261104T170000
 DTEND;TZID=Europe/Berlin:20261104T180000
 RRULE:FREQ=WEEKLY;BYDAY=WE
@@ -213,7 +255,7 @@ URL:https://www.streetball-team.de/turniere-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-opengym-montag@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261109T190000
 DTEND;TZID=Europe/Berlin:20261109T203000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -229,7 +271,7 @@ URL:https://www.streetball-team.de/turniere-open-gym/
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2026-11-13@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261113T223000
 DTEND;TZID=Europe/Berlin:20261114T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -251,7 +293,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2026-11-27@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261127T223000
 DTEND;TZID=Europe/Berlin:20261128T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -273,7 +315,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2026-12-11@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261211T223000
 DTEND;TZID=Europe/Berlin:20261212T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -295,7 +337,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2026@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20261030T223000
 DTEND;TZID=Europe/Berlin:20261031T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -316,7 +358,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2027-01-15@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270115T223000
 DTEND;TZID=Europe/Berlin:20270116T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -338,7 +380,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2027-01-29@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270129T223000
 DTEND;TZID=Europe/Berlin:20270130T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -360,7 +402,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2027-02-19@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270219T223000
 DTEND;TZID=Europe/Berlin:20270220T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -382,7 +424,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2027-03-05@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270305T223000
 DTEND;TZID=Europe/Berlin:20270306T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle
@@ -404,7 +446,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:streetballteam-streetball-night-2027-03-19@checkballberlin.github.io
-DTSTAMP:20261103T052558Z
+DTSTAMP:20261103T172543Z
 DTSTART;TZID=Europe/Berlin:20270319T223000
 DTEND;TZID=Europe/Berlin:20270320T013000
 SUMMARY:🏆 Streetball Night in der Max-Schmeling-Halle

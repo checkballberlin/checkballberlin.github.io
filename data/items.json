@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T05:25:58+00:00",
+ "generatedAt": "2026-11-03T17:25:43+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -422,6 +422,29 @@
    "venue": "Neukölln"
   },
   {
+   "id": "neuenhagen-maedchen-frauenturnier-2027",
+   "audience": "Mädchen und Frauen, U12 bis Ü18",
+   "categories": [
+    "U14",
+    "U16",
+    "U18",
+    "Damen"
+   ],
+   "district": "Umland (Brandenburg)",
+   "end": "2027-05-22T16:00",
+   "foundAt": "2026-11-03",
+   "organizer": "SG Rot-Weiß Neuenhagen e.V.",
+   "regUrl": "https://bbv-inside.de/events/offenes-maedchen-und-frauenturnier-sg-rot-weiss-neuenhagen-e-v-u12-frauen/",
+   "sourceName": "Brandenburgischer Basketball-Verband",
+   "sourceUrl": "https://bbv-inside.de/events/offenes-maedchen-und-frauenturnier-sg-rot-weiss-neuenhagen-e-v-u12-frauen/",
+   "start": "2027-05-22T09:00",
+   "summary": "Offenes Basketballturnier der SG Rot-Weiß Neuenhagen für Mädchen und Frauen von U12 bis Ü18. Der Spielmodus wird vor Ort abgestimmt, Meldeschluss ist der 16.05.2027.",
+   "summaryEn": "Open basketball tournament hosted by SG Rot-Weiß Neuenhagen for girls and women from U12 to over-18. The game format is agreed on site; the registration deadline is 16 May 2027.",
+   "title": "Offenes Mädchen- und Frauenturnier in Neuenhagen",
+   "type": "event",
+   "venue": "Grundschule am Gruscheweg, Gruscheweg 52-54, 15366 Neuenhagen bei Berlin"
+  },
+  {
    "id": "streetballteam-ferien-opengym-herbst-2026",
    "categories": [
     "Offen"
@@ -454,6 +477,27 @@
    "title": "Ferien Open Gym in der Seelenbinderhalle",
    "type": "gym",
    "venue": "Seelenbinderhalle, Paul-Heyse-Straße 26"
+  },
+  {
+   "id": "streetballteam-indoor-grundschulturnier-2027",
+   "audience": "Mädchen und Jungen der Jahrgänge 2014 bis 2017 von Berliner Schulen mit Grundstufe",
+   "categories": [
+    "U14",
+    "Mixed"
+   ],
+   "district": "Pankow",
+   "end": "2027-02-10T15:30",
+   "foundAt": "2026-11-03",
+   "level": "Schulturnier",
+   "organizer": "Streetball-Team (GSJ) im Auftrag der Senatsverwaltung für Bildung, Jugend und Familie",
+   "sourceName": "Streetball-Team Berlin",
+   "sourceUrl": "https://www.streetball-team.de/indoor-grundschulturnier/",
+   "start": "2027-02-10T09:30",
+   "summary": "3-gegen-3-Hallenturnier auf dem Halbfeld für Berliner Schulen mit Grundstufe, auch schulübergreifende Teams sind möglich. Gespielt wird ohne Schiedsrichter, pro Schule sind höchstens 5 Teams und insgesamt höchstens 100 Teams zugelassen. Ein Anmeldeschluss steht noch nicht fest.",
+   "summaryEn": "Indoor 3-on-3 half-court tournament for Berlin schools with primary grades; cross-school teams are possible. Games are played without referees, with a limit of 5 teams per school and 100 teams overall. The registration deadline has not been set yet.",
+   "title": "Indoor Streetball Challenge: Grundschulturnier",
+   "type": "turnier",
+   "venue": "Max-Schmeling-Halle, Nebenhallen A und B, Am Falkplatz 1"
   },
   {
    "id": "streetballteam-open-gym-night-2026-11",
