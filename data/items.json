@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T17:25:43+00:00",
+ "generatedAt": "2026-11-04T05:26:09+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -75,6 +75,26 @@
    "title": "Friday Night Hoops",
    "type": "gym",
    "venue": "Sporthalle im Olympiapark"
+  },
+  {
+   "id": "bbv-gamepoint-wittstock-2026",
+   "audience": "Alle ab 10 Jahren",
+   "categories": [
+    "Offen"
+   ],
+   "district": "",
+   "end": "2026-11-28T16:00",
+   "foundAt": "2026-11-04",
+   "organizer": "Brandenburgischer Basketball-Verband",
+   "price": "kostenlos",
+   "sourceName": "Brandenburgischer Basketball-Verband",
+   "sourceUrl": "https://bbv-inside.de/events/gamepoint-in-wittstock/",
+   "start": "2026-11-28T09:00",
+   "summary": "Kostenloser offener Basketball-Spieletreff des Brandenburgischen Basketball-Verbands für alle Begeisterten ab 10 Jahren; auch Vereine und Mannschaften sind eingeladen. Wittstock liegt rund 100 km nordwestlich von Berlin.",
+   "summaryEn": "Free open basketball meet-up run by the Brandenburg Basketball Association for all fans aged 10 and over; clubs and teams are welcome too. Wittstock is about 100 km north-west of Berlin.",
+   "title": "GamePoint in Wittstock",
+   "type": "event",
+   "venue": "Stadthalle Wittstock, Ringstraße 28, 16909 Wittstock/Dosse"
   },
   {
    "id": "dakar-yog-3x3",
@@ -420,6 +440,35 @@
    "title": "MBL Ferienliga: Runde 5",
    "type": "event",
    "venue": "Neukölln"
+  },
+  {
+   "id": "meetup-flinta-pickup-krausenstrasse",
+   "audience": "Frauen und FLINTA*, alle Level",
+   "categories": [
+    "FLINTA*"
+   ],
+   "district": "Mitte",
+   "foundAt": "2026-11-04",
+   "level": "",
+   "organizer": "Women's and FLINTA Outdoor Pick up Basketball (Meetup)",
+   "price": "Spende",
+   "recurring": {
+    "freq": "irregular",
+    "from": "11:00",
+    "to": "13:00",
+    "weekday": 6,
+    "weekdays": [
+     6
+    ]
+   },
+   "setting": "freiplatz",
+   "sourceName": "Meetup",
+   "sourceUrl": "https://www.meetup.com/womens-and-flinta-outdoor-pick-up-basketball/",
+   "summary": "Offene Pick-up-Runde für Frauen und FLINTA* auf dem Freiplatz in Mitte, samstags um 11 Uhr, alle Level willkommen und ohne Punktezählen. Der Rhythmus schwankt, bei Regen fällt der Termin aus. Zuletzt war der 24.10.2026 gelistet; aktuelle Termine vorher auf Meetup prüfen, denn die Gruppe beschreibt sich als Sommerangebot.",
+   "summaryEn": "Open pick-up run for women and FLINTA* on the outdoor courts in Mitte, Saturdays at 11 am, all levels welcome and no scorekeeping. The rhythm varies and sessions are cancelled when it rains. The last listed date was 24 Oct 2026; check Meetup for current dates, as the group describes itself as a summer offering.",
+   "title": "Women's & FLINTA* Outdoor Pick-up an der Krausenstraße",
+   "type": "gym",
+   "venue": "Basketball Courts Krausenstraße, Krausenstraße 40, 10117 Berlin"
   },
   {
    "id": "neuenhagen-maedchen-frauenturnier-2027",
