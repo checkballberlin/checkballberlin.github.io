@@ -1,26 +1,26 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-04T05:58:00+01:00",
+ "lastRun": "2026-11-04T17:58:00+01:00",
  "log": [
-  "05:55  Morgenlauf · Stadt: Berlin",
-  "Neu: Women's & FLINTA* Outdoor Pick-up Krausenstraße (Mitte, Sa 11 Uhr, Meetup); letzter gelisteter Termin 24.10., Winterbetrieb unklar.",
-  "Neu: GamePoint in Wittstock (28.11., kostenlos, ab 10 Jahren, ca. 100 km von Berlin, daher ohne district).",
-  "Nicht übernommen: Hauptstadtzirkus 2027 (09./10.01., Adlershof): Seite nennt keinen Basketball-Bezug; Jugend Appreciation Day weiter ohne Ort; BBV Mini-Tour U8–U11 ohne 3x3-Bezug.",
-  "Websuche FIBA 3x3, Winterturniere, Hochschulsport, Partnervereine, Pickup: sonst nichts Neues.",
-  "Nicht abrufbar: play.fiba3x3.com-Suche liefert keine aktuellen Berliner Events; DBB-News weiter leer.",
+  "17:55  Abendlauf · Stadt: Berlin",
+  "Neu: Offenes Mädchen- und Frauenturnier in Prenzlau (13.12., U12–U18, Meldeschluss 06.12.; ca. 100 km von Berlin, daher ohne district).",
+  "Nicht übernommen: Jugend Appreciation Day (29.11.) weiter ohne Ort; BBV Mini-Tour U8–U11 ohne 3x3-Bezug; 3x3 Winter League / Winter Jam: kein Berlin-Bezug belegbar, FIBA-Seiten blockiert.",
+  "Websuche FIBA 3x3, Winterturniere, Hochschulsport, Partnervereine, Pickup, Schul-3x3: sonst nichts Neues.",
+  "Nicht abrufbar: play.fiba3x3.com und binb.info; DBB-News weiter leer.",
+  "Meetup FLINTA* Krausenstraße: keine Termine mehr gelistet, Eintrag unverändert – beobachten.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Per Websuche keine neuen Berliner Events; Event df43cac9 (MBF/Hoop City Ferienliga Turnier) ohne Datum – beobachten.",
+   "note": "Direktabruf blockiert; per Websuche keine neuen Berliner Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/events/df43cac9-12ae-449e-b24c-af2a09b25fae"
   },
   {
    "name": "DBB 3x3: News",
-   "note": "Newsliste beim Abruf leer.",
+   "note": "Seite zeigt weiter keine Meldungen (nur Platzhaltertext); Turnierseite nur vergangene Termine außerhalb Berlins.",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -32,13 +32,13 @@
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Wieder erreichbar, nur teilweise lesbar; keine neuen 3x3-Termine.",
-   "status": "ok",
+   "note": "Abruf im Abendlauf fehlgeschlagen; per Websuche keine neuen 3x3-Termine.",
+   "status": "blockiert",
    "url": "https://www.binb.info/puls/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gym Night 06.11. und Open Gyms Mo/Mi unverändert.",
+   "note": "Open Gym Night 06.11., Streetball Nights und Open Gyms Mo/Mi unverändert.",
    "status": "ok",
    "url": "https://www.streetball-team.de/upcoming-events/"
   },
@@ -56,7 +56,7 @@
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Seite 1 des Kalenders geprüft: GamePoint Wittstock neu; sonst Mini-Tour U8–U11. Jugend Appreciation Day (29.11.) ohne Ort.",
+   "note": "Kalender bis 09.01.2027 geprüft: Mädchen- und Frauenturnier Prenzlau (13.12.) neu; sonst Mini-Tour U8–U11. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
    "status": "ok",
    "url": "https://bbv-inside.de/veranstaltungen/"
   },
@@ -121,18 +121,18 @@
   },
   {
    "name": "FLINTA*-Angebote (Websuche)",
-   "note": "Meetup-Gruppe Krausenstraße neu erfasst.",
+   "note": "Keine neuen Angebote gefunden.",
    "status": "ok"
   },
   {
    "name": "Meetup: Women's and FLINTA Outdoor Pick up Basketball",
-   "note": "Zuletzt gelisteter Termin 24.10.2026; Rhythmus widersprüchlich, Winterbetrieb unklar – beobachten.",
+   "note": "Terminliste zeigt aktuell 0 Events; letzter gelisteter Termin 24.10.2026. Winterbetrieb unklar – beobachten.",
    "status": "ok",
    "url": "https://www.meetup.com/womens-and-flinta-outdoor-pick-up-basketball/"
   },
   {
    "name": "Internationale Pickup-Runs (Websuche)",
-   "note": "Keine weiteren öffentlich ausgeschriebenen Runs gefunden.",
+   "note": "Keine öffentlich ausgeschriebenen Runs gefunden.",
    "status": "ok"
   },
   {
@@ -142,9 +142,9 @@
   }
  ],
  "stats": {
-  "items": 42,
+  "items": 43,
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-04T05:26:09+00:00"
+ "exportedAt": "2026-11-04T17:25:52+00:00"
 }

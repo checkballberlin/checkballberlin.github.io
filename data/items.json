@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T05:26:09+00:00",
+ "generatedAt": "2026-11-04T17:25:52+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -95,6 +95,29 @@
    "title": "GamePoint in Wittstock",
    "type": "event",
    "venue": "Stadthalle Wittstock, Ringstraße 28, 16909 Wittstock/Dosse"
+  },
+  {
+   "id": "bbv-prenzlau-maedchen-frauenturnier-2026",
+   "audience": "Mädchen, U12 bis U18",
+   "categories": [
+    "U14",
+    "U16",
+    "U18"
+   ],
+   "deadline": "2026-12-06",
+   "district": "",
+   "end": "2026-12-13T17:00",
+   "foundAt": "2026-11-04",
+   "organizer": "FSV Rot-Weiß Prenzlau e.V.",
+   "regUrl": "https://bbv-inside.de/events/offenes-maedchen-und-frauenturnier-fsv-rot-weiss-prenzlau-e-v-u12-u18/",
+   "sourceName": "Brandenburgischer Basketball-Verband",
+   "sourceUrl": "https://bbv-inside.de/events/offenes-maedchen-und-frauenturnier-fsv-rot-weiss-prenzlau-e-v-u12-u18/",
+   "start": "2026-12-13T10:00",
+   "summary": "Offenes Basketballturnier des FSV Rot-Weiß Prenzlau für Mädchen von U12 bis U18. Der Spielmodus wird vor Ort abgestimmt, Meldeschluss ist der 06.12.2026.",
+   "summaryEn": "Open basketball tournament hosted by FSV Rot-Weiß Prenzlau for girls from U12 to U18. The game format is agreed on site; the registration deadline is 6 December 2026.",
+   "title": "Offenes Mädchen- und Frauenturnier in Prenzlau",
+   "type": "event",
+   "venue": "Grabow-Halle, Berliner Straße 29, 17291 Prenzlau"
   },
   {
    "id": "dakar-yog-3x3",
