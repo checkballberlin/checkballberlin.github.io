@@ -1,26 +1,25 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-04T17:58:00+01:00",
+ "lastRun": "2026-11-05T05:58:01+01:00",
  "log": [
-  "17:55  Abendlauf · Stadt: Berlin",
-  "Neu: Offenes Mädchen- und Frauenturnier in Prenzlau (13.12., U12–U18, Meldeschluss 06.12.; ca. 100 km von Berlin, daher ohne district).",
-  "Nicht übernommen: Jugend Appreciation Day (29.11.) weiter ohne Ort; BBV Mini-Tour U8–U11 ohne 3x3-Bezug; 3x3 Winter League / Winter Jam: kein Berlin-Bezug belegbar, FIBA-Seiten blockiert.",
-  "Websuche FIBA 3x3, Winterturniere, Hochschulsport, Partnervereine, Pickup, Schul-3x3: sonst nichts Neues.",
-  "Nicht abrufbar: play.fiba3x3.com und binb.info; DBB-News weiter leer.",
-  "Meetup FLINTA* Krausenstraße: keine Termine mehr gelistet, Eintrag unverändert – beobachten.",
-  "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
+  "05:55  Morgenlauf · Stadt: Berlin",
+  "Keine neuen Einträge, keine Änderungen an bestehenden Einträgen.",
+  "Geprüft: Streetball-Team, MBF, BBV Brandenburg (Seite 1), Friedenauer TSC, visitBerlin, Meetup, DBB-News.",
+  "Websuche FIBA 3x3, Winterturniere, Open Gyms, Pickup, Hochschulsport, Partnervereine, ALBA Jugend: nichts Neues.",
+  "Nicht abrufbar: play.fiba3x3.com (Berlin-Listen), binb.info, BBV-Kalender Seite 2; DBB-News weiter leer.",
+  "Alle Einträge haben summaryEn; keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direktabruf blockiert; per Websuche keine neuen Berliner Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
+   "note": "Direktabruf blockiert; Websuche am 05.11. ohne neue Berliner oder Brandenburger Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/events/df43cac9-12ae-449e-b24c-af2a09b25fae"
   },
   {
    "name": "DBB 3x3: News",
-   "note": "Seite zeigt weiter keine Meldungen (nur Platzhaltertext); Turnierseite nur vergangene Termine außerhalb Berlins.",
+   "note": "Seite zeigt am 05.11. weiter keine Meldungen (nur Platzhaltertext).",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -32,31 +31,31 @@
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Abruf im Abendlauf fehlgeschlagen; per Websuche keine neuen 3x3-Termine.",
+   "note": "Abruf am 05.11. fehlgeschlagen; per Websuche keine neuen 3x3-Termine.",
    "status": "blockiert",
    "url": "https://www.binb.info/puls/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Open Gym Night 06.11., Streetball Nights und Open Gyms Mo/Mi unverändert.",
+   "note": "Am 05.11. geprüft: Open Gym Night 06.11., Streetball Nights und Open Gyms Mo/Mi unverändert.",
    "status": "ok",
    "url": "https://www.streetball-team.de/upcoming-events/"
   },
   {
    "name": "Friedenauer TSC Basketball",
-   "note": "Herbstferien-Camps erfasst; in diesem Lauf nicht erneut geprüft.",
+   "note": "Startseite am 05.11. geprüft: keine Termine nach den Herbstcamps.",
    "status": "ok",
    "url": "https://www.friedenau-basketball.de/mammut-basketball-camps-in-den-schulferien-2026/"
   },
   {
    "name": "MBF Berlin (MBL Ferienliga)",
-   "note": "Runden 3–5 und Abschlussevent unverändert erfasst.",
+   "note": "Am 05.11. geprüft: Runden 3–5 und Abschlussevent unverändert.",
    "status": "ok",
    "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Kalender bis 09.01.2027 geprüft: Mädchen- und Frauenturnier Prenzlau (13.12.) neu; sonst Mini-Tour U8–U11. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
+   "note": "Kalender am 05.11. Seite 1 geprüft (bis Januar 2027): nichts Neues; Seite 2 nicht abrufbar. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
    "status": "ok",
    "url": "https://bbv-inside.de/veranstaltungen/"
   },
@@ -126,7 +125,7 @@
   },
   {
    "name": "Meetup: Women's and FLINTA Outdoor Pick up Basketball",
-   "note": "Terminliste zeigt aktuell 0 Events; letzter gelisteter Termin 24.10.2026. Winterbetrieb unklar – beobachten.",
+   "note": "Am 05.11. keine Termine nach dem 24.10.2026 gelistet. Winterbetrieb unklar – beobachten.",
    "status": "ok",
    "url": "https://www.meetup.com/womens-and-flinta-outdoor-pick-up-basketball/"
   },
@@ -146,5 +145,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-04T17:25:52+00:00"
+ "exportedAt": "2026-11-05T05:25:36+00:00"
 }
