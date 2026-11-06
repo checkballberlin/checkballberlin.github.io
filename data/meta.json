@@ -1,14 +1,15 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-06T05:57:43+01:00",
+ "lastRun": "2026-11-06T17:57:11+01:00",
  "log": [
-  "05:57  Morgenlauf · Stadt: Berlin",
+  "17:57  Abendlauf · Stadt: Berlin",
   "Keine neuen Einträge, keine Änderungen an bestehenden Einträgen.",
-  "Geprüft: Streetball-Team, MBF, BBV Brandenburg (Seiten 1–3), binb.info (nur Seitenanfang), Meetup, DBB-News.",
-  "Websuche FIBA 3x3, Weihnachtsturniere, Open Gyms, FLINTA*, Hochschulsport, Partnervereine: nichts Neues.",
-  "3x3 Winter League auf rausgegangen liegt in Leipzig, daher nicht übernommen.",
-  "Hinweis Betreiber: Friday Night Hoops steht weiter auf abgesagt („nach den Ferien wieder“); Ferien sind vorbei, Stand bitte prüfen.",
-  "Alle Einträge haben summaryEn; keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
+  "Geprüft: Streetball-Team (Open Gym Night heute, Streetball Nights unverändert), BBV Brandenburg (Seite 1), Meetup FLINTA Pickup, visitBerlin.",
+  "Websuche FIBA 3x3, Weihnachtsturniere, Potsdam/Brandenburg, Pickup-Runs, Hochschulsport: nichts Neues.",
+  "Hochschulsport HU: Seite per Bot-Schutz blockiert, nicht lesbar.",
+  "Hoop District (Kraftwerk, EuroLeague) ist ein vergangener Termin, nicht übernommen.",
+  "Friday Night Hoops weiter „abgesagt“ – Betreiber bitte Stand prüfen.",
+  "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
@@ -146,5 +147,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-06T05:26:16+00:00"
+ "exportedAt": "2026-11-06T17:25:52+00:00"
 }
