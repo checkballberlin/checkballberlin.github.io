@@ -1,26 +1,26 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-05T17:57:02+01:00",
+ "lastRun": "2026-11-06T05:57:43+01:00",
  "log": [
-  "17:55  Abendlauf · Stadt: Berlin",
+  "05:57  Morgenlauf · Stadt: Berlin",
   "Keine neuen Einträge, keine Änderungen an bestehenden Einträgen.",
-  "Geprüft: Streetball-Team, MBF, BBV Brandenburg (Seiten 1–3), visitBerlin, Meetup, DBB-News.",
-  "Websuche FIBA 3x3, Winter- und Weihnachtsturniere, Open Gyms, Pickup, Partnervereine: nichts Neues.",
-  "BBV Mini-Tour (U8–U11) und Schulliga nicht einzeln übernommen.",
-  "Nicht abrufbar: play.fiba3x3.com (Berlin-Listen), binb.info; DBB-News weiter leer.",
+  "Geprüft: Streetball-Team, MBF, BBV Brandenburg (Seiten 1–3), binb.info (nur Seitenanfang), Meetup, DBB-News.",
+  "Websuche FIBA 3x3, Weihnachtsturniere, Open Gyms, FLINTA*, Hochschulsport, Partnervereine: nichts Neues.",
+  "3x3 Winter League auf rausgegangen liegt in Leipzig, daher nicht übernommen.",
+  "Hinweis Betreiber: Friday Night Hoops steht weiter auf abgesagt („nach den Ferien wieder“); Ferien sind vorbei, Stand bitte prüfen.",
   "Alle Einträge haben summaryEn; keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direktabruf blockiert; Websuche am 05.11. (abends) ohne neue Berliner oder Brandenburger Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
+   "note": "Direktabruf blockiert; Websuche am 06.11. (morgens) ohne neue Berliner oder Brandenburger Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/events/df43cac9-12ae-449e-b24c-af2a09b25fae"
   },
   {
    "name": "DBB 3x3: News",
-   "note": "Seite zeigt am 05.11. weiter keine Meldungen (nur Platzhaltertext).",
+   "note": "Seite zeigt am 06.11. weiter keine Meldungen (nur Platzhaltertext).",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -32,13 +32,13 @@
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Abruf am 05.11. erneut fehlgeschlagen; per Websuche keine neuen 3x3-Termine.",
-   "status": "blockiert",
+   "note": "Am 06.11. abrufbar, aber nur der Anfang der Seite wörtlich gelesen: dort keine Spieltermine ab heute; per Websuche keine neuen 3x3-Termine.",
+   "status": "ok",
    "url": "https://www.binb.info/puls/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Am 05.11. abends geprüft: Open Gym Night 06.11., Streetball Nights und Open Gyms Mo/Mi unverändert.",
+   "note": "Am 06.11. morgens geprüft: Open Gym Night 06.11., Streetball Nights und Open Gyms Mo/Mi unverändert.",
    "status": "ok",
    "url": "https://www.streetball-team.de/upcoming-events/"
   },
@@ -50,13 +50,13 @@
   },
   {
    "name": "MBF Berlin (MBL Ferienliga)",
-   "note": "Am 05.11. abends geprüft: Runden 3–5 und Abschlussevent unverändert.",
+   "note": "Am 06.11. morgens geprüft: Runden 3–5 und Abschlussevent unverändert.",
    "status": "ok",
    "url": "https://www.mbf-berlin.com/mbl-berlin/ferienliga/season-202627"
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Kalender am 05.11. abends komplett geprüft (Seiten 1–3): keine neuen offenen Turniere für U12+; Mini-Tour U8–U11 und Schulliga bewusst nicht einzeln übernommen. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
+   "note": "Kalender am 06.11. morgens geprüft (Seiten 1–3): keine neuen offenen Turniere für U12+; Mini-Tour U8–U11 und Schulliga bewusst nicht einzeln übernommen. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
    "status": "ok",
    "url": "https://bbv-inside.de/veranstaltungen/"
   },
@@ -68,7 +68,7 @@
   },
   {
    "name": "Berliner Sportkalender / visitBerlin",
-   "note": "Keine Basketball-Termine ab November.",
+   "note": "Stichprobe am 06.11.: 3x3-Einträge betreffen Mai/Juni 2026, keine neuen Basketball-Termine gefunden.",
    "status": "ok",
    "url": "https://www.visitberlin.de/de/sport-berlin"
   },
@@ -86,7 +86,7 @@
   },
   {
    "name": "Hochschulsport Berlin",
-   "note": "Per Websuche keine offenen 3x3-Turniere im Wintersemester.",
+   "note": "Websuche am 06.11.: keine offenen 3x3-Turniere im Wintersemester.",
    "status": "blockiert",
    "url": "https://www.hochschulsport.hu-berlin.de/en/competitive-sport"
   },
@@ -104,7 +104,7 @@
   },
   {
    "name": "rausgegangen.de (I called Game)",
-   "note": "3x3-Serie aus Köln/NRW; kein datierter Termin in Berlin oder Brandenburg.",
+   "note": "3x3 Winter League auf rausgegangen findet in Leipzig statt (April/Mai 2026), kein Berliner Termin.",
    "status": "ok",
    "url": "https://rausgegangen.de/en/organizations/i-called-game-1/"
   },
@@ -126,7 +126,7 @@
   },
   {
    "name": "Meetup: Women's and FLINTA Outdoor Pick up Basketball",
-   "note": "Am 05.11. abends keine kommenden Termine gelistet. Winterbetrieb unklar – beobachten.",
+   "note": "Am 06.11. keine kommenden Termine gelistet (letzter Termin 03.10.). Winterbetrieb unklar – beobachten.",
    "status": "ok",
    "url": "https://www.meetup.com/womens-and-flinta-outdoor-pick-up-basketball/"
   },
@@ -146,5 +146,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-05T17:25:35+00:00"
+ "exportedAt": "2026-11-06T05:26:16+00:00"
 }
