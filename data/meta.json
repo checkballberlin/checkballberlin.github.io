@@ -1,12 +1,12 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-07T06:05:00+01:00",
+ "lastRun": "2026-11-07T17:58:00+01:00",
  "log": [
-  "06:05  Morgenlauf · Stadt: Berlin",
-  "Neu: Berlin Dreams – Heimspiele 1. Regionalliga Nord in der Sömmeringhalle (ab 21.11., Quelle visitBerlin).",
-  "Streetball-Team geprüft: Streetball Nights (13.11., 27.11., 11.12. …) und Open Gyms Mo/Mi unverändert.",
-  "visitBerlin: weitere Basketball-Einträge (We Own The Game, FLINTA*-Turnier Potsdamer Platz) sind vergangen; node 2290855 nicht abrufbar.",
-  "Websuche FIBA 3x3, Weihnachts-/Winterturniere, Potsdam/Brandenburg, Pickup-Runs, Hochschulsport: nichts Neues für Berlin.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "Websuche FIBA 3x3 Berlin/Brandenburg, Dezember- und Weihnachtsturniere: nichts Neues für Berlin oder Umland.",
+  "visitBerlin geprüft: Berlin Dreams (ab 21.11.) bereits erfasst; We Own The Game und Hermann-Ehlers-Platz vergangen.",
+  "Streetball-Team: Open Gyms Mo/Mi und Streetball Nights unverändert; Open Gym Night 06.11. vorbei.",
+  "Hochschulsport und internationale Pickup-Runs: keine öffentlich ausgeschriebenen Berliner Angebote gefunden.",
   "Alle Einträge haben summaryEn; keine Korrekturen nötig.",
   "Friday Night Hoops weiter „abgesagt“ – Betreiber bitte Stand prüfen.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
@@ -147,5 +147,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-07T05:26:30+00:00"
+ "exportedAt": "2026-11-07T17:25:38+00:00"
 }
