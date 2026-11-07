@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-06T17:57:11+01:00",
+ "lastRun": "2026-11-07T06:05:00+01:00",
  "log": [
-  "17:57  Abendlauf · Stadt: Berlin",
-  "Keine neuen Einträge, keine Änderungen an bestehenden Einträgen.",
-  "Geprüft: Streetball-Team (Open Gym Night heute, Streetball Nights unverändert), BBV Brandenburg (Seite 1), Meetup FLINTA Pickup, visitBerlin.",
-  "Websuche FIBA 3x3, Weihnachtsturniere, Potsdam/Brandenburg, Pickup-Runs, Hochschulsport: nichts Neues.",
-  "Hochschulsport HU: Seite per Bot-Schutz blockiert, nicht lesbar.",
-  "Hoop District (Kraftwerk, EuroLeague) ist ein vergangener Termin, nicht übernommen.",
+  "06:05  Morgenlauf · Stadt: Berlin",
+  "Neu: Berlin Dreams – Heimspiele 1. Regionalliga Nord in der Sömmeringhalle (ab 21.11., Quelle visitBerlin).",
+  "Streetball-Team geprüft: Streetball Nights (13.11., 27.11., 11.12. …) und Open Gyms Mo/Mi unverändert.",
+  "visitBerlin: weitere Basketball-Einträge (We Own The Game, FLINTA*-Turnier Potsdamer Platz) sind vergangen; node 2290855 nicht abrufbar.",
+  "Websuche FIBA 3x3, Weihnachts-/Winterturniere, Potsdam/Brandenburg, Pickup-Runs, Hochschulsport: nichts Neues für Berlin.",
+  "Alle Einträge haben summaryEn; keine Korrekturen nötig.",
   "Friday Night Hoops weiter „abgesagt“ – Betreiber bitte Stand prüfen.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
@@ -143,9 +143,9 @@
   }
  ],
  "stats": {
-  "items": 43,
+  "items": 44,
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-06T17:25:52+00:00"
+ "exportedAt": "2026-11-07T05:26:30+00:00"
 }

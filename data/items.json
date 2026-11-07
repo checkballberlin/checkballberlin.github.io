@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T17:25:52+00:00",
+ "generatedAt": "2026-11-07T05:26:30+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -118,6 +118,27 @@
    "title": "Offenes Mädchen- und Frauenturnier in Prenzlau",
    "type": "event",
    "venue": "Grabow-Halle, Berliner Straße 29, 17291 Prenzlau"
+  },
+  {
+   "id": "berlin-dreams-heimspiele-2026-27",
+   "audience": "Zuschauerinnen und Zuschauer",
+   "categories": [
+    "Herren"
+   ],
+   "district": "Charlottenburg-Wilmersdorf",
+   "end": "2027-04-03T20:00",
+   "foundAt": "2026-11-07",
+   "organizer": "Berlin Dreams",
+   "price": "ab 5 €",
+   "sourceName": "visitBerlin",
+   "sourceUrl": "https://www.visitberlin.de/de/event/berlin-dreams-basketball-der-soemmeringhalle",
+   "start": "2026-11-21T18:00",
+   "status": "bestätigt",
+   "summary": "Die Herren von Berlin Dreams spielen in der 1. Regionalliga Nord ihre Heimspiele in der Sömmeringhalle in Charlottenburg. Nächste Termine: Sa 21.11. (18 Uhr), Sa 05.12. (18 Uhr) und Fr 18.12. (19 Uhr); die Saison läuft bis April 2027. Tickets ab 5 Euro, für Kinder und Jugendliche teils frei.",
+   "summaryEn": "Berlin Dreams' men's team plays its 1. Regionalliga Nord home games at the Sömmeringhalle in Charlottenburg. Next dates: Sat 21 Nov (6 pm), Sat 5 Dec (6 pm) and Fri 18 Dec (7 pm); the season runs until April 2027. Tickets from 5 euros, partly free for kids and teens.",
+   "title": "Berlin Dreams: Heimspiele in der Sömmeringhalle",
+   "type": "event",
+   "venue": "Sömmeringhalle, Sömmeringstraße 29, 10589 Berlin"
   },
   {
    "id": "dakar-yog-3x3",
