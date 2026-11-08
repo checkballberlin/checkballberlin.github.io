@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-08T05:58:00+01:00",
+ "lastRun": "2026-11-08T17:58:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "Websuche FIBA 3x3 Berlin/Brandenburg, Weihnachts- und Winterturniere: nichts Neues für Berlin oder Umland.",
-  "visitBerlin: FLINTA*-3x3-Turnier (30./31.05.) ist der bereits erfasste DM-Quali-Termin – kein Duplikat angelegt.",
-  "Streetball-Team: Open Gyms Mo/Mi und Streetball Nights unverändert; MBF-Ferienliga Runden 3–5 unverändert.",
-  "binb.info/jugend/news ohne neue 3x3-Termine; binb.info/puls/news heute nicht abrufbar.",
-  "Meetup FLINTA*-Pickup Krausenstraße: weiter keine kommenden Termine; Hochschulsport und internationale Runs ohne Treffer.",
-  "Alle Einträge haben summaryEn; keine Korrekturen nötig. Friday Night Hoops weiter „abgesagt“ – Betreiber bitte prüfen.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "Websuche FIBA 3x3 Berlin/Brandenburg, Dezember- und Weihnachtsturniere: nichts Neues für Berlin oder Umland.",
+  "visitBerlin: Berlin Dreams Heimspiele (ab 21.11.) bereits erfasst; We Own The Game und Hermann-Ehlers-Platz vergangen.",
+  "Streetball-Team: Open Gyms Mo/Mi und Streetball Nights unverändert; Open Gym Night 06.11. vorbei.",
+  "binb.info/puls/news erneut nicht abrufbar.",
+  "Meetup FLINTA*-Pickup Krausenstraße: weiter keine kommenden Termine (Sommerbetrieb).",
+  "Hochschulsport, internationale Runs, Eastercup 2027: keine neuen öffentlichen Termine.",
   "Keine Community-Meldungen; 3 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -147,5 +147,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-08T05:25:30+00:00"
+ "exportedAt": "2026-11-08T17:26:08+00:00"
 }
