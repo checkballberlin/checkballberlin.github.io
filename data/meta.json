@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-09T17:58:00+01:00",
+ "lastRun": "2026-11-10T05:58:00+01:00",
  "log": [
-  "17:58  Abendlauf · Stadt: Berlin",
-  "Websuche FIBA 3x3 Berlin, 3x3-Turniere Dezember: nichts Neues für Berlin oder Umland.",
+  "05:58  Morgenlauf · Stadt: Berlin",
+  "Websuche FIBA 3x3 Berlin/Brandenburg, 3x3-Turniere Dez./Jan.: nichts Neues.",
   "DBB 3x3 News per Websuche: keine Berliner Meldungen.",
-  "Streetball-Team: Streetball Nights (nächste 13.11.) und Gyms Mo/Mi unverändert.",
-  "visitBerlin: Berlin Dreams Heimspiele ab 21.11. (erfasst); übrige Basketball-Seiten vergangen.",
-  "Open-Gym-Suche November: keine neuen öffentlichen Angebote.",
+  "Streetball-Team: Streetball Nights (nächste 13.11.) unverändert.",
+  "visitBerlin: Berlin Dreams Heimspiele ab 21.11. bestätigt; übrige Seiten vergangen oder ohne Basketball.",
+  "Open Gyms, FLINTA*, Hochschulsport, Pickup-Runs, Potsdam: keine neuen öffentlichen Angebote.",
   "Keine Änderungen an items; keine Community-Meldungen.",
   "3 Berliner Turniere in den nächsten 60 Tagen."
  ],
@@ -147,5 +147,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-09T17:25:59+00:00"
+ "exportedAt": "2026-11-10T05:25:38+00:00"
 }
