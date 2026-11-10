@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-10T05:25:38+00:00",
+ "generatedAt": "2026-11-10T17:25:57+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -254,6 +254,20 @@
    "title": "BBV 3x3 Sommertour: Bernau bei Berlin",
    "type": "turnier",
    "venue": "Bernau bei Berlin"
+  },
+  {
+   "id": "fiba-a688308c",
+   "end": "2026-12-20",
+   "foundAt": "2026-11-10",
+   "organizer": "Berliner Basketball Verband",
+   "regUrl": "https://play.fiba3x3.com/events/a688308c-3291-406e-bb51-91b16751a12c",
+   "sourceName": "FIBA 3x3",
+   "sourceUrl": "https://play.fiba3x3.com/events/a688308c-3291-406e-bb51-91b16751a12c",
+   "start": "2026-12-20",
+   "summary": "Der Berliner Basketball Verband lädt am 20. Dezember zum 3x3-Winterturnier. Die Anmeldung läuft über die FIBA-3x3-Eventseite, dort stehen auch Ort, Klassen und Anmeldeschluss.",
+   "summaryEn": "The Berlin Basketball Association hosts a 3x3 winter tournament on 20 December. Registration is via the FIBA 3x3 event page, which also lists venue, divisions and deadline.",
+   "title": "BBV Winterturnier",
+   "type": "turnier"
   },
   {
    "id": "fiba-b0524210",
