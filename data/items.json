@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T05:26:05+00:00",
+ "generatedAt": "2026-11-11T17:25:55+00:00",
  "items": [
   {
    "id": "alba-3x3-girls-cup-2026",
@@ -148,8 +148,8 @@
    "sourceName": "DBB",
    "sourceUrl": "https://www.basketball-bund.de/team-d-athletinnen-fuer-dakar-2026-nominiert/",
    "start": "2026-10-31",
-   "summary": "Das deutsche 3x3-Team tritt bei den Olympischen Jugendspielen an. Termine der Spiele folgen über DBB und FIBA.",
-   "summaryEn": "Germany's 3x3 team competes at the Youth Olympic Games. Game dates will follow via DBB and FIBA.",
+   "summary": "Bei den Olympischen Jugendspielen in Dakar stand auch 3x3 auf dem Programm. Das deutsche Jungen-Team gewann dort Bronze.",
+   "summaryEn": "3x3 basketball was part of the Youth Olympic Games in Dakar. Germany's boys' team won bronze.",
    "title": "Olympische Jugendspiele: 3x3 in Dakar",
    "type": "event",
    "venue": "Dakar, Senegal"
@@ -952,6 +952,18 @@
    "title": "We Own The Game am Rathaus Schöneberg",
    "type": "turnier",
    "venue": "Vorplatz Rathaus Schöneberg"
+  },
+  {
+   "id": "zdf-dakar-bronze-2026",
+   "date": "2026-11-09",
+   "foundAt": "2026-11-11",
+   "sourceName": "ZDFheute",
+   "sourceUrl": "https://www.zdfheute.de/sport/youth-olympic-games-3x3-basketball-deutschland-bronze-100.html",
+   "summary": "Das deutsche 3x3-Team der Jungen hat bei den Olympischen Jugendspielen in Dakar die Bronzemedaille gewonnen. Nach einer knappen Halbfinal-Niederlage gegen Gastgeber Senegal setzte sich das Team im Spiel um Platz drei gegen Lettland durch.",
+   "summaryEn": "Germany's boys' 3x3 team won bronze at the Youth Olympic Games in Dakar. After a narrow semi-final loss to hosts Senegal, the team beat Latvia in the third-place game.",
+   "title": "Jugendspiele Dakar: Bronze für die deutschen 3x3-Jungs",
+   "type": "news",
+   "venue": "Dakar, Senegal"
   }
  ]
 }

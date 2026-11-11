@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-11T06:08:00+01:00",
+ "lastRun": "2026-11-11T17:57:00+01:00",
  "log": [
-  "06:08  Morgenlauf · Stadt: Berlin",
-  "Websuche FIBA 3x3 Berlin/Brandenburg, Weihnachts- und Winterturniere Dez./Jan.: nichts Neues.",
+  "17:57  Abendlauf · Stadt: Berlin",
+  "Neu: News „Jugendspiele Dakar: Bronze für die deutschen 3x3-Jungs“ (ZDFheute, 09.11.).",
+  "Aktualisiert: Event „Olympische Jugendspiele: 3x3 in Dakar“ – Zusammenfassung mit Ergebnis statt „Termine folgen“.",
+  "Websuche FIBA 3x3 Berlin/Brandenburg, Dezember/Januar: keine neuen Turniere.",
   "BBV Winterturnier (20.12.): Ort, Klassen und Anmeldeschluss weiter nicht öffentlich auffindbar.",
-  "Streetball-Team: Streetball Nights bis 19.03.2027 unverändert; Open Gym Mi und Weekly Gym Mo im November-Kalender bestätigt.",
-  "visitBerlin: Berlin Dreams Heimspiele 21.11.–03.04. bestätigt (erfasst); übrige Basketball-Seiten vergangen.",
-  "Meetup FLINTA* Pick-up Krausenstraße: letzte Termine 3.10., keine kommenden gelistet.",
-  "DBB 3x3, Potsdam/Brandenburg, Pickup-Runs: keine neuen öffentlichen Termine. Keine Community-Meldungen.",
+  "visitBerlin geprüft: nur Berlin Dreams Heimspiele (ab 21.11.) kommend, bereits erfasst.",
+  "FLINTA*, Potsdam/Brandenburg, Open Gyms: nichts Neues. Keine Community-Meldungen.",
   "4 Berliner Turniere in den nächsten 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -143,9 +143,9 @@
   }
  ],
  "stats": {
-  "items": 45,
+  "items": 46,
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-11T05:26:05+00:00"
+ "exportedAt": "2026-11-11T17:25:55+00:00"
 }
