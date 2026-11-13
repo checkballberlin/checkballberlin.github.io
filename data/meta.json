@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-13T06:05:00+01:00",
+ "lastRun": "2026-11-13T17:57:00+01:00",
  "log": [
-  "06:05  Morgenlauf · Stadt: Berlin",
+  "17:57  Abendlauf · Stadt: Berlin",
   "Websuche FIBA 3x3 Berlin/Brandenburg (Dez./Jan.): keine neuen Turniere.",
   "BBV Winterturnier (20.12.): Ort, Klassen, Anmeldeschluss weiter nicht öffentlich auffindbar.",
-  "Streetball-Team: Nights-Termine bis 19.03. unverändert, Open Gyms Mo/Mi unverändert; heute Streetball Night (22:30).",
-  "visitBerlin: Berlin Dreams (erfasst), We Own The Game und Hermann-Ehlers-Platz vergangen.",
-  "DBB-3x3-News: Liste lädt dynamisch, keine neuen Meldungen sichtbar. BBV/binb: nichts Neues.",
-  "FLINTA*-Meetup: nur vergangener Termin (11.04.); HU-Sportkalender per Bot-Check blockiert.",
+  "Streetball-Team: Nights bis 19.03. unverändert, Open Gyms Mo/Mi unverändert; Open Gym Night bisher nur 06.11. im Kalender.",
+  "visitBerlin: Berlin Dreams (erfasst), übrige Basketball-Seiten vergangen; keine neuen Knoten.",
+  "DBB-3x3-News und Weihnachtsturnier-Suche: nichts Neues für Berlin/Brandenburg.",
+  "FLINTA*-Suche: nichts Neues; rainbowtime-Eintrag leitet weiter auf fremde Domain – nicht übernommen.",
   "Keine Community-Meldungen. Keine Änderungen an items. 4 Berliner Turniere in 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-13T05:25:46+00:00"
+ "exportedAt": "2026-11-13T17:25:48+00:00"
 }
