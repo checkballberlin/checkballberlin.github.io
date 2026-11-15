@@ -1,13 +1,12 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-15T05:56:00+01:00",
+ "lastRun": "2026-11-15T17:58:00+01:00",
  "log": [
-  "05:56  Morgenlauf · Stadt: Berlin",
-  "Websuche FIBA 3x3 / 3x3-Turniere Berlin (Nov./Dez.): keine neuen Events.",
-  "BBV Winterturnier (20.12.): weiter keine öffentlichen Details zu Ort, Klassen, Anmeldeschluss.",
-  "Streetball-Team (Stand 14.11.): Nights 27.11.–19.03. bestätigt; keine neuen Termine für Open Gym Night oder Winterferien Open Gym.",
-  "Brandenburgischer BBV (Seite 1): Wittstock 28.11. und Prenzlau 13.12. erfasst; nur Mini-Tour/Lehrgänge neu, bewusst nicht übernommen.",
-  "visitBerlin: Berlin Dreams-Spielplan unverändert; DBB 3x3, Weihnachtsturnier- und FLINTA*-Suche ohne Neues.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "Websuche FIBA 3x3 Berlin/Brandenburg (Dez.): keine neuen Events.",
+  "BBV Winterturnier (20.12.): weiter ohne öffentliche Angaben zu Ort, Klassen, Anmeldeschluss.",
+  "Suche Weihnachtsturniere, Open Gyms/Pickup im Winter: nichts Neues in Berlin.",
+  "DBB 3x3 News: keine neuen Meldungen mit Berlin-Bezug.",
   "Keine Community-Meldungen. Keine Änderungen an items; alle Einträge haben summaryEn.",
   "3 Berliner Turniere in den nächsten 60 Tagen (Streetball Nights 27.11. und 11.12., BBV Winterturnier 20.12.)."
  ],
@@ -147,5 +146,5 @@
   "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-15T05:26:12+00:00"
+ "exportedAt": "2026-11-15T17:26:01+00:00"
 }
