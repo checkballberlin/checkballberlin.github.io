@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-16T05:56:00+01:00",
+ "lastRun": "2026-11-16T17:57:00+01:00",
  "log": [
-  "05:56  Morgenlauf · Stadt: Berlin",
-  "Websuche FIBA 3x3 Berlin/Brandenburg (Dez.): keine neuen Events.",
-  "Streetball-Team: Streetball Nights 27.11., 11.12. und Termine 2027 unverändert; Open Gyms Mo/Mi weiter im Kalender.",
-  "visitBerlin: bekannte Seiten vergangen (We Own The Game, FLINTA*-Turnier); drei Seiten per robots gesperrt, Inhalt unbekannt.",
-  "DBB 3x3, BBV, Brandenburg, Hochschulsport, Pickup-Runs: keine neuen öffentlichen Termine.",
+  "17:57  Abendlauf · Stadt: Berlin",
+  "Websuche FIBA 3x3 Berlin/Brandenburg (Dez./Jan.): keine neuen Events.",
+  "visitBerlin: 6 Basketball-Seiten geprüft, alle vergangen außer Berlin Dreams (bereits erfasst); eine Seite per robots gesperrt.",
+  "Streetball-Team: November-Kalender (Mo Weekly Gym, Mi Open Gym) unverändert; Termin-Widget lädt per JavaScript, Dez.–März nicht neu prüfbar.",
+  "DBB 3x3 News: Seite lädt Inhalte per JavaScript, keine Meldungen auslesbar.",
   "BBV Winterturnier (20.12.) weiter ohne öffentliche Angaben zu Ort, Klassen, Anmeldeschluss.",
-  "Keine Community-Meldungen. Keine Änderungen an items; alle Einträge haben summaryEn.",
+  "FLINTA*, Pickup-Runs, BBV: keine neuen öffentlichen Termine. Keine Community-Meldungen; keine Änderungen an items.",
   "4 Berliner Turniere in den nächsten 60 Tagen (Streetball Nights 27.11., 11.12., 15.01.; BBV Winterturnier 20.12.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-16T05:25:55+00:00"
+ "exportedAt": "2026-11-16T17:25:45+00:00"
 }
