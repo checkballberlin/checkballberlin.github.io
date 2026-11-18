@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-17T17:57:00+01:00",
+ "lastRun": "2026-11-18T05:56:00+01:00",
  "log": [
-  "17:57  Abendlauf · Stadt: Berlin",
-  "Websuche FIBA 3x3 Berlin/Brandenburg, 3x3-Turniere Dezember, BBV Winterturnier: keine neuen Events oder Details.",
-  "visitBerlin: 5 Basketball-Seiten geprüft; nur Berlin Dreams (ab 21.11.) kommend, bereits erfasst.",
-  "Streetball-Team: Streetball Nights 27.11. bis 19.03. unverändert; Open Gyms Mo/Mi weiter wie erfasst.",
-  "Meetup FLINTA* Pick-up: nur vergangener Termin (11.04.) gefunden, keine Wintertermine.",
-  "Brandenburg/Potsdam, FLINTA*, Eastercup 2027: keine neuen öffentlichen Termine.",
+  "05:56  Morgenlauf · Stadt: Berlin",
+  "Websuche FIBA 3x3 Berlin, 3x3-Turniere Dezember, Streetball-Hallenturniere Winter: keine neuen Events.",
+  "DBB 3x3 / basketball-bund.de per Websuche: keine neuen Meldungen mit Berlin-Bezug.",
+  "Brandenburg (bbv-inside): keine neuen 3x3-Termine für Dezember gefunden.",
+  "visitBerlin: 5 Basketball-Seiten geprüft; nur Berlin Dreams (ab 21.11.) kommend, bereits erfasst. TuS-Neukölln-Sommerfest (Juli) vergangen, ohne genaues Datum – nicht übernommen.",
+  "Open Gyms / englischsprachige Pickup-Runs: keine neuen öffentlich ausgeschriebenen Angebote.",
   "Keine Community-Meldungen; keine Änderungen an items; alle Einträge haben summaryEn.",
   "4 Berliner Turniere in den nächsten 60 Tagen (Streetball Nights 27.11., 11.12., 15.01.; BBV Winterturnier 20.12.)."
  ],
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-17T17:26:07+00:00"
+ "exportedAt": "2026-11-18T05:26:13+00:00"
 }
