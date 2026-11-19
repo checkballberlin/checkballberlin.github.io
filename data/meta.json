@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-19T05:58:00+01:00",
+ "lastRun": "2026-11-19T17:56:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "FIBA 3x3 Berlin/Brandenburg, 3x3-Turniere Dezember, Weihnachtsturniere per Websuche: keine neuen Events.",
-  "DBB 3x3 / basketball-bund.de: keine neuen Meldungen mit Berlin-Bezug.",
-  "binb.info News (neueste Meldung 01.11.) und bbv-inside.de Kalender: keine neuen 3x3- oder Open-Gym-Termine; GamePoint Wittstock und Prenzlau bereits erfasst.",
-  "Streetball-Team: Open Gyms Mo/Mi und Open Gym Night 06.11. unverändert; visitBerlin: nur Berlin Dreams aktuell (erfasst).",
-  "HU-Sportkalender (PDF) durch Bot-Schutz nicht abrufbar; Meetup FLINTA-Pickup ohne neue Termine.",
+  "17:56  Abendlauf · Stadt: Berlin",
+  "FIBA 3x3 Berlin/Brandenburg und Dezember-/Weihnachtsturniere per Websuche: keine neuen Events; BBV Winterturnier (20.12.) weiter ohne öffentlich bestätigten Ort.",
+  "DBB 3x3 / basketball-bund.de und binb.info: keine neuen Meldungen mit Berlin-Bezug.",
+  "visitBerlin geprüft: Berlin Dreams Heimspiele (21.11., 05.12., 18.12. …) bereits erfasst; Hermann-Ehlers-Platz und We Own The Game vergangen.",
+  "Berliner Sportkalender (berlinstadtservice): nur ALBA/NBA-Profispiele, kein Eintrag.",
+  "Bezirksamt Mitte FLINTA*-Workshops: nur Einladung für Sportakteure, ohne Basketball, vergangen – nicht übernommen. Meetup-Gruppe „womens-basketball-berlin“ existiert nicht mehr.",
   "Keine Community-Meldungen; keine Änderungen an items, alle Einträge haben summaryEn.",
   "4 Berliner Turniere in den nächsten 60 Tagen (Streetball Nights 27.11., 11.12., 15.01.; BBV Winterturnier 20.12.)."
  ],
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-19T05:26:22+00:00"
+ "exportedAt": "2026-11-19T17:25:56+00:00"
 }
