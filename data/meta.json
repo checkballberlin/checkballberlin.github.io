@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-20T05:58:00+01:00",
+ "lastRun": "2026-11-20T17:58:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "FIBA 3x3 Berlin/Brandenburg, Dezember-/Januar- und Weihnachtsturniere per Websuche: keine neuen Events; BBV Winterturnier (20.12.) weiter ohne öffentlich bestätigten Ort.",
-  "Streetball-Team geprüft: Weekly Gym Mo 19:00–20:30 und Open Gym Mi 17:00–18:00 bis Ende Dezember unverändert; keine neue Open Gym Night nach dem 06.11.",
-  "binb.info (BBV) geprüft: keine neuen 3x3-Meldungen im November.",
-  "visitBerlin: Berlin Dreams Heimspiele (21.11. bis 03.04.) bereits erfasst; übrige Basketball-Seiten vergangen.",
-  "Meetup FLINTA* Pick-up Krausenstraße: letzter Termin 03.10., keine Wintertermine – beobachten.",
-  "Potsdam/Brandenburg und Open-Gym-Websuche ohne neue Treffer; keine Community-Meldungen; keine Änderungen an items.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "FIBA 3x3 Berlin/Brandenburg und Dezember-/Januar-Turniere per Websuche: keine neuen Events; BBV Winterturnier (20.12.) weiter ohne öffentlich bestätigten Ort.",
+  "Weihnachtsturniere und Potsdam/Brandenburg (Januar 2027) per Websuche: keine Berliner Treffer (nur Turniere in anderen Städten).",
+  "visitBerlin geprüft: Berlin Dreams Heimspiele unverändert erfasst; We Own The Game und Hermann-Ehlers-Platz vergangen.",
+  "Meetup FLINTA* Pick-up Krausenstraße: weiterhin keine kommenden Termine gelistet – beobachten.",
+  "Hochschulsport und 3x3-Partnervereine per Websuche: keine offenen 3x3-Turniere.",
+  "Keine Community-Meldungen; keine Änderungen an items, alle Einträge haben summaryEn.",
   "4 Berliner Turniere in den nächsten 60 Tagen (Streetball Nights 27.11., 11.12., 15.01.; BBV Winterturnier 20.12.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-20T05:26:02+00:00"
+ "exportedAt": "2026-11-20T17:26:00+00:00"
 }
