@@ -1,15 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-21T05:58:00+01:00",
+ "lastRun": "2026-11-21T17:58:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "FIBA 3x3 Berlin/Brandenburg, Dezember-/Januar-Turniere, Weihnachtsturniere und Potsdam per Websuche: keine neuen Events.",
-  "BBV Winterturnier (20.12.) weiter ohne öffentlich bestätigten Ort – district bleibt leer.",
-  "Streetball Nights geprüft: 27.11., 11.12., 15.01., 29.01., 19.02., 05.03., 19.03. unverändert erfasst.",
-  "visitBerlin: Berlin Dreams Heimspiele (ab heute, 21.11.) unverändert; übrige Basketball-Seiten vergangen.",
-  "DBB 3x3 News: Seite lädt, aber ohne Meldungen.",
-  "FLINTA*, Hochschulsport, Open Gyms per Websuche: keine neuen öffentlichen Berliner Angebote.",
-  "Keine Community-Meldungen; keine Änderungen an items. 4 Berliner Turniere in 60 Tagen."
+  "17:58  Abendlauf · Stadt: Berlin",
+  "FIBA 3x3 Berlin/Brandenburg, Dezember-/Januar-Turniere und Weihnachtsturniere per Websuche: keine neuen Events.",
+  "visitBerlin geprüft: Berlin Dreams Heimspiele (nächstes 05.12.) unverändert; We Own The Game und Hermann-Ehlers-Platz vergangen.",
+  "Meetup FLINTA* Pick-up Krausenstraße: weiterhin keine kommenden Termine gelistet; zweite Gruppe „womens-basketball-berlin“ existiert nicht.",
+  "FLINTA*, Open Gyms, Streetball-Team per Websuche: keine neuen öffentlichen Berliner Angebote.",
+  "Alle Einträge haben summaryEn; keine Änderungen an items.",
+  "Keine Community-Meldungen. 4 Berliner Turniere in 60 Tagen."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
@@ -147,5 +146,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-21T05:25:58+00:00"
+ "exportedAt": "2026-11-21T17:25:42+00:00"
 }
