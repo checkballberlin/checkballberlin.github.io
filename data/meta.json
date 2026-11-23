@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-23T06:05:00+01:00",
+ "lastRun": "2026-11-23T17:58:00+01:00",
  "log": [
-  "06:05  Morgenlauf · Stadt: Berlin",
-  "FIBA 3x3 Berlin/Brandenburg/Potsdam, Dezember-/Januar-Turniere per Websuche: keine neuen Events.",
+  "17:58  Abendlauf · Stadt: Berlin",
+  "FIBA 3x3 Berlin, Turniere Dezember 2026/Januar 2027 per Websuche: keine neuen Events.",
   "DBB 3x3 / basketball-bund.de per Websuche: keine neuen Termine mit Berlin-Bezug.",
-  "Weihnachtsturniere Berlin/Potsdam per Websuche: nichts Öffentliches mit Berlin-Bezug (RPTU-Turnier liegt in Kaiserslautern).",
-  "Meetup „womens-basketball-berlin“: Gruppe nicht mehr auffindbar; FLINTA*-Outdoor-Pickup ohne kommende Termine.",
-  "BBV Winterturnier (20.12.): weiter kein öffentlich bekannter Ort/Bezirk.",
+  "visitBerlin: 5 Basketball-Seiten geprüft; nur Berlin Dreams (Heimspiele ab 05.12.) kommend, bereits erfasst.",
+  "Potsdam/Umland, Streetball-Team, Weihnachts-/Open-Gym-Suche: nichts Neues Öffentliches.",
+  "FLINTA*-Suche: keine neuen Angebote; Meetup-Gruppe weiter ohne kommende Termine.",
   "Keine Änderungen an items; alle Einträge haben summaryEn.",
   "Keine Community-Meldungen. 4 Berliner Turniere in 60 Tagen (27.11., 11.12., 20.12., 15.01.)."
  ],
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-23T05:26:09+00:00"
+ "exportedAt": "2026-11-23T17:26:20+00:00"
 }
