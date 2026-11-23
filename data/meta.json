@@ -1,14 +1,14 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-22T17:58:00+01:00",
+ "lastRun": "2026-11-23T06:05:00+01:00",
  "log": [
-  "17:58  Abendlauf · Stadt: Berlin",
-  "FIBA 3x3 Berlin/Brandenburg, Dezember-/Januar-Turniere per Websuche: keine neuen Events.",
-  "DBB 3x3 / basketball-bund.de und BBV Brandenburg per Websuche: keine neuen Termine mit Berlin-Bezug.",
-  "visitBerlin node 2294715 geprüft: Berlin Dreams Heimspiele (5x5, bereits erfasst) – nichts Neues.",
-  "Streetball-Team: Open Gyms Mo (Max-Schmeling-Halle) und Mi (Lichtenberg) unverändert.",
-  "Open Gyms, Potsdam, Weihnachtsturniere per Websuche: keine neuen öffentlichen Angebote.",
-  "Keine Änderungen an items; BBV Winterturnier (20.12.) weiter ohne öffentlich bekannten Ort/Bezirk.",
+  "06:05  Morgenlauf · Stadt: Berlin",
+  "FIBA 3x3 Berlin/Brandenburg/Potsdam, Dezember-/Januar-Turniere per Websuche: keine neuen Events.",
+  "DBB 3x3 / basketball-bund.de per Websuche: keine neuen Termine mit Berlin-Bezug.",
+  "Weihnachtsturniere Berlin/Potsdam per Websuche: nichts Öffentliches mit Berlin-Bezug (RPTU-Turnier liegt in Kaiserslautern).",
+  "Meetup „womens-basketball-berlin“: Gruppe nicht mehr auffindbar; FLINTA*-Outdoor-Pickup ohne kommende Termine.",
+  "BBV Winterturnier (20.12.): weiter kein öffentlich bekannter Ort/Bezirk.",
+  "Keine Änderungen an items; alle Einträge haben summaryEn.",
   "Keine Community-Meldungen. 4 Berliner Turniere in 60 Tagen (27.11., 11.12., 20.12., 15.01.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-22T17:26:15+00:00"
+ "exportedAt": "2026-11-23T05:26:09+00:00"
 }
