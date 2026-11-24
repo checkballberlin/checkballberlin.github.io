@@ -1,13 +1,13 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-24T05:58:00+01:00",
+ "lastRun": "2026-11-24T17:57:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
-  "FIBA 3x3 Berlin/Brandenburg Dez. 2026/Jan. 2027 per Websuche: keine neuen Events; BBV Winterturnier (20.12.) weiter ohne öffentlich bestätigten Ort.",
-  "DBB 3x3 / basketball-bund.de per Websuche: keine neuen Termine mit Berlin-Bezug.",
-  "visitBerlin: 4 Basketball-Seiten geprüft; nur Berlin Dreams (nächstes Heimspiel 05.12.) kommend, bereits erfasst.",
-  "Potsdam/Umland, Hochschulsport, Weihnachtsturniere, Streetball-Team: nichts Neues Öffentliches.",
-  "FLINTA*-Suche: Meetup-Event 314210644 ist vom 11.04.2026 (vergangen), keine neuen Termine.",
+  "17:57  Abendlauf · Stadt: Berlin",
+  "FIBA 3x3 / allgemeine 3x3-Suche Berlin Dez. 2026: keine neuen Events; BBV Winterturnier (20.12.) weiter ohne öffentlich bestätigten Ort.",
+  "Weihnachtsturniere Berlin, Potsdam/Brandenburg, DBB 3x3: nichts Neues mit Berlin-Bezug.",
+  "visitBerlin: 7 Basketball-Seiten geprüft – alle vergangen außer Berlin Dreams (bereits erfasst).",
+  "International Eastercup 2027: noch keine öffentliche Ausschreibung gefunden – beobachten.",
+  "Open Gym / FLINTA*-Suche: keine neuen Angebote; Meetup-Gruppe „womens-basketball-berlin“ existiert nicht mehr.",
   "Keine Änderungen an items; alle Einträge haben summaryEn.",
   "Keine Community-Meldungen. 4 Berliner Turniere in 60 Tagen (27.11., 11.12., 20.12., 15.01.)."
  ],
@@ -147,5 +147,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-24T05:25:43+00:00"
+ "exportedAt": "2026-11-24T17:26:02+00:00"
 }
