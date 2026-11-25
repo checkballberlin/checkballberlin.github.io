@@ -1,13 +1,12 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-25T05:58:00+01:00",
+ "lastRun": "2026-11-25T17:58:00+01:00",
  "log": [
-  "05:58  Morgenlauf · Stadt: Berlin",
+  "17:58  Abendlauf · Stadt: Berlin",
   "FIBA 3x3 Websuche (Berlin, Dez. 2026/Jan. 2027): keine neuen Events.",
-  "DBB 3x3 / basketball-bund.de: keine neuen Meldungen mit Berlin-Bezug.",
-  "visitBerlin: 5 Basketball-Seiten geprüft – nur Berlin Dreams (ab 05.12.) künftig, bereits erfasst.",
-  "Weihnachtsturniere Berlin: nichts Neues; FLINTA*/Open-Gym-Suche ohne neue öffentliche Angebote.",
-  "Keine Änderungen an items; alle Einträge haben summaryEn.",
+  "Websuche 3x3/Weihnachtsturniere Berlin und BBV-Wintertermine: nichts Neues.",
+  "Open-Gym/Pickup-Suche: Meetup „Women's Basketball Berlin“ nicht mehr vorhanden; FLINTA-Outdoor-Pickup ohne kommende Termine.",
+  "Keine Änderungen an items; alle Einträge haben summaryEn und district.",
   "Keine Community-Meldungen. 4 Berliner Turniere in 60 Tagen (27.11., 11.12., 20.12., 15.01.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
@@ -146,5 +145,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-25T05:25:57+00:00"
+ "exportedAt": "2026-11-25T17:25:48+00:00"
 }
