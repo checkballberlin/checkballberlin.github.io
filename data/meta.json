@@ -1,11 +1,11 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-26T06:05:00+01:00",
+ "lastRun": "2026-11-26T18:00:00+01:00",
  "log": [
-  "06:05  Morgenlauf · Stadt: Berlin",
-  "FIBA 3x3 Websuche (Berlin, Dez. 2026): keine neuen Events.",
-  "Websuche 3x3-/Weihnachtsturniere Berlin, BBV und Brandenburg (bbv-inside): nichts Neues.",
-  "visitBerlin geprüft: Berlin Dreams Heimspiele bereits erfasst; übrige Seiten vergangen (Kranzler Eck 25.04., Damen-WM Sept.).",
+  "18:00  Abendlauf · Stadt: Berlin",
+  "FIBA 3x3 Websuche (Berlin, Dez. 2026 / 2027): keine neuen Berliner Events.",
+  "Websuche Weihnachts- und 3x3-Turniere Berlin: nur bekannte bzw. vergangene Seiten (visitBerlin, berlin.de).",
+  "Brandenburg/Potsdam (Jan. 2027): nichts Neues; DBB-News ohne Berlin-Bezug.",
   "Open-Gym-Suche: keine neuen öffentlich ausgeschriebenen Angebote.",
   "Keine Änderungen an items; alle Einträge haben summaryEn.",
   "Keine Community-Meldungen. 4 Berliner Turniere in 60 Tagen (27.11., 11.12., 20.12., 15.01.)."
@@ -146,5 +146,5 @@
   "soon": 4,
   "sources": 22
  },
- "exportedAt": "2026-11-26T05:26:10+00:00"
+ "exportedAt": "2026-11-26T17:25:51+00:00"
 }
