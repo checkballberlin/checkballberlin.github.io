@@ -1,27 +1,27 @@
 {
  "by": "Claude",
- "lastRun": "2026-11-27T17:57:00+01:00",
+ "lastRun": "2026-11-28T06:05:00+01:00",
  "log": [
-  "17:57  Abendlauf · Stadt: Berlin",
-  "FIBA 3x3 Websuche (Berlin/Brandenburg, Dez. 2026 / Jan. 2027): keine neuen Events; BBV Winterturnier (20.12.) bereits erfasst.",
-  "Streetball-Team (27.11. geprüft): Streetball Nights 27.11., 11.12., 15.01.–19.03. unverändert; keine neuen Termine.",
-  "DBB 3x3 News: Seite lieferte beim Abruf keine Meldungen.",
-  "visitBerlin: Berlin Dreams (5.12.–3.4.) erfasst; übrige Basketball-Seiten vergangen.",
-  "Websuche FLINTA*, Weihnachtsturniere, Potsdam/Umland, Pickup-Runs: nichts Neues.",
+  "06:05  Morgenlauf · Stadt: Berlin",
+  "FIBA 3x3 Websuche (Berlin/Brandenburg, Dez. 2026 / Jan. 2027): keine neuen Events; BBV Winterturnier (20.12.) erfasst.",
+  "Streetball-Team: Streetball Nights 11.12., 15.01.–19.03. unverändert; Open Gym Montag laut Kalender bis 28.12.",
+  "BBV Brandenburg: nur Mini-Tour U8–U11 neu gelistet, bewusst nicht übernommen.",
+  "visitBerlin, DBB 3x3 News, binb.info: nichts Neues (nur Lehrgänge).",
+  "Websuche FLINTA*, Weihnachtsturniere, Hochschulsport, Pickup-Runs, Potsdam: nichts Neues.",
   "Keine Änderungen an items; keine Community-Meldungen.",
-  "4 Berliner Turniere in 60 Tagen (heute Streetball Night, 11.12., 20.12., 15.01.)."
+  "3 Berliner Turniere in 60 Tagen (11.12., 20.12., 15.01.)."
  ],
  "nextRun": "täglich um 05:55 und 17:55",
  "sources": [
   {
    "name": "FIBA 3x3 (play.fiba3x3.com)",
-   "note": "Direktabruf blockiert; Websuche am 09.11. (morgens) ohne neue Berliner oder Brandenburger Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
+   "note": "Direktabruf blockiert; Websuche am 28.11. (morgens) ohne neue Berliner oder Brandenburger Events. Event df43cac9 (MBF/Hoop City Ferienliga Turnier) weiter ohne bestätigtes Datum – beobachten.",
    "status": "blockiert",
    "url": "https://play.fiba3x3.com/events/df43cac9-12ae-449e-b24c-af2a09b25fae"
   },
   {
    "name": "DBB 3x3: News",
-   "note": "In diesem Lauf nicht erneut geprüft; zuletzt (06.11.) keine Meldungen.",
+   "note": "28.11. geprüft: keine datierten Meldungen (nur Platzhaltertext).",
    "status": "ok",
    "url": "https://3x3.basketball-bund.de/news/"
   },
@@ -33,13 +33,13 @@
   },
   {
    "name": "Berliner Basketball Verband (binb.info)",
-   "note": "Per Websuche am 09.11. keine neuen öffentlichen 3x3-Termine.",
+   "note": "28.11. geprüft: nur Lehrgänge (Betreuer*innenlehrgang 03.12.), keine neuen öffentlichen 3x3-Termine; Seite sehr lang, nicht vollständig gelesen.",
    "status": "ok",
    "url": "https://www.binb.info/puls/news"
   },
   {
    "name": "Streetball-Team Berlin",
-   "note": "Am 09.11. geprüft: Open Gyms Mo/Mi und Streetball Nights (13.11., 27.11., 11.12., 15.01., 29.01., 19.02., 05.03., 19.03.) unverändert.",
+   "note": "28.11. geprüft: Streetball Nights 11.12., 15.01., 29.01., 19.02., 05.03., 19.03. unverändert; Weekly Gym Montag im Kalender bis 28.12. gelistet.",
    "status": "ok",
    "url": "https://www.streetball-team.de/streetball-nights/"
   },
@@ -57,7 +57,7 @@
   },
   {
    "name": "Brandenburgischer Basketball-Verband",
-   "note": "Kalender Seite 1 am 09.11. geprüft: GamePoint Wittstock (28.11.) und Prenzlau (13.12.) bereits erfasst; Mini-Tour U8–U11, Lehrgänge und Schulliga bewusst nicht übernommen. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
+   "note": "28.11. geprüft: GamePoint Wittstock (28.11.) und Prenzlau (13.12.) erfasst; Mini-Tour U8–U11, 1. Mustangs-Mini-Cup (10.01., ohne Ort) und Lehrgänge bewusst nicht übernommen. Jugend Appreciation Day (29.11.) weiter ohne Ort.",
    "status": "ok",
    "url": "https://bbv-inside.de/veranstaltungen/"
   },
@@ -69,7 +69,7 @@
   },
   {
    "name": "Berliner Sportkalender / visitBerlin",
-   "note": "Am 09.11. geprüft: Berlin Dreams Heimspiele (ab 21.11.) erfasst; übrige Basketball-Seiten (We Own The Game, Hermann-Ehlers-Platz, FLINTA*-Turnier Potsdamer Platz) vergangen.",
+   "note": "28.11. geprüft: Berlin Dreams Heimspiele erfasst; übrige Basketball-Seiten (We Own The Game, Hermann-Ehlers-Platz, Kranzler Eck) vergangen.",
    "status": "ok",
    "url": "https://www.visitberlin.de/de/sport-berlin"
   },
@@ -87,7 +87,7 @@
   },
   {
    "name": "Hochschulsport Berlin",
-   "note": "Websuche am 09.11.: keine offenen 3x3-Turniere im Wintersemester.",
+   "note": "Websuche am 28.11.: keine offenen 3x3-Turniere im Wintersemester in Berlin.",
    "status": "blockiert",
    "url": "https://www.hochschulsport.hu-berlin.de/en/competitive-sport"
   },
@@ -122,12 +122,12 @@
   },
   {
    "name": "FLINTA*-Angebote (Websuche)",
-   "note": "09.11.: keine neuen Berliner Angebote; rainbowtime-Eintrag „FLINTA competitive basketball training“ nicht abrufbar (Weiterleitung) – beobachten.",
+   "note": "28.11.: keine neuen Berliner Angebote; Meetup-Gruppe „womens-basketball-berlin“ existiert nicht mehr.",
    "status": "ok"
   },
   {
    "name": "Meetup: Women's and FLINTA Outdoor Pick up Basketball",
-   "note": "Keine kommenden Termine gelistet (Gruppe spielt laut Seite alle zwei Wochen draußen, bei Regen abgesagt). Winterbetrieb unklar – beobachten.",
+   "note": "28.11.: keine kommenden Termine gelistet (letzter sichtbarer Termin 11.04.2026). Winterbetrieb unklar – beobachten.",
    "status": "ok",
    "url": "https://www.meetup.com/womens-and-flinta-outdoor-pick-up-basketball/"
   },
@@ -144,8 +144,8 @@
  ],
  "stats": {
   "items": 46,
-  "soon": 4,
+  "soon": 3,
   "sources": 22
  },
- "exportedAt": "2026-11-27T17:26:05+00:00"
+ "exportedAt": "2026-11-28T05:25:34+00:00"
 }
